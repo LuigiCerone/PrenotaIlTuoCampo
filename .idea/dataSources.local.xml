@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="TDWProject@localhost" uuid="afa935db-2f35-4d56-8ba0-e6236e0ae0a2">
+      <database-info product="MySQL" version="5.5.57-0+deb8u1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>tdw</user-name>
+      <introspection-schemas>*:tdwproject</introspection-schemas>
+    </data-source>
+  </component>
+</project>
