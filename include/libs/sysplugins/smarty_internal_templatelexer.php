@@ -10,7 +10,7 @@
 
 /**
  * Smarty_Internal_Templatelexer
- * This is the template file lexer.
+ * This is the templates file lexer.
  * It is generated from the smarty_internal_templatelexer.plex file
  *
  *
@@ -196,7 +196,7 @@ class Smarty_Internal_Templatelexer
     /**
      * constructor
      *
-     * @param   string                             $data template source
+     * @param   string                             $data templates source
      * @param Smarty_Internal_TemplateCompilerBase $compiler
      */
     function __construct($data, Smarty_Internal_TemplateCompilerBase $compiler)

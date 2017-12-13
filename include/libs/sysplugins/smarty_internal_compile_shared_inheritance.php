@@ -20,7 +20,7 @@ class Smarty_Internal_Compile_Shared_Inheritance extends Smarty_Internal_Compile
      * Register post compile callback to compile inheritance initialization code
      *
      * @param \Smarty_Internal_TemplateCompilerBase $compiler
-     * @param bool|false                            $initChildSequence if true force child template
+     * @param bool|false                            $initChildSequence if true force child templates
      */
     public function registerInit(Smarty_Internal_TemplateCompilerBase $compiler, $initChildSequence = false)
     {
@@ -36,7 +36,7 @@ class Smarty_Internal_Compile_Shared_Inheritance extends Smarty_Internal_Compile
      * Compile inheritance initialization code as prefix
      *
      * @param \Smarty_Internal_TemplateCompilerBase $compiler
-     * @param bool|false                            $initChildSequence if true force child template
+     * @param bool|false                            $initChildSequence if true force child templates
      */
     static function postCompile(Smarty_Internal_TemplateCompilerBase $compiler, $initChildSequence = false)
     {

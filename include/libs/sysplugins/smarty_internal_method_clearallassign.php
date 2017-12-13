@@ -19,7 +19,7 @@ class Smarty_Internal_Method_ClearAllAssign
     public $objMap = 7;
 
     /**
-     * clear all the assigned template variables.
+     * clear all the assigned templates variables.
      *
      * @api  Smarty::clearAllAssign()
      * @link http://www.smarty.net/docs/en/api.clear.all.assign.tpl

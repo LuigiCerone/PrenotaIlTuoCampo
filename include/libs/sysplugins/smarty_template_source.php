@@ -68,7 +68,7 @@ class Smarty_Template_Source
     public $basename = null;
 
     /**
-     * The Components an extended template is made of
+     * The Components an extended templates is made of
      *
      * @var \Smarty_Template_Source[]
      */
@@ -148,7 +148,7 @@ class Smarty_Template_Source
      * initialize Source Object for given resource
      * Either [$_template] or [$smarty, $template_resource] must be specified
      *
-     * @param  Smarty_Internal_Template $_template         template object
+     * @param  Smarty_Internal_Template $_template         templates object
      * @param  Smarty                   $smarty            smarty object
      * @param  string                   $template_resource resource identifier
      *

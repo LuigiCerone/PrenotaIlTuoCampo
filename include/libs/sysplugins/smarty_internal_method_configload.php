@@ -73,7 +73,7 @@ class Smarty_Internal_Method_ConfigLoad
     }
 
     /**
-     * load config variables into template object
+     * load config variables into templates object
      *
      * @param \Smarty_Internal_Template $tpl
      * @param  array                    $new_config_vars
@@ -141,7 +141,7 @@ class Smarty_Internal_Method_ConfigLoad
     }
 
     /**
-     * Update config variables in template local variable stack
+     * Update config variables in templates local variable stack
      *
      * @param \Smarty_Internal_Template $tpl
      * @param array                     $config_vars
@@ -158,7 +158,7 @@ class Smarty_Internal_Method_ConfigLoad
     /**
      * gets  a config variable value
      *
-     * @param \Smarty_Internal_Template $tpl     template object
+     * @param \Smarty_Internal_Template $tpl     templates object
      * @param string                    $varName the name of the config variable
      * @param bool                      $errorEnable
      *

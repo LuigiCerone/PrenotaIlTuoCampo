@@ -17,10 +17,10 @@
  * @author Monte Ohrt <monte at ohrt dot com>
  *
  * @param array                    $params   parameters
- * @param Smarty_Internal_Template $template template object
+ * @param Smarty_Internal_Template $template templates object
  *
  * @throws SmartyException
- * @return string|null if the assign parameter is passed, Smarty assigns the result to a template variable
+ * @return string|null if the assign parameter is passed, Smarty assigns the result to a templates variable
  */
 function smarty_function_fetch($params, $template)
 {

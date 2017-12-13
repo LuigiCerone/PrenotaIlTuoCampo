@@ -82,7 +82,7 @@ class Smarty_Template_Cached extends Smarty_Template_Resource_Base
     /**
      * create Cached Object container
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      */
     public function __construct(Smarty_Internal_Template $_template)
     {
@@ -114,7 +114,7 @@ class Smarty_Template_Cached extends Smarty_Template_Resource_Base
     }
 
     /**
-     * Render cache template
+     * Render cache templates
      *
      * @param \Smarty_Internal_Template $_template
      * @param  bool                     $no_output_filter
@@ -222,9 +222,9 @@ class Smarty_Template_Cached extends Smarty_Template_Resource_Base
     }
 
     /**
-     * Process cached template
+     * Process cached templates
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      * @param bool                     $update    flag if called because cache update
      */
     public function process(Smarty_Internal_Template $_template, $update = false)
@@ -242,7 +242,7 @@ class Smarty_Template_Cached extends Smarty_Template_Resource_Base
     /**
      * Read cache content from handler
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      *
      * @return string|false content
      */

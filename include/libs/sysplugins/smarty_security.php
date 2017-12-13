@@ -36,7 +36,7 @@ class Smarty_Security
     public $php_handling = Smarty::PHP_PASSTHRU;
 
     /**
-     * This is the list of template directories that are considered secure.
+     * This is the list of templates directories that are considered secure.
      * $template_dir is in this list implicitly.
      *
      * @var array
@@ -169,28 +169,28 @@ class Smarty_Security
     public $streams = array('file');
 
     /**
-     * + flag if constants can be accessed from template
+     * + flag if constants can be accessed from templates
      *
      * @var boolean
      */
     public $allow_constants = true;
 
     /**
-     * + flag if super globals can be accessed from template
+     * + flag if super globals can be accessed from templates
      *
      * @var boolean
      */
     public $allow_super_globals = true;
 
     /**
-     * max template nesting level
+     * max templates nesting level
      *
      * @var int
      */
     public $max_template_nesting = 0;
 
     /**
-     * current template nesting level
+     * current templates nesting level
      *
      * @var int
      */
@@ -693,7 +693,7 @@ class Smarty_Security
         return;
     }
     /**
-     * Start template processing
+     * Start templates processing
      *
      * @param $template
      *
@@ -702,12 +702,12 @@ class Smarty_Security
     public function startTemplate($template)
     {
         if ($this->max_template_nesting > 0 && $this->_current_template_nesting ++ >= $this->max_template_nesting) {
-            throw new SmartyException("maximum template nesting level of '{$this->max_template_nesting}' exceeded when calling '{$template->template_resource}'");
+            throw new SmartyException("maximum templates nesting level of '{$this->max_template_nesting}' exceeded when calling '{$template->template_resource}'");
         }
     }
 
     /**
-     * Exit template processing
+     * Exit templates processing
      *
      */
     public function endTemplate()
@@ -718,7 +718,7 @@ class Smarty_Security
     }
 
     /**
-     * Register callback functions call at start/end of template rendering
+     * Register callback functions call at start/end of templates rendering
      *
      * @param \Smarty_Internal_Template $template
      */

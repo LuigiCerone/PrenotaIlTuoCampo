@@ -12,8 +12,8 @@ class Smarty_Internal_Runtime_Make_Nocache
 {
 
     /**
-     * Save current variable value while rendering compiled template and inject nocache code to
-     * assign variable value in cahed template
+     * Save current variable value while rendering compiled templates and inject nocache code to
+     * assign variable value in cahed templates
      *
      * @param \Smarty_Internal_Template $tpl
      * @param string                    $var variable name
@@ -26,7 +26,7 @@ class Smarty_Internal_Runtime_Make_Nocache
             $export = preg_replace('/^Smarty_Variable::__set_state[(]|\s|[)]$/', '',
                                    var_export($tpl->tpl_vars[ $var ], true));
             if (preg_match('/(\w+)::__set_state/', $export, $match)) {
-                throw new SmartyException("{make_nocache \${$var}} in template '{$tpl->source->name}': variable does contain object '{$match[1]}' not implementing method '__set_state'");
+                throw new SmartyException("{make_nocache \${$var}} in templates '{$tpl->source->name}': variable does contain object '{$match[1]}' not implementing method '__set_state'");
             }
             echo "/*%%SmartyNocache:{$tpl->compiled->nocache_hash}%%*/<?php " .
                  addcslashes("\$_smarty_tpl->smarty->ext->_make_nocache->store(\$_smarty_tpl, '{$var}', " . $export,
@@ -35,7 +35,7 @@ class Smarty_Internal_Runtime_Make_Nocache
     }
 
     /**
-     * Store variable value saved while rendering compiled template in cached template context
+     * Store variable value saved while rendering compiled templates in cached templates context
      *
      * @param \Smarty_Internal_Template $tpl
      * @param  string                   $var variable name

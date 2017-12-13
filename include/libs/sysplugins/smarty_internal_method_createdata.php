@@ -12,7 +12,7 @@
 class Smarty_Internal_Method_CreateData
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */

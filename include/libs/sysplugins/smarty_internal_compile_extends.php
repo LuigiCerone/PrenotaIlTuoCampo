@@ -65,7 +65,7 @@ class Smarty_Internal_Compile_Extends extends Smarty_Internal_Compile_Shared_Inh
         $this->registerInit($compiler, true);
         $file = trim($_attr[ 'file' ], '\'"');
         if (strlen($file) > 8 && substr($file, 0, 8) == 'extends:') {
-            // generate code for each template
+            // generate code for each templates
             $files = array_reverse(explode('|', substr($file, 8)));
             $i = 0;
             foreach ($files as $file) {
@@ -92,7 +92,7 @@ class Smarty_Internal_Compile_Extends extends Smarty_Internal_Compile_Shared_Inh
     }
 
     /**
-     * Add code for inheritance endChild() method to end of template
+     * Add code for inheritance endChild() method to end of templates
      *
      * @param \Smarty_Internal_TemplateCompilerBase $compiler
      */
@@ -103,7 +103,7 @@ class Smarty_Internal_Compile_Extends extends Smarty_Internal_Compile_Shared_Inh
     }
 
     /**
-     * Add code for including subtemplate to end of template
+     * Add code for including subtemplate to end of templates
      *
      * @param \Smarty_Internal_TemplateCompilerBase $compiler
      * @param  string                               $file subtemplate name

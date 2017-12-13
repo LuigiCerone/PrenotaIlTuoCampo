@@ -2,14 +2,14 @@
 
 /**
  * Smarty Internal Plugin Templateparser Parse Tree
- * These are classes to build parse tree in the template parser
+ * These are classes to build parse tree in the templates parser
  *
  * @package    Smarty
  * @subpackage Compiler
  * @author     Thue Kristensen
  * @author     Uwe Tews
  *             *
- *             template text
+ *             templates text
  * @package    Smarty
  * @subpackage Compiler
  * @ignore
@@ -17,7 +17,7 @@
 class Smarty_Internal_ParseTree_Text extends Smarty_Internal_ParseTree
 {
     /**
-     * Create template text buffer
+     * Create templates text buffer
      *
      * @param string $data text
      */

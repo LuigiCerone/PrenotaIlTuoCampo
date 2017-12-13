@@ -124,7 +124,7 @@ class Smarty_Internal_Compile_Functionclose extends Smarty_Internal_CompileBase
             $_paramsCode = '';
         }
         $_functionCode = $compiler->parser->current_buffer;
-        // setup buffer for template function code
+        // setup buffer for templates function code
         $compiler->parser->current_buffer = new Smarty_Internal_ParseTree_Template();
 
         $_funcName = "smarty_template_function_{$_name}_{$compiler->template->compiled->nocache_hash}";

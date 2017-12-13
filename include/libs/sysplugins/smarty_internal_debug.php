@@ -17,7 +17,7 @@
 class Smarty_Internal_Debug extends Smarty_Internal_Data
 {
     /**
-     * template data
+     * templates data
      *
      * @var array
      */
@@ -45,9 +45,9 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
     public $offset = 0;
 
     /**
-     * Start logging template
+     * Start logging templates
      *
-     * @param \Smarty_Internal_Template $template template
+     * @param \Smarty_Internal_Template $template templates
      * @param null                      $mode     true: display   false: fetch  null: subtemplate
      */
     public function start_template(Smarty_Internal_Template $template, $mode = null)
@@ -64,14 +64,14 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
     /**
      * End logging of cache time
      *
-     * @param \Smarty_Internal_Template $template cached template
+     * @param \Smarty_Internal_Template $template cached templates
      */
     public function end_template(Smarty_Internal_Template $template)
     {
         $key = $this->get_key($template);
         $this->template_data[ $this->index ][ $key ][ 'total_time' ] +=
             microtime(true) - $this->template_data[ $this->index ][ $key ][ 'start_template_time' ];
-        //$this->template_data[$this->index][$key]['properties'] = $template->properties;
+        //$this->template_data[$this->index][$key]['properties'] = $templates->properties;
     }
 
     /**
@@ -150,7 +150,7 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
     /**
      * Start logging of cache time
      *
-     * @param \Smarty_Internal_Template $template cached template
+     * @param \Smarty_Internal_Template $template cached templates
      */
     public function start_cache(Smarty_Internal_Template $template)
     {
@@ -161,7 +161,7 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
     /**
      * End logging of cache time
      *
-     * @param \Smarty_Internal_Template $template cached template
+     * @param \Smarty_Internal_Template $template cached templates
      */
     public function end_cache(Smarty_Internal_Template $template)
     {
@@ -171,9 +171,9 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
     }
 
     /**
-     * Register template object
+     * Register templates object
      *
-     * @param \Smarty_Internal_Template $template cached template
+     * @param \Smarty_Internal_Template $template cached templates
      */
     public function register_template(Smarty_Internal_Template $template)
     {
@@ -263,7 +263,7 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
     }
 
     /**
-     * Recursively gets variables from all template/data scopes
+     * Recursively gets variables from all templates/data scopes
      *
      * @param  Smarty_Internal_Template|Smarty_Data $obj object to debug
      *
@@ -350,9 +350,9 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
     }
 
     /**
-     * Return key into $template_data for template
+     * Return key into $template_data for templates
      *
-     * @param \Smarty_Internal_Template $template template object
+     * @param \Smarty_Internal_Template $template templates object
      *
      * @return string key into $template_data
      */
@@ -383,7 +383,7 @@ class Smarty_Internal_Debug extends Smarty_Internal_Data
     }
 
     /**
-     * Ignore template
+     * Ignore templates
      *
      * @param \Smarty_Internal_Template $template
      */

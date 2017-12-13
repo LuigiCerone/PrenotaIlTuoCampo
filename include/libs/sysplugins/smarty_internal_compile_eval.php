@@ -57,7 +57,7 @@ class Smarty_Internal_Compile_Eval extends Smarty_Internal_CompileBase
             $_assign = $_attr[ 'assign' ];
         }
 
-        // create template object
+        // create templates object
         $_output = "\$_template = new {$compiler->smarty->template_class}('eval:'." . $_attr[ 'var' ] .
                    ", \$_smarty_tpl->smarty, \$_smarty_tpl);";
         //was there an assign attribute?

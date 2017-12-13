@@ -64,7 +64,7 @@ class Smarty_Template_Config extends Smarty_Template_Source
      * initialize Source Object for given resource
      * Either [$_template] or [$smarty, $template_resource] must be specified
      *
-     * @param  Smarty_Internal_Template $_template         template object
+     * @param  Smarty_Internal_Template $_template         templates object
      * @param  Smarty                   $smarty            smarty object
      * @param  string                   $template_resource resource identifier
      *

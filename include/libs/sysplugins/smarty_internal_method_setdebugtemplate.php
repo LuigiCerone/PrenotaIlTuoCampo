@@ -12,14 +12,14 @@
 class Smarty_Internal_Method_SetDebugTemplate
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */
     public $objMap = 3;
 
     /**
-     * set the debug template
+     * set the debug templates
      *
      * @api Smarty::setDebugTemplate()
      *

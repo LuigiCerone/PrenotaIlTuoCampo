@@ -12,14 +12,14 @@
 class Smarty_Internal_Method_GetDebugTemplate
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */
     public $objMap = 3;
 
     /**
-     * return name of debugging template
+     * return name of debugging templates
      *
      * @api Smarty::getDebugTemplate()
      *

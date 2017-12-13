@@ -121,7 +121,7 @@ class Smarty_Internal_Extension_Handler
      */
     public function __get($property_name)
     {
-        // object properties of runtime template extensions will start with '_'
+        // object properties of runtime templates extensions will start with '_'
         if ($property_name[ 0 ] == '_') {
             $class = 'Smarty_Internal_Runtime_' . ucfirst(substr($property_name, 1));
         } else {

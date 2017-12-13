@@ -41,11 +41,11 @@ class Smarty_Internal_Resource_Php extends Smarty_Internal_Resource_File
     }
 
     /**
-     * Load template's source from file into current template object
+     * Load templates's source from file into current templates object
      *
      * @param  Smarty_Template_Source $source source object
      *
-     * @return string                 template source
+     * @return string                 templates source
      * @throws SmartyException        if source cannot be loaded
      */
     public function getContent(Smarty_Template_Source $source)
@@ -53,17 +53,17 @@ class Smarty_Internal_Resource_Php extends Smarty_Internal_Resource_File
         if ($source->exists) {
             return '';
         }
-        throw new SmartyException("Unable to read template {$source->type} '{$source->name}'");
+        throw new SmartyException("Unable to read templates {$source->type} '{$source->name}'");
     }
 
     /**
-     * Render and output the template (without using the compiler)
+     * Render and output the templates (without using the compiler)
      *
      * @param  Smarty_Template_Source   $source    source object
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      *
      * @return void
-     * @throws SmartyException          if template cannot be loaded or allow_php_templates is disabled
+     * @throws SmartyException          if templates cannot be loaded or allow_php_templates is disabled
      */
     public function renderUncompiled(Smarty_Template_Source $source, Smarty_Internal_Template $_template)
     {
@@ -72,14 +72,14 @@ class Smarty_Internal_Resource_Php extends Smarty_Internal_Resource_File
         }
         if (!$source->exists) {
             $parentIsTpl = isset($this->parent) && $this->parent->_objType == 2;
-            throw new SmartyException("Unable to load template {$source->type} '{$source->name}'" .
+            throw new SmartyException("Unable to load templates {$source->type} '{$source->name}'" .
                                       ($parentIsTpl ? " in '{$this->parent->template_resource}'" : ''));
         }
 
         // prepare variables
         extract($_template->getTemplateVars());
 
-        // include PHP template with short open tags enabled
+        // include PHP templates with short open tags enabled
         ini_set('short_open_tag', '1');
         /** @var Smarty_Internal_Template $_smarty_template
          * used in included file
@@ -93,7 +93,7 @@ class Smarty_Internal_Resource_Php extends Smarty_Internal_Resource_File
      * populate compiled object with compiled filepath
      *
      * @param Smarty_Template_Compiled $compiled  compiled object
-     * @param Smarty_Internal_Template $_template template object (is ignored)
+     * @param Smarty_Internal_Template $_template templates object (is ignored)
      */
     public function populateCompiledFilepath(Smarty_Template_Compiled $compiled, Smarty_Internal_Template $_template)
     {

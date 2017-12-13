@@ -1,7 +1,7 @@
 <?php
 /**
  * Smarty Internal Plugin Templateparser Parse Tree
- * These are classes to build parse tree in the template parser
+ * These are classes to build parse tree in the templates parser
  *
  * @package    Smarty
  * @subpackage Compiler
@@ -20,14 +20,14 @@ class Smarty_Internal_ParseTree_Template extends Smarty_Internal_ParseTree
 {
 
     /**
-     * Array of template elements
+     * Array of templates elements
      *
      * @var array
      */
     public $subtrees = Array();
 
     /**
-     * Create root of parse tree for template elements
+     * Create root of parse tree for templates elements
      *
      */
     public function __construct()
@@ -82,7 +82,7 @@ class Smarty_Internal_ParseTree_Template extends Smarty_Internal_ParseTree
      *
      * @param \Smarty_Internal_Templateparser $parser
      *
-     * @return string template code content
+     * @return string templates code content
      */
     public function to_smarty_php(Smarty_Internal_Templateparser $parser)
     {

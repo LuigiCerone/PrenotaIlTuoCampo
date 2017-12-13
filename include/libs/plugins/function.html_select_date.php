@@ -89,7 +89,7 @@ function smarty_function_html_select_date($params)
     $month_size = null;
     $year_size = null;
     /* Unparsed attributes common to *ALL* the <select>/<input> tags.
-       An example might be in the template: all_extra ='class ="foo"'. */
+       An example might be in the templates: all_extra ='class ="foo"'. */
     $all_extra = null;
     /* Separate attributes for the tags. */
     $day_extra = null;

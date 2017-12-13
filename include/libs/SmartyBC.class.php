@@ -1,6 +1,6 @@
 <?php
 /**
- * Project:     Smarty: the PHP compiling template engine
+ * Project:     Smarty: the PHP compiling templates engine
  * File:        SmartyBC.class.php
  * SVN:         $Id: $
  * This library is free software; you can redistribute it and/or
@@ -63,7 +63,7 @@ class SmartyBC extends Smarty
     /**
      * wrapper for assign_by_ref
      *
-     * @param string $tpl_var the template variable name
+     * @param string $tpl_var the templates variable name
      * @param mixed  &$value  the referenced value to assign
      */
     public function assign_by_ref($tpl_var, &$value)
@@ -74,7 +74,7 @@ class SmartyBC extends Smarty
     /**
      * wrapper for append_by_ref
      *
-     * @param string  $tpl_var the template variable name
+     * @param string  $tpl_var the templates variable name
      * @param mixed   &$value  the referenced value to append
      * @param boolean $merge   flag if array elements shall be merged
      */
@@ -84,9 +84,9 @@ class SmartyBC extends Smarty
     }
 
     /**
-     * clear the given assigned template variable.
+     * clear the given assigned templates variable.
      *
-     * @param string $tpl_var the template variable to clear
+     * @param string $tpl_var the templates variable to clear
      */
     public function clear_assign($tpl_var)
     {
@@ -96,7 +96,7 @@ class SmartyBC extends Smarty
     /**
      * Registers custom function to be used in templates
      *
-     * @param string $function      the name of the template function
+     * @param string $function      the name of the templates function
      * @param string $function_impl the name of the PHP function to register
      * @param bool   $cacheable
      * @param mixed  $cache_attrs
@@ -109,7 +109,7 @@ class SmartyBC extends Smarty
     /**
      * Unregister custom function
      *
-     * @param string $function name of template function
+     * @param string $function name of templates function
      */
     public function unregister_function($function)
     {
@@ -119,7 +119,7 @@ class SmartyBC extends Smarty
     /**
      * Registers object to be used in templates
      *
-     * @param string  $object        name of template object
+     * @param string  $object        name of templates object
      * @param object  $object_impl   the referenced PHP object to register
      * @param array   $allowed       list of allowed methods (empty = all)
      * @param boolean $smarty_args   smarty argument format, else traditional
@@ -139,7 +139,7 @@ class SmartyBC extends Smarty
     /**
      * Unregister object
      *
-     * @param string $object name of template object
+     * @param string $object name of templates object
      */
     public function unregister_object($object)
     {
@@ -149,7 +149,7 @@ class SmartyBC extends Smarty
     /**
      * Registers block function to be used in templates
      *
-     * @param string $block      name of template block
+     * @param string $block      name of templates block
      * @param string $block_impl PHP function to register
      * @param bool   $cacheable
      * @param mixed  $cache_attrs
@@ -162,7 +162,7 @@ class SmartyBC extends Smarty
     /**
      * Unregister block function
      *
-     * @param string $block name of template function
+     * @param string $block name of templates function
      */
     public function unregister_block($block)
     {
@@ -172,7 +172,7 @@ class SmartyBC extends Smarty
     /**
      * Registers compiler function
      *
-     * @param string $function      name of template function
+     * @param string $function      name of templates function
      * @param string $function_impl name of PHP function to register
      * @param bool   $cacheable
      */
@@ -184,7 +184,7 @@ class SmartyBC extends Smarty
     /**
      * Unregister compiler function
      *
-     * @param string $function name of template function
+     * @param string $function name of templates function
      */
     public function unregister_compiler_function($function)
     {
@@ -194,7 +194,7 @@ class SmartyBC extends Smarty
     /**
      * Registers modifier to be used in templates
      *
-     * @param string $modifier      name of template modifier
+     * @param string $modifier      name of templates modifier
      * @param string $modifier_impl name of PHP function to register
      */
     public function register_modifier($modifier, $modifier_impl)
@@ -205,7 +205,7 @@ class SmartyBC extends Smarty
     /**
      * Unregister modifier
      *
-     * @param string $modifier name of template modifier
+     * @param string $modifier name of templates modifier
      */
     public function unregister_modifier($modifier)
     {
@@ -213,7 +213,7 @@ class SmartyBC extends Smarty
     }
 
     /**
-     * Registers a resource to fetch a template
+     * Registers a resource to fetch a templates
      *
      * @param string $type      name of resource
      * @param array  $functions array of functions to handle resource
@@ -235,7 +235,7 @@ class SmartyBC extends Smarty
 
     /**
      * Registers a prefilter function to apply
-     * to a template before compiling
+     * to a templates before compiling
      *
      * @param callable $function
      */
@@ -256,7 +256,7 @@ class SmartyBC extends Smarty
 
     /**
      * Registers a postfilter function to apply
-     * to a compiled template after compilation
+     * to a compiled templates after compilation
      *
      * @param callable $function
      */
@@ -277,7 +277,7 @@ class SmartyBC extends Smarty
 
     /**
      * Registers an output filter function to apply
-     * to a template output
+     * to a templates output
      *
      * @param callable $function
      */
@@ -308,9 +308,9 @@ class SmartyBC extends Smarty
     }
 
     /**
-     * clear cached content for the given template and cache id
+     * clear cached content for the given templates and cache id
      *
-     * @param  string $tpl_file   name of template file
+     * @param  string $tpl_file   name of templates file
      * @param  string $cache_id   name of cache_id
      * @param  string $compile_id name of compile_id
      * @param  string $exp_time   expiration time
@@ -335,9 +335,9 @@ class SmartyBC extends Smarty
     }
 
     /**
-     * test to see if valid cache exists for this template
+     * test to see if valid cache exists for this templates
      *
-     * @param  string $tpl_file name of template file
+     * @param  string $tpl_file name of templates file
      * @param  string $cache_id
      * @param  string $compile_id
      *
@@ -349,7 +349,7 @@ class SmartyBC extends Smarty
     }
 
     /**
-     * clear all the assigned template variables.
+     * clear all the assigned templates variables.
      */
     public function clear_all_assign()
     {
@@ -357,8 +357,8 @@ class SmartyBC extends Smarty
     }
 
     /**
-     * clears compiled version of specified template resource,
-     * or all compiled template files if one is not specified.
+     * clears compiled version of specified templates resource,
+     * or all compiled templates files if one is not specified.
      * This function is for advanced use only, not normally needed.
      *
      * @param  string $tpl_file
@@ -373,7 +373,7 @@ class SmartyBC extends Smarty
     }
 
     /**
-     * Checks whether requested template exists.
+     * Checks whether requested templates exists.
      *
      * @param  string $tpl_file
      *
@@ -385,7 +385,7 @@ class SmartyBC extends Smarty
     }
 
     /**
-     * Returns an array containing template variables
+     * Returns an array containing templates variables
      *
      * @param  string $name
      *

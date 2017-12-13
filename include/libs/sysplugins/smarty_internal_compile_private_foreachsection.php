@@ -95,7 +95,7 @@ class Smarty_Internal_Compile_Private_ForeachSection extends Smarty_Internal_Com
         $this->propertyPreg .= ')\W~i';
         // Template source
         $this->matchTemplateSource($compiler);
-        // Parent template source
+        // Parent templates source
         $this->matchParentTemplateSource($compiler);
         // {block} source
         $this->matchBlockSource($compiler);
@@ -148,7 +148,7 @@ class Smarty_Internal_Compile_Private_ForeachSection extends Smarty_Internal_Com
     }
 
     /**
-     * Find matches in template source
+     * Find matches in templates source
      *
      * @param \Smarty_Internal_TemplateCompilerBase $compiler
      */
@@ -158,18 +158,18 @@ class Smarty_Internal_Compile_Private_ForeachSection extends Smarty_Internal_Com
     }
 
     /**
-     * Find matches in all parent template source
+     * Find matches in all parent templates source
      *
      * @param \Smarty_Internal_TemplateCompilerBase $compiler
      */
     public function matchParentTemplateSource(Smarty_Internal_TemplateCompilerBase $compiler)
     {
-        // search parent compiler template source
+        // search parent compiler templates source
         $nextCompiler = $compiler;
         while ($nextCompiler !== $nextCompiler->parent_compiler) {
             $nextCompiler = $nextCompiler->parent_compiler;
             if ($compiler !== $nextCompiler) {
-                // get template source
+                // get templates source
                 $_content = $nextCompiler->template->source->getContent();
                 if ($_content != '') {
                     // run pre filter if required

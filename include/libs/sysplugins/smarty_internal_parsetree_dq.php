@@ -68,7 +68,7 @@ class Smarty_Internal_ParseTree_Dq extends Smarty_Internal_ParseTree
      *
      * @param \Smarty_Internal_Templateparser $parser
      *
-     * @return string compiled template code
+     * @return string compiled templates code
      */
     public function to_smarty_php(Smarty_Internal_Templateparser $parser)
     {

@@ -11,17 +11,17 @@
 class Smarty_Internal_Runtime_TplFunction
 {
     /**
-     * Array of source information for known template functions
+     * Array of source information for known templates functions
      *
      * @var array
      */
     private $tplFunctions = array();
 
     /**
-     * Call template function
+     * Call templates function
      *
-     * @param \Smarty_Internal_Template $tpl     template object
-     * @param string                    $name    template function name
+     * @param \Smarty_Internal_Template $tpl     templates object
+     * @param string                    $name    templates function name
      * @param array                     $params  parameter array
      * @param bool                      $nocache true if called nocache
      *
@@ -45,7 +45,7 @@ class Smarty_Internal_Runtime_TplFunction
                 $this->restoreTemplateVariables($tpl, $name);
                 return;
             }
-            // try to load template function dynamically
+            // try to load templates function dynamically
             if ($this->addTplFuncToCache($tpl, $name, $function)) {
                 $this->saveTemplateVariables($tpl, $name);
                 $function ($tpl, $params);
@@ -53,20 +53,20 @@ class Smarty_Internal_Runtime_TplFunction
                 return;
             }
         }
-        throw new SmartyException("Unable to find template function '{$name}'");
+        throw new SmartyException("Unable to find templates function '{$name}'");
     }
 
     /**
-     * Register template functions defined by template
+     * Register templates functions defined by templates
      *
      * @param \Smarty_Internal_Template $tpl
-     * @param  array                    $tplFunctions source information array of template functions defined in template
+     * @param  array                    $tplFunctions source information array of templates functions defined in templates
      */
     public function registerTplFunctions(Smarty_Internal_Template $tpl, $tplFunctions)
     {
         $this->tplFunctions = array_merge($this->tplFunctions, $tplFunctions);
         $ptr = $tpl;
-        // make sure that the template functions are known in parent templates
+        // make sure that the templates functions are known in parent templates
         while (isset($ptr->parent) && $ptr->parent->_objType === 2 && !isset($ptr->ext->_tplFunction)) {
             $ptr->ext->_tplFunction = $this;
             $ptr = $ptr->parent;
@@ -74,9 +74,9 @@ class Smarty_Internal_Runtime_TplFunction
     }
 
     /**
-     * Return source parameter array for single or all template functions
+     * Return source parameter array for single or all templates functions
      *
-     * @param null|string $name template function name
+     * @param null|string $name templates function name
      *
      * @return array|bool|mixed
      */
@@ -91,10 +91,10 @@ class Smarty_Internal_Runtime_TplFunction
 
     /**
      *
-     * Add template function to cache file for nocache calls
+     * Add templates function to cache file for nocache calls
      *
      * @param Smarty_Internal_Template $tpl
-     * @param string                   $_name     template function name
+     * @param string                   $_name     templates function name
      * @param string                   $_function PHP function name
      *
      * @return bool
@@ -105,7 +105,7 @@ class Smarty_Internal_Runtime_TplFunction
         if (is_file($funcParam[ 'compiled_filepath' ])) {
             // read compiled file
             $code = file_get_contents($funcParam[ 'compiled_filepath' ]);
-            // grab template function
+            // grab templates function
             if (preg_match("/\/\* {$_function} \*\/([\S\s]*?)\/\*\/ {$_function} \*\//", $code, $match)) {
                 // grab source info from file dependency
                 preg_match("/\s*'{$funcParam['uid']}'([\S\s]*?)\),/", $code, $match1);
@@ -113,12 +113,12 @@ class Smarty_Internal_Runtime_TplFunction
                 // make PHP function known
                 eval($match[ 0 ]);
                 if (function_exists($_function)) {
-                    // search cache file template
+                    // search cache file templates
                     $tplPtr = $tpl;
                     while (!isset($tplPtr->cached) && isset($tplPtr->parent)) {
                         $tplPtr = $tplPtr->parent;
                     }
-                    // add template function code to cache file
+                    // add templates function code to cache file
                     if (isset($tplPtr->cached)) {
                         /* @var Smarty_CacheResource $cache */
                         $cache = $tplPtr->cached;
@@ -143,7 +143,7 @@ class Smarty_Internal_Runtime_TplFunction
     }
 
     /**
-     * Save current template variables on stack
+     * Save current templates variables on stack
      *
      * @param \Smarty_Internal_Template $tpl
      * @param  string                   $name stack name
@@ -155,7 +155,7 @@ class Smarty_Internal_Runtime_TplFunction
     }
 
     /**
-     * Restore saved variables into template objects
+     * Restore saved variables into templates objects
      *
      * @param \Smarty_Internal_Template $tpl
      * @param  string                   $name stack name

@@ -12,14 +12,14 @@
 class Smarty_Internal_Method_UnregisterResource
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */
     public $objMap = 3;
 
     /**
-     * Registers a resource to fetch a template
+     * Registers a resource to fetch a templates
      *
      * @api  Smarty::unregisterResource()
      * @link http://www.smarty.net/docs/en/api.unregister.resource.tpl

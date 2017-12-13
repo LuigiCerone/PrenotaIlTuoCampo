@@ -12,7 +12,7 @@ class Smarty_Internal_Runtime_UpdateScope
 {
 
     /**
-     * Update new assigned template or config variable in other effected scopes
+     * Update new assigned templates or config variable in other effected scopes
      *
      * @param Smarty_Internal_Template $tpl     data object
      * @param string|null              $varName variable name
@@ -44,7 +44,7 @@ class Smarty_Internal_Runtime_UpdateScope
      * Get array of objects which needs to be updated  by given scope value
      *
      * @param Smarty_Internal_Template $tpl
-     * @param int                      $mergedScope merged tag and template scope to which bubble up variable value
+     * @param int                      $mergedScope merged tag and templates scope to which bubble up variable value
      *
      * @return array
      */
@@ -84,7 +84,7 @@ class Smarty_Internal_Runtime_UpdateScope
     /**
      * Update varibale in other scope
      *
-     * @param array     $tpl_vars template variable array
+     * @param array     $tpl_vars templates variable array
      * @param \Smarty_Internal_Template $from
      * @param string               $varName variable name
      */
@@ -99,7 +99,7 @@ class Smarty_Internal_Runtime_UpdateScope
     }
 
     /**
-     * Update variable in template local variable stack
+     * Update variable in templates local variable stack
      *
      * @param \Smarty_Internal_Template $tpl
      * @param string|null               $varName variable name or null for config variables

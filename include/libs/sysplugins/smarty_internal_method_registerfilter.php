@@ -12,7 +12,7 @@
 class Smarty_Internal_Method_RegisterFilter
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */

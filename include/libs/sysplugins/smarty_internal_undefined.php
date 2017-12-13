@@ -13,12 +13,12 @@ class Smarty_Internal_Undefined
 {
 
     /**
-     * This function is executed automatically when a compiled or cached template file is included
-     * - Decode saved properties from compiled template and cache files
+     * This function is executed automatically when a compiled or cached templates file is included
+     * - Decode saved properties from compiled templates and cache files
      * - Check if compiled or cache file is valid
      *
      * @param  \Smarty_Internal_Template $tpl
-     * @param  array                     $properties special template properties
+     * @param  array                     $properties special templates properties
      * @param  bool                      $cache      flag if called from cache file
      *
      * @return bool flag if compiled or cache file is valid

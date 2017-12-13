@@ -19,7 +19,7 @@ class Smarty_Internal_Method_GetTemplateVars
     public $objMap = 7;
 
     /**
-     * Returns a single or all template variables
+     * Returns a single or all templates variables
      *
      * @api  Smarty::getTemplateVars()
      * @link http://www.smarty.net/docs/en/api.get.template.vars.tpl

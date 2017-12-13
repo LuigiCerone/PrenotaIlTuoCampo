@@ -143,7 +143,7 @@ class Smarty_Internal_Config_File_Compiler
         if ($this->smarty->debugging) {
             $this->smarty->_debug->end_compile($this->template);
         }
-        // template header code
+        // templates header code
         $template_header =
             "<?php /* Smarty version " . Smarty::SMARTY_VERSION . ", created on " . strftime("%Y-%m-%d %H:%M:%S") .
             "\n";

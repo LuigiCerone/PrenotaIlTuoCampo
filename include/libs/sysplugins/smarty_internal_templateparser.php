@@ -81,7 +81,7 @@ class TP_yyStackEntry
 /**
  * Smarty Template Parser Class
  *
- * This is the template parser.
+ * This is the templates parser.
  * It is generated from the smarty_internal_templateparser.y file
  *
  * @author Uwe Tews <uwe.tews@googlemail.com>
@@ -94,7 +94,7 @@ class Smarty_Internal_Templateparser
 
     const Err2 = "Security error: Call to dynamic object member not allowed";
 
-    const Err3 = "PHP in template not allowed. Use SmartyBC to enable it";
+    const Err3 = "PHP in templates not allowed. Use SmartyBC to enable it";
 
     /**
      * result status
@@ -179,7 +179,7 @@ class Smarty_Internal_Templateparser
     public $smarty = null;
 
     /**
-     * template object
+     * templates object
      *
      * @var Smarty_Internal_Template
      */
@@ -200,7 +200,7 @@ class Smarty_Internal_Templateparser
     public $security = null;
 
     /**
-     * template prefix array
+     * templates prefix array
      *
      * @var \Smarty_Internal_ParseTree[]
      */
@@ -907,7 +907,7 @@ class Smarty_Internal_Templateparser
                                 'CLOSEP', 'MATH', 'UNIMATH', 'ISIN', 'QMARK', 'NOT', 'TYPECAST', 'HEX', 'DOT',
                                 'INSTANCEOF', 'SINGLEQUOTESTRING', 'DOUBLECOLON', 'NAMESPACE', 'AT', 'HATCH', 'OPENB',
                                 'CLOSEB', 'DOLLAR', 'LOGOP', 'SLOGOP', 'TLOGOP', 'SINGLECOND', 'QUOTE', 'BACKTICK',
-                                'error', 'start', 'template', 'template_element', 'smartytag', 'literal',
+                                'error', 'start', 'templates', 'template_element', 'smartytag', 'literal',
                                 'text_content', 'literal_elements', 'literal_element', 'tag', 'variable', 'attributes',
                                 'value', 'expr', 'varindexed', 'modifierlist', 'statement', 'statements', 'foraction',
                                 'varvar', 'modparameters', 'attribute', 'ternary', 'array', 'tlop', 'lop', 'scond',
@@ -916,8 +916,8 @@ class Smarty_Internal_Templateparser
                                 'params', 'modifier', 'modparameter', 'arrayelements', 'arrayelement', 'doublequoted',
                                 'doublequotedcontent',);
 
-    public static $yyRuleName = array('start ::= template', 'template ::= template_element',
-                                      'template ::= template template_element', 'template ::=',
+    public static $yyRuleName = array('start ::= templates', 'templates ::= template_element',
+                                      'templates ::= templates template_element', 'templates ::=',
                                       'template_element ::= smartytag', 'template_element ::= literal',
                                       'template_element ::= PHP', 'template_element ::= NOCACHE',
                                       'template_element ::= text_content', 'text_content ::= TEXT',
@@ -1317,7 +1317,7 @@ class Smarty_Internal_Templateparser
             #line 207 "../smarty/lexer/smarty_internal_templateparser.y"
 
             $this->internalError = true;
-            $this->compiler->trigger_template_error("Stack overflow in template parser");
+            $this->compiler->trigger_template_error("Stack overflow in templates parser");
 
             return;
         }

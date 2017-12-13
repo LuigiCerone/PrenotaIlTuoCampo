@@ -1,7 +1,7 @@
 <?php
 /**
  * Smarty Internal Extension
- * This file contains the Smarty template extension to create a code frame
+ * This file contains the Smarty templates extension to create a code frame
  *
  * @package    Smarty
  * @subpackage Template
@@ -18,8 +18,8 @@ class Smarty_Internal_Runtime_CodeFrame
      * Create code frame for compiled and cached templates
      *
      * @param Smarty_Internal_Template              $_template
-     * @param string                                $content   optional template content
-     * @param string                                $functions compiled template function and block code
+     * @param string                                $content   optional templates content
+     * @param string                                $functions compiled templates function and block code
      * @param bool                                  $cache     flag for cache file
      * @param \Smarty_Internal_TemplateCompilerBase $compiler
      *

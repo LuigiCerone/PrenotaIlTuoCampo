@@ -10,7 +10,7 @@
 
 /**
  * Smarty Internal Plugin Resource String
- * Implements the strings as resource for Smarty template
+ * Implements the strings as resource for Smarty templates
  * {@internal unlike eval-include the compiled state of string-include is saved for subsequent access}}
  *
  * @package    Smarty
@@ -22,7 +22,7 @@ class Smarty_Internal_Resource_String extends Smarty_Resource
      * populate Source Object with meta data from Resource
      *
      * @param  Smarty_Template_Source   $source    source object
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      *
      * @return void
      */
@@ -33,13 +33,13 @@ class Smarty_Internal_Resource_String extends Smarty_Resource
     }
 
     /**
-     * Load template's source from $resource_name into current template object
+     * Load templates's source from $resource_name into current templates object
      *
      * @uses decode() to decode base64 and urlencoded template_resources
      *
      * @param  Smarty_Template_Source $source source object
      *
-     * @return string                 template source
+     * @return string                 templates source
      */
     public function getContent(Smarty_Template_Source $source)
     {

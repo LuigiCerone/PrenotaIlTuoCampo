@@ -12,7 +12,7 @@
 class Smarty_Internal_Method_UnregisterPlugin
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */
@@ -26,7 +26,7 @@ class Smarty_Internal_Method_UnregisterPlugin
      *
      * @param \Smarty_Internal_TemplateBase|\Smarty_Internal_Template|\Smarty $obj
      * @param  string                                                         $type plugin type
-     * @param  string                                                         $name name of template tag
+     * @param  string                                                         $name name of templates tag
      *
      * @return \Smarty|\Smarty_Internal_Template
      */

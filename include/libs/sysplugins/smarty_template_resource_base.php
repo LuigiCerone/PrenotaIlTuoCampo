@@ -45,14 +45,14 @@ abstract class Smarty_Template_Resource_Base
     public $processed = false;
 
     /**
-     * unique function name for compiled template code
+     * unique function name for compiled templates code
      *
      * @var string
      */
     public $unifunc = '';
 
     /**
-     * flag if template does contain nocache code sections
+     * flag if templates does contain nocache code sections
      *
      * @var bool
      */
@@ -96,15 +96,15 @@ abstract class Smarty_Template_Resource_Base
     /**
      * Process resource
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      */
     abstract public function process(Smarty_Internal_Template $_template);
 
     /**
-     * get rendered template content by calling compiled or cached template code
+     * get rendered templates content by calling compiled or cached templates code
      *
      * @param \Smarty_Internal_Template $_template
-     * @param string                    $unifunc function with template code
+     * @param string                    $unifunc function with templates code
      *
      * @throws \Exception
      */
@@ -118,7 +118,7 @@ abstract class Smarty_Template_Resource_Base
                 $unifunc = $this->unifunc;
             }
             if (empty($unifunc) || !function_exists($unifunc)) {
-                throw new SmartyException("Invalid compiled template for '{$_template->template_resource}'");
+                throw new SmartyException("Invalid compiled templates for '{$_template->template_resource}'");
             }
             if ($_template->startRenderCallbacks) {
                 foreach ($_template->startRenderCallbacks as $callback) {

@@ -12,15 +12,15 @@
 class Smarty_Internal_Method_MustCompile
 {
     /**
-     * Valid for template object
+     * Valid for templates object
      *
      * @var int
      */
     public $objMap = 2;
 
     /**
-     * Returns if the current template must be compiled by the Smarty compiler
-     * It does compare the timestamps of template source and the compiled templates and checks the force compile
+     * Returns if the current templates must be compiled by the Smarty compiler
+     * It does compare the timestamps of templates source and the compiled templates and checks the force compile
      * configuration
      *
      * @param \Smarty_Internal_Template $_template
@@ -36,7 +36,7 @@ class Smarty_Internal_Method_MustCompile
             } else {
                 $parent_resource = '';
             }
-            throw new SmartyException("Unable to load template {$_template->source->type} '{$_template->source->name}'{$parent_resource}");
+            throw new SmartyException("Unable to load templates {$_template->source->type} '{$_template->source->name}'{$parent_resource}");
         }
         if ($_template->mustCompile === null) {
             $_template->mustCompile = (!$_template->source->handler->uncompiled &&

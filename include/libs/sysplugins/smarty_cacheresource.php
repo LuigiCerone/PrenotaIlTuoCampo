@@ -26,7 +26,7 @@ abstract class Smarty_CacheResource
      * populate Cached Object with meta data from Resource
      *
      * @param Smarty_Template_Cached   $cached    cached object
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      *
      * @return void
      */
@@ -42,9 +42,9 @@ abstract class Smarty_CacheResource
     abstract public function populateTimestamp(Smarty_Template_Cached $cached);
 
     /**
-     * Read the cached template and process header
+     * Read the cached templates and process header
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      * @param Smarty_Template_Cached   $cached    cached object
      * @param boolean                  $update    flag if called because cache update
      *
@@ -54,9 +54,9 @@ abstract class Smarty_CacheResource
                                      $update = false);
 
     /**
-     * Write the rendered template output to cache
+     * Write the rendered templates output to cache
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      * @param string                   $content   content to cache
      *
      * @return boolean success
@@ -64,9 +64,9 @@ abstract class Smarty_CacheResource
     abstract public function writeCachedContent(Smarty_Internal_Template $_template, $content);
 
     /**
-     * Read cached template from cache
+     * Read cached templates from cache
      *
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      *
      * @return string  content
      */
@@ -75,7 +75,7 @@ abstract class Smarty_CacheResource
     /**
      * Return cached content
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      *
      * @return null|string
      */
@@ -102,10 +102,10 @@ abstract class Smarty_CacheResource
     abstract public function clearAll(Smarty $smarty, $exp_time = null);
 
     /**
-     * Empty cache for a specific template
+     * Empty cache for a specific templates
      *
      * @param Smarty  $smarty        Smarty object
-     * @param string  $resource_name template name
+     * @param string  $resource_name templates name
      * @param string  $cache_id      cache id
      * @param string  $compile_id    compile id
      * @param integer $exp_time      expiration time (number of seconds, not timestamp)
@@ -138,7 +138,7 @@ abstract class Smarty_CacheResource
     }
 
     /**
-     * Check is cache is locked for this template
+     * Check is cache is locked for this templates
      *
      * @param Smarty                 $smarty
      * @param Smarty_Template_Cached $cached
@@ -152,7 +152,7 @@ abstract class Smarty_CacheResource
     }
 
     /**
-     * Lock cache for this template
+     * Lock cache for this templates
      *
      * @param Smarty                 $smarty
      * @param Smarty_Template_Cached $cached
@@ -166,7 +166,7 @@ abstract class Smarty_CacheResource
     }
 
     /**
-     * Unlock cache for this template
+     * Unlock cache for this templates
      *
      * @param Smarty                 $smarty
      * @param Smarty_Template_Cached $cached

@@ -18,10 +18,10 @@
 class Smarty_Internal_Resource_File extends Smarty_Resource
 {
     /**
-     * build template filepath by traversing the template_dir array
+     * build templates filepath by traversing the template_dir array
      *
      * @param Smarty_Template_Source    $source    source object
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      *
      * @return string fully qualified filepath
      * @throws SmartyException
@@ -34,18 +34,18 @@ class Smarty_Internal_Resource_File extends Smarty_Resource
             $file = $source->smarty->_realpath($file, true);
             return is_file($file) ? $file : false;
         }
-        // go relative to a given template?
+        // go relative to a given templates?
         if ($file[ 0 ] == '.' && $_template && isset($_template->parent) && $_template->parent->_objType == 2 &&
             preg_match('#^[.]{1,2}[\\\/]#', $file)
         ) {
             if ($_template->parent->source->type != 'file' && $_template->parent->source->type != 'extends' &&
                 !isset($_template->parent->_cache[ 'allow_relative_path' ])
             ) {
-                throw new SmartyException("Template '{$file}' cannot be relative to template of resource type '{$_template->parent->source->type}'");
+                throw new SmartyException("Template '{$file}' cannot be relative to templates of resource type '{$_template->parent->source->type}'");
             }
             // normalize path
             $path = $source->smarty->_realpath(dirname($_template->parent->source->filepath) . DS . $file);
-            // files relative to a template only get one shot
+            // files relative to a templates only get one shot
             return is_file($path) ? $path : false;
         }
         // normalize DS
@@ -111,7 +111,7 @@ class Smarty_Internal_Resource_File extends Smarty_Resource
      * populate Source Object with meta data from Resource
      *
      * @param Smarty_Template_Source   $source    source object
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      */
     public function populate(Smarty_Template_Source $source, Smarty_Internal_Template $_template = null)
     {
@@ -146,11 +146,11 @@ class Smarty_Internal_Resource_File extends Smarty_Resource
     }
 
     /**
-     * Load template's source from file into current template object
+     * Load templates's source from file into current templates object
      *
      * @param  Smarty_Template_Source $source source object
      *
-     * @return string                 template source
+     * @return string                 templates source
      * @throws SmartyException        if source cannot be loaded
      */
     public function getContent(Smarty_Template_Source $source)
@@ -158,7 +158,7 @@ class Smarty_Internal_Resource_File extends Smarty_Resource
         if ($source->exists) {
             return file_get_contents($source->filepath);
         }
-        throw new SmartyException('Unable to read ' . ($source->isConfig ? 'config' : 'template') .
+        throw new SmartyException('Unable to read ' . ($source->isConfig ? 'config' : 'templates') .
                                   " {$source->type} '{$source->name}'");
     }
 

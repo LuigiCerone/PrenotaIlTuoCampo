@@ -53,7 +53,7 @@ class Smarty_Internal_Runtime_UpdateCache
         $content = '';
         // loop over items, stitch back together
         foreach ($cache_split as $curr_idx => $curr_split) {
-            // escape PHP tags in template content
+            // escape PHP tags in templates content
             $content .= preg_replace('/(<%|%>|<\?php|<\?|\?>|<script\s+language\s*=\s*[\"\']?\s*php\s*[\"\']?\s*>)/',
                                      "<?php echo '\$1'; ?>\n", $curr_split);
             if (isset($cache_parts[ 0 ][ $curr_idx ])) {
@@ -131,7 +131,7 @@ class Smarty_Internal_Runtime_UpdateCache
      * Write this cache object to handler
      *
      * @param \Smarty_Template_Cached  $cached
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      * @param string                   $content   content to cache
      *
      * @return bool success

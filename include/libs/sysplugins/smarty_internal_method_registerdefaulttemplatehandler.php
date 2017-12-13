@@ -12,14 +12,14 @@
 class Smarty_Internal_Method_RegisterDefaultTemplateHandler
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */
     public $objMap = 3;
 
     /**
-     * Register template default handler
+     * Register templates default handler
      *
      * @api  Smarty::registerDefaultTemplateHandler()
      *
@@ -35,13 +35,13 @@ class Smarty_Internal_Method_RegisterDefaultTemplateHandler
         if (is_callable($callback)) {
             $smarty->default_template_handler_func = $callback;
         } else {
-            throw new SmartyException("Default template handler not callable");
+            throw new SmartyException("Default templates handler not callable");
         }
         return $obj;
     }
 
     /**
-     * get default content from template or config resource handler
+     * get default content from templates or config resource handler
      *
      * @param Smarty_Template_Source $source
      *
@@ -63,7 +63,7 @@ class Smarty_Internal_Method_RegisterDefaultTemplateHandler
                 $source->timestamp = filemtime($_return);
             } else {
                 throw new SmartyException("Default handler: Unable to load " .
-                                          ($source->isConfig ? 'config' : 'template') .
+                                          ($source->isConfig ? 'config' : 'templates') .
                                           " default file '{$_return}' for '{$source->type}:{$source->name}'");
             }
             $source->name = $source->filepath = $_return;
@@ -75,7 +75,7 @@ class Smarty_Internal_Method_RegisterDefaultTemplateHandler
             $source->handler = Smarty_Resource::load($source->smarty, 'eval');
         } else {
             $source->exists = false;
-            throw new SmartyException('Default handler: No ' . ($source->isConfig ? 'config' : 'template') .
+            throw new SmartyException('Default handler: No ' . ($source->isConfig ? 'config' : 'templates') .
                                       " default content for '{$source->type}:{$source->name}'");
         }
     }

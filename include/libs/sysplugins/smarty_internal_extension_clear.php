@@ -12,10 +12,10 @@
 class Smarty_Internal_Extension_Clear
 {
     /**
-     * Empty cache for a specific template
+     * Empty cache for a specific templates
      *
      * @param Smarty  $smarty
-     * @param string  $resource_name template name
+     * @param string  $resource_name templates name
      * @param string  $cache_id      cache id
      * @param string  $compile_id    compile id
      * @param integer $exp_time      expiration time (number of seconds, not timestamp)
@@ -48,8 +48,8 @@ class Smarty_Internal_Extension_Clear
             $tpl = new $smarty->template_class($resource_name, $smarty);
             $smarty->caching = $_save_stat;
 
-            // remove from template cache
-            $tpl->source; // have the template registered before unset()
+            // remove from templates cache
+            $tpl->source; // have the templates registered before unset()
 
             if ($tpl->source->exists) {
                 $_resourcename_parts = basename(str_replace('^', '/', $tpl->cached->filepath));

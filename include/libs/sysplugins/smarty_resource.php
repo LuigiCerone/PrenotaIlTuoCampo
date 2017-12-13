@@ -54,11 +54,11 @@ abstract class Smarty_Resource
     public $hasCompiledHandler = false;
 
     /**
-     * Load template's source into current template object
+     * Load templates's source into current templates object
      *
      * @param  Smarty_Template_Source $source source object
      *
-     * @return string                 template source
+     * @return string                 templates source
      * @throws SmartyException        if source cannot be loaded
      */
     abstract public function getContent(Smarty_Template_Source $source);
@@ -67,7 +67,7 @@ abstract class Smarty_Resource
      * populate Source Object with meta data from Resource
      *
      * @param Smarty_Template_Source   $source    source object
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      */
     abstract public function populate(Smarty_Template_Source $source, Smarty_Internal_Template $_template = null);
 
@@ -170,7 +170,7 @@ abstract class Smarty_Resource
             return $smarty->_cache[ 'resource_handlers' ][ $type ] = new Smarty_Internal_Resource_Stream();
         }
 
-        // TODO: try default_(template|config)_handler
+        // TODO: try default_(templates|config)_handler
 
         // give up
         throw new SmartyException("Unknown resource type '{$type}'");
@@ -213,7 +213,7 @@ abstract class Smarty_Resource
         list($name, $type) = self::parseResourceName($template_resource, $smarty->default_resource_type);
         // TODO: optimize for Smarty's internal resource types
         $resource = Smarty_Resource::load($smarty, $type);
-        // go relative to a given template?
+        // go relative to a given templates?
         $_file_is_dotted = $name[ 0 ] == '.' && ($name[ 1 ] == '.' || $name[ 1 ] == '/');
         if ($obj->_objType == 2 && $_file_is_dotted &&
             ($obj->source->type == 'file' || $obj->parent->source->type == 'extends')
@@ -239,7 +239,7 @@ abstract class Smarty_Resource
      * wrapper for backward compatibility to versions < 3.1.22
      * Either [$_template] or [$smarty, $template_resource] must be specified
      *
-     * @param  Smarty_Internal_Template $_template         template object
+     * @param  Smarty_Internal_Template $_template         templates object
      * @param  Smarty                   $smarty            smarty object
      * @param  string                   $template_resource resource identifier
      *

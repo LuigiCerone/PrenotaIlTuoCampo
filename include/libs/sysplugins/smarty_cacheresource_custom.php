@@ -19,7 +19,7 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
      * fetch cached content and its modification time from data source
      *
      * @param  string  $id         unique cache content identifier
-     * @param  string  $name       template name
+     * @param  string  $name       templates name
      * @param  string  $cache_id   cache id
      * @param  string  $compile_id compile id
      * @param  string  $content    cached content
@@ -35,11 +35,11 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
      *  Only implement it if modification times can be accessed faster than loading the complete cached content.}}
      *
      * @param  string $id         unique cache content identifier
-     * @param  string $name       template name
+     * @param  string $name       templates name
      * @param  string $cache_id   cache id
      * @param  string $compile_id compile id
      *
-     * @return integer|boolean timestamp (epoch) the template was modified, or false if not found
+     * @return integer|boolean timestamp (epoch) the templates was modified, or false if not found
      */
     protected function fetchTimestamp($id, $name, $cache_id, $compile_id)
     {
@@ -50,7 +50,7 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
      * Save content to cache
      *
      * @param  string       $id         unique cache content identifier
-     * @param  string       $name       template name
+     * @param  string       $name       templates name
      * @param  string       $cache_id   cache id
      * @param  string       $compile_id compile id
      * @param  integer|null $exp_time   seconds till expiration or null
@@ -63,7 +63,7 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
     /**
      * Delete content from cache
      *
-     * @param  string|null  $name       template name
+     * @param  string|null  $name       templates name
      * @param  string|null  $cache_id   cache id
      * @param  string|null  $compile_id compile id
      * @param  integer|null $exp_time   seconds till expiration time in seconds or null
@@ -76,7 +76,7 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
      * populate Cached Object with meta data from Resource
      *
      * @param  Smarty_Template_Cached   $cached    cached object
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      *
      * @return void
      */
@@ -117,9 +117,9 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
     }
 
     /**
-     * Read the cached template and process the header
+     * Read the cached templates and process the header
      *
-     * @param \Smarty_Internal_Template $_smarty_tpl do not change variable name, is used by compiled template
+     * @param \Smarty_Internal_Template $_smarty_tpl do not change variable name, is used by compiled templates
      * @param  Smarty_Template_Cached   $cached      cached object
      * @param boolean                   $update      flag if called because cache update
      *
@@ -147,9 +147,9 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
     }
 
     /**
-     * Write the rendered template output to cache
+     * Write the rendered templates output to cache
      *
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      * @param  string                   $content   content to cache
      *
      * @return boolean                  success
@@ -161,9 +161,9 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
     }
 
     /**
-     * Read cached template from cache
+     * Read cached templates from cache
      *
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      *
      * @return string|boolean  content
      */
@@ -196,10 +196,10 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
     }
 
     /**
-     * Empty cache for a specific template
+     * Empty cache for a specific templates
      *
      * @param  Smarty  $smarty        Smarty object
-     * @param  string  $resource_name template name
+     * @param  string  $resource_name templates name
      * @param  string  $cache_id      cache id
      * @param  string  $compile_id    compile id
      * @param  integer $exp_time      expiration time (number of seconds, not timestamp)
@@ -223,7 +223,7 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
     }
 
     /**
-     * Check is cache is locked for this template
+     * Check is cache is locked for this templates
      *
      * @param  Smarty                 $smarty Smarty object
      * @param  Smarty_Template_Cached $cached cached object
@@ -243,7 +243,7 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
     }
 
     /**
-     * Lock cache for this template
+     * Lock cache for this templates
      *
      * @param Smarty                 $smarty Smarty object
      * @param Smarty_Template_Cached $cached cached object
@@ -259,7 +259,7 @@ abstract class Smarty_CacheResource_Custom extends Smarty_CacheResource
     }
 
     /**
-     * Unlock cache for this template
+     * Unlock cache for this templates
      *
      * @param Smarty                 $smarty Smarty object
      * @param Smarty_Template_Cached $cached cached object

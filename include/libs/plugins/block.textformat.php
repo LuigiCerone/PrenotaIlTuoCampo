@@ -27,7 +27,7 @@
  *
  * @param array                    $params   parameters
  * @param string                   $content  contents of the block
- * @param Smarty_Internal_Template $template template object
+ * @param Smarty_Internal_Template $template templates object
  * @param boolean                  &$repeat  repeat flag
  *
  * @return string content re-formatted

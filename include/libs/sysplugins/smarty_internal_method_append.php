@@ -19,13 +19,13 @@ class Smarty_Internal_Method_Append
     public $objMap = 7;
 
     /**
-     * appends values to template variables
+     * appends values to templates variables
      *
      * @api  Smarty::append()
      * @link http://www.smarty.net/docs/en/api.append.tpl
      *
      * @param \Smarty_Internal_Data|\Smarty_Internal_Template|\Smarty $data
-     * @param  array|string                                           $tpl_var the template variable name(s)
+     * @param  array|string                                           $tpl_var the templates variable name(s)
      * @param  mixed                                                  $value   the value to append
      * @param  bool                                                   $merge   flag if array elements shall be merged
      * @param  bool                                                   $nocache if true any output of this variable will

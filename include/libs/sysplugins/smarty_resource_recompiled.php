@@ -31,9 +31,9 @@ abstract class Smarty_Resource_Recompiled extends Smarty_Resource
     public $hasCompiledHandler = true;
 
     /**
-     * compile template from source
+     * compile templates from source
      *
-     * @param Smarty_Internal_Template $_smarty_tpl do not change variable name, is used by compiled template
+     * @param Smarty_Internal_Template $_smarty_tpl do not change variable name, is used by compiled templates
      *
      * @throws Exception
      */
@@ -69,7 +69,7 @@ abstract class Smarty_Resource_Recompiled extends Smarty_Resource
      * populate Compiled Object with compiled filepath
      *
      * @param  Smarty_Template_Compiled $compiled  compiled object
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      *
      * @return void
      */

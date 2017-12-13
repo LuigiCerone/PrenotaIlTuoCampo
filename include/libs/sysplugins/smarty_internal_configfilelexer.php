@@ -134,7 +134,7 @@ class Smarty_Internal_Configfilelexer
     /**
      * constructor
      *
-     * @param   string                             $data template source
+     * @param   string                             $data templates source
      * @param Smarty_Internal_Config_File_Compiler $compiler
      */
     function __construct($data, Smarty_Internal_Config_File_Compiler $compiler)

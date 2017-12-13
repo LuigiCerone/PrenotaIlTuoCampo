@@ -10,7 +10,7 @@
 class Smarty_Variable
 {
     /**
-     * template variable
+     * templates variable
      *
      * @var mixed
      */

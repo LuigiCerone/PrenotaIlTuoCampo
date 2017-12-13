@@ -17,7 +17,7 @@
  *         (Smarty online manual)
  *
  * @param array                    $params   parameters
- * @param Smarty_Internal_Template $template template object
+ * @param Smarty_Internal_Template $template templates object
  *
  * @return string|null
  */

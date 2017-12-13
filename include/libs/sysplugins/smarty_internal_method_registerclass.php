@@ -12,7 +12,7 @@
 class Smarty_Internal_Method_RegisterClass
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */
@@ -37,7 +37,7 @@ class Smarty_Internal_Method_RegisterClass
         $smarty = isset($obj->smarty) ? $obj->smarty : $obj;
         // test if exists
         if (!class_exists($class_impl)) {
-            throw new SmartyException("Undefined class '$class_impl' in register template class");
+            throw new SmartyException("Undefined class '$class_impl' in register templates class");
         }
         // register the class
         $smarty->registered_classes[ $class_name ] = $class_impl;

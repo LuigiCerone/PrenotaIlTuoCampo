@@ -38,7 +38,7 @@
  * @version    1.0
  *
  * @param array  $params   parameters
- * @param object $template template object
+ * @param object $template templates object
  *
  * @return string
  * @uses       smarty_function_escape_special_chars()

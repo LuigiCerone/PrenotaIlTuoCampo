@@ -1,7 +1,7 @@
 <?php
 /**
  * Smarty Internal Plugin Template
- * This file contains the Smarty template engine
+ * This file contains the Smarty templates engine
  *
  * @package    Smarty
  * @subpackage Template
@@ -9,7 +9,7 @@
  */
 
 /**
- * Main class with template data structures and methods
+ * Main class with templates data structures and methods
  *
  * @package    Smarty
  * @subpackage Template
@@ -26,7 +26,7 @@
 class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
 {
     /**
-     * This object type (Smarty = 1, template = 2, data = 4)
+     * This object type (Smarty = 1, templates = 2, data = 4)
      *
      * @var int
      */
@@ -61,7 +61,7 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     public $template_resource = null;
 
     /**
-     * flag if compiled template is invalid and must be (re)compiled
+     * flag if compiled templates is invalid and must be (re)compiled
      *
      * @var bool
      */
@@ -89,25 +89,25 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     public $isRenderingCache = false;
 
     /**
-     * Callbacks called before rendering template
+     * Callbacks called before rendering templates
      *
      * @var callback[]
      */
     public $startRenderCallbacks = array();
 
     /**
-     * Callbacks called after rendering template
+     * Callbacks called after rendering templates
      *
      * @var callback[]
      */
     public $endRenderCallbacks = array();
 
     /**
-     * Create template data object
-     * Some of the global Smarty settings copied to template scope
-     * It load the required template resources and caching plugins
+     * Create templates data object
+     * Some of the global Smarty settings copied to templates scope
+     * It load the required templates resources and caching plugins
      *
-     * @param string                                                  $template_resource template resource string
+     * @param string                                                  $template_resource templates resource string
      * @param Smarty                                                  $smarty            Smarty instance
      * @param \Smarty_Internal_Template|\Smarty|\Smarty_Internal_Data $_parent           back pointer to parent object
      *                                                                                   with variables or null
@@ -141,10 +141,10 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * render template
+     * render templates
      *
      * @param  bool      $no_output_filter if true do not run output filter
-     * @param  null|bool $display          true: display, false: fetch null: sub-template
+     * @param  null|bool $display          true: display, false: fetch null: sub-templates
      *
      * @return string
      * @throws \SmartyException
@@ -158,9 +158,9 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
             }
             $this->smarty->_debug->start_template($this, $display);
         }
-        // checks if template exists
+        // checks if templates exists
         if (!$this->source->exists) {
-            throw new SmartyException("Unable to load template '{$this->source->type}:{$this->source->name}'" .
+            throw new SmartyException("Unable to load templates '{$this->source->type}:{$this->source->name}'" .
                                       ($parentIsTpl ? " in '{$this->parent->template_resource}'" : ''));
         }
         // disable caching for evaluated code
@@ -234,16 +234,16 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * Runtime function to render sub-template
+     * Runtime function to render sub-templates
      *
-     * @param string  $template       template name
+     * @param string  $template       templates name
      * @param mixed   $cache_id       cache id
      * @param mixed   $compile_id     compile id
      * @param integer $caching        cache mode
      * @param integer $cache_lifetime life time of cache data
-     * @param array   $data           passed parameter template variables
+     * @param array   $data           passed parameter templates variables
      * @param int     $scope          scope in which {include} should execute
-     * @param bool    $forceTplCache  cache template object
+     * @param bool    $forceTplCache  cache templates object
      * @param string  $uid            file dependency uid
      * @param string  $content_func   function name
      *
@@ -257,7 +257,7 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
         $_templateId = $smarty->_getTemplateId($template, $cache_id, $compile_id, $caching, $tpl);
         // recursive call ?
         if (isset($tpl->templateId) ? $tpl->templateId : $tpl->_getTemplateId() != $_templateId) {
-            // already in template cache?
+            // already in templates cache?
             if (isset($smarty->_cache[ 'tplObjects' ][ $_templateId ])) {
                 // copy data from cached object
                 $cachedTpl = &$smarty->_cache[ 'tplObjects' ][ $_templateId ];
@@ -303,10 +303,10 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
         }
         $tpl->caching = $caching;
         $tpl->cache_lifetime = $cache_lifetime;
-        // set template scope
+        // set templates scope
         $tpl->scope = $scope;
         if (!isset($smarty->_cache[ 'tplObjects' ][ $tpl->templateId ]) && !$tpl->source->handler->recompiled) {
-            // check if template object should be cached
+            // check if templates object should be cached
             if ($forceTplCache || (isset($smarty->_cache[ 'subTplInfo' ][ $tpl->template_resource ]) &&
                                    $smarty->_cache[ 'subTplInfo' ][ $tpl->template_resource ] > 1) ||
                 ($tpl->_isParentTemplate() && isset($smarty->_cache[ 'tplObjects' ][ $tpl->parent->templateId ]))
@@ -368,9 +368,9 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * Check if parent is template object
+     * Check if parent is templates object
      *
-     * @return bool true if parent is template
+     * @return bool true if parent is templates
      */
     public function _isParentTemplate()
     {
@@ -405,12 +405,12 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * This function is executed automatically when a compiled or cached template file is included
-     * - Decode saved properties from compiled template and cache files
+     * This function is executed automatically when a compiled or cached templates file is included
+     * - Decode saved properties from compiled templates and cache files
      * - Check if compiled or cache file is valid
      *
      * @param \Smarty_Internal_Template $tpl
-     * @param  array                    $properties special template properties
+     * @param  array                    $properties special templates properties
      * @param  bool                     $cache      flag if called from cache file
      *
      * @return bool flag if compiled or cache file is valid
@@ -429,7 +429,7 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
             foreach ($properties[ 'file_dependency' ] as $_file_to_check) {
                 if ($_file_to_check[ 2 ] == 'file' || $_file_to_check[ 2 ] == 'php') {
                     if ($tpl->source->filepath == $_file_to_check[ 0 ]) {
-                        // do not recheck current template
+                        // do not recheck current templates
                         continue;
                         //$mtime = $tpl->source->getTimeStamp();
                     } else {
@@ -476,8 +476,8 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * Compiles the template
-     * If the template is not evaluated the compiled template is saved on disk
+     * Compiles the templates
+     * If the templates is not evaluated the compiled templates is saved on disk
      */
     public function compileTemplateSource()
     {
@@ -497,7 +497,7 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * Get unique template id
+     * Get unique templates id
      *
      * @return string
      */
@@ -596,7 +596,7 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
     }
 
     /**
-     * set Smarty property in template context
+     * set Smarty property in templates context
      *
      * @param string $property_name property name
      * @param mixed  $value         value
@@ -618,11 +618,11 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
                     return;
                 }
         }
-        throw new SmartyException("invalid template property '$property_name'.");
+        throw new SmartyException("invalid templates property '$property_name'.");
     }
 
     /**
-     * get Smarty property in template context
+     * get Smarty property in templates context
      *
      * @param string $property_name property name
      *
@@ -649,7 +649,7 @@ class Smarty_Internal_Template extends Smarty_Internal_TemplateBase
                     return $this->smarty->$property_name;
                 }
         }
-        throw new SmartyException("template property '$property_name' does not exist.");
+        throw new SmartyException("templates property '$property_name' does not exist.");
     }
 
     /**

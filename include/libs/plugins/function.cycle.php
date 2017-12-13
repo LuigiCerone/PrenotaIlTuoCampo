@@ -21,7 +21,7 @@
  * - print     - boolean - print var or not. default is true
  * - advance   - boolean - whether or not to advance the cycle
  * - delimiter - the value delimiter, default is ","
- * - assign    - boolean, assigns to template var instead of printed.
+ * - assign    - boolean, assigns to templates var instead of printed.
  * </pre>
  * Examples:<br>
  * <pre>
@@ -39,7 +39,7 @@
  * @version  1.3
  *
  * @param array                    $params   parameters
- * @param Smarty_Internal_Template $template template object
+ * @param Smarty_Internal_Template $template templates object
  *
  * @return string|null
  */

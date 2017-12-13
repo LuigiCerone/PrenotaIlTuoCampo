@@ -19,13 +19,13 @@ class Smarty_Internal_Method_ClearCache
     public $objMap = 1;
 
     /**
-     * Empty cache for a specific template
+     * Empty cache for a specific templates
      *
      * @api  Smarty::clearCache()
      * @link http://www.smarty.net/docs/en/api.clear.cache.tpl
      *
      * @param \Smarty  $smarty
-     * @param  string  $template_name template name
+     * @param  string  $template_name templates name
      * @param  string  $cache_id      cache id
      * @param  string  $compile_id    compile id
      * @param  integer $exp_time      expiration time

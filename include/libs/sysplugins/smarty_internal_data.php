@@ -1,7 +1,7 @@
 <?php
 /**
  * Smarty Internal Plugin Data
- * This file contains the basic classes and methods for template and variable creation
+ * This file contains the basic classes and methods for templates and variable creation
  *
  * @package    Smarty
  * @subpackage Template
@@ -9,7 +9,7 @@
  */
 
 /**
- * Base class with template and variable methods
+ * Base class with templates and variable methods
  *
  * @package    Smarty
  * @subpackage Template
@@ -29,7 +29,7 @@
 class Smarty_Internal_Data
 {
     /**
-     * This object type (Smarty = 1, template = 2, data = 4)
+     * This object type (Smarty = 1, templates = 2, data = 4)
      *
      * @var int
      */
@@ -43,14 +43,14 @@ class Smarty_Internal_Data
     public $template_class = 'Smarty_Internal_Template';
 
     /**
-     * template variables
+     * templates variables
      *
      * @var Smarty_Variable[]
      */
     public $tpl_vars = array();
 
     /**
-     * parent template (if any)
+     * parent templates (if any)
      *
      * @var Smarty|Smarty_Internal_Template|Smarty_Internal_Data
      */
@@ -84,7 +84,7 @@ class Smarty_Internal_Data
     /**
      * assigns a Smarty variable
      *
-     * @param  array|string $tpl_var the template variable name(s)
+     * @param  array|string $tpl_var the templates variable name(s)
      * @param  mixed        $value   the value to assign
      * @param  boolean      $nocache if true any output of this variable will be not cached
      *
@@ -111,12 +111,12 @@ class Smarty_Internal_Data
     }
 
     /**
-     * appends values to template variables
+     * appends values to templates variables
      *
      * @api  Smarty::append()
      * @link http://www.smarty.net/docs/en/api.append.tpl
      *
-     * @param  array|string $tpl_var                                           the template variable name(s)
+     * @param  array|string $tpl_var                                           the templates variable name(s)
      * @param  mixed        $value                                             the value to append
      * @param  bool         $merge                                             flag if array elements shall be merged
      * @param  bool         $nocache                                           if true any output of this variable will
@@ -144,9 +144,9 @@ class Smarty_Internal_Data
     }
 
     /**
-     * appends values to template variables by reference
+     * appends values to templates variables by reference
      *
-     * @param  string  $tpl_var the template variable name
+     * @param  string  $tpl_var the templates variable name
      * @param  mixed   &$value  the referenced value to append
      * @param  boolean $merge   flag if array elements shall be merged
      *
@@ -158,9 +158,9 @@ class Smarty_Internal_Data
     }
 
     /**
-     * assigns values to template variables by reference
+     * assigns values to templates variables by reference
      *
-     * @param string   $tpl_var the template variable name
+     * @param string   $tpl_var the templates variable name
      * @param          $value
      * @param  boolean $nocache if true any output of this variable will be not cached
      *
@@ -172,7 +172,7 @@ class Smarty_Internal_Data
     }
 
     /**
-     * Returns a single or all template variables
+     * Returns a single or all templates variables
      *
      * @api  Smarty::getTemplateVars()
      * @link http://www.smarty.net/docs/en/api.get.template.vars.tpl
@@ -206,7 +206,7 @@ class Smarty_Internal_Data
     }
 
     /**
-     * Follow the parent chain an merge template and config variables
+     * Follow the parent chain an merge templates and config variables
      *
      * @param \Smarty_Internal_Data|null $data
      */

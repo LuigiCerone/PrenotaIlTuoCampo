@@ -23,7 +23,7 @@ class Smarty_Internal_Method_CompileAllConfig extends Smarty_Internal_Method_Com
      * @param  int    $time_limit
      * @param  int    $max_errors
      *
-     * @return int number of template files recompiled
+     * @return int number of templates files recompiled
      */
     public function compileAllConfig(Smarty $smarty, $extension = '.conf', $force_compile = false, $time_limit = 0,
                                      $max_errors = null)

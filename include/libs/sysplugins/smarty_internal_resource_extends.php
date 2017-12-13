@@ -10,7 +10,7 @@
 
 /**
  * Smarty Internal Plugin Resource Extends
- * Implements the file system as resource for Smarty which {extend}s a chain of template files templates
+ * Implements the file system as resource for Smarty which {extend}s a chain of templates files templates
  *
  * @package    Smarty
  * @subpackage TemplateResources
@@ -28,7 +28,7 @@ class Smarty_Internal_Resource_Extends extends Smarty_Resource
      * populate Source Object with meta data from Resource
      *
      * @param Smarty_Template_Source   $source    source object
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      *
      * @throws SmartyException
      */
@@ -75,17 +75,17 @@ class Smarty_Internal_Resource_Extends extends Smarty_Resource
     }
 
     /**
-     * Load template's source from files into current template object
+     * Load templates's source from files into current templates object
      *
      * @param Smarty_Template_Source $source source object
      *
-     * @return string template source
+     * @return string templates source
      * @throws SmartyException if source cannot be loaded
      */
     public function getContent(Smarty_Template_Source $source)
     {
         if (!$source->exists) {
-            throw new SmartyException("Unable to read template {$source->type} '{$source->name}'");
+            throw new SmartyException("Unable to read templates {$source->type} '{$source->name}'");
         }
 
         $_components = array_reverse($source->components);

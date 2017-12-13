@@ -12,7 +12,7 @@
 class Smarty_Internal_Method_RegisterPlugin
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */
@@ -26,7 +26,7 @@ class Smarty_Internal_Method_RegisterPlugin
      *
      * @param \Smarty_Internal_TemplateBase|\Smarty_Internal_Template|\Smarty $obj
      * @param  string                                                         $type       plugin type
-     * @param  string                                                         $name       name of template tag
+     * @param  string                                                         $name       name of templates tag
      * @param  callback                                                       $callback   PHP callback to register
      * @param  bool                                                           $cacheable  if true (default) this
      *                                                                                    function is cache able

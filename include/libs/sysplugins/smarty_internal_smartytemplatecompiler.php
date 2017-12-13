@@ -38,7 +38,7 @@ class Smarty_Internal_SmartyTemplateCompiler extends Smarty_Internal_TemplateCom
     public $local_var = array();
 
     /**
-     * array of callbacks called when the normal compile process of template is finished
+     * array of callbacks called when the normal compile process of templates is finished
      *
      * @var array
      */
@@ -74,9 +74,9 @@ class Smarty_Internal_SmartyTemplateCompiler extends Smarty_Internal_TemplateCom
     }
 
     /**
-     * method to compile a Smarty template
+     * method to compile a Smarty templates
      *
-     * @param  mixed $_content template source
+     * @param  mixed $_content templates source
      * @param bool   $isTemplateSource
      *
      * @return bool true if compiling succeeded, false if it failed
@@ -87,7 +87,7 @@ class Smarty_Internal_SmartyTemplateCompiler extends Smarty_Internal_TemplateCom
         /* here is where the compiling takes place. Smarty
           tags in the templates are replaces with PHP code,
           then written to compiled files. */
-        // init the lexer/parser to compile the template
+        // init the lexer/parser to compile the templates
         $this->parser =
             new $this->parser_class(new $this->lexer_class(str_replace(array("\r\n", "\r"), "\n", $_content), $this),
                                     $this);
@@ -138,7 +138,7 @@ class Smarty_Internal_SmartyTemplateCompiler extends Smarty_Internal_TemplateCom
 
     /**
      * Register a post compile callback
-     * - when the callback is called after template compiling the compiler object will be inserted as first parameter
+     * - when the callback is called after templates compiling the compiler object will be inserted as first parameter
      *
      * @param callback $callback
      * @param array    $parameter optional parameter array

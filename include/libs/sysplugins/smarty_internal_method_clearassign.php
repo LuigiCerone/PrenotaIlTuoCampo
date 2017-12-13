@@ -19,13 +19,13 @@ class Smarty_Internal_Method_ClearAssign
     public $objMap = 7;
 
     /**
-     * clear the given assigned template variable(s).
+     * clear the given assigned templates variable(s).
      *
      * @api  Smarty::clearAssign()
      * @link http://www.smarty.net/docs/en/api.clear.assign.tpl
      *
      * @param \Smarty_Internal_Data|\Smarty_Internal_Template|\Smarty $data
-     * @param  string|array                                           $tpl_var the template variable(s) to clear
+     * @param  string|array                                           $tpl_var the templates variable(s) to clear
      *
      * @return \Smarty_Internal_Data|\Smarty_Internal_Template|\Smarty
      */

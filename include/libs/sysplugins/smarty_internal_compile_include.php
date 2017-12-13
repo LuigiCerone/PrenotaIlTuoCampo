@@ -100,7 +100,7 @@ class Smarty_Internal_Compile_Include extends Smarty_Internal_CompileBase
                         if ("{$compiler->template->source->type}:{$compiler->template->source->name}" ==
                             $fullResourceName
                         ) {
-                            // recursive call of current template
+                            // recursive call of current templates
                             $compiled->includes[ $fullResourceName ] = 2;
                             $cache_tpl = true;
                         } else {
@@ -120,7 +120,7 @@ class Smarty_Internal_Compile_Include extends Smarty_Internal_CompileBase
         // scope setup
         $_scope = $compiler->convertScope($_attr, $this->valid_scopes);
 
-        // set flag to cache subtemplate object when called within loop or template name is variable.
+        // set flag to cache subtemplate object when called within loop or templates name is variable.
         if ($cache_tpl || $variable_template || $compiler->loopNesting > 0) {
             $_cache_tpl = 'true';
         } else {
@@ -136,12 +136,12 @@ class Smarty_Internal_Compile_Include extends Smarty_Internal_CompileBase
             $_caching = self::CACHING_NOCACHE_CODE;
         }
 
-        // flag if included template code should be merged into caller
+        // flag if included templates code should be merged into caller
         $merge_compiled_includes = ($compiler->smarty->merge_compiled_includes || $_attr[ 'inline' ] === true) &&
                                    !$compiler->template->source->handler->recompiled;
 
         if ($merge_compiled_includes) {
-            // variable template name ?
+            // variable templates name ?
             if ($variable_template) {
                 $merge_compiled_includes = false;
             }
@@ -282,7 +282,7 @@ class Smarty_Internal_Compile_Include extends Smarty_Internal_CompileBase
     }
 
     /**
-     * Compile inline sub template
+     * Compile inline sub templates
      *
      * @param \Smarty_Internal_SmartyTemplateCompiler $compiler
      * @param \Smarty_Internal_Template               $tpl
@@ -319,14 +319,14 @@ class Smarty_Internal_Compile_Include extends Smarty_Internal_CompileBase
             }
             // get compiled code
             $compiled_code = "<?php\n\n";
-            $compiled_code .= "/* Start inline template \"{$sourceInfo}\" =============================*/\n";
+            $compiled_code .= "/* Start inline templates \"{$sourceInfo}\" =============================*/\n";
             $compiled_code .= "function {$tpl->compiled->unifunc} (\$_smarty_tpl) {\n";
             $compiled_code .= "?>\n" . $tpl->compiler->compileTemplateSource($tpl, null, $compiler->parent_compiler);
             $compiled_code .= "<?php\n";
             $compiled_code .= "}\n?>\n";
             $compiled_code .= $tpl->compiler->postFilter($tpl->compiler->blockOrFunctionCode);
             $compiled_code .= "<?php\n\n";
-            $compiled_code .= "/* End inline template \"{$sourceInfo}\" =============================*/\n";
+            $compiled_code .= "/* End inline templates \"{$sourceInfo}\" =============================*/\n";
             $compiled_code .= "?>";
             unset($tpl->compiler);
             if ($tpl->compiled->has_nocache_code) {

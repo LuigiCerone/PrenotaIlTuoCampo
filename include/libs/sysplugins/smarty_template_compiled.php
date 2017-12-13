@@ -22,7 +22,7 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
     /**
      * get a Compiled Object of this source
      *
-     * @param  Smarty_Internal_Template $_template template object
+     * @param  Smarty_Internal_Template $_template templates object
      *
      * @return Smarty_Template_Compiled compiled object
      */
@@ -40,7 +40,7 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
     /**
      * populate Compiled Object with compiled filepath
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      **/
     public function populateCompiledFilepath(Smarty_Internal_Template $_template)
     {
@@ -79,9 +79,9 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
     }
 
     /**
-     * load compiled template or compile from source
+     * load compiled templates or compile from source
      *
-     * @param Smarty_Internal_Template $_smarty_tpl do not change variable name, is used by compiled template
+     * @param Smarty_Internal_Template $_smarty_tpl do not change variable name, is used by compiled templates
      *
      * @throws Exception
      */
@@ -117,10 +117,10 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
     }
 
     /**
-     * Load fresh compiled template by including the PHP file
+     * Load fresh compiled templates by including the PHP file
      * HHVM requires a work around because of a PHP incompatibility
      *
-     * @param \Smarty_Internal_Template $_smarty_tpl do not change variable name, is used by compiled template
+     * @param \Smarty_Internal_Template $_smarty_tpl do not change variable name, is used by compiled templates
      */
     private function loadCompiledTemplate(Smarty_Internal_Template $_smarty_tpl)
     {
@@ -137,7 +137,7 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
     }
 
     /**
-     * render compiled template code
+     * render compiled templates code
      *
      * @param Smarty_Internal_Template $_template
      *
@@ -146,9 +146,9 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
      */
     public function render(Smarty_Internal_Template $_template)
     {
-        // checks if template exists
+        // checks if templates exists
         if (!$_template->source->exists) {
-            $type = $_template->source->isConfig ? 'config' : 'template';
+            $type = $_template->source->isConfig ? 'config' : 'templates';
             throw new SmartyException("Unable to load {$type} '{$_template->source->type}:{$_template->source->name}'");
         }
         if ($_template->smarty->debugging) {
@@ -178,7 +178,7 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
     }
 
     /**
-     * compile template from source
+     * compile templates from source
      *
      * @param Smarty_Internal_Template $_template
      *
@@ -204,7 +204,7 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
     /**
      * Write compiled code by handler
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      * @param string                   $code      compiled code
      *
      * @return boolean success
@@ -227,7 +227,7 @@ class Smarty_Template_Compiled extends Smarty_Template_Resource_Base
     /**
      * Read compiled content from handler
      *
-     * @param Smarty_Internal_Template $_template template object
+     * @param Smarty_Internal_Template $_template templates object
      *
      * @return string content
      */

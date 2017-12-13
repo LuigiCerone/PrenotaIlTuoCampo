@@ -25,7 +25,7 @@ class Smarty_Internal_Runtime_FilterHandler
      *
      * @param  string                   $type     the type of filter ('pre','post','output') which shall run
      * @param  string                   $content  the content which shall be processed by the filters
-     * @param  Smarty_Internal_Template $template template object
+     * @param  Smarty_Internal_Template $template templates object
      *
      * @throws SmartyException
      * @return string                   the filtered content

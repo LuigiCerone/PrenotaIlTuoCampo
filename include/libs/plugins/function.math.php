@@ -11,14 +11,14 @@
  * Smarty {math} function plugin
  * Type:     function<br>
  * Name:     math<br>
- * Purpose:  handle math computations in template
+ * Purpose:  handle math computations in templates
  *
  * @link     http://www.smarty.net/manual/en/language.function.math.php {math}
  *           (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  *
  * @param array                    $params   parameters
- * @param Smarty_Internal_Template $template template object
+ * @param Smarty_Internal_Template $template templates object
  *
  * @return string|null
  */

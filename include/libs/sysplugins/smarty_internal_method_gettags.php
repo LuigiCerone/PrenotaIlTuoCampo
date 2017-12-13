@@ -12,14 +12,14 @@
 class Smarty_Internal_Method_GetTags
 {
     /**
-     * Valid for Smarty and template object
+     * Valid for Smarty and templates object
      *
      * @var int
      */
     public $objMap = 3;
 
     /**
-     * Return array of tag/attributes of all tags used by an template
+     * Return array of tag/attributes of all tags used by an templates
      *
      * @api  Smarty::getTags()
      * @link http://www.smarty.net/docs/en/api.get.tags.tpl
@@ -41,9 +41,9 @@ class Smarty_Internal_Method_GetTags
         } elseif (isset($template) && is_string($template)) {
             /* @var Smarty_Internal_Template $tpl */
             $tpl = new $smarty->template_class($template, $smarty);
-            // checks if template exists
+            // checks if templates exists
             if (!$tpl->source->exists) {
-                throw new SmartyException("Unable to load template {$tpl->source->type} '{$tpl->source->name}'");
+                throw new SmartyException("Unable to load templates {$tpl->source->type} '{$tpl->source->name}'");
             }
         }
         if (isset($tpl)) {
@@ -57,6 +57,6 @@ class Smarty_Internal_Method_GetTags
             $tpl->compiler->compileTemplate($tpl);
             return $tpl->_cache[ 'used_tags' ];
         }
-        throw new SmartyException("Missing template specification");
+        throw new SmartyException("Missing templates specification");
     }
 }
