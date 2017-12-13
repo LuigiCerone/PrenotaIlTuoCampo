@@ -1,6 +1,6 @@
 <?php
 /**
- * Smarty Internal Plugin Resource String
+ * Smarty Internal Plugin Resource Eval
  *
  * @package    Smarty
  * @subpackage TemplateResources
@@ -9,14 +9,14 @@
  */
 
 /**
- * Smarty Internal Plugin Resource String
+ * Smarty Internal Plugin Resource Eval
  * Implements the strings as resource for Smarty template
- * {@internal unlike eval-resources the compiled state of string-resources is saved for subsequent access}}
+ * {@internal unlike string-include the compiled state of eval-include is NOT saved for subsequent access}}
  *
  * @package    Smarty
  * @subpackage TemplateResources
  */
-class Smarty_Internal_Resource_String extends Smarty_Resource
+class Smarty_Internal_Resource_Eval extends Smarty_Resource_Recompiled
 {
     /**
      * populate Source Object with meta data from Resource
@@ -28,7 +28,7 @@ class Smarty_Internal_Resource_String extends Smarty_Resource
      */
     public function populate(Smarty_Template_Source $source, Smarty_Internal_Template $_template = null)
     {
-        $source->uid = $source->filepath = sha1($source->name . $source->smarty->_joined_template_dir);
+        $source->uid = $source->filepath = sha1($source->name);
         $source->timestamp = $source->exists = true;
     }
 
@@ -83,7 +83,6 @@ class Smarty_Internal_Resource_String extends Smarty_Resource
 
     /**
      * Determine basename for compiled filename
-     * Always returns an empty string.
      *
      * @param  Smarty_Template_Source $source source object
      *
@@ -93,15 +92,4 @@ class Smarty_Internal_Resource_String extends Smarty_Resource
     {
         return '';
     }
-
-    /*
-        * Disable timestamp checks for string resource.
-        *
-        * @return bool
-        */
-    public function checkTimestamps()
-    {
-        return false;
-    }
 }
-
