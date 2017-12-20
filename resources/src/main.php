@@ -1,5 +1,5 @@
 <?php
-    require ('model/User.php');
+    require('model/User.php');
 
     echo "Hello world";
     $user = new User('Tizio', 'Caio');

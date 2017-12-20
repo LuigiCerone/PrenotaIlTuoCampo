@@ -319,7 +319,7 @@ h3.tittle.why {
 .w3layouts_header_right input[type="submit"] {
     outline: none;
     border: none;
-    background: #ffb71c url(../images/search.png)no-repeat 12px 5px;
+    background: #ffb71c url(../assets/images/search.png)no-repeat 12px 5px;
     color: #fff;
     padding: 8px 0;
     width: 20%;
@@ -424,7 +424,7 @@ li.agileits-main i {
     width:64px;
     height:64px;
     cursor: pointer;
-    background: url('../images/play-button.png') no-repeat 0px 0px;
+    background: url('../assets/images/play-button.png') no-repeat 0px 0px;
     background-size: auto, cover;
     z-index: 9;
 }
@@ -435,7 +435,7 @@ li.agileits-main i {
     width:64px;
     height:64px;
     cursor: pointer;
-    background: url('../images/play-button.png') no-repeat 0px 0px;
+    background: url('../assets/images/play-button.png') no-repeat 0px 0px;
     background-size: auto, cover;
     z-index: 9;
 }
@@ -739,7 +739,7 @@ a.trend-w3l:hover {
 /*-- //about --*/
 /*-- Stats Section --*/
 .stats {
-	background: url(../images/bg1.jpg) no-repeat 0px 0px;
+	background: url(../assets/images/bg1.jpg) no-repeat 0px 0px;
     padding: 100px 0;
     background-size: cover;
 	-webkit-background-size: cover;
@@ -1202,7 +1202,7 @@ text-align:center;
     height: 32px;
     border: none;
     text-indent: 100%;
-    background: url(../images/up2.png) no-repeat 0px 0px;
+    background: url(../assets/images/up2.png) no-repeat 0px 0px;
 }
 #toTopHover {
     width: 64px;
