@@ -13,23 +13,18 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords"
           content="Scholarly web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEriinclude/assets/css/on, Motorola web design"/>
-    <script type="application/x-javascript">
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        } </script>
     <!--/ Meta tag Keywords -->
-    <!-- include/assets/css/ files -->
-    <link rel="stylesheet" href="../include/assets/css/bootstrap.css"> <!-- Bootstrap-Core-include/assets/css/ -->
-    <link rel="stylesheet" href="../include/assets/css/style.css" type="text/css" media="all"/>
-    <!-- Style-include/assets/css/ -->
-    <link rel="stylesheet" href="../include/assets/css/font-awesome.css">
-    <!-- Font-Awesome-Icons-include/assets/css/ -->
-    <link rel="stylesheet" href="../include/assets/css/swipebox.css">
-    <link rel="stylesheet" href="../include/assets/css/jquery-ui.css"/>
+    {block name="css"}
+        <link rel="stylesheet" href="public/css/bootstrap.css">
+        <!-- Bootstrap-Core-include/assets/css/ -->
+        <link rel="stylesheet" href="public/css/style.css" type="text/css" media="all"/>
+        <!-- Style-include/assets/css/ -->
+        <link rel="stylesheet" href="public/css/font-awesome.css">
+        <!-- Font-Awesome-Icons-include/assets/css/ -->
+        <link rel="stylesheet" href="public/css/swipebox.css">
+        <link rel="stylesheet" href="public/css/jquery-ui.css"/>
+    {/block}
     <!-- /include/assets/css/ files -->
     <!-- online-include/assets/fonts/ -->
     <!-- /online-fontsfonts -->
@@ -83,26 +78,35 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
         <div class="clearfix"></div>
     </div>
 </div>
-<!-- banner -->
-<!-- include/assets/js/-scripts -->
-<!-- include/assets/js/-files -->
-<script type="text/javascript" src="../include/assets/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript"
-        src="../include/assets/js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
-<!-- /include/assets/js/-files -->
-<!-- Baneer-include/assets/js/ -->
+
+{block name="js"}
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        } </script>
+    <script type="text/javascript" src="public/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"
+            src="public/js/bootstrap.js"></script>
+    <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <!-- /include/assets/js/-files -->
+    <!-- Baneer-include/assets/js/ -->
 
 
-<!-- smooth scrolling -->
-<script src="../include/assets/js/SmoothScroll.min.js"></script>
-<!-- /smooth scrolling -->
-<!-- stats -->
-<script type="text/javascript" src="../include/assets/js/numscroller-1.0.js"></script>
-<!-- /stats -->
-<!-- moving-top scrolling -->
-<script type="text/javascript" src="../include/assets/js/move-top.js"></script>
-<script type="text/javascript" src="../include/assets/js/easing.js"></script>
-<script src="../include/assets/js/simplePlayer.js"></script>
-<script src="../include/assets/js/jquery.swipebox.min.js"></script>
+    <!-- smooth scrolling -->
+    <script src="public/js/SmoothScroll.min.js"></script>
+    <!-- /smooth scrolling -->
+    <!-- stats -->
+    <script type="text/javascript" src="public/js/numscroller-1.0.js"></script>
+    <!-- /stats -->
+    <!-- moving-top scrolling -->
+    <script type="text/javascript" src="public/js/move-top.js"></script>
+    <script type="text/javascript" src="public/js/easing.js"></script>
+    <script src="public/js/simplePlayer.js"></script>
+    <script src="public/js/jquery.swipebox.min.js"></script>
+{/block}
 </body>
 </html>

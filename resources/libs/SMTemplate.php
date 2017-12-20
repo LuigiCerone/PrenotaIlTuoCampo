@@ -23,7 +23,14 @@ class SMTemplate{
         $this->_smarty->config_dir = $smtemplate_config['configs_dir'];
     }
 
-    function render($template){
+//    function render($template){
+//        $this->_smarty->display($template . '.tpl');
+//    }
+
+    function render($template, $data = array()){
+        foreach($data as $key => $value){
+            $this->_smarty->assign($key, $value);
+        }
         $this->_smarty->display($template . '.tpl');
     }
 }

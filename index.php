@@ -1,5 +1,5 @@
 <?php
-require_once('lib/SMTemplate.php');
+require_once('resources/libs/SMTemplate.php');
 
 $tpl = new SMTemplate();
 $tpl->render('test');
