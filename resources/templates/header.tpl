@@ -20,7 +20,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
         <!-- Bootstrap-Core-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/style.css" type="text/css" media="all"/>
         <!-- Style-include/assets/css/ -->
-        <link rel="stylesheet" href="public/css/font-awesome.css">
+        <link rel="stylesheet" href="public/css/font-awesome.min.css">
         <!-- Font-Awesome-Icons-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/swipebox.css">
         <link rel="stylesheet" href="public/css/jquery-ui.css"/>
@@ -42,16 +42,16 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1><a class="navbar-brand" href="index.html"><i class="fa fa-leanpub" aria-hidden="true"></i> scholarly</a>
-                </h1>
+                <h2><a class="navbar-brand" href="index.html">PrenotaIltuoCampo</a>
+                </h2>
 
             </div>
-            <div class="w3layouts_header_right">
-                <form action="#" method="post">
-                    <input name="Search here" type="search" placeholder="Search" required="">
-                    <input type="submit" value="">
-                </form>
-            </div>
+            {*<div class="w3layouts_header_right">*}
+                {*<form action="#" method="post">*}
+                    {*<input name="Search here" type="search" placeholder="Search" required="">*}
+                    {*<input type="submit" value="">*}
+                {*</form>*}
+            {*</div>*}
             <ul class="agile_forms">
                 <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
                                                                                               aria-hidden="true"></i>
@@ -65,17 +65,72 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <nav class="link-effect-2" id="link-effect-2">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html" class="effect-3">Home</a></li>
-                        <li><a href="#about" class="effect-3 scroll">About Us</a></li>
-                        <li><a href="#services" class="effect-3 scroll">Services</a></li>
+                        <li><a href="#about" class="effect-3 scroll">About us</a></li>
+                        <li><a href="#parteners" class="effect-3 scroll">Partners</a></li>
+                        <li><a href="#reviews" class="effect-3 scroll">Reviews</a></li>
                         <li><a href="#team" class="effect-3 scroll">Team</a></li>
-                        <li><a href="#gallery" class="effect-3 scroll">Gallery</a></li>
-                        <li><a href="#mail" class="effect-3 scroll">Mail Us</a></li>
                     </ul>
                 </nav>
 
             </div>
         </nav>
         <div class="clearfix"></div>
+    </div>
+</div>
+<!-- Modal1 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="signin-form profile">
+                    <h3 class="agileinfo_sign">Sign In</h3>
+                    <div class="login-form">
+                        <form action="#" method="post">
+                            <input type="email" name="email" placeholder="E-mail" required="">
+                            <input type="password" name="password" placeholder="Password" required="">
+                            <div class="tp">
+                                <input type="submit" value="Sign In">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="login-social-grids">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                    <p><a href="#" data-toggle="modal" data-target="#myModal3"> Don't have an account?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal1 -->
+<!-- Modal2 -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="signin-form profile">
+                    <h3 class="agileinfo_sign">Sign Up</h3>
+                    <div class="login-form">
+                        <form action="#" method="post">
+                            <input type="text" name="name" placeholder="Username" required="">
+                            <input type="email" name="email" placeholder="Email" required="">
+                            <input type="password" name="password" placeholder="Password" required="">
+                            <input type="password" name="password" placeholder="Confirm Password" required="">
+                            <input type="submit" value="Sign Up">
+                        </form>
+                    </div>
+                    <p><a href="#"> By clicking Sign Up, I agree to your terms</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 18:14:12
+/* Smarty version 3.1.30, created on 2017-12-21 16:48:51
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3a9a64d07a61_03851445',
+  'unifunc' => 'content_5a3bd7e3859fc0_73671981',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1513789960,
+      1 => 1513871329,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3a9a64d07a61_03851445 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3bd7e3859fc0_73671981 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10742342725a3a9a64d05657_50828946', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8824680275a3bd7e3858441_59221439', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -62,16 +62,16 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10742342725a3a9a64
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1><a class="navbar-brand" href="index.html"><i class="fa fa-leanpub" aria-hidden="true"></i> scholarly</a>
-                </h1>
+                <h2><a class="navbar-brand" href="index.html">PrenotaIltuoCampo</a>
+                </h2>
 
             </div>
-            <div class="w3layouts_header_right">
-                <form action="#" method="post">
-                    <input name="Search here" type="search" placeholder="Search" required="">
-                    <input type="submit" value="">
-                </form>
-            </div>
+            
+                
+                    
+                    
+                
+            
             <ul class="agile_forms">
                 <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
                                                                                               aria-hidden="true"></i>
@@ -85,11 +85,10 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10742342725a3a9a64
                 <nav class="link-effect-2" id="link-effect-2">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html" class="effect-3">Home</a></li>
-                        <li><a href="#about" class="effect-3 scroll">About Us</a></li>
-                        <li><a href="#services" class="effect-3 scroll">Services</a></li>
+                        <li><a href="#about" class="effect-3 scroll">About us</a></li>
+                        <li><a href="#parteners" class="effect-3 scroll">Partners</a></li>
+                        <li><a href="#reviews" class="effect-3 scroll">Reviews</a></li>
                         <li><a href="#team" class="effect-3 scroll">Team</a></li>
-                        <li><a href="#gallery" class="effect-3 scroll">Gallery</a></li>
-                        <li><a href="#mail" class="effect-3 scroll">Mail Us</a></li>
                     </ul>
                 </nav>
 
@@ -98,15 +97,71 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10742342725a3a9a64
         <div class="clearfix"></div>
     </div>
 </div>
+<!-- Modal1 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="signin-form profile">
+                    <h3 class="agileinfo_sign">Sign In</h3>
+                    <div class="login-form">
+                        <form action="#" method="post">
+                            <input type="email" name="email" placeholder="E-mail" required="">
+                            <input type="password" name="password" placeholder="Password" required="">
+                            <div class="tp">
+                                <input type="submit" value="Sign In">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="login-social-grids">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                    <p><a href="#" data-toggle="modal" data-target="#myModal3"> Don't have an account?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal1 -->
+<!-- Modal2 -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="signin-form profile">
+                    <h3 class="agileinfo_sign">Sign Up</h3>
+                    <div class="login-form">
+                        <form action="#" method="post">
+                            <input type="text" name="name" placeholder="Username" required="">
+                            <input type="email" name="email" placeholder="Email" required="">
+                            <input type="password" name="password" placeholder="Password" required="">
+                            <input type="password" name="password" placeholder="Confirm Password" required="">
+                            <input type="submit" value="Sign Up">
+                        </form>
+                    </div>
+                    <p><a href="#"> By clicking Sign Up, I agree to your terms</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5767582795a3a9a64d07188_53606973', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5572935405a3bd7e38599b9_19329118', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_10742342725a3a9a64d05657_50828946 extends Smarty_Internal_Block
+class Block_8824680275a3bd7e3858441_59221439 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -115,7 +170,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <!-- Bootstrap-Core-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/style.css" type="text/css" media="all"/>
         <!-- Style-include/assets/css/ -->
-        <link rel="stylesheet" href="public/css/font-awesome.css">
+        <link rel="stylesheet" href="public/css/font-awesome.min.css">
         <!-- Font-Awesome-Icons-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/swipebox.css">
         <link rel="stylesheet" href="public/css/jquery-ui.css"/>
@@ -124,7 +179,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_5767582795a3a9a64d07188_53606973 extends Smarty_Internal_Block
+class Block_5572935405a3bd7e38599b9_19329118 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

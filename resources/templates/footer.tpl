@@ -13,7 +13,9 @@
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.html">Home</a></li>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#about" class="scroll">About
                             Us</a></li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#services" class="scroll">Services</a>
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#partners" class="scroll">Partners</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#reviews" class="scroll">Reviews</a>
                     </li>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#team"
                                                                                       class="scroll">Team</a></li>
@@ -22,6 +24,7 @@
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#mail" class="scroll">Mail
                             Us</a></li>
                 </ul>
+
             </div>
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1 w3l-3">
                 <h4>Others</h4>
