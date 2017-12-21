@@ -1,3 +1,15 @@
-p{
-    background-color: #398439;
+.searchbox{
+    background-image: url("../images/ball-stadium.jpeg");
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.searchbox-panel{
+    margin-bottom: 30px;
+    margin-top: 30px;
 }

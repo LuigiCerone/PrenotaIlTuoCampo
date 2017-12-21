@@ -24,6 +24,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
         <!-- Font-Awesome-Icons-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/swipebox.css">
         <link rel="stylesheet" href="public/css/jquery-ui.css"/>
+        <link rel="stylesheet" href="public/css/mycss.css"/>
     {/block}
     <!-- /include/assets/css/ files -->
     <!-- online-include/assets/fonts/ -->

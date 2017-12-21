@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-21 16:48:51
+/* Smarty version 3.1.30, created on 2017-12-21 17:34:27
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3bd7e3859fc0_73671981',
+  'unifunc' => 'content_5a3be2934979b7_85995905',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1513871329,
+      1 => 1513874054,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3bd7e3859fc0_73671981 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3be2934979b7_85995905 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8824680275a3bd7e3858441_59221439', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8626457435a3be293495ef0_75061606', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -155,13 +155,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8824680275a3bd7e38
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5572935405a3bd7e38599b9_19329118', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15649929285a3be293497475_46377414', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_8824680275a3bd7e3858441_59221439 extends Smarty_Internal_Block
+class Block_8626457435a3be293495ef0_75061606 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -174,12 +174,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <!-- Font-Awesome-Icons-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/swipebox.css">
         <link rel="stylesheet" href="public/css/jquery-ui.css"/>
+        <link rel="stylesheet" href="public/css/mycss.css"/>
     <?php
 }
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_5572935405a3bd7e38599b9_19329118 extends Smarty_Internal_Block
+class Block_15649929285a3be293497475_46377414 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

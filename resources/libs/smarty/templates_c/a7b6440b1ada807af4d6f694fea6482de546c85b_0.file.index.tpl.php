@@ -1,21 +1,84 @@
-{extends file='layout.tpl'}
+<?php
+/* Smarty version 3.1.30, created on 2017-12-21 17:50:16
+  from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl" */
 
-{block name="css" append}
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a3be6483ccba0_71179913',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a7b6440b1ada807af4d6f694fea6482de546c85b' => 
+    array (
+      0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl',
+      1 => 1513875013,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:layout.tpl' => 1,
+  ),
+),false)) {
+function content_5a3be6483ccba0_71179913 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_loadInheritance();
+$_smarty_tpl->inheritance->init($_smarty_tpl, true);
+?>
 
-{/block}
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5424442595a3be6483cab37_51984431', "css");
+?>
 
 
-{block name="js" append}
-{/block}
 
-{block name="content"}
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_682420215a3be6483cb9b7_91493549', "js");
+?>
+
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6089498445a3be6483cc752_71283983', "content");
+$_smarty_tpl->inheritance->endChild();
+$_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
+}
+/* {block "css"} */
+class Block_5424442595a3be6483cab37_51984431 extends Smarty_Internal_Block
+{
+public $append = true;
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+
+<?php
+}
+}
+/* {/block "css"} */
+/* {block "js"} */
+class Block_682420215a3be6483cb9b7_91493549 extends Smarty_Internal_Block
+{
+public $append = true;
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+<?php
+}
+}
+/* {/block "js"} */
+/* {block "content"} */
+class Block_6089498445a3be6483cc752_71283983 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
 
     <!-- banner -->
     <div class="container-fluid searchbox">
                     <div class="col-md-6 w3l_about_bottom_left one">
                 <div class="">
                     <div class="searchbox-panel">
-                        {*<h3>Prenota il tuo campo!</h3>*}
+                        
                         <form action="#" method="post" class="mod2">
                             <div class="col-md-6 col-xs-6 w3l-left-mk">
                                 <ul>
@@ -67,4 +130,8 @@
 
     </div>
     <!-- /banner -->
-{/block}
+<?php
+}
+}
+/* {/block "content"} */
+}
