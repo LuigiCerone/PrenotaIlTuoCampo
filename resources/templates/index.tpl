@@ -1,11 +1,13 @@
 {extends file='layout.tpl'}
 
 {block name="css" append}
-
+    <link rel="stylesheet" href="public/css/jquery.timepicker.min.css" />
 {/block}
 
 
 {block name="js" append}
+    <script src="public/js/jquery.timepicker.min.js"></script>
+    <script src="public/js/projectScript/index.js"></script>
 {/block}
 
 {block name="content"}
@@ -41,8 +43,8 @@
                                                 required="">
                                     </li>
                                     <li class="text">Ora :</li>
-                                    <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
-                                                class="date" id="datepicker" name="date" type="text" value=""
+                                    <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
+                                                class="date" name="date" id="timepicker" type="text" value=""
                                                 required=""/>
                                     </li>
                                     <li class="text">Address :</li>

@@ -23,7 +23,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
         <link rel="stylesheet" href="public/css/font-awesome.min.css">
         <!-- Font-Awesome-Icons-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/swipebox.css">
-        <link rel="stylesheet" href="public/css/jquery-ui.css"/>
+        <link rel="stylesheet" href="public/css/jquery-ui.min.css"/>
         <link rel="stylesheet" href="public/css/mycss.css"/>
     {/block}
     <!-- /include/assets/css/ files -->
@@ -163,6 +163,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
     <script type="text/javascript" src="public/js/easing.js"></script>
     <script src="public/js/simplePlayer.js"></script>
     <script src="public/js/jquery.swipebox.min.js"></script>
+    <script src="public/js/jquery-ui.js"></script>
 {/block}
 </body>
 </html>
