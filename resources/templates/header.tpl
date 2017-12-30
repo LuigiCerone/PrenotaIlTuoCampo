@@ -67,8 +67,8 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                     <ul class="nav navbar-nav">
                         <li id="index" class="active"><a href="index.php" class="effect-3">Home</a></li>
                         <li id="partners"><a href="parteners.php" class="effect-3 scroll">Partners</a></li>
-                        <li><a href="#about" class="effect-3 scroll">About us</a></li>
-                        <li><a href="#reviews" class="effect-3 scroll">Reviews</a></li>
+                        <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Reviews</a></li>
+                        <li id="about_us"><a href="#about" class="effect-3 scroll">About us</a></li>
                         <li><a href="#team" class="effect-3 scroll">Team</a></li>
                     </ul>
                 </nav>

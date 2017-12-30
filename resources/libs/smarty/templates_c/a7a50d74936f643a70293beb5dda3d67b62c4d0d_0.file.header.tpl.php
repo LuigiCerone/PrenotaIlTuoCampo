@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-30 12:48:50
+/* Smarty version 3.1.30, created on 2017-12-30 16:46:45
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a477d22dd2577_04497707',
+  'unifunc' => 'content_5a47b4e5a89b84_07001611',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1514634519,
+      1 => 1514648656,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a477d22dd2577_04497707 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a47b4e5a89b84_07001611 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5240748055a477d22dd0d88_50192651', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16527957075a47b4e5a882b6_90899216', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -86,8 +86,8 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5240748055a477d22d
                     <ul class="nav navbar-nav">
                         <li id="index" class="active"><a href="index.php" class="effect-3">Home</a></li>
                         <li id="partners"><a href="parteners.php" class="effect-3 scroll">Partners</a></li>
-                        <li><a href="#about" class="effect-3 scroll">About us</a></li>
-                        <li><a href="#reviews" class="effect-3 scroll">Reviews</a></li>
+                        <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Reviews</a></li>
+                        <li id="about_us"><a href="#about" class="effect-3 scroll">About us</a></li>
                         <li><a href="#team" class="effect-3 scroll">Team</a></li>
                     </ul>
                 </nav>
@@ -155,13 +155,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5240748055a477d22d
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13406134215a477d22dd2026_94698403', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12447096705a47b4e5a895c5_10712227', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_5240748055a477d22dd0d88_50192651 extends Smarty_Internal_Block
+class Block_16527957075a47b4e5a882b6_90899216 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -180,7 +180,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_13406134215a477d22dd2026_94698403 extends Smarty_Internal_Block
+class Block_12447096705a47b4e5a895c5_10712227 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
