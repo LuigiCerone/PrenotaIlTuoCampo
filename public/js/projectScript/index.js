@@ -1,5 +1,4 @@
 $(function () {
-    console.log("Ciao");
 
     $.datepicker.regional['it'] = {
         closeText: 'Chiudi', // set a close button text
@@ -15,5 +14,11 @@ $(function () {
     $("#datepicker").datepicker($.datepicker.regional['it']);
     $("#datepicker").datepicker();
 
-    $('#timepicker').timepicker();
+    $('#timepicker').timepicker({
+        minTime: '9:00am',
+        maxTime: '11:00pm',
+        disableTextInput: true,
+        timeFormat: 'G:i',
+        step: 60
+    });
 });

@@ -8,11 +8,13 @@
 //require_once('smarty/Smarty.class.php');
 require_once('smtemplate_config.php');
 
-class SMTemplate{
+class SMTemplate
+{
 
     private $_smarty;
 
-    function __construct(){
+    function __construct()
+    {
         require('smarty/Smarty.class.php');
         $this->_smarty = new Smarty();
 
@@ -27,9 +29,11 @@ class SMTemplate{
 //        $this->_smarty->display($template . '.tpl');
 //    }
 
-    function render($template, $data = array()){
-        foreach($data as $key => $value){
+    function render($template, $data = array())
+    {
+        foreach ($data as $key => $value) {
             $this->_smarty->assign($key, $value);
+//            echo "key:" . $key . ", value:" . $value);
         }
         $this->_smarty->display($template . '.tpl');
     }

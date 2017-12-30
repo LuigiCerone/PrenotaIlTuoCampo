@@ -11,10 +11,11 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.html">Home</a></li>
+
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="partners.php" class="scroll">Partners</a>
+                    </li>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#about" class="scroll">About
                             Us</a></li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#partners" class="scroll">Partners</a>
-                    </li>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#reviews" class="scroll">Reviews</a>
                     </li>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#team"

@@ -48,10 +48,10 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
             </div>
             {*<div class="w3layouts_header_right">*}
-                {*<form action="#" method="post">*}
-                    {*<input name="Search here" type="search" placeholder="Search" required="">*}
-                    {*<input type="submit" value="">*}
-                {*</form>*}
+            {*<form action="#" method="post">*}
+            {*<input name="Search here" type="search" placeholder="Search" required="">*}
+            {*<input type="submit" value="">*}
+            {*</form>*}
             {*</div>*}
             <ul class="agile_forms">
                 <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
@@ -65,9 +65,9 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <nav class="link-effect-2" id="link-effect-2">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html" class="effect-3">Home</a></li>
+                        <li id="index" class="active"><a href="index.php" class="effect-3">Home</a></li>
+                        <li id="partners"><a href="parteners.php" class="effect-3 scroll">Partners</a></li>
                         <li><a href="#about" class="effect-3 scroll">About us</a></li>
-                        <li><a href="#parteners" class="effect-3 scroll">Partners</a></li>
                         <li><a href="#reviews" class="effect-3 scroll">Reviews</a></li>
                         <li><a href="#team" class="effect-3 scroll">Team</a></li>
                     </ul>
