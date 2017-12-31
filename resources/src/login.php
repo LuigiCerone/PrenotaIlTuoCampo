@@ -4,9 +4,10 @@ require_once("model/User.php");
 
 if (isset($_POST["email"]) && isset($_POST["password"])) {
     $user = new User();
-    echo "Qui";
-
-    $user::withEmailAndPassoword($_POST["email"], $_POST["password"]);
+    $user = User::withEmailAndPassoword($_POST["email"], $_POST["password"]);
+    if ($user != null) {
+        echo $user->to_json();
+    }
 }
 
 

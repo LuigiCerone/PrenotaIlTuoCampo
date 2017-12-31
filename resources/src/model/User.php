@@ -86,14 +86,12 @@ class User
 
     protected function loadByID($id)
     {
-        // do query
         $row = $this->get_user_from_id($id);
         $this->fill($row);
     }
 
     protected function loadByEmailAndPassword($email, $password)
     {
-        // do query
         $row = $this->get_user_from_email_password($email, $password);
         $this->fill($row);
     }
@@ -104,8 +102,6 @@ class User
         $this->lastName = $row['secondName'];
         $this->email = $row['email'];
         $this->password = $row['password'];
-
-        echo "Sono " . $this->toString();
     }
 
     function get_user_from_id($id)
@@ -130,8 +126,6 @@ class User
         $conn = Database::getConnection();
         // prepare and bind
 
-        echo "Qui";
-
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ss", $email, $password);
         $stmt->execute();
@@ -145,5 +139,15 @@ class User
         Database::closeConnestion($conn);
 
         return $result->fetch_assoc();
+    }
+
+    public function to_json()
+    {
+        return json_encode(array(
+            'firstName' => $this->firstName,
+            'lastName' => $this->lastName,
+            'email' => $this->email,
+            'password' => $this->password,
+        ));
     }
 }
