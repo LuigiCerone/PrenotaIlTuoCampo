@@ -41,3 +41,8 @@
     margin-bottom: 3rem;
     text-align: center;
 }
+
+#loading_img{
+    height: 70px;
+    width: 70px;
+}

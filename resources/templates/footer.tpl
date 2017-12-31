@@ -12,14 +12,18 @@
                 <ul>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.html">Home</a></li>
 
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="partners.php" class="scroll">Partners</a>
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="partners.php"
+                                                                                      class="scroll">Partners</a>
                     </li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#about" class="scroll">About
+
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="reviews.php" class="scroll">Reviews</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="about_us.php"
+                                                                                      class="scroll">About
                             Us</a></li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#reviews" class="scroll">Reviews</a>
-                    </li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#team"
-                                                                                      class="scroll">Team</a></li>
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="news.php"
+                                                                                      class="scroll">News</a></li>
+
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#gallery" class="scroll">Gallery</a>
                     </li>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#mail" class="scroll">Mail

@@ -47,18 +47,13 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 </h2>
 
             </div>
-            {*<div class="w3layouts_header_right">*}
-            {*<form action="#" method="post">*}
-            {*<input name="Search here" type="search" placeholder="Search" required="">*}
-            {*<input type="submit" value="">*}
-            {*</form>*}
-            {*</div>*}
             <ul class="agile_forms">
+                {*Login and Sign up*}
                 <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
                                                                                               aria-hidden="true"></i>
-                        Sign In</a></li>
+                       Accedi</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o"
-                                                                               aria-hidden="true"></i> Sign Up</a></li>
+                                                                               aria-hidden="true"></i>Registrati</a></li>
             </ul>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,8 +63,8 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                         <li id="index" class="active"><a href="index.php" class="effect-3">Home</a></li>
                         <li id="partners"><a href="parteners.php" class="effect-3 scroll">Partners</a></li>
                         <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Reviews</a></li>
-                        <li id="about_us"><a href="#about" class="effect-3 scroll">About us</a></li>
-                        <li><a href="#team" class="effect-3 scroll">Team</a></li>
+                        <li id="about_us"><a href="about_us.php" class="effect-3 scroll">About us</a></li>
+                        <li id="news"><a href="news.php" class="effect-3 scroll">News</a></li>
                     </ul>
                 </nav>
 
@@ -86,24 +81,25 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <div class="signin-form profile">
-                    <h3 class="agileinfo_sign">Sign In</h3>
+                    <h3 class="agileinfo_sign">Accedi</h3>
                     <div class="login-form">
-                        <form action="#" method="post">
-                            <input type="email" name="email" placeholder="E-mail" required="">
-                            <input type="password" name="password" placeholder="Password" required="">
+                        <div class="err" id="add_err"></div>
+                        <form action="./" method="post">
+                            <input id="email" type="email" name="email" placeholder="E-mail" required="">
+                            <input id="password" type="password" name="password" placeholder="Password" required="">
                             <div class="tp">
-                                <input type="submit" value="Sign In">
+                                <input type="submit" value="Accedi" id="log_in">
                             </div>
                         </form>
                     </div>
                     <div class="login-social-grids">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                        </ul>
+                        {*<ul>*}
+                        {*<li><a href="#"><i class="fa fa-facebook"></i></a></li>*}
+                        {*<li><a href="#"><i class="fa fa-twitter"></i></a></li>*}
+                        {*<li><a href="#"><i class="fa fa-rss"></i></a></li>*}
+                        {*</ul>*}
                     </div>
-                    <p><a href="#" data-toggle="modal" data-target="#myModal3"> Don't have an account?</a></p>
+                    <p><a href="#" data-toggle="modal" data-target="#myModal3"> Non sei ancora registrato?</a></p>
                 </div>
             </div>
         </div>
@@ -164,6 +160,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
     <script src="public/js/simplePlayer.js"></script>
     <script src="public/js/jquery.swipebox.min.js"></script>
     <script src="public/js/jquery-ui.js"></script>
+    <script src="public/js/projectScript/header.js"></script>
 {/block}
 </body>
 </html>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-30 10:45:27
+/* Smarty version 3.1.30, created on 2017-12-30 17:29:35
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a47603777d828_26490514',
+  'unifunc' => 'content_5a47beef70a4a5_87720365',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a51a379622a3c939eba627034eb2d8202d7ff303' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/footer.tpl',
-      1 => 1514627109,
+      1 => 1514651372,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a47603777d828_26490514 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a47beef70a4a5_87720365 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <div class="footer">
@@ -36,14 +36,18 @@ function content_5a47603777d828_26490514 (Smarty_Internal_Template $_smarty_tpl)
                 <ul>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.html">Home</a></li>
 
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="partners.php" class="scroll">Partners</a>
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="partners.php"
+                                                                                      class="scroll">Partners</a>
                     </li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#about" class="scroll">About
+
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="reviews.php" class="scroll">Reviews</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="about_us.php"
+                                                                                      class="scroll">About
                             Us</a></li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#reviews" class="scroll">Reviews</a>
-                    </li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#team"
-                                                                                      class="scroll">Team</a></li>
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="news.php"
+                                                                                      class="scroll">News</a></li>
+
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#gallery" class="scroll">Gallery</a>
                     </li>
                     <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#mail" class="scroll">Mail

@@ -10,7 +10,7 @@
 {/block}
 
 {block name="content"}
-    <h2 class="title">Cosa dicono di noi.</h2>
+    <h2 class="title">Cosa dicono di noi?</h2>
     {*{$partners->partners|json_encode}*}
     <br>
     {foreach from=$reviews->reviews item=review}
