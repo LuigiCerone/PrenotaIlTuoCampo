@@ -2,10 +2,10 @@
 
 class Database
 {
-    private $servername = "localhost";
-    private $username = "tdw";
-    private $password = "tdw";
-    private $dbname = "TDWProject";
+    protected static $servername = "localhost";
+    protected static $username = "tdw";
+    protected static $password = "tdw";
+    protected static $dbname = "TDWProject";
 
     /**
      * Database constructor.
@@ -16,9 +16,9 @@ class Database
     }
 
 
-    public function getConnection()
+    public static function getConnection()
     {
-        $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+        $conn = new mysqli(self::$servername, self::$username, self::$password, self::$dbname);
 
         // Check connection
         if ($conn->connect_error) {
@@ -27,4 +27,11 @@ class Database
         echo "Connected successfully";
         return $conn;
     }
+
+    public static function closeConnestion($conn)
+    {
+        mysqli_close($conn);
+    }
+
+
 }
