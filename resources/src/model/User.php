@@ -3,6 +3,7 @@ require("Database.php");
 
 class User
 {
+    private $id;
     private $firstName;
     private $lastName;
     private $email;
@@ -50,13 +51,13 @@ class User
         $this->lastName = $lastName;
     }
 
-    public function insert()
+    public function insert($email, $password)
     {
-        $sql = "INSERT INTO user (id, firstName, secondName) VALUES (null, ?, ?);";
+        $sql = "INSERT INTO user (id, email, password) VALUES (null, ?, ?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ss", $this->firstName, $this->lastName);
+        $stmt->bind_param("ss", $email, $password);
         $stmt->execute();
         $stmt->close();
         Database::closeConnestion($conn);
@@ -84,6 +85,35 @@ class User
         return $instance;
     }
 
+    public static function signUp($email, $password)
+    {
+        $instance = new self();
+        $instance->insert($email, $password);
+        return $instance;
+    }
+
+    public static function isEmailAvailable($email)
+    {
+        $sql = "SELECT COUNT(*) as count FROM user WHERE user.email = ? GROUP BY user.email;";
+        $conn = Database::getConnection();
+        // prepare and bind
+
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        while ($row = $result->fetch_assoc()) {
+            $count = $row['count'];
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        if ($count == 0) {
+            return true;
+        } else return false;
+    }
+
     protected function loadByID($id)
     {
         $row = $this->get_user_from_id($id);
@@ -98,6 +128,7 @@ class User
 
     protected function fill(array $row)
     {
+        $this->id = $row['id'];
         $this->firstName = $row['firstName'];
         $this->lastName = $row['secondName'];
         $this->email = $row['email'];
@@ -144,6 +175,7 @@ class User
     public function to_json()
     {
         return json_encode(array(
+            'id' => $this->id,
             'firstName' => $this->firstName,
             'lastName' => $this->lastName,
             'email' => $this->email,

@@ -51,9 +51,10 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 {*Login and Sign up*}
                 <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
                                                                                               aria-hidden="true"></i>
-                       Accedi</a></li>
+                        Accedi</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o"
-                                                                               aria-hidden="true"></i>Registrati</a></li>
+                                                                               aria-hidden="true"></i>Registrati</a>
+                </li>
             </ul>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -113,14 +114,47 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <div class="signin-form profile">
-                    <h3 class="agileinfo_sign">Sign Up</h3>
-                    <div class="login-form">
-                        <form action="#" method="post">
-                            <input type="text" name="name" placeholder="Username" required="">
-                            <input type="email" name="email" placeholder="Email" required="">
-                            <input type="password" name="password" placeholder="Password" required="">
-                            <input type="password" name="password" placeholder="Confirm Password" required="">
+                <div class="signin-form profile modal-body">
+                    <h3 class="agileinfo_sign">Registrati</h3>
+                    <div class="login-form container-fluid">
+                        <form action="./" method="post">
+                            <div class="row">
+                                <div class="col-md-5"><label for="first_name">Nome:</label>
+                                    <input class="form_input" type="text" name="first_name" placeholder="Nome"
+                                           required=""></div>
+                                <div class="col-md-5">
+                                    <label for="first_name">Cognome:</label>
+                                    <input class="form_input" type="text" name="last_name" placeholder="Cognome"
+                                           required=""></div>
+                                <div class="col-md-2"><label for="first_name">Sesso:</label>
+                                    <select class="form_input" name="gender" required="">
+                                        <option selected value="m">M</option>
+                                        <option value="f">F</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8"><label for="email">Email:</label>
+                                    <input class="form_input" type="email" name="email" placeholder="Email" required="">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="birthdate">Data di nascita:</label>
+                                    <input class="form_input" type="text" name="birthdate" placeholder="Data di nascita"
+                                           required=""></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="passoword">Passoword:</label>
+                                    <input class="form_input" type="password" name="password" placeholder="Password"
+                                           required=""></div>
+                                <div class="col-md-6">
+                                    <label for="rep_password">Conferma passoword:</label>
+                                    <input class="form_input" type="password" name="rep_password"
+                                           placeholder="Conferma Password" required="">
+                                </div>
+
+                            </div>
+                            <br><br>
                             <input type="submit" value="Sign Up">
                         </form>
                     </div>

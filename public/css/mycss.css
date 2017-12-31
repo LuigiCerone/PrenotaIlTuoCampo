@@ -27,22 +27,28 @@
     background-size: cover;
 }
 
-.card{
+.card {
     margin-bottom: 2rem;
 }
-.bigger{
+
+.bigger {
     font-size: 25px;
     height: 20px;
     padding: 1px 7px;
 }
 
-.title{
+.title {
     margin-top: 3rem;
     margin-bottom: 3rem;
     text-align: center;
 }
 
-#loading_img{
+#loading_img {
     height: 70px;
     width: 70px;
+}
+
+.form_input {
+    margin-bottom: 30px !important;
+    margin-top: 5px !important;
 }
