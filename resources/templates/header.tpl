@@ -117,7 +117,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="signin-form profile modal-body">
                     <h3 class="agileinfo_sign">Registrati</h3>
                     <div class="login-form container-fluid">
-                        <form action="./" method="post">
+                        <form action="signup.php" method="post">
                             <div class="row">
                                 <div class="col-md-5"><label for="first_name">Nome:</label>
                                     <input class="form_input" type="text" name="first_name" placeholder="Nome"
@@ -139,26 +139,29 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                 </div>
                                 <div class="col-md-4">
                                     <label for="birthdate">Data di nascita:</label>
-                                    <input class="form_input" type="text" name="birthdate" placeholder="Data di nascita"
+                                    <input class="form_input" type="text" id="birthdate" name="birthdate"
+                                           placeholder="Data di nascita"
                                            required=""></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="passoword">Passoword:</label>
-                                    <input class="form_input" type="password" name="password" placeholder="Password"
+                                    <input class="form_input" type="password" name="password" id="password"
+                                           placeholder="Password"
                                            required=""></div>
                                 <div class="col-md-6">
                                     <label for="rep_password">Conferma passoword:</label>
-                                    <input class="form_input" type="password" name="rep_password"
+                                    <input class="form_input" type="password" name="rep_password" id="rep_password"
                                            placeholder="Conferma Password" required="">
+                                    <span id="passoword_error"></span>
                                 </div>
 
                             </div>
                             <br><br>
-                            <input type="submit" value="Sign Up">
+                            <input class="form-control" id="submit_button" type="submit" value="Registrati">
                         </form>
                     </div>
-                    <p><a href="#"> By clicking Sign Up, I agree to your terms</a></p>
+                    <p><a href="#"> Cliccando su "Regitrati", accetti i nostri termini.</a></p>
                 </div>
             </div>
         </div>
