@@ -213,7 +213,7 @@ ul.agile_forms {
     padding-top: .5em;
 }
 
-ul.agile_forms li a {
+ul.agile_forms li > a {
     background: #ffb71c;
     color: #fff;
     font-size: 0.9em;
@@ -227,12 +227,12 @@ ul.agile_forms li a {
     -ms-border-radius: 30px;
 }
 
-ul.agile_forms li a:hover {
+ul.agile_forms li > a:hover {
     background: #fff;
     color: #000;
 }
 
-ul.agile_forms li {
+ul.agile_forms > li {
     display: inline-block;
     list-style: none;
 }

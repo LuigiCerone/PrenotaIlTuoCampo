@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-02 12:19:22
+/* Smarty version 3.1.30, created on 2018-01-02 18:13:36
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4b6abadcd2c0_78273123',
+  'unifunc' => 'content_5a4bbdc08be0c6_75195465',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1514891957,
+      1 => 1514913209,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a4b6abadcd2c0_78273123 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4bbdc08be0c6_75195465 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10763018755a4b6abadca1a6_81701363', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16794069725a4bbdc08bb412_04715427', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -66,14 +66,37 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10763018755a4b6aba
                 </h2>
 
             </div>
+
             <ul class="agile_forms">
-                
-                <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
-                                                                                              aria-hidden="true"></i>
-                        Accedi</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o"
-                                                                               aria-hidden="true"></i>Registrati</a>
-                </li>
+
+                <?php if (($_SESSION['id'] != null)) {?>
+                    <li>
+                        <div class="dropdown show user_profile">
+                            <a class="dropdown-toggle " href="#" role="button" id="dropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Il mio account
+                            </a>
+
+                            <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item" id="logout">Esci</a>
+                            </div>
+                        </div>
+                    </li>
+                    }
+                <?php } else { ?>
+
+                    
+                    <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
+                                                                                                  aria-hidden="true"></i>
+                            Accedi</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o"
+                                                                                   aria-hidden="true"></i>Registrati</a>
+                    </li>
+                <?php }?>
             </ul>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -136,17 +159,19 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10763018755a4b6aba
                 <div class="signin-form profile modal-body">
                     <h3 class="agileinfo_sign">Registrati</h3>
                     <div class="login-form container-fluid">
-                        <form action="signup.php" method="post">
+                        <form action="./" method="post">
                             <div class="row">
                                 <div class="col-md-5"><label for="first_name">Nome:</label>
-                                    <input class="form_input" type="text" name="first_name" placeholder="Nome"
+                                    <input class="form_input" type="text" id="first_name" name="first_name"
+                                           placeholder="Nome"
                                            required=""></div>
                                 <div class="col-md-5">
                                     <label for="first_name">Cognome:</label>
-                                    <input class="form_input" type="text" name="last_name" placeholder="Cognome"
+                                    <input class="form_input" type="text" id="last_name" name="last_name"
+                                           placeholder="Cognome"
                                            required=""></div>
                                 <div class="col-md-2"><label for="first_name">Sesso:</label>
-                                    <select class="form_input" name="gender" required="">
+                                    <select id="gender" class="form_input" name="gender" required="">
                                         <option selected value="m">M</option>
                                         <option value="f">F</option>
                                     </select>
@@ -154,7 +179,8 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10763018755a4b6aba
                             </div>
                             <div class="row">
                                 <div class="col-md-8"><label for="email">Email:</label>
-                                    <input class="form_input" type="email" name="email" placeholder="Email" required="">
+                                    <input class="form_input" id="signup_email" type="email" name="email"
+                                           placeholder="Email" required="">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="birthdate">Data di nascita:</label>
@@ -165,7 +191,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10763018755a4b6aba
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="passoword">Passoword:</label>
-                                    <input class="form_input" type="password" name="password" id="password"
+                                    <input class="form_input" type="password" name="password" id="signup_password"
                                            placeholder="Password"
                                            required=""></div>
                                 <div class="col-md-6">
@@ -176,7 +202,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10763018755a4b6aba
                                 </div>
 
                             </div>
-                            <br><br>
+                            <br><span id="signup_err"></span>
                             <input class="form-control" id="submit_button" type="submit" value="Registrati">
                         </form>
                     </div>
@@ -188,13 +214,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10763018755a4b6aba
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14192726025a4b6abadccaa3_88887004', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_848977495a4bbdc08bdaa1_62840716', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_10763018755a4b6abadca1a6_81701363 extends Smarty_Internal_Block
+class Block_16794069725a4bbdc08bb412_04715427 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -213,7 +239,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_14192726025a4b6abadccaa3_88887004 extends Smarty_Internal_Block
+class Block_848977495a4bbdc08bdaa1_62840716 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

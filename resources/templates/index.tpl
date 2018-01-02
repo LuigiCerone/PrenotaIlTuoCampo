@@ -11,7 +11,6 @@
 {/block}
 
 {block name="content"}
-
     <!-- banner -->
     <div class="container-fluid searchbox">
                     <div class="col-md-6 w3l_about_bottom_left one">

@@ -47,14 +47,37 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 </h2>
 
             </div>
+
             <ul class="agile_forms">
-                {*Login and Sign up*}
-                <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
-                                                                                              aria-hidden="true"></i>
-                        Accedi</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o"
-                                                                               aria-hidden="true"></i>Registrati</a>
-                </li>
+
+                {if ($smarty.session.id != null)}
+                    <li>
+                        <div class="dropdown show user_profile">
+                            <a class="dropdown-toggle " href="#" role="button" id="dropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Il mio account
+                            </a>
+
+                            <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item" id="logout">Esci</a>
+                            </div>
+                        </div>
+                    </li>
+                    }
+                {else}
+
+                    {*Login and Sign up*}
+                    <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
+                                                                                                  aria-hidden="true"></i>
+                            Accedi</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o"
+                                                                                   aria-hidden="true"></i>Registrati</a>
+                    </li>
+                {/if}
             </ul>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -117,17 +140,19 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="signin-form profile modal-body">
                     <h3 class="agileinfo_sign">Registrati</h3>
                     <div class="login-form container-fluid">
-                        <form action="signup.php" method="post">
+                        <form action="./" method="post">
                             <div class="row">
                                 <div class="col-md-5"><label for="first_name">Nome:</label>
-                                    <input class="form_input" type="text" name="first_name" placeholder="Nome"
+                                    <input class="form_input" type="text" id="first_name" name="first_name"
+                                           placeholder="Nome"
                                            required=""></div>
                                 <div class="col-md-5">
                                     <label for="first_name">Cognome:</label>
-                                    <input class="form_input" type="text" name="last_name" placeholder="Cognome"
+                                    <input class="form_input" type="text" id="last_name" name="last_name"
+                                           placeholder="Cognome"
                                            required=""></div>
                                 <div class="col-md-2"><label for="first_name">Sesso:</label>
-                                    <select class="form_input" name="gender" required="">
+                                    <select id="gender" class="form_input" name="gender" required="">
                                         <option selected value="m">M</option>
                                         <option value="f">F</option>
                                     </select>
@@ -135,7 +160,8 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             </div>
                             <div class="row">
                                 <div class="col-md-8"><label for="email">Email:</label>
-                                    <input class="form_input" type="email" name="email" placeholder="Email" required="">
+                                    <input class="form_input" id="signup_email" type="email" name="email"
+                                           placeholder="Email" required="">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="birthdate">Data di nascita:</label>
@@ -146,7 +172,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="passoword">Passoword:</label>
-                                    <input class="form_input" type="password" name="password" id="password"
+                                    <input class="form_input" type="password" name="password" id="signup_password"
                                            placeholder="Password"
                                            required=""></div>
                                 <div class="col-md-6">
@@ -157,7 +183,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                 </div>
 
                             </div>
-                            <br><br>
+                            <br><span id="signup_err"></span>
                             <input class="form-control" id="submit_button" type="submit" value="Registrati">
                         </form>
                     </div>

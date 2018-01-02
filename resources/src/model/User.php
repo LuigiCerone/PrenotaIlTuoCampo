@@ -85,9 +85,10 @@ class User
         return $instance;
     }
 
-    public static function signUp($email, $password)
+    public static function signUp($email, $password, $firstName, $lastName, $birthdate, $gender)
     {
         $instance = new self();
+        // TODO Insert all the data.
         $instance->insert($email, $password);
         return $instance;
     }

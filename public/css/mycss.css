@@ -56,3 +56,34 @@
 .error {
     border: 1px solid red;
 }
+
+.user_profile {
+    display: block;
+    background: #ffb71c;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 8px 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -o-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+}
+
+.user_profile li {
+    color: #FFF;
+}
+
+.user_profile:hover {
+    background: #fff;
+    color: #000;
+}
+
+.user_profile_item {
+
+    border-radius: 0px;
+}
+
+
