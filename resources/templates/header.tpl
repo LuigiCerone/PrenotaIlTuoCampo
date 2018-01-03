@@ -58,10 +58,10 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                 Il mio account
                             </a>
 
-                            <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-menu user_profile_item" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item " href="#">Il mio account</a>
+                                <a class="dropdown-item " href="#">Le mie prenotazioni</a>
+                                <a class="dropdown-item " href="#">Messaggi</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="#" class="dropdown-item" id="logout">Esci</a>
                             </div>
