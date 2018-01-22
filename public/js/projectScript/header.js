@@ -137,7 +137,6 @@ $(function () {
             url: "resources/src/logout.php",
             success: function (response) {
                 console.log(response);
-                location.reload();
             },
             error: function (response) {
                 console.log(response);

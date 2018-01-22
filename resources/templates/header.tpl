@@ -43,7 +43,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h2><a class="navbar-brand" href="index.html">PrenotaIltuoCampo</a>
+                <h2><a class="navbar-brand" href="index.php">PrenotaIltuoCampo</a>
                 </h2>
 
             </div>
@@ -59,11 +59,11 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             </a>
 
                             <div class="dropdown-menu user_profile_item" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item " href="#">Il mio account</a>
-                                <a class="dropdown-item " href="#">Le mie prenotazioni</a>
-                                <a class="dropdown-item " href="#">Messaggi</a>
+                                <a class="dropdown-item " href="profile.php">Il mio account</a>
+                                <a class="dropdown-item " href="bookings.php">Le mie prenotazioni</a>
+                                <a class="dropdown-item " href="messages.php">Messaggi</a>
                                 <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item" id="logout">Esci</a>
+                                <a href="index.php" class="dropdown-item" id="logout">Esci</a>
                             </div>
                         </div>
                     </li>
