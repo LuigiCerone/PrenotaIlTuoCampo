@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="da823cb4-60ac-43e2-b5b1-046a58fb250c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/afa935db-2f35-4d56-8ba0-e6236e0ae0a2.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/afa935db-2f35-4d56-8ba0-e6236e0ae0a2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/public/css/mycss.css" afterPath="$PROJECT_DIR$/public/css/mycss.css" />
-      <change beforePath="$PROJECT_DIR$/public/js/projectScript/reviews.js" afterPath="$PROJECT_DIR$/public/js/projectScript/reviews.js" />
-      <change beforePath="$PROJECT_DIR$/resources/libs/smarty/templates_c/131d760cc891a16f68a6cc991db8a6fe8c032cfb_0.file.reviews.tpl.php" afterPath="$PROJECT_DIR$/resources/libs/smarty/templates_c/131d760cc891a16f68a6cc991db8a6fe8c032cfb_0.file.reviews.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/reviews.tpl" afterPath="$PROJECT_DIR$/resources/templates/reviews.tpl" />
-      <change beforePath="$PROJECT_DIR$/reviews.php" afterPath="$PROJECT_DIR$/reviews.php" />
+      <change beforePath="$PROJECT_DIR$/parteners.php" afterPath="$PROJECT_DIR$/parteners.php" />
+      <change beforePath="$PROJECT_DIR$/resources/libs/smarty/templates_c/1ad68fcb857d9441c1c2cbd3fb4e5e07b1cd0592_0.file.partners.tpl.php" afterPath="$PROJECT_DIR$/resources/libs/smarty/templates_c/1ad68fcb857d9441c1c2cbd3fb4e5e07b1cd0592_0.file.partners.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/resources/src/model/Review.php" afterPath="$PROJECT_DIR$/resources/src/model/Review.php" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/partners.tpl" afterPath="$PROJECT_DIR$/resources/templates/partners.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,7 +48,7 @@
         <item name="TDWProject@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="tdwproject: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="reviews: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="partner: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -67,34 +65,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reviews.tpl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/templates/reviews.tpl">
+      <file leaf-file-name="parteners.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parteners.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
+            <state relative-caret-position="153">
+              <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Review.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/src/model/Review.php">
+      <file leaf-file-name="partners.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/templates/partners.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="29" column="55" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="55" />
-              <folding>
-                <marker date="1516641790827" expanded="true" signature="571:628" ph="SELECT text,... reviews" />
-                <marker date="1516641790827" expanded="true" signature="571:674" ph="SELECT * FRO... reviews" />
-                <marker date="1516641790827" expanded="true" signature="571:675" ph="SELECT * FRO... reviews" />
-                <marker date="1516641790827" expanded="true" signature="571:1133" ph="SELECT * FRO... reviews" />
-                <marker date="1516641790827" expanded="true" signature="1135:1223" ph="INSERT INTO reviews... " />
-              </folding>
+            <state relative-caret-position="280">
+              <caret line="24" column="109" lean-forward="false" selection-start-line="24" selection-start-column="109" selection-end-line="24" selection-end-column="109" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reviews" pinned="false" current-in-tab="false">
-        <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.reviews">
+      <file leaf-file-name="partner" pinned="false" current-in-tab="false">
+        <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.partner">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -102,11 +94,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Review.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/src/model/Review.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="24" />
+              <folding>
+                <marker date="1516642601051" expanded="true" signature="571:627" ph="SELECT text,... reviews" />
+                <marker date="1516642601051" expanded="true" signature="571:673" ph="SELECT * FRO... reviews" />
+                <marker date="1516642601051" expanded="true" signature="571:674" ph="SELECT * FRO... reviews" />
+                <marker date="1516642601051" expanded="true" signature="571:1132" ph="SELECT * FRO... reviews" />
+                <marker date="1516642601051" expanded="true" signature="1134:1221" ph="INSERT INTO reviews... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/src/model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="114" column="9" lean-forward="true" selection-start-line="110" selection-start-column="8" selection-end-line="114" selection-end-column="9" />
+            <state relative-caret-position="459">
+              <caret line="84" column="5" lean-forward="true" selection-start-line="72" selection-start-column="3" selection-end-line="84" selection-end-column="5" />
               <folding>
                 <marker date="1516636173179" expanded="true" signature="969:1027" ph="INSERT INTO user... " />
                 <marker date="1516636173179" expanded="true" signature="2111:2186" ph="SELECT COUNT... " />
@@ -117,11 +125,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Partner.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/src/model/Partner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <marker date="1516643009319" expanded="true" signature="635:656" ph="SELECT * FRO... partner" />
+                <marker date="1516643009319" expanded="true" signature="1120:1204" ph="INSERT INTO partner... " />
+                <marker date="1516643009319" expanded="true" signature="1120:1205" ph="INSERT INTO partner... " />
+                <marker date="1516643009319" expanded="true" signature="1120:1254" ph="INSERT INTO partner... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="review" pinned="false" current-in-tab="false">
+        <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.review">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="reviews.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reviews.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -132,16 +164,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="474">
               <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="insertNewReview.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/src/insertNewReview.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -191,7 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/smtemplate_config.php" />
         <option value="$PROJECT_DIR$/libs/smtemplate_config.php" />
         <option value="$PROJECT_DIR$/resources/libs/smtemplate_config.php" />
         <option value="$PROJECT_DIR$/resources/templates/layout.tpl" />
@@ -202,7 +223,6 @@
         <option value="$PROJECT_DIR$/templateInit.php" />
         <option value="$PROJECT_DIR$/resources/templates/parteners.tpl" />
         <option value="$PROJECT_DIR$/resources/libs/SMTemplate.php" />
-        <option value="$PROJECT_DIR$/resources/templates/partners.tpl" />
         <option value="$PROJECT_DIR$/public/js/projectScript/partners.js" />
         <option value="$PROJECT_DIR$/public/js/projectScript/about_us.js" />
         <option value="$PROJECT_DIR$/resources/templates/about_us.tpl" />
@@ -215,7 +235,6 @@
         <option value="$PROJECT_DIR$/public/js/projectScript/index.js" />
         <option value="$PROJECT_DIR$/resources/src/signup.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/parteners.php" />
         <option value="$PROJECT_DIR$/resources/templates/index.tpl" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/news.php" />
@@ -242,6 +261,9 @@
         <option value="$PROJECT_DIR$/reviews.php" />
         <option value="$PROJECT_DIR$/resources/src/model/Review.php" />
         <option value="$PROJECT_DIR$/resources/templates/reviews.tpl" />
+        <option value="$PROJECT_DIR$/parteners.php" />
+        <option value="$PROJECT_DIR$/resources/src/model/Partner.php" />
+        <option value="$PROJECT_DIR$/resources/templates/partners.tpl" />
       </list>
     </option>
   </component>
@@ -414,12 +436,12 @@
       <workItem from="1514910608066" duration="4251000" />
       <workItem from="1514970808583" duration="824000" />
       <workItem from="1516618404045" duration="2521000" />
-      <workItem from="1516634678647" duration="6327000" />
+      <workItem from="1516634678647" duration="7573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72888000" />
+    <option name="totallyTimeSpent" value="74134000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -440,7 +462,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34059098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32348368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17019667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17019667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20877458" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -458,7 +480,7 @@
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32503888" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -470,7 +492,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17019667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15355521" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20877458" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -489,28 +511,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/libs/smarty/templates_c/1ad68fcb857d9441c1c2cbd3fb4e5e07b1cd0592_0.file.partners.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/reviews/index.tpl" />
-    <entry file="file://$PROJECT_DIR$/resources/libs/SMTemplate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/partners.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/about_us.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -568,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parteners.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -594,6 +587,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -817,18 +811,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
+    <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.reviews">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/reviews.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.review">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/src/model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="114" column="9" lean-forward="true" selection-start-line="110" selection-start-column="8" selection-end-line="114" selection-end-column="9" />
+        <state relative-caret-position="459">
+          <caret line="84" column="5" lean-forward="true" selection-start-line="72" selection-start-column="3" selection-end-line="84" selection-end-column="5" />
           <folding>
             <marker date="1516636173179" expanded="true" signature="969:1027" ph="INSERT INTO user... " />
             <marker date="1516636173179" expanded="true" signature="2111:2186" ph="SELECT COUNT... " />
@@ -838,39 +846,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.reviews">
+    <entry file="file://$PROJECT_DIR$/reviews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parteners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.partner">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reviews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/src/model/Review.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="29" column="55" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="55" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="24" />
           <folding>
-            <marker date="1516641790827" expanded="true" signature="571:628" ph="SELECT text,... reviews" />
-            <marker date="1516641790827" expanded="true" signature="571:674" ph="SELECT * FRO... reviews" />
-            <marker date="1516641790827" expanded="true" signature="571:675" ph="SELECT * FRO... reviews" />
-            <marker date="1516641790827" expanded="true" signature="571:1133" ph="SELECT * FRO... reviews" />
-            <marker date="1516641790827" expanded="true" signature="1135:1223" ph="INSERT INTO reviews... " />
+            <marker date="1516642601051" expanded="true" signature="571:627" ph="SELECT text,... reviews" />
+            <marker date="1516642601051" expanded="true" signature="571:673" ph="SELECT * FRO... reviews" />
+            <marker date="1516642601051" expanded="true" signature="571:674" ph="SELECT * FRO... reviews" />
+            <marker date="1516642601051" expanded="true" signature="571:1132" ph="SELECT * FRO... reviews" />
+            <marker date="1516642601051" expanded="true" signature="1134:1221" ph="INSERT INTO reviews... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/reviews.tpl">
+    <entry file="file://$PROJECT_DIR$/resources/src/model/Partner.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1516643009319" expanded="true" signature="635:656" ph="SELECT * FRO... partner" />
+            <marker date="1516643009319" expanded="true" signature="1120:1204" ph="INSERT INTO partner... " />
+            <marker date="1516643009319" expanded="true" signature="1120:1205" ph="INSERT INTO partner... " />
+            <marker date="1516643009319" expanded="true" signature="1120:1254" ph="INSERT INTO partner... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/partners.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="24" column="109" lean-forward="false" selection-start-line="24" selection-start-column="109" selection-end-line="24" selection-end-column="109" />
           <folding />
         </state>
       </provider>
