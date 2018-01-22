@@ -114,3 +114,7 @@ small {
     margin: 40px auto;
     /* margin-left: auto; margin-right: auto; */
 }
+
+.hidden {
+    display: none;
+}
