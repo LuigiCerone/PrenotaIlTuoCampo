@@ -24,8 +24,11 @@
                                 <p class="card-text">Cras convallis ut turpis vitae facilisis. Morbi eu augue vel quam
                                     efficitur rhoncus vitae eget lectus. Cras augue ligula, aliquam ut enim ut, feugiat
                                     imperdiet sem. Integer sed mi quis nisl eleifend interdum.</p>
-                                <p class="pull-right"><input type="number" name="rating" id="stars_rating" data-icon-lib="fa"
-                                           data-active-icon="fa-star" data-inactive-icon=" fa-star-o" class="rating bigger" value="{$review->value}" data-readonly/>
+                                <p class="pull-right"><input type="number" name="rating" id="stars_rating"
+                                                             data-icon-lib="fa"
+                                                             data-active-icon="fa-star" data-inactive-icon=" fa-star-o"
+                                                             class="rating bigger" value="{$review->value}"
+                                                             data-readonly/>
                                 </p>
                             </div>
                         </div>
@@ -34,5 +37,27 @@
             </div>
         </section>
     {/foreach}
+
+    {*New review*}
+    {if ($smarty.session.id != null)}
+        <div class="row" id="post-review-box">
+            <div class="col-md-6 col-center-block">
+                <form accept-charset="UTF-8" action="" method="post">
+                    <input id="ratings-hidden" name="rating" type="hidden">
+                    <textarea class="form-control animated" cols="50" id="new-review" name="comment"
+                              placeholder="Inserisci la tua recensione qui..." rows="5"></textarea>
+
+                    <div class="text-right">
+                        <input type="number" name="rating" id="new_review" data-icon-lib="fa"
+                               data-active-icon="fa-star" data-inactive-icon=" fa-star-o" class="rating bigger"
+                               value="1"/>
+                        <br>
+                        <button class="btn btn-success btn-lg" type="submit">Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {/if}
     <!-- /banner -->
 {/block}

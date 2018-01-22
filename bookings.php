@@ -9,7 +9,7 @@ $tpl = templateInit::Instance();
 //$json = "{\"reviews\":[{\"username\":\"User1\",\"value\":1},{\"username\":\"User2\",\"number\":2}]}";
 //$params = array('reviews' => json_decode($json));
 
-if ($SESSION['id'] != null)
+if ($_SESSION['id'] != null)
     $tpl->render('bookings');
 else
     $tpl->render('error');

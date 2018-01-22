@@ -19,6 +19,12 @@ class User
         return ("User's data : " . $this->firstName . " " . $this->lastName);
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
     /**
      * @return mixed
      */

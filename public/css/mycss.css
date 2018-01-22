@@ -81,10 +81,11 @@
     color: #000;
 }
 
-.user_profile_item{
+.user_profile_item {
     /*width: 200px;*/
     /*display:inline-block;*/
 }
+
 .user_profile_item a {
     padding-bottom: 4px;
     padding-left: 5px;
@@ -92,4 +93,24 @@
     list-style: circle;
 }
 
+padding {
+    padding-top: 30px;
+}
 
+.glyphicon {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+small {
+    display: block;
+    line-height: 1.428571429;
+    color: #999;
+}
+
+.col-center-block {
+    float: none;
+    display: block;
+    margin: 40px auto;
+    /* margin-left: auto; margin-right: auto; */
+}
