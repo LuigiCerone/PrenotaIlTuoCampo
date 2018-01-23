@@ -46,10 +46,11 @@ $(function () {
         return false;
     });
 
-    $("#rep_password").on('keypress', function () {
-        console.log("Event - Keypress");
+    $("#rep_password").on('keyup', function () {
+
         password = $('#signup_password').val();
         rep_password = $('#rep_password').val();
+        console.log(password, rep_password);
         if (password !== rep_password) {
             $('#passoword_error').html("Le passwords non corrispondono!");
             $('#rep_password').addClass('error');
@@ -57,7 +58,7 @@ $(function () {
         } else {
             $('#passoword_error').html("");
             $('#rep_password').removeClass('error');
-            $("#submit_button").prop('disabled', true);
+            $("#submit_button").prop('disabled', false);
         }
     });
 
@@ -103,14 +104,7 @@ $(function () {
             success: function (response) {
                 $("#signup_err").html("Sign up ok.");
                 console.log(response);
-                // if (html == 'true') {
-                //     //$("#add_err").html("right username or password");
-                //     window.location = "dashboard.php";
-                // }
-                // else {
-                //     $("#add_err").css('display', 'inline', 'important');
-                //     $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
-                // }
+                window.location = "activateAccount.php";
             },
             error: function (response) {
                 $("#signup_err").html("Error in signup");

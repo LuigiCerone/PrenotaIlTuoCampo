@@ -57,13 +57,13 @@ class User
         $this->lastName = $lastName;
     }
 
-    public function insert($email, $password)
+    public function insert($email, $password, $firstName, $lastName, $birthdate, $gender)
     {
-        $sql = "INSERT INTO user (id, email, password) VALUES (null, ?, ?);";
+        $sql = "INSERT INTO user (id, email, password, firstName, lastName, birthdate, gender, created_at, tokenCode) VALUES (null, ?, ?, ?, ?, ?, ?, NOW(), ?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ss", $email, $password);
+        $stmt->bind_param("sssssss", $email, $password,  $firstName, $lastName, $birthdate, $gender, md5($firstName.$lastName));
         $stmt->execute();
         $stmt->close();
         Database::closeConnestion($conn);
@@ -95,7 +95,7 @@ class User
     {
         $instance = new self();
         // TODO Insert all the data.
-        $instance->insert($email, $password);
+        $instance->insert($email, $password, $firstName, $lastName, $birthdate, $gender);
         return $instance;
     }
 
@@ -160,7 +160,7 @@ class User
     function get_user_from_email_password($email, $password)
     {
 
-        $sql = "SELECT * FROM user WHERE user.email = ? AND user.password = ?;";
+        $sql = "SELECT * FROM user WHERE user.email = ? AND user.password = ? AND user.active = 1;";
         $conn = Database::getConnection();
         // prepare and bind
 

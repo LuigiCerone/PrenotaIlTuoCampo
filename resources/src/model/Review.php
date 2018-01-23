@@ -27,7 +27,7 @@ class Review
 
     public static function getAllReviews()
     {
-        $sql = "SELECT text, stars, approved, firstName FROM review JOIN user ON userId_fk = user.id WHERE approved = 1";
+        $sql = "SELECT text, stars, approved, firstName FROM review JOIN user ON user_fk = user.id WHERE approved = 1";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -48,7 +48,7 @@ class Review
 
     public function insert()
     {
-        $sql = "INSERT INTO review (id, userId_fk, text, stars, approved) VALUES (null, ?, ?, ?, FALSE);";
+        $sql = "INSERT INTO review (id, user_fk, text, stars, approved) VALUES (null, ?, ?, ?, FALSE);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
