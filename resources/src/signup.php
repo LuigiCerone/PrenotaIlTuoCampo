@@ -21,13 +21,14 @@ if (isset($_POST["email"]) &&
 //                'gender' : gender
 
         $user = User::signUp($_POST['email'], $_POST['password'], $_POST["firstName"], $_POST["lastName"], $_POST["birthDate"], $_POST["gender"]);
+
+        // Send confirmation email.
+        $user->sendConfirmationEmail();
     } else {
         // The email is already in use.
         http_response_code(409);
         $response['error'] = true;
         $response['error_msg'] = 'Email in use!';
     }
-
-
 }
 

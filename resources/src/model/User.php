@@ -1,4 +1,8 @@
 <?php
+require_once(dirname(__FILE__, 3) . '/libs/Mailer/PHPMailer.php');
+require_once(dirname(__FILE__, 3) . '/libs/Mailer/Exception.php');
+require_once(dirname(__FILE__, 3) . '/libs/Mailer/SMTP.php');
+
 require("Database.php");
 
 class User
@@ -8,6 +12,12 @@ class User
     private $lastName;
     private $email;
     private $password;
+    private $telnumber;
+    private $birthdate;
+    private $created_at;
+    private $active;
+    private $tokenCode;
+    private $gender;
 
 
     public function __construct()
@@ -57,16 +67,25 @@ class User
         $this->lastName = $lastName;
     }
 
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
     public function insert($email, $password, $firstName, $lastName, $birthdate, $gender)
     {
         $sql = "INSERT INTO user (id, email, password, firstName, lastName, birthdate, gender, created_at, tokenCode) VALUES (null, ?, ?, ?, ?, ?, ?, NOW(), ?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssss", $email, $password,  $firstName, $lastName, $birthdate, $gender, md5($firstName.$lastName));
+        $stmt->bind_param("sssssss", $email, $password, $firstName, $lastName, $birthdate, $gender, md5($firstName . $lastName));
         $stmt->execute();
+        $id = $conn->insert_id;
         $stmt->close();
         Database::closeConnestion($conn);
+
+        $this->setId($id);
+//        return $this->loadByID($id);
     }
 
 
@@ -96,6 +115,8 @@ class User
         $instance = new self();
         // TODO Insert all the data.
         $instance->insert($email, $password, $firstName, $lastName, $birthdate, $gender);
+        $instance->loadByID($instance->getId());
+        echo "" . $instance->to_json();
         return $instance;
     }
 
@@ -140,6 +161,12 @@ class User
         $this->lastName = $row['secondName'];
         $this->email = $row['email'];
         $this->password = $row['password'];
+        $this->gender = $row['gender'];
+        $this->telnumber = $row['telnumber'];
+        $this->birthdate = $row['birthdate'];
+        $this->tokenCode = $row['birthdate'];
+        $this->created_at = $row['created_at'];
+        $this->active = $row['active'];
     }
 
     function get_user_from_id($id)
@@ -189,4 +216,55 @@ class User
             'password' => $this->password,
         ));
     }
+
+    public function sendConfirmationEmail()
+    {
+        $message = $this->formatMessage($this->firstName, $this->tokenCode);
+        $subject = "Conferma registrazione";
+
+        $mail = new \PHPMailer\PHPMailer\PHPMailer(true);                              // Passing `true` enables exceptions
+        try {
+            //Server settings
+            $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+            $mail->isSMTP();                                      // Set mailer to use SMTP
+            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+            $mail->SMTPAuth = true;                               // Enable SMTP authentication
+            $mail->Username = 'progettotwd@gmail.com';                 // SMTP username
+            $mail->Password = 'progettotwd1';                           // SMTP password
+            $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+            $mail->Port = 587;                                    // TCP port to connect to
+
+            echo "L'email : " . $this->email;
+            echo "";
+            //Recipients
+            $mail->setFrom('progettotdw@gmail.com', 'Mailer');
+            $mail->addAddress('' . $this->email);     // Add a recipient
+
+            $mail->addReplyTo('progettotdw@gmail.com');
+
+
+            //Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = $subject;
+            $mail->Body = $message;
+            $mail->AltBody = $message;
+
+            $mail->send();
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+        }
+    }
+
+
+    function formatMessage($firstName, $token)
+    {
+        $message = "Ciao " . $firstName . ",<br/><br />Benvenuto su PrenotaIlTuoCampo!<br/> " .
+            "Per completare la tua registrazione clicca semplicemente sul seguente link:<br/>" .
+            "<a href='http://www.localhost/PrenotaIlTuoCampo/resources/src/verify.php?token='" . $token . "'>Clicca qui per attivare!</a>" .
+            "<br/><br/>Grazie!";
+        return $message;
+    }
+
+
 }

@@ -70,7 +70,7 @@ $(function () {
         dayNames: ['Domenica', 'Luned&#236', 'Marted&#236', 'Mercoled&#236', 'Gioved&#236', 'Venerd&#236', 'Sabato'], // set days names
         dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'], // set short day names
         dayNamesMin: ['Do', 'Lu', 'Ma', 'Me', 'Gio', 'Ve', 'Sa'], // set more short days names
-        dateFormat: 'dd/mm/yy' // set format date
+        dateFormat: 'yy-mm-dd' // set format date.
     };
 
     $("#birthdate").datepicker($.datepicker.regional['it']);
@@ -104,7 +104,7 @@ $(function () {
             success: function (response) {
                 $("#signup_err").html("Sign up ok.");
                 console.log(response);
-                window.location = "activateAccount.php";
+                // window.location = "activateAccount.php";
             },
             error: function (response) {
                 $("#signup_err").html("Error in signup");
