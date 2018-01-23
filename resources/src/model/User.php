@@ -24,6 +24,18 @@ class User
     {
     }
 
+    public static function activateUser($token)
+    {
+        $sql = "UPDATE user SET active = 1 WHERE tokenCode=?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $token);
+        $stmt->execute();
+        $stmt->close();
+        Database::closeConnestion($conn);
+    }
+
     function toString()
     {
         return ("User's data : " . $this->firstName . " " . $this->lastName);
@@ -261,7 +273,7 @@ class User
     {
         $message = "Ciao " . $firstName . ",<br/><br />Benvenuto su PrenotaIlTuoCampo!<br/> " .
             "Per completare la tua registrazione clicca semplicemente sul seguente link:<br/>" .
-            "<a href='http://www.localhost/PrenotaIlTuoCampo/resources/src/verify.php?token='" . $token . "'>Clicca qui per attivare!</a>" .
+            "<a href='http://www.localhost/PrenotaIlTuoCampo/resources/src/verifyAccount.php?token='" . $token . "'>Clicca qui per attivare!</a>" .
             "<br/><br/>Grazie!";
         return $message;
     }
