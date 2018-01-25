@@ -56,7 +56,8 @@
                                 </tr>
                             </table>
                             <br><br>
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#changePasswordModal">
                                 Cambia password
                             </button>
                             <!-- Split button -->
@@ -83,23 +84,21 @@
     </div>
     <!-- Modal1 -->
     <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
+        <div class="modal-dialog change_pass">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <div class="signin-form profile">
                         <h3 class="agileinfo_sign">Cambia password</h3>
-                        <div class="login-form">
-                            <div class="err" id="add_err"></div>
-                            <form method="post">
-                                <input id="email" type="email" name="email" placeholder="E-mail" required>
-                                <input id="password" type="password" name="password" placeholder="Password" required>
-                                <div class="tp">
-                                    <input type="submit" value="Cambia passoword" id="change_password" />
-                                </div>
-                            </form>
-                        </div>
+                        <form id="changePassFrom" method="post">
+                            <input id="old_password" type="password" name="old_password"
+                                   placeholder="Vecchia password" required />
+                            <input id="new_password" type="password" name="new_password"
+                                   placeholder="Nuova password" required />
+                            <span id="error"></span>
+                            <input type="submit" value="Cambia passoword" />
+                        </form>
                     </div>
                 </div>
             </div>

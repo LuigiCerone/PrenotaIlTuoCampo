@@ -1,6 +1,7 @@
 <?php
 require_once("model/User.php");
 
+session_start();
 
 if (isset($_POST["email"]) &&
     isset($_POST["password"]) &&
@@ -30,5 +31,11 @@ if (isset($_POST["email"]) &&
         $response['error'] = true;
         $response['error_msg'] = 'Email in use!';
     }
+} else if (isset($_POST["old_pass"]) && isset($_POST["new_pass"]) && isset($_SESSION["id"])) {
+    // Change user's password.
+    if (User::changePassword($_SESSION["id"], $_POST["old_pass"], $_POST["new_pass"]))
+        http_response_code(200);
+    else
+        http_response_code(500);
 }
 

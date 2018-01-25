@@ -36,6 +36,19 @@ class User
         Database::closeConnestion($conn);
     }
 
+    public static function changePassword($id, $old_pass, $new_pass)
+    {
+        $sql = "UPDATE user SET password = ? WHERE id=? AND password = ?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sss", $new_pass, $id, $old_pass);
+        $stmt->execute();
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return true;
+    }
+
     function toString()
     {
         return ("User's data : " . $this->firstName . " " . $this->lastName);

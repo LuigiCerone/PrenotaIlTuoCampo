@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-25 10:37:04
+/* Smarty version 3.1.30, created on 2018-01-25 11:57:12
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/profile.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a69a54015e895_25623375',
+  'unifunc' => 'content_5a69b808a38189_31624764',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '851d01d268753293f6cff2ad0be90c0198820ad2' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/profile.tpl',
-      1 => 1516873003,
+      1 => 1516877808,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a69a54015e895_25623375 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a69b808a38189_31624764 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9618694035a69a540146458_70613057', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1066707785a69b808a1de04_49591511', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4856300075a69a54014ac24_38459486', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11282720285a69b808a204b0_65037704', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_806427975a69a54015dca1_64465877', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_524823255a69b808a373c5_64403549', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_9618694035a69a540146458_70613057 extends Smarty_Internal_Block
+class Block_1066707785a69b808a1de04_49591511 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_4856300075a69a54014ac24_38459486 extends Smarty_Internal_Block
+class Block_11282720285a69b808a204b0_65037704 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_806427975a69a54015dca1_64465877 extends Smarty_Internal_Block
+class Block_524823255a69b808a373c5_64403549 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -130,7 +130,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                                 </tr>
                             </table>
                             <br><br>
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#changePasswordModal">
                                 Cambia password
                             </button>
                             <!-- Split button -->
@@ -150,6 +151,28 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             
                             
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal1 -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog change_pass">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="signin-form profile">
+                        <h3 class="agileinfo_sign">Cambia password</h3>
+                        <form id="changePassFrom" method="post">
+                            <input id="old_password" type="password" name="old_password"
+                                   placeholder="Vecchia password" required />
+                            <input id="new_password" type="password" name="new_password"
+                                   placeholder="Nuova password" required />
+                            <span id="error"></span>
+                            <input type="submit" value="Cambia passoword" />
+                        </form>
                     </div>
                 </div>
             </div>

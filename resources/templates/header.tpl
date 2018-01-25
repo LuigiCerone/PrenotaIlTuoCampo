@@ -107,11 +107,13 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="signin-form profile">
                     <h3 class="agileinfo_sign">Accedi</h3>
                     <div class="login-form">
-                        <div class="err" id="add_err"></div>
-                        <form method="post">
+                        <form id="loginForm" method="post">
+                            <div class="err" id="add_err"></div>
                             <input id="email" type="email" name="email" placeholder="E-mail" required/>
                             <input id="password" type="password" name="password" placeholder="Password" required/>
-                            <input type="submit" value="Accedi" id="log_in"/>
+                            {*<input type="submit" class="form-control" value="Accedi" id="log_in"/>*}
+
+                            <input type="submit" value="Accedi">
                         </form>
                     </div>
                     <p><a href="#" data-toggle="modal" data-target="#myModal3"> Non sei ancora registrato?</a></p>
@@ -131,7 +133,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="signin-form profile modal-body">
                     <h3 class="agileinfo_sign">Registrati</h3>
                     <div class="login-form container-fluid">
-                        <form method="post">
+                        <form method="post" id="signupForm">
                             <div class="row">
                                 <div class="col-md-5"><label for="first_name">Nome:</label>
                                     <input class="form_input" type="text" id="first_name" name="first_name"

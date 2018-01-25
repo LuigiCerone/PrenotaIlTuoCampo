@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-25 10:44:11
+/* Smarty version 3.1.30, created on 2018-01-25 11:56:09
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a69a6eb920214_46883946',
+  'unifunc' => 'content_5a69b7c98d6c33_23254765',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1516873402,
+      1 => 1516877759,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a69a6eb920214_46883946 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a69b7c98d6c33_23254765 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3420654855a69a6eb914e02_80593574', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20971851885a69b7c98cf271_31181985', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -126,11 +126,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3420654855a69a6eb9
                 <div class="signin-form profile">
                     <h3 class="agileinfo_sign">Accedi</h3>
                     <div class="login-form">
-                        <div class="err" id="add_err"></div>
-                        <form method="post">
+                        <form id="loginForm" method="post">
+                            <div class="err" id="add_err"></div>
                             <input id="email" type="email" name="email" placeholder="E-mail" required/>
                             <input id="password" type="password" name="password" placeholder="Password" required/>
-                            <input type="submit" value="Accedi" id="log_in"/>
+                            
+
+                            <input type="submit" value="Accedi">
                         </form>
                     </div>
                     <p><a href="#" data-toggle="modal" data-target="#myModal3"> Non sei ancora registrato?</a></p>
@@ -150,7 +152,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3420654855a69a6eb9
                 <div class="signin-form profile modal-body">
                     <h3 class="agileinfo_sign">Registrati</h3>
                     <div class="login-form container-fluid">
-                        <form method="post">
+                        <form method="post" id="signupForm">
                             <div class="row">
                                 <div class="col-md-5"><label for="first_name">Nome:</label>
                                     <input class="form_input" type="text" id="first_name" name="first_name"
@@ -205,13 +207,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3420654855a69a6eb9
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9975665025a69a6eb91df98_15790279', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2485143265a69b7c98d5ea6_85797024', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_3420654855a69a6eb914e02_80593574 extends Smarty_Internal_Block
+class Block_20971851885a69b7c98cf271_31181985 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -230,7 +232,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_9975665025a69a6eb91df98_15790279 extends Smarty_Internal_Block
+class Block_2485143265a69b7c98d5ea6_85797024 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

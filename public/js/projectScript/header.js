@@ -1,8 +1,11 @@
 $(function () {
     console.log("ok");
 
-    $('#log_in').click(function (event) {
+    $('#loginForm').submit(function (event) {
         console.log("Submit button clicked");
+
+        event.preventDefault();
+        event.stopPropagation();
 
         var email = $('#email').val();
         var password = $('#password').val();
@@ -43,11 +46,9 @@ $(function () {
                 $("#password").prop('disabled', false);
             }
         });
-        return false;
     });
 
     $("#rep_password").on('keyup', function () {
-
         password = $('#signup_password').val();
         rep_password = $('#rep_password').val();
         console.log(password, rep_password);
@@ -78,7 +79,7 @@ $(function () {
 
     // ----------------------------------------------------------------------------------------------------------------
     // ------------------------------------- SIGNUP
-    $('#submit_button').click(function (event) {
+    $('#signupForm').submit(function (event) {
         console.log("Submit button clicked");
 
         var email = $('#signup_email').val();
@@ -133,7 +134,7 @@ $(function () {
             },
             error: function (response) {
                 console.log(response);
-            },
+            }
         });
     });
 });

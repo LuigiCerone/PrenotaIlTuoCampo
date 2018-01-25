@@ -93,7 +93,7 @@
     list-style: circle;
 }
 
-padding {
+.padding {
     padding-top: 30px;
 }
 
@@ -117,4 +117,8 @@ small {
 
 .hidden {
     display: none;
+}
+
+.change_pass {
+    width: 30%;
 }
