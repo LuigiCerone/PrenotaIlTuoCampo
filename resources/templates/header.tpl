@@ -140,19 +140,19 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="signin-form profile modal-body">
                     <h3 class="agileinfo_sign">Registrati</h3>
                     <div class="login-form container-fluid">
-                        <form action="./" method="post">
+                        <form method="post">
                             <div class="row">
                                 <div class="col-md-5"><label for="first_name">Nome:</label>
                                     <input class="form_input" type="text" id="first_name" name="first_name"
                                            placeholder="Nome"
-                                           required=""></div>
+                                           required/></div>
                                 <div class="col-md-5">
                                     <label for="first_name">Cognome:</label>
                                     <input class="form_input" type="text" id="last_name" name="last_name"
                                            placeholder="Cognome"
-                                           required=""></div>
+                                           required/></div>
                                 <div class="col-md-2"><label for="first_name">Sesso:</label>
-                                    <select id="gender" class="form_input" name="gender" required="">
+                                    <select id="gender" class="form_input" name="gender" required>
                                         <option selected value="m">M</option>
                                         <option value="f">F</option>
                                     </select>
@@ -161,30 +161,30 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             <div class="row">
                                 <div class="col-md-8"><label for="email">Email:</label>
                                     <input class="form_input" id="signup_email" type="email" name="email"
-                                           placeholder="Email" required="">
+                                           placeholder="Email" required/>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="birthdate">Data di nascita:</label>
                                     <input class="form_input" type="text" id="birthdate" name="birthdate"
                                            placeholder="Data di nascita"
-                                           required=""></div>
+                                           required/></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="passoword">Passoword:</label>
                                     <input class="form_input" type="password" name="password" id="signup_password"
                                            placeholder="Password"
-                                           required=""></div>
+                                           required/></div>
                                 <div class="col-md-6">
                                     <label for="rep_password">Conferma passoword:</label>
                                     <input class="form_input" type="password" name="rep_password" id="rep_password"
-                                           placeholder="Conferma Password" required="">
+                                           placeholder="Conferma Password" required/>
                                     <span id="passoword_error"></span>
                                 </div>
 
                             </div>
                             <br><span id="signup_err"></span>
-                            <input class="form-control" id="submit_button" type="submit" value="Registrati">
+                            <input type="submit" class="form-control" id="submit_button" value="Registrati"/>
                         </form>
                     </div>
                     <p><a href="#"> Cliccando su "Regitrati", accetti i nostri termini.</a></p>

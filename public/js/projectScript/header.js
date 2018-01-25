@@ -121,7 +121,6 @@ $(function () {
                 $("#password").prop('disabled', false);
             }
         });
-        return false;
     });
 
     $('#logout').on('click', function () {
