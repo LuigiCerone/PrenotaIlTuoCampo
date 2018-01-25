@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-25 10:25:58
+/* Smarty version 3.1.30, created on 2018-01-25 10:44:11
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a69a2a63bd209_08580860',
+  'unifunc' => 'content_5a69a6eb920214_46883946',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1516872351,
+      1 => 1516873402,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a69a2a63bd209_08580860 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a69a6eb920214_46883946 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20184839005a69a2a63a8e51_02183469', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3420654855a69a6eb914e02_80593574', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -127,20 +127,11 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20184839005a69a2a6
                     <h3 class="agileinfo_sign">Accedi</h3>
                     <div class="login-form">
                         <div class="err" id="add_err"></div>
-                        <form action="./" method="post">
-                            <input id="email" type="email" name="email" placeholder="E-mail" required="">
-                            <input id="password" type="password" name="password" placeholder="Password" required="">
-                            <div class="tp">
-                                <input type="submit" value="Accedi" id="log_in">
-                            </div>
+                        <form method="post">
+                            <input id="email" type="email" name="email" placeholder="E-mail" required/>
+                            <input id="password" type="password" name="password" placeholder="Password" required/>
+                            <input type="submit" value="Accedi" id="log_in"/>
                         </form>
-                    </div>
-                    <div class="login-social-grids">
-                        
-                        
-                        
-                        
-                        
                     </div>
                     <p><a href="#" data-toggle="modal" data-target="#myModal3"> Non sei ancora registrato?</a></p>
                 </div>
@@ -214,13 +205,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20184839005a69a2a6
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3356793935a69a2a63b9ba3_31909908', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9975665025a69a6eb91df98_15790279', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_20184839005a69a2a63a8e51_02183469 extends Smarty_Internal_Block
+class Block_3420654855a69a6eb914e02_80593574 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -239,7 +230,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_3356793935a69a2a63b9ba3_31909908 extends Smarty_Internal_Block
+class Block_9975665025a69a6eb91df98_15790279 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

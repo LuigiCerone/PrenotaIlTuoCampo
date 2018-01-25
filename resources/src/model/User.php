@@ -170,13 +170,13 @@ class User
     {
         $this->id = $row['id'];
         $this->firstName = $row['firstName'];
-        $this->lastName = $row['secondName'];
+        $this->lastName = $row['lastName'];
         $this->email = $row['email'];
         $this->password = $row['password'];
         $this->gender = $row['gender'];
         $this->telnumber = $row['telnumber'];
         $this->birthdate = $row['birthdate'];
-        $this->tokenCode = $row['birthdate'];
+        $this->tokenCode = $row['tokenCode'];
         $this->created_at = $row['created_at'];
         $this->active = $row['active'];
     }
@@ -226,6 +226,11 @@ class User
             'lastName' => $this->lastName,
             'email' => $this->email,
             'password' => $this->password,
+            'telnumber' => $this->telnumber,
+            'birthdate' => $this->birthdate,
+            'created_at' => $this->created_at,
+            'active' => $this->active,
+            'gender' => $this->gender
         ));
     }
 

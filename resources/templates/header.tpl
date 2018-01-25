@@ -108,20 +108,11 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                     <h3 class="agileinfo_sign">Accedi</h3>
                     <div class="login-form">
                         <div class="err" id="add_err"></div>
-                        <form action="./" method="post">
-                            <input id="email" type="email" name="email" placeholder="E-mail" required="">
-                            <input id="password" type="password" name="password" placeholder="Password" required="">
-                            <div class="tp">
-                                <input type="submit" value="Accedi" id="log_in">
-                            </div>
+                        <form method="post">
+                            <input id="email" type="email" name="email" placeholder="E-mail" required/>
+                            <input id="password" type="password" name="password" placeholder="Password" required/>
+                            <input type="submit" value="Accedi" id="log_in"/>
                         </form>
-                    </div>
-                    <div class="login-social-grids">
-                        {*<ul>*}
-                        {*<li><a href="#"><i class="fa fa-facebook"></i></a></li>*}
-                        {*<li><a href="#"><i class="fa fa-twitter"></i></a></li>*}
-                        {*<li><a href="#"><i class="fa fa-rss"></i></a></li>*}
-                        {*</ul>*}
                     </div>
                     <p><a href="#" data-toggle="modal" data-target="#myModal3"> Non sei ancora registrato?</a></p>
                 </div>
