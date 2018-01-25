@@ -122,3 +122,7 @@ small {
 .change_pass {
     width: 30%;
 }
+
+.user-info td {
+    padding: 5px 10px 5px 10px;
+}

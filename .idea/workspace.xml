@@ -7,13 +7,7 @@
     <list default="true" id="da823cb4-60ac-43e2-b5b1-046a58fb250c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/public/css/mycss.css" afterPath="$PROJECT_DIR$/public/css/mycss.css" />
-      <change beforePath="$PROJECT_DIR$/public/js/projectScript/header.js" afterPath="$PROJECT_DIR$/public/js/projectScript/header.js" />
-      <change beforePath="$PROJECT_DIR$/public/js/projectScript/profile.js" afterPath="$PROJECT_DIR$/public/js/projectScript/profile.js" />
       <change beforePath="$PROJECT_DIR$/resources/libs/smarty/templates_c/851d01d268753293f6cff2ad0be90c0198820ad2_0.file.profile.tpl.php" afterPath="$PROJECT_DIR$/resources/libs/smarty/templates_c/851d01d268753293f6cff2ad0be90c0198820ad2_0.file.profile.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/resources/libs/smarty/templates_c/a7a50d74936f643a70293beb5dda3d67b62c4d0d_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/resources/libs/smarty/templates_c/a7a50d74936f643a70293beb5dda3d67b62c4d0d_0.file.header.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/resources/src/model/User.php" afterPath="$PROJECT_DIR$/resources/src/model/User.php" />
-      <change beforePath="$PROJECT_DIR$/resources/src/signup.php" afterPath="$PROJECT_DIR$/resources/src/signup.php" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/header.tpl" afterPath="$PROJECT_DIR$/resources/templates/header.tpl" />
       <change beforePath="$PROJECT_DIR$/resources/templates/profile.tpl" afterPath="$PROJECT_DIR$/resources/templates/profile.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,10 +119,10 @@
       <file leaf-file-name="profile.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/templates/profile.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="93" column="48" lean-forward="false" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="48" />
+            <state relative-caret-position="152">
+              <caret line="19" column="102" lean-forward="true" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
               <folding>
-                <element signature="e#767#773#0#HTML" expanded="true" />
+                <element signature="e#766#772#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,8 +141,8 @@
       <file leaf-file-name="mycss.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="122" column="12" lean-forward="false" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
+            <state relative-caret-position="266">
+              <caret line="126" column="28" lean-forward="false" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -253,14 +247,14 @@
         <option value="$PROJECT_DIR$/resources/templates/activateAccount.tpl" />
         <option value="$PROJECT_DIR$/resources/src/verifyAccount.php" />
         <option value="$PROJECT_DIR$/profile.php" />
-        <option value="$PROJECT_DIR$/public/css/mycss.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/console.sql" />
         <option value="$PROJECT_DIR$/resources/src/signup.php" />
         <option value="$PROJECT_DIR$/resources/src/model/User.php" />
         <option value="$PROJECT_DIR$/public/js/projectScript/header.js" />
         <option value="$PROJECT_DIR$/resources/templates/header.tpl" />
-        <option value="$PROJECT_DIR$/resources/templates/profile.tpl" />
         <option value="$PROJECT_DIR$/public/js/projectScript/profile.js" />
+        <option value="$PROJECT_DIR$/resources/templates/profile.tpl" />
+        <option value="$PROJECT_DIR$/public/css/mycss.css" />
       </list>
     </option>
   </component>
@@ -454,12 +448,12 @@
       <workItem from="1516634678647" duration="7596000" />
       <workItem from="1516701260691" duration="5345000" />
       <workItem from="1516718927989" duration="6866000" />
-      <workItem from="1516871927815" duration="5985000" />
+      <workItem from="1516871927815" duration="6432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92353000" />
+    <option name="totallyTimeSpent" value="92800000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -479,7 +473,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34059098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32348368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32348368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17700455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -838,45 +832,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="122" column="12" lean-forward="false" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="135" column="58" lean-forward="false" selection-start-line="135" selection-start-column="58" selection-end-line="135" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/projectScript/header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="81" column="23" lean-forward="false" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/profile.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="93" column="48" lean-forward="false" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="48" />
-          <folding>
-            <element signature="e#767#773#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,6 +872,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="135" column="58" lean-forward="false" selection-start-line="135" selection-start-column="58" selection-end-line="135" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/profile.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="19" column="102" lean-forward="true" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
+          <folding>
+            <element signature="e#766#772#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="126" column="28" lean-forward="false" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
           <folding />
         </state>
       </provider>

@@ -20,38 +20,40 @@
                             <img src="public/images/user.png" alt="" class="img-rounded img-responsive"/>
                         </div>
                         <div class="col-sm-6 col-md-8">
-                            <h4>Ciao {$user->firstName} &nbsp; {$user->lastName}</h4>
+                            <h4>Ciao {$user->firstName}&nbsp;{$user->lastName}</h4>
                             {*<small><cite title="San Francisco, USA">San Francisco, USA <i*}
                             {*class="glyphicon glyphicon-map-marker">*}
                             {*</i></cite></small>*}
+                            <br>
                             <p> I tuoi dati: </p>
-                            <table>
+
+                            <table class="user-info">
                                 <tr>
-                                    <td>Nome:</td>
+                                    <td><b>Nome:</b></td>
                                     <td>{$user->firstName}</td>
                                 </tr>
                                 <tr>
-                                    <td>Cognome:</td>
+                                    <td><b>Cognome:</b></td>
                                     <td>{$user->lastName}</td>
                                 </tr>
                                 <tr>
-                                    <td>Sesso:</td>
+                                    <td><b>Sesso:</b></td>
                                     <td>{$user->gender}</td>
                                 </tr>
                                 <tr>
-                                    <td>Email:</td>
+                                    <td><b>Email:</b></td>
                                     <td>{$user->email}</td>
                                 </tr>
                                 <tr>
-                                    <td>Numero telefono:</td>
+                                    <td><b>Numero telefono:</b></td>
                                     <td>{$user->telnumber}</td>
                                 </tr>
                                 <tr>
-                                    <td>Data nascita:</td>
+                                    <td><b>Data nascita:</b></td>
                                     <td>{$user->birthdate}</td>
                                 </tr>
                                 <tr>
-                                    <td>Registrato in data:</td>
+                                    <td><b>Registrato in data:</b></td>
                                     <td>{$user->created_at}</td>
                                 </tr>
                             </table>
@@ -93,11 +95,11 @@
                         <h3 class="agileinfo_sign">Cambia password</h3>
                         <form id="changePassFrom" method="post">
                             <input id="old_password" type="password" name="old_password"
-                                   placeholder="Vecchia password" required />
+                                   placeholder="Vecchia password" required/>
                             <input id="new_password" type="password" name="new_password"
-                                   placeholder="Nuova password" required />
+                                   placeholder="Nuova password" required/>
                             <span id="error"></span>
-                            <input type="submit" value="Cambia passoword" />
+                            <input type="submit" value="Cambia passoword"/>
                         </form>
                     </div>
                 </div>
