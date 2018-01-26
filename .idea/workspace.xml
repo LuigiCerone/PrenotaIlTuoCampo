@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="da823cb4-60ac-43e2-b5b1-046a58fb250c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/about_us.php" afterPath="$PROJECT_DIR$/about_us.php" />
-      <change beforePath="$PROJECT_DIR$/activateAccount.php" afterPath="$PROJECT_DIR$/activateAccount.php" />
-      <change beforePath="$PROJECT_DIR$/bookings.php" afterPath="$PROJECT_DIR$/bookings.php" />
-      <change beforePath="$PROJECT_DIR$/public/css/mycss.css" afterPath="$PROJECT_DIR$/public/css/mycss.css" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change beforePath="$PROJECT_DIR$/public/js/bootstrap3-typeahead.min.js" afterPath="$PROJECT_DIR$/public/js/bootstrap3-typeahead.min.js" />
       <change beforePath="$PROJECT_DIR$/public/js/projectScript/index.js" afterPath="$PROJECT_DIR$/public/js/projectScript/index.js" />
-      <change beforePath="$PROJECT_DIR$/resources/libs/smarty/templates_c/a7b6440b1ada807af4d6f694fea6482de546c85b_0.file.index.tpl.php" afterPath="$PROJECT_DIR$/resources/libs/smarty/templates_c/a7b6440b1ada807af4d6f694fea6482de546c85b_0.file.index.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/index.tpl" afterPath="$PROJECT_DIR$/resources/templates/index.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,21 +88,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="1490" column="24" lean-forward="true" selection-start-line="1490" selection-start-column="24" selection-end-line="1490" selection-end-column="24" />
+            <state relative-caret-position="273">
+              <caret line="1494" column="11" lean-forward="true" selection-start-line="1494" selection-start-column="11" selection-end-line="1494" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/projectScript/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-207">
-              <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+            <state relative-caret-position="120">
+              <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap3-typeahead.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/bootstrap3-typeahead.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="218" column="0" lean-forward="true" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -189,6 +193,7 @@
       <find>inser</find>
       <find>\</find>
       <find>agileits-main</find>
+      <find>.agileits-main input[type=&quot;text&quot;]</find>
     </findStrings>
     <replaceStrings>
       <replace>include/assets/hs/</replace>
@@ -246,14 +251,14 @@
         <option value="$PROJECT_DIR$/resources/templates/bookings.tpl" />
         <option value="$PROJECT_DIR$/resources/templates/reviews.tpl" />
         <option value="$PROJECT_DIR$/resources/templates/header.tpl" />
-        <option value="$PROJECT_DIR$/public/js/bootstrap3-typeahead.min.js" />
-        <option value="$PROJECT_DIR$/public/js/projectScript/index.js" />
         <option value="$PROJECT_DIR$/about_us.php" />
         <option value="$PROJECT_DIR$/activateAccount.php" />
         <option value="$PROJECT_DIR$/bookings.php" />
         <option value="$PROJECT_DIR$/resources/templates/index.tpl" />
         <option value="$PROJECT_DIR$/public/css/mycss.css" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/js/bootstrap3-typeahead.min.js" />
+        <option value="$PROJECT_DIR$/public/js/projectScript/index.js" />
       </list>
     </option>
   </component>
@@ -431,12 +436,12 @@
       <workItem from="1516871927815" duration="6468000" />
       <workItem from="1516893633673" duration="70000" />
       <workItem from="1516952606992" duration="10528000" />
-      <workItem from="1516978216823" duration="4331000" />
+      <workItem from="1516978216823" duration="5518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107765000" />
+    <option name="totallyTimeSpent" value="108952000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -460,7 +465,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34059098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32348368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32348368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968896" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -831,16 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/bootstrap3-typeahead.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="7" column="7512" lean-forward="false" selection-start-line="7" selection-start-column="7512" selection-end-line="7" selection-end-column="7512" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -875,14 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/projectScript/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
-          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -901,8 +888,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="1490" column="24" lean-forward="true" selection-start-line="1490" selection-start-column="24" selection-end-line="1490" selection-end-column="24" />
+        <state relative-caret-position="273">
+          <caret line="1494" column="11" lean-forward="true" selection-start-line="1494" selection-start-column="11" selection-end-line="1494" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/bootstrap3-typeahead.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="218" column="0" lean-forward="true" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/projectScript/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding />
         </state>
       </provider>

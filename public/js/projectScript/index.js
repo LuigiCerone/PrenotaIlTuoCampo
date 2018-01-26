@@ -22,59 +22,29 @@ $(function () {
         step: 60
     });
 
-
-    var substringMatcher = function (strs) {
-        return function findMatches(q, cb) {
-            var matches, substringRegex;
-
-            // an array that will be populated with substring matches
-            matches = [];
-
-            // regex used to determine if a string contains the substring `q`
-            substrRegex = new RegExp(q, 'i');
-
-            // iterate through the pool of strings and for any string that
-            // contains the substring `q`, add it to the `matches` array
-            $.each(strs, function (i, str) {
-                if (substrRegex.test(str)) {
-                    matches.push(str);
-                }
-            });
-
-            cb(matches);
-        };
-    };
-
-    var substringMatcher = function (strs) {
-        return function findMatches(q, cb) {
-            var matches, substringRegex;
-
-            // an array that will be populated with substring matches
-            matches = [];
-
-            // regex used to determine if a string contains the substring `q`
-            substrRegex = new RegExp(q, 'i');
-
-            // iterate through the pool of strings and for any string that
-            // contains the substring `q`, add it to the `matches` array
-            $.each(strs, function (i, str) {
-                if (substrRegex.test(str)) {
-                    matches.push(str);
-                }
-            });
-
-            cb(matches);
-        };
-    };
-
-    var sports = ['Calcio', 'Pallavolo', 'Calcetto'];
-    $('#sport').typeahead({
-            hint: true,
-            highlight: true,
-            minLength: 1
-        },
+    $('#sport').typeahead(
         {
-            name: 'sports',
-            source: substringMatcher(sports)
+            minLength: 3,
+            source: function (query, process) {
+                objects = [];
+                map = {};
+                var data = [{"id": 1, "sport": "Calcio"}, {"id": 2, "sport": "Pallavolo"}]; // Or get your JSON dynamically and load it into this variable
+                $.each(data, function (i, object) {
+                    map[object.sport] = object;
+                    objects.push(object.sport);
+                });
+                process(objects);
+            },
+            matcher: function (item) {
+                if (item.toLowerCase().indexOf(this.query.trim().toLowerCase()) != -1) {
+                    return true;
+                }
+            },
+            updater: function (item) {
+                selectedSport = map[item].id;
+                console.log(selectedSport);
+                return item;
+            }
         });
-});
+})
+;
