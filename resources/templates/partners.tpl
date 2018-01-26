@@ -13,9 +13,9 @@
     <br>
     {*{$partners->partners|json_encode}*}
     <br>
-    {foreach from=$partners item=partner}
-        <section>
-            <div class="container">
+    <section>
+        <div class="container">
+            {foreach from=$partners item=partner}
                 <div class="card">
                     <div class="row">
                         <div class="col-md-6">
@@ -31,8 +31,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    {/foreach}
+            {/foreach}
+        </div>
+    </section>
+    </section>
     <!-- /banner -->
 {/block}

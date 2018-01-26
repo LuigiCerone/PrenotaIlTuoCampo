@@ -126,3 +126,8 @@ small {
 .user-info td {
     padding: 5px 10px 5px 10px;
 }
+
+.booking-img {
+    width: 35px;
+    height: 45px;
+}

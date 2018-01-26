@@ -1,6 +1,6 @@
 <?php
 require_once('templateInit.php');
-require_once('resources\src\model\Booking.php');
+require_once('resources/src/model/Booking.php');
 
 session_start();
 
