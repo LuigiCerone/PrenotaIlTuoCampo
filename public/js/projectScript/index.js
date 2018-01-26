@@ -1,5 +1,7 @@
 $(function () {
 
+    var sportsData = null;
+
     $.datepicker.regional['it'] = {
         closeText: 'Chiudi', // set a close button text
         currentText: 'Oggi', // set today text
@@ -22,16 +24,27 @@ $(function () {
         step: 60
     });
 
+    $.ajax({
+        type: "get",
+        url: "resources/src/getSports.php",
+        success: function (data) {
+            console.log(data);
+            sportsData = data;
+        },
+        error: function (data) {
+            console.log(data);
+        }
+    });
+
     $('#sport').typeahead(
         {
             minLength: 3,
             source: function (query, process) {
                 objects = [];
                 map = {};
-                var data = [{"id": 1, "sport": "Calcio"}, {"id": 2, "sport": "Pallavolo"}]; // Or get your JSON dynamically and load it into this variable
-                $.each(data, function (i, object) {
-                    map[object.sport] = object;
-                    objects.push(object.sport);
+                $.each(sportsData, function (i, object) {
+                    map[object.name] = object;
+                    objects.push(object.name);
                 });
                 process(objects);
             },
@@ -46,5 +59,4 @@ $(function () {
                 return item;
             }
         });
-})
-;
+});

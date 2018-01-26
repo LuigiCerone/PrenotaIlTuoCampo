@@ -38,15 +38,16 @@ class User
 
     public static function changePassword($id, $old_pass, $new_pass)
     {
+        $b = false;
         $sql = "UPDATE user SET password = ? WHERE id=? AND password = ?;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sss", $new_pass, $id, $old_pass);
-        $stmt->execute();
+        if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);
-        return true;
+        return $b;
     }
 
     function toString()
@@ -218,7 +219,7 @@ class User
 
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ss", $email, $password);
-        $stmt->execute();
+        if (!$stmt->execute()) echo "error";
         $result = $stmt->get_result();
 
 //        while ($row = $result->fetch_assoc()) {

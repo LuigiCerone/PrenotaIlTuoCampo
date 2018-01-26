@@ -32,8 +32,9 @@ $(function () {
                 //     $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
                 // }
             },
-            error: function () {
+            error: function (response) {
                 $("#add_err").html("Error in login");
+                console.log(response.data);
             },
             beforeSend: function () {
                 // $("#add_err").css('display', 'inline', 'important');
