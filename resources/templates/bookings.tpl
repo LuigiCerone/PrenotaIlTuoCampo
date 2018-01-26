@@ -11,44 +11,50 @@
 {block name="content"}
     <h2 class="title">Le mie prenotazioni</h2>
     <div class="container">
-        <div class="col-center-block">
-            {*<div class="list-group">*}
-            {foreach from=$bookings item=booking}
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-3">
-                        </div>
-                        <div class="col-md-1">
-                            <img src="public/images/booking.png" class="booking-img rounded-circle"/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-block">
-                                <h4 class="card-title">Prenotazione numero {$booking->id}</h4>
-                                <p class="card-text">Data: {$booking->date}, ora: {$booking->time}</p>
-                                <p class="card-text">Campo numero: {$booking->field_fk}</p>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
+        {*<div class="list-group">*}
+        {foreach from=$bookings item=booking}
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-1">
+                        <img src="public/images/booking.png" class="booking-img rounded-circle"/>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-block">
+                            <h4 class="card-title">Prenotazione numero {$booking->id}</h4>
+                            <p class="card-text">Data: {$booking->date}, ora: {$booking->time}</p>
+                            <p class="card-text">Campo numero: {$booking->field_fk}</p>
                         </div>
                     </div>
+                    <div class="col-md-2">
+                        <i data-id="{$booking->id}" class="fa fa-trash delete" aria-hidden="true"></i>
+                    </div>
                 </div>
-            {/foreach}
-        </div>
-    </div>
+            </div>
+        {/foreach}
     </div>
     <!-- /banner -->
+
+    <!-- Modal1 -->
+    <div class="modal fade" id="removeBooking" tabindex="-1" role="dialog">
+        <div class="modal-dialog change_pass">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="agileinfo_sign">Anullamento prenotazione</h3>
+                    Sei sicuro di voler disdire la prenotazione?
+                    <span id="error"></span>
+                    <div class="modal-footer">
+                        <button id="saveBooking" type="button" class="btn btn-primary">Si, disdici</button>
+                        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {/block}
 
-{*<a class="list-group-item clearfix bookings">*}
-{*<div class="d-flex w-100 justify-content-between">*}
-{*<h5 class="mb-1">Prenotazione numero {$booking->id}</h5>*}
-{*</div>*}
-{*<br>*}
-{*<p class="mb-1">Data: {$booking->date} , ora: {$booking->time}</p>*}
-{*<p class="mb-1">Struttura: {$booking->field_fk}</p>*}
-{*<span class="pull-right">*}
-{*<span class="btn btn-xs btn-default">*}
-{*<i class="fa fa-trash" aria-hidden="true"></i>*}
-{*</span>*}
-{*</a>*}
+

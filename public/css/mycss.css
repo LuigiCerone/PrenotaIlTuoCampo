@@ -131,3 +131,18 @@ small {
     width: 35px;
     height: 45px;
 }
+
+.card {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid darkgray;
+    border-radius: 20px;
+}
+
+.card:hover {
+    background-color: #a6daea;
+}
+
+.delete {
+    font-size: 32px;
+}

@@ -28,7 +28,7 @@ class Booking
 
     public static function getAllBookingsForUser($user_fk)
     {
-        $sql = "SELECT * FROM booking WHERE user_fk=?;";
+        $sql = "SELECT * FROM booking WHERE user_fk=? AND approved=1;";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -48,10 +48,24 @@ class Booking
         return json_encode($partners);
     }
 
+    public static function changeValidation($user, $booking)
+    {
+        $sql = "UPDATE booking SET valid=FALSE WHERE user_fk=? AND id=?;";
+        $b = false;
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ii", $user, $booking);
+        if ($stmt->execute()) $b = true;
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $b;
+    }
+
     public function insert()
     {
-        $sql = "INSERT INTO booking (id, date, time, user_fk, field_fk) "
-            . " VALUES (NULL, ?, ?, ?, ?);";
+        $sql = "INSERT INTO booking (id, date, time, user_fk, field_fk, approved, valid) "
+            . " VALUES (NULL, ?, ?, ?, ?, FALSE, TRUE);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
