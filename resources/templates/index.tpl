@@ -22,8 +22,8 @@
                         <div class="col-md-6 col-xs-6 w3l-left-mk">
                             <ul>
                                 <li class="text">Dove :</li>
-                                <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i><input
-                                            name="place" type="text" required=""></li>
+                                <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <input id="place" name="place" type="text" required class='typeahead'/></li>
                                 <li class="text">Data :</li>
                                 <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
                                             class="date" id="datepicker" name="date" type="text" value=""
@@ -37,10 +37,9 @@
                         <div class="col-md-6 col-xs-6 w3l-right-mk">
                             <ul>
                                 <li class="text">Sport :</li>
-                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
-                                            name="sport_name"
-                                            type="text"
-                                            required="">
+                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
+                                    <input id="sport" name="sport_name" type="text" class="typeahead"
+                                           placeholder="Sport" required/>
                                 </li>
                                 <li class="text">Ora :</li>
                                 <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
