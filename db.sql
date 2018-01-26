@@ -5,10 +5,12 @@ CREATE TABLE booking
 (
   id       INT AUTO_INCREMENT
     PRIMARY KEY,
-  date     DATE NOT NULL,
-  time     TIME NOT NULL,
-  user_fk  INT  NOT NULL,
-  field_fk INT  NULL
+  date     DATE                   NOT NULL,
+  time     TIME                   NOT NULL,
+  user_fk  INT                    NOT NULL,
+  field_fk INT                    NULL,
+  approved TINYINT(1) DEFAULT '0' NOT NULL,
+  valid    TINYINT(1) DEFAULT '1' NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -72,4 +74,6 @@ CREATE TABLE user
   gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL
 )
   ENGINE = InnoDB;
+
+
 
