@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-26 11:12:26
+/* Smarty version 3.1.30, created on 2018-01-26 12:33:07
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookings.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6aff0a888404_59717133',
+  'unifunc' => 'content_5a6b11f362d408_41016044',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89856db9c6b498e31cc7af554cca107d9eec0f2f' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookings.tpl',
-      1 => 1516961542,
+      1 => 1516966384,
       2 => 'file',
     ),
   ),
@@ -21,25 +21,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6aff0a888404_59717133 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6b11f362d408_41016044 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16164665595a6aff0a878a12_20033331', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8931600915a6b11f361a077_55921857', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7484377705a6aff0a87b0d8_68829213', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8568736845a6b11f361c6d1_70997644', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2498767555a6aff0a886c89_11876768', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9607590705a6b11f362c3c7_38672468', "content");
 ?>
 
 
@@ -48,7 +48,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2498767555a6aff0a8
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_16164665595a6aff0a878a12_20033331 extends Smarty_Internal_Block
+class Block_8931600915a6b11f361a077_55921857 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -59,7 +59,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_7484377705a6aff0a87b0d8_68829213 extends Smarty_Internal_Block
+class Block_8568736845a6b11f361c6d1_70997644 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,43 +73,49 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_2498767555a6aff0a886c89_11876768 extends Smarty_Internal_Block
+class Block_9607590705a6b11f362c3c7_38672468 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-    <h2 class="title">Le mie prenotazioni</h2>
-    <div class="container">
-        
-        <?php
+<h2 class="title">Le mie prenotazioni</h2>
+<div class="container">
+    
+    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['bookings']->value, 'booking');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['booking']->value) {
 ?>
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-1">
-                        <img src="public/images/booking.png" class="booking-img rounded-circle"/>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-block">
-                            <h4 class="card-title">Prenotazione numero <?php echo $_smarty_tpl->tpl_vars['booking']->value->id;?>
+    <?php if ($_smarty_tpl->tpl_vars['booking']->value->valid == 1) {?>
+    <div class="card ">
+        <?php } elseif ($_smarty_tpl->tpl_vars['booking']->value->valid == 0) {?>
+        <div class="card not-valid" data-toggle="tooltip"
+             title="La disdetta deve ancora essere approva dall'amministratore!">
+            <?php }?>
+
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-1">
+                    <img src="public/images/booking.png" class="booking-img rounded-circle"/>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-block">
+                        <h4 class="card-title">Prenotazione numero <?php echo $_smarty_tpl->tpl_vars['booking']->value->id;?>
 </h4>
-                            <p class="card-text">Data: <?php echo $_smarty_tpl->tpl_vars['booking']->value->date;?>
+                        <p class="card-text">Data: <?php echo $_smarty_tpl->tpl_vars['booking']->value->date;?>
 , ora: <?php echo $_smarty_tpl->tpl_vars['booking']->value->time;?>
 </p>
-                            <p class="card-text">Campo numero: <?php echo $_smarty_tpl->tpl_vars['booking']->value->field_fk;?>
+                        <p class="card-text">Campo numero: <?php echo $_smarty_tpl->tpl_vars['booking']->value->field_fk;?>
 </p>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <i data-id="<?php echo $_smarty_tpl->tpl_vars['booking']->value->id;?>
-" class="fa fa-trash delete" aria-hidden="true"></i>
                     </div>
                 </div>
+                <div class="col-md-2">
+                    <i data-id="<?php echo $_smarty_tpl->tpl_vars['booking']->value->id;?>
+" class="fa fa-trash delete" aria-hidden="true"></i>
+                </div>
             </div>
+        </div>
         <?php
 }
 }
@@ -117,7 +123,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
     </div>
-    <!-- /banner -->
 
     <!-- Modal1 -->
     <div class="modal fade" id="removeBooking" tabindex="-1" role="dialog">
@@ -138,7 +143,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             </div>
         </div>
     </div>
-<?php
+    <?php
 }
 }
 /* {/block "content"} */

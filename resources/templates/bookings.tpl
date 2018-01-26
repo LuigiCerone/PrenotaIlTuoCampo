@@ -9,32 +9,37 @@
 {/block}
 
 {block name="content"}
-    <h2 class="title">Le mie prenotazioni</h2>
-    <div class="container">
-        {*<div class="list-group">*}
-        {foreach from=$bookings item=booking}
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-1">
-                        <img src="public/images/booking.png" class="booking-img rounded-circle"/>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-block">
-                            <h4 class="card-title">Prenotazione numero {$booking->id}</h4>
-                            <p class="card-text">Data: {$booking->date}, ora: {$booking->time}</p>
-                            <p class="card-text">Campo numero: {$booking->field_fk}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <i data-id="{$booking->id}" class="fa fa-trash delete" aria-hidden="true"></i>
+<h2 class="title">Le mie prenotazioni</h2>
+<div class="container">
+    {*<div class="list-group">*}
+    {foreach from=$bookings item=booking}
+    {if $booking->valid == 1}
+    <div class="card ">
+        {elseif $booking->valid == 0}
+        <div class="card not-valid" data-toggle="tooltip"
+             title="La disdetta deve ancora essere approva dall'amministratore!">
+            {/if}
+
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-1">
+                    <img src="public/images/booking.png" class="booking-img rounded-circle"/>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-block">
+                        <h4 class="card-title">Prenotazione numero {$booking->id}</h4>
+                        <p class="card-text">Data: {$booking->date}, ora: {$booking->time}</p>
+                        <p class="card-text">Campo numero: {$booking->field_fk}</p>
                     </div>
                 </div>
+                <div class="col-md-2">
+                    <i data-id="{$booking->id}" class="fa fa-trash delete" aria-hidden="true"></i>
+                </div>
             </div>
+        </div>
         {/foreach}
     </div>
-    <!-- /banner -->
 
     <!-- Modal1 -->
     <div class="modal fade" id="removeBooking" tabindex="-1" role="dialog">
@@ -55,6 +60,6 @@
             </div>
         </div>
     </div>
-{/block}
+    {/block}
 
 

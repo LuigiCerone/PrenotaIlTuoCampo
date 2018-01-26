@@ -146,3 +146,8 @@ small {
 .delete {
     font-size: 32px;
 }
+
+.not-valid{
+    cursor: not-allowed;
+    border-color: red;
+}
