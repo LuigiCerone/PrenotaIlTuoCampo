@@ -50,7 +50,7 @@
                                data-active-icon="fa-star" data-inactive-icon=" fa-star-o" class="rating bigger"
                                value="1"/>
                         <br>
-                        <button id="saveReview" class="btn btn-success btn-lg" type="submit">Save
+                        <button id="saveReview" class="btn btn-success btn-lg" type="submit">Salva
                         </button>
                     </div>
                 </form>
