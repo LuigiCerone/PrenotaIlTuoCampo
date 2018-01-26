@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/resources/templates/header.tpl" line="174" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/resources/templates/header.tpl" line="178" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da823cb4-60ac-43e2-b5b1-046a58fb250c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sql" afterPath="$PROJECT_DIR$/db.sql" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/public/js/projectScript/header.js" afterPath="$PROJECT_DIR$/public/js/projectScript/header.js" />
+      <change beforePath="$PROJECT_DIR$/resources/libs/smarty/templates_c/a7a50d74936f643a70293beb5dda3d67b62c4d0d_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/resources/libs/smarty/templates_c/a7a50d74936f643a70293beb5dda3d67b62c4d0d_0.file.header.tpl.php" />
       <change beforePath="$PROJECT_DIR$/resources/src/model/User.php" afterPath="$PROJECT_DIR$/resources/src/model/User.php" />
+      <change beforePath="$PROJECT_DIR$/resources/src/signup.php" afterPath="$PROJECT_DIR$/resources/src/signup.php" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/header.tpl" afterPath="$PROJECT_DIR$/resources/templates/header.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,16 +58,23 @@
         <item name="tdwproject: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="field: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TDWProject@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tdwproject: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bookings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookings.php">
+      <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/projectScript/header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state relative-caret-position="249">
+              <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -72,30 +83,40 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/src/model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="261" column="31" lean-forward="false" selection-start-line="261" selection-start-column="31" selection-end-line="261" selection-end-column="31" />
+            <state relative-caret-position="179">
+              <caret line="105" column="69" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="69" />
               <folding>
-                <marker date="1516966482031" expanded="true" signature="607:651" ph="UPDATE user... " />
-                <marker date="1516966482031" expanded="true" signature="994:1048" ph="UPDATE user... " />
-                <marker date="1516966482031" expanded="true" signature="994:1049" ph="UPDATE user... " />
-                <marker date="1516966482031" expanded="true" signature="994:1050" ph="UPDATE user... " />
-                <marker date="1516966482031" expanded="true" signature="2225:2368" ph="INSERT INTO user... " />
-                <marker date="1516966482031" expanded="true" signature="3762:3837" ph="SELECT COUNT... " />
-                <marker date="1516966482031" expanded="true" signature="5184:5220" ph="SELECT * FRO... user" />
-                <marker date="1516966482031" expanded="true" signature="5632:5693" ph="SELECT * FRO... user" />
-                <marker date="1516966482031" expanded="true" signature="5632:5696" ph="SELECT * FRO... user" />
-                <marker date="1516966482031" expanded="true" signature="5632:5697" ph="SELECT * FRO... user" />
-                <marker date="1516966482031" expanded="true" signature="5632:5713" ph="SELECT * FRO... user" />
+                <marker date="1516967171219" expanded="true" signature="607:651" ph="UPDATE user... " />
+                <marker date="1516967171219" expanded="true" signature="994:1048" ph="UPDATE user... " />
+                <marker date="1516967171219" expanded="true" signature="994:1049" ph="UPDATE user... " />
+                <marker date="1516967171219" expanded="true" signature="994:1050" ph="UPDATE user... " />
+                <marker date="1516967171219" expanded="true" signature="2231:2387" ph="INSERT INTO user... " />
+                <marker date="1516967171219" expanded="true" signature="3800:3875" ph="SELECT COUNT... " />
+                <marker date="1516967171219" expanded="true" signature="5222:5258" ph="SELECT * FRO... user" />
+                <marker date="1516967171219" expanded="true" signature="5670:5731" ph="SELECT * FRO... user" />
+                <marker date="1516967171219" expanded="true" signature="5670:5734" ph="SELECT * FRO... user" />
+                <marker date="1516967171219" expanded="true" signature="5670:5735" ph="SELECT * FRO... user" />
+                <marker date="1516967171219" expanded="true" signature="5670:5751" ph="SELECT * FRO... user" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1309">
               <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/src/signup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -131,11 +152,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booking" pinned="false" current-in-tab="false">
-        <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.booking">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/templates/header.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="159" column="87" lean-forward="false" selection-start-line="159" selection-start-column="87" selection-end-line="159" selection-end-column="87" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,16 +167,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="372">
               <caret line="31" column="26" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="31" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -254,9 +266,6 @@
         <option value="$PROJECT_DIR$/resources/src/verifyAccount.php" />
         <option value="$PROJECT_DIR$/profile.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/console.sql" />
-        <option value="$PROJECT_DIR$/resources/src/signup.php" />
-        <option value="$PROJECT_DIR$/public/js/projectScript/header.js" />
-        <option value="$PROJECT_DIR$/resources/templates/header.tpl" />
         <option value="$PROJECT_DIR$/public/js/projectScript/profile.js" />
         <option value="$PROJECT_DIR$/resources/templates/profile.tpl" />
         <option value="$PROJECT_DIR$/bookings.php" />
@@ -266,8 +275,11 @@
         <option value="$PROJECT_DIR$/public/css/mycss.css" />
         <option value="$PROJECT_DIR$/public/js/projectScript/bookings.js" />
         <option value="$PROJECT_DIR$/resources/templates/bookings.tpl" />
-        <option value="$PROJECT_DIR$/resources/src/model/User.php" />
         <option value="$PROJECT_DIR$/db.sql" />
+        <option value="$PROJECT_DIR$/public/js/projectScript/header.js" />
+        <option value="$PROJECT_DIR$/resources/src/signup.php" />
+        <option value="$PROJECT_DIR$/resources/src/model/User.php" />
+        <option value="$PROJECT_DIR$/resources/templates/header.tpl" />
       </list>
     </option>
   </component>
@@ -321,6 +333,41 @@
             <path>
               <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
               <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="projectScript" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -403,12 +450,12 @@
       <workItem from="1516718927989" duration="6866000" />
       <workItem from="1516871927815" duration="6468000" />
       <workItem from="1516893633673" duration="70000" />
-      <workItem from="1516952606992" duration="9321000" />
+      <workItem from="1516952606992" duration="10084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102227000" />
+    <option name="totallyTimeSpent" value="102990000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -428,10 +475,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34059098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32348368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32348368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18154311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20877458" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20877458" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -704,14 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/src/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/projectScript/profile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -728,26 +767,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="140" column="59" lean-forward="false" selection-start-line="140" selection-start-column="59" selection-end-line="140" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/messages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/projectScript/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="123" column="11" lean-forward="true" selection-start-line="93" selection-start-column="7" selection-end-line="123" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -843,30 +866,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/src/model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="261" column="31" lean-forward="false" selection-start-line="261" selection-start-column="31" selection-end-line="261" selection-end-column="31" />
-          <folding>
-            <marker date="1516966482031" expanded="true" signature="607:651" ph="UPDATE user... " />
-            <marker date="1516966482031" expanded="true" signature="994:1048" ph="UPDATE user... " />
-            <marker date="1516966482031" expanded="true" signature="994:1049" ph="UPDATE user... " />
-            <marker date="1516966482031" expanded="true" signature="994:1050" ph="UPDATE user... " />
-            <marker date="1516966482031" expanded="true" signature="2225:2368" ph="INSERT INTO user... " />
-            <marker date="1516966482031" expanded="true" signature="3762:3837" ph="SELECT COUNT... " />
-            <marker date="1516966482031" expanded="true" signature="5184:5220" ph="SELECT * FRO... user" />
-            <marker date="1516966482031" expanded="true" signature="5632:5693" ph="SELECT * FRO... user" />
-            <marker date="1516966482031" expanded="true" signature="5632:5696" ph="SELECT * FRO... user" />
-            <marker date="1516966482031" expanded="true" signature="5632:5697" ph="SELECT * FRO... user" />
-            <marker date="1516966482031" expanded="true" signature="5632:5713" ph="SELECT * FRO... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/projectScript/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/src/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/src/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="105" column="69" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="69" />
+          <folding>
+            <marker date="1516967171219" expanded="true" signature="607:651" ph="UPDATE user... " />
+            <marker date="1516967171219" expanded="true" signature="994:1048" ph="UPDATE user... " />
+            <marker date="1516967171219" expanded="true" signature="994:1049" ph="UPDATE user... " />
+            <marker date="1516967171219" expanded="true" signature="994:1050" ph="UPDATE user... " />
+            <marker date="1516967171219" expanded="true" signature="2231:2387" ph="INSERT INTO user... " />
+            <marker date="1516967171219" expanded="true" signature="3800:3875" ph="SELECT COUNT... " />
+            <marker date="1516967171219" expanded="true" signature="5222:5258" ph="SELECT * FRO... user" />
+            <marker date="1516967171219" expanded="true" signature="5670:5731" ph="SELECT * FRO... user" />
+            <marker date="1516967171219" expanded="true" signature="5670:5734" ph="SELECT * FRO... user" />
+            <marker date="1516967171219" expanded="true" signature="5670:5735" ph="SELECT * FRO... user" />
+            <marker date="1516967171219" expanded="true" signature="5670:5751" ph="SELECT * FRO... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="159" column="87" lean-forward="false" selection-start-line="159" selection-start-column="87" selection-end-line="159" selection-end-column="87" />
           <folding />
         </state>
       </provider>

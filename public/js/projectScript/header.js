@@ -88,6 +88,7 @@ $(function () {
         var lastName = $('#last_name').val();
         var birthDate = $('#birthdate').val();
         var gender = $('#gender').val();
+        var telnumber = $('#telnumber').val();
 
         console.log(email + password);
         // ""
@@ -100,7 +101,8 @@ $(function () {
                 'firstName': firstName,
                 'lastName': lastName,
                 'birthDate': birthDate,
-                'gender': gender
+                'gender': gender,
+                'telnumber': telnumber
             },
             success: function (response) {
                 $("#signup_err").html("Sign up ok.");

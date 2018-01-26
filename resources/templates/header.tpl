@@ -152,9 +152,13 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-8"><label for="email">Email:</label>
+                                <div class="col-md-4"><label for="email">Email:</label>
                                     <input class="form_input" id="signup_email" type="email" name="email"
                                            placeholder="Email" required/>
+                                </div>
+                                <div class="col-md-4"><label for="telnumber">Telefono:</label>
+                                    <input class="form_input" id="telnumber" type="text" name="telnumber"
+                                           placeholder="Telefono" required/>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="birthdate">Data di nascita:</label>

@@ -8,7 +8,8 @@ if (isset($_POST["email"]) &&
     isset($_POST["firstName"]) &&
     isset($_POST["lastName"]) &&
     isset($_POST["birthDate"]) &&
-    isset($_POST["gender"])) {
+    isset($_POST["gender"]) &&
+    isset($_POST["telbumber"])) {
 
     if (User::isEmailAvailable($_POST['email']) == true) {
         http_response_code(200);
@@ -21,7 +22,7 @@ if (isset($_POST["email"]) &&
 //                'birthDate' : birthDate,
 //                'gender' : gender
 
-        $user = User::signUp($_POST['email'], $_POST['password'], $_POST["firstName"], $_POST["lastName"], $_POST["birthDate"], $_POST["gender"]);
+        $user = User::signUp($_POST['email'], $_POST['password'], $_POST["firstName"], $_POST["lastName"], $_POST["birthDate"], $_POST["gender"], $_POST["telnumber"]);
 
         // Send confirmation email.
         $user->sendConfirmationEmail();

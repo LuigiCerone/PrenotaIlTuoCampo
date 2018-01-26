@@ -97,13 +97,13 @@ class User
         $this->id = $id;
     }
 
-    public function insert($email, $password, $firstName, $lastName, $birthdate, $gender)
+    public function insert($email, $password, $firstName, $lastName, $birthdate, $gender, $tel)
     {
-        $sql = "INSERT INTO user (id, email, password, firstName, lastName, birthdate, gender, created_at, tokenCode) VALUES (null, ?, ?, ?, ?, ?, ?, NOW(), ?);";
+        $sql = "INSERT INTO user (id, email, password, firstName, lastName, birthdate, gender, telnumber, created_at, tokenCode) VALUES (NULL, ?, ?, ?, ?, ?, ?,?, NOW(), ?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssss", $email, $password, $firstName, $lastName, $birthdate, $gender, md5($firstName . $lastName));
+        $stmt->bind_param("ssssssss", $email, $password, $firstName, $lastName, $birthdate, $gender, $tel, md5($firstName . $lastName));
         $stmt->execute();
         $id = $conn->insert_id;
         $stmt->close();
@@ -135,11 +135,11 @@ class User
         return $instance;
     }
 
-    public static function signUp($email, $password, $firstName, $lastName, $birthdate, $gender)
+    public static function signUp($email, $password, $firstName, $lastName, $birthdate, $gender, $tel)
     {
         $instance = new self();
         // TODO Insert all the data.
-        $instance->insert($email, $password, $firstName, $lastName, $birthdate, $gender);
+        $instance->insert($email, $password, $firstName, $lastName, $birthdate, $gender, $tel);
         $instance->loadByID($instance->getId());
         echo "" . $instance->to_json();
         return $instance;
@@ -147,7 +147,7 @@ class User
 
     public static function isEmailAvailable($email)
     {
-        $sql = "SELECT COUNT(*) as count FROM user WHERE user.email = ? GROUP BY user.email;";
+        $sql = "SELECT COUNT(*) AS count FROM user WHERE user.email = ? GROUP BY user.email;";
         $conn = Database::getConnection();
         // prepare and bind
 
