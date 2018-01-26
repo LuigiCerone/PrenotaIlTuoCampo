@@ -21,36 +21,37 @@
                     <form action="#" method="post" class="mod2">
                         <div class="col-md-6 col-xs-6 w3l-left-mk">
                             <ul>
-                                <li class="text">Dove :</li>
+                                <li class="text">Provincia :</li>
                                 <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <input id="place" name="place" type="text" required class='typeahead'/></li>
+                                    <input id="region" name="region" type="text" required class='typeahead'/></li>
                                 <li class="text">Data :</li>
                                 <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
                                             class="date" id="datepicker" name="date" type="text" value=""
                                             required=""/>
                                 </li>
-                                <li class="text">Sesso :</li>
+                                <li class="text">qualcosa di utile qui :</li>
                                 <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
                                             name="gender" type="text" required=""></li>
                             </ul>
                         </div>
                         <div class="col-md-6 col-xs-6 w3l-right-mk">
                             <ul>
-                                <li class="text">Sport :</li>
-                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
-                                    <input id="sport" name="sport_name" type="text" class="typeahead"
-                                           placeholder="Sport" required/>
+                                <li class="text">Struttura :</li>
+                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
+                                            name="address"
+                                            type="text"
+                                            required="">
                                 </li>
                                 <li class="text">Ora :</li>
                                 <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
                                             class="date" name="date" id="timepicker" type="text" value=""
                                             required=""/>
                                 </li>
-                                <li class="text">Address :</li>
-                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
-                                            name="address"
-                                            type="text"
-                                            required="">
+
+                                <li class="text">Sport :</li>
+                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
+                                    <input id="sport" name="sport_name" type="text" class="typeahead"
+                                           placeholder="Sport" required/>
                                 </li>
                             </ul>
                         </div>

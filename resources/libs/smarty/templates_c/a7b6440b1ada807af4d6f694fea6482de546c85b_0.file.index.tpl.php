@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-26 17:56:54
+/* Smarty version 3.1.30, created on 2018-01-26 19:12:21
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6b5dd60fdcd6_69618288',
+  'unifunc' => 'content_5a6b6f8528a626_97667780',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7b6440b1ada807af4d6f694fea6482de546c85b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl',
-      1 => 1516985811,
+      1 => 1516990270,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6b5dd60fdcd6_69618288 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6b6f8528a626_97667780 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19813658305a6b5dd60f4cd4_11899887', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3628608975a6b6f85283585_48870257', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16431317935a6b5dd60faa35_31188024', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8300082755a6b6f85286ec4_71292808', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15716313055a6b5dd60fd2e3_98149253', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5654565975a6b6f85289cc6_04756072', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_19813658305a6b5dd60f4cd4_11899887 extends Smarty_Internal_Block
+class Block_3628608975a6b6f85283585_48870257 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_16431317935a6b5dd60faa35_31188024 extends Smarty_Internal_Block
+class Block_8300082755a6b6f85286ec4_71292808 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_15716313055a6b5dd60fd2e3_98149253 extends Smarty_Internal_Block
+class Block_5654565975a6b6f85289cc6_04756072 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -90,36 +90,37 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                     <form action="#" method="post" class="mod2">
                         <div class="col-md-6 col-xs-6 w3l-left-mk">
                             <ul>
-                                <li class="text">Dove :</li>
+                                <li class="text">Provincia :</li>
                                 <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <input id="place" name="place" type="text" required class='typeahead'/></li>
+                                    <input id="region" name="region" type="text" required class='typeahead'/></li>
                                 <li class="text">Data :</li>
                                 <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
                                             class="date" id="datepicker" name="date" type="text" value=""
                                             required=""/>
                                 </li>
-                                <li class="text">Sesso :</li>
+                                <li class="text">qualcosa di utile qui :</li>
                                 <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
                                             name="gender" type="text" required=""></li>
                             </ul>
                         </div>
                         <div class="col-md-6 col-xs-6 w3l-right-mk">
                             <ul>
-                                <li class="text">Sport :</li>
-                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
-                                    <input id="sport" name="sport_name" type="text" class="typeahead"
-                                           placeholder="Sport" required/>
+                                <li class="text">Struttura :</li>
+                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
+                                            name="address"
+                                            type="text"
+                                            required="">
                                 </li>
                                 <li class="text">Ora :</li>
                                 <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
                                             class="date" name="date" id="timepicker" type="text" value=""
                                             required=""/>
                                 </li>
-                                <li class="text">Address :</li>
-                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
-                                            name="address"
-                                            type="text"
-                                            required="">
+
+                                <li class="text">Sport :</li>
+                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
+                                    <input id="sport" name="sport_name" type="text" class="typeahead"
+                                           placeholder="Sport" required/>
                                 </li>
                             </ul>
                         </div>
