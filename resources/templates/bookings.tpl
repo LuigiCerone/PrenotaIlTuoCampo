@@ -11,12 +11,14 @@
 {block name="content"}
 <h2 class="title">Le mie prenotazioni</h2>
 <div class="container">
+    Le prenotazioni in rosso sono quelle per cui è stata richiesta una disdetta che però deve ancora essere approvata
+    dall'amministratore.
     {*<div class="list-group">*}
     {foreach from=$bookings item=booking}
     {if $booking->valid == 1}
     <div class="card ">
         {elseif $booking->valid == 0}
-        <div class="card not-valid" data-toggle="tooltip"
+        <div class="booking-card not-valid" data-toggle="tooltip"
              title="La disdetta deve ancora essere approva dall'amministratore!">
             {/if}
 
