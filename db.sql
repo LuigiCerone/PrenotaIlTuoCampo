@@ -1,6 +1,5 @@
 CREATE DATABASE tdwproject;
 USE tdwproject;
-
 CREATE TABLE booking
 (
   id       INT AUTO_INCREMENT
@@ -16,11 +15,12 @@ CREATE TABLE booking
 
 CREATE TABLE field
 (
-  id         INT AUTO_INCREMENT
+  id          INT AUTO_INCREMENT
     PRIMARY KEY,
-  partner_fk INT                    NOT NULL,
-  sport_fk   INT                    NOT NULL,
-  outdoor    TINYINT(1) DEFAULT '1' NULL
+  partner_fk  INT                    NOT NULL,
+  sport_fk    INT                    NOT NULL,
+  outdoor     TINYINT(1) DEFAULT '1' NULL,
+  province_fk VARCHAR(2)             NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -35,6 +35,14 @@ CREATE TABLE partner
   address     VARCHAR(40)  NULL,
   email       VARCHAR(40)  NOT NULL,
   telnumber   VARCHAR(30)  NOT NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE province
+(
+  sign VARCHAR(2)  NOT NULL
+    PRIMARY KEY,
+  name VARCHAR(40) NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -74,6 +82,4 @@ CREATE TABLE user
   gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL
 )
   ENGINE = InnoDB;
-
-
 
