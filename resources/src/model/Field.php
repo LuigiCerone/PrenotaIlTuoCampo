@@ -28,7 +28,10 @@ class Field
 
     public static function getFieldsForSport($sport)
     {
-        $sql = "SELECT * FROM field WHERE sport_fk = ?;";
+        $sql = "SELECT province_fk, province.name AS province_name , partner_fk, partner.name AS partner_name
+      FROM (field JOIN partner ON field.partner_fk = partner.id)
+      JOIN province ON sign = province_fk 
+      WHERE sport_fk = ?;";
         $conn = Database::getConnection();
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $sport);
