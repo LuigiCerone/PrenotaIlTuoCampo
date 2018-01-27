@@ -18,7 +18,7 @@
             <div class="">
                 <div class="searchbox-panel">
                     {*<h3>Prenota il tuo campo!</h3>*}
-                    <form action="#" method="post" class="mod2">
+                    <form id="bookingForm" method="post" action="bookingReview.php" class="mod2">
                         <div class="col-md-6 col-xs-6 w3l-left-mk">
                             <ul>
                                 <li class="text">Sport :</li>
@@ -28,12 +28,12 @@
                                 </li>
                                 <li class="text">Provincia :</li>
                                 <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <input id="region" placeholder="Provincia" name="region" type="text" required
+                                    <input id="province" placeholder="Provincia" name="province" type="text" required
                                            class='typeahead'/></li>
                                 <li class="text">Data :</li>
                                 <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
                                             class="date" id="datepicker" name="date" type="text" value=""
-                                            required=""/>
+                                            required/>
                                 </li>
 
                             </ul>
@@ -42,17 +42,15 @@
                             <ul>
                                 <li class="text">qualcosa di utile qui :</li>
                                 <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
-                                            name="gender" type="text" required=""></li>
+                                            name="gender" type="text"/></li>
                                 <li class="text">Struttura :</li>
                                 <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
-                                            name="address"
-                                            type="text"
-                                            required="">
+                                            id="partner" name="partner" class="typeahead" type="text" required/>
                                 </li>
                                 <li class="text">Ora :</li>
                                 <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
                                             class="date" name="date" id="timepicker" type="text" value=""
-                                            required=""/>
+                                            required/>
                                 </li>
                             </ul>
                         </div>
@@ -60,6 +58,10 @@
                         <div class="agile-submit">
                             <input type="submit" value="Prenota">
                         </div>
+                        <input class="hidden" id="selectedSport" name="selectedSport"/>
+                        <input class="hidden" id="selectedPartner" name="selectedPartner"/>
+                        <input class="hidden" id="selectedProvince" name="selectedProvince"/>
+
                     </form>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 $(function () {
 
-    var sportsData = null;
-    var selectedRegion = null, selectedSport = null;
+    var sportsData = null, provincesData = [], partnersData = [];
+    var selectedProvince = null, selectedSport = null, selectedPartner = null;
 
     $.datepicker.regional['it'] = {
         closeText: 'Chiudi', // set a close button text
@@ -73,7 +73,13 @@ $(function () {
             },
             success: function (data) {
                 console.log(data);
-                // sportsData = data;
+
+                data.forEach(function (value) {
+                    provincesData.push({'province_fk': value.province_fk, 'province_name': value.province_name});
+                    partnersData.push({'partner_fk': value.partner_fk, 'partner_name': value.partner_name});
+                });
+                console.log(provincesData);
+                console.log(partnersData);
             },
             error: function (data) {
                 console.log(data);
@@ -81,14 +87,14 @@ $(function () {
         });
     }
 
-    $('#region').typeahead({
-        minLength: 3,
+    $('#province').typeahead({
+        minLength: 1,
         source: function (query, process) {
             objects = [];
             map = {};
-            $.each(italianRegions, function (i, object) {
-                map[object.nome] = object;
-                objects.push(object.nome);
+            $.each(provincesData, function (i, object) {
+                map[object.province_name] = object;
+                objects.push(object.province_name);
             });
             process(objects);
         },
@@ -98,9 +104,41 @@ $(function () {
             }
         },
         updater: function (item) {
-            selectedRegion = map[item].sigla;
-            console.log(selectedRegion);
+            selectedProvince = map[item].province_fk;
+            console.log(selectedProvince);
             return item;
         }
     });
+
+    $('#partner').typeahead({
+        minLength: 1,
+        source: function (query, process) {
+            objects = [];
+            map = {};
+            $.each(partnersData, function (i, object) {
+                map[object.partner_name] = object;
+                objects.push(object.partner_name);
+            });
+            process(objects);
+        },
+        matcher: function (item) {
+            if (item.toLowerCase().indexOf(this.query.trim().toLowerCase()) != -1) {
+                return true;
+            }
+        },
+        updater: function (item) {
+            selectedPartner = map[item].partner_fk;
+            console.log(selectedPartner);
+            return item;
+        }
+    });
+
+    $('#bookingForm').submit(function () {
+        // event.stopPropagation();
+        // event.preventDefault();
+        $('#selectedSport').val(selectedSport);
+        $('#selectedProvince').val(selectedProvince);
+        $('#selectedPartner').val(selectedPartner);
+    });
+
 });
