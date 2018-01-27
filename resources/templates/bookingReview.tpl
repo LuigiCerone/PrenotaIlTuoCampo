@@ -12,7 +12,6 @@
     <h2 class="title">Conferma prenotazione</h2>
     <br>
     <div class="container">
-        {if ($smarty.session.id != null)}{/if}
         <h4><b>Riepilogo dati inseriti</b></h4>
         <table class="user-info">
             <tr>
@@ -39,32 +38,31 @@
         </table>
         <br>
         <hr>
+        Non raggiungi la quota necessaria?
+        <a href="#">Clicca qui se hai bisogno di altri giocatori!</a>
+        <hr>
         Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
-        {foreach from=$bookings item=booking}
-            <div class="card ">
-                <div class="row ">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-1">
-                        <img src="public/images/booking.png" class="booking-img rounded-circle"/>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-block">
-                            <h4 class="card-title">Prenotazione numero {$booking->id}</h4>
-                            <p class="card-text">Data: {$booking->date}, ora: {$booking->time}</p>
-                            <p class="card-text">Campo numero: {$booking->field_fk}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <i data-id="{$booking->id}" class="fa fa-trash delete" aria-hidden="true"></i>
-                    </div>
+        <form id="fieldSelect">
+            {foreach from=$fields item=field}
+                <div class="radio">
+                    <label><input type="radio" name="field_radio" required/>Numero: {$field->id}, tipo: {$field->type},
+                        esterno: {if $field->outdoor == 1}Si {else}No {/if},
+                        riscaldato: {if $field->warmed == 1}Si {else}No {/if}</label>
                 </div>
+            {/foreach}
+            <div class="agile-submit">
+                {if ($smarty.session.id != null)}
+                    <input class="disabled" disabled type="submit" id="submit" value="Conferma"/>
+                {else}
+                    <input class="disabled" disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
+                           title="Accedi o registrati!"/>
+                {/if}
+                <br>
+                Ricorda che per effetturare la prenotazione devi essere registrato!
             </div>
-        {/foreach}
+        </form>
+
     </div>
     </div>
-    valore:
-    {$booking->selectedSport}
-    {$booking->selectedPartner}
     <!-- /banner -->
 {/block}
