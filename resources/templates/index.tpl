@@ -23,7 +23,7 @@
                             <ul>
                                 <li class="text">Sport :</li>
                                 <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
-                                    <input id="sport" name="sport_name" type="text" class="typeahead"
+                                    <input id="sport" name="sport" type="text" class="typeahead"
                                            placeholder="Sport" required/>
                                 </li>
                                 <li class="text">Provincia :</li>
@@ -49,7 +49,7 @@
                                 </li>
                                 <li class="text">Ora :</li>
                                 <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
-                                            class="date" name="date" id="timepicker" type="text" value=""
+                                            class="date" name="time" id="timepicker" type="text" value=""
                                             required/>
                                 </li>
                             </ul>

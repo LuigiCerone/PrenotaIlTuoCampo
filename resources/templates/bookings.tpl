@@ -22,7 +22,7 @@
              title="La disdetta deve ancora essere approva dall'amministratore!">
             {/if}
 
-            <div class="row">
+            <div class="row ">
                 <div class="col-md-3">
                 </div>
                 <div class="col-md-1">

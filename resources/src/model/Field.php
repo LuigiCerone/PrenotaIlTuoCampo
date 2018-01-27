@@ -47,4 +47,26 @@ class Field
 
         return json_encode($fields);
     }
+
+    public static function getAllAvailableFields($selectedSport, $selectedPartner, $date, $time)
+    {
+        $sql = "SELECT * FROM field AS f WHERE f.id NOT IN (
+        SELECT field.id FROM booking JOIN field ON booking.field_fk = field.id 
+        WHERE field.partner_fk = ? AND field.sport_fk = ? AND date = ? AND time=?);";
+
+        $conn = Database::getConnection();
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("iiss", $selectedPartner, $selectedSport, $date, $time);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $fields = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $fields[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($fields);
+    }
 }
