@@ -441,6 +441,18 @@ li.agileits-main i {
     -ms-transition: 0.5s all;
 }
 
+.disabled input[type="submit"] {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background-color: black;
+}
+
+.disabled input[type="submit"]:hover {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background-color: lightgray;
+}
+
 .agile-submit input[type="submit"]:hover {
     background: #000;
     color: #fff;

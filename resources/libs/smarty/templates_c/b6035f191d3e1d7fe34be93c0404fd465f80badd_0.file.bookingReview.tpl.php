@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-27 17:31:58
+/* Smarty version 3.1.30, created on 2018-01-28 10:35:16
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6ca97e7b2c15_43771964',
+  'unifunc' => 'content_5a6d9954913671_65892846',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6035f191d3e1d7fe34be93c0404fd465f80badd' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl',
-      1 => 1517070714,
+      1 => 1517132112,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6ca97e7b2c15_43771964 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6d9954913671_65892846 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20185852525a6ca97e792ac9_90462041', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9039504275a6d99548f5938_66926545', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7588979175a6ca97e7954c7_51921241', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16793506425a6d99548f90e8_42413591', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9364626525a6ca97e7b1de3_61326235', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17654294705a6d9954912890_96221772', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_20185852525a6ca97e792ac9_90462041 extends Smarty_Internal_Block
+class Block_9039504275a6d99548f5938_66926545 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_7588979175a6ca97e7954c7_51921241 extends Smarty_Internal_Block
+class Block_16793506425a6d99548f90e8_42413591 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_9364626525a6ca97e7b1de3_61326235 extends Smarty_Internal_Block
+class Block_17654294705a6d9954912890_96221772 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -132,16 +132,17 @@ foreach ($_from as $_smarty_tpl->tpl_vars['field']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
+            <?php if (($_SESSION['id'] != null)) {?>
             <div class="agile-submit">
-                <?php if (($_SESSION['id'] != null)) {?>
-                    <input class="disabled" disabled type="submit" id="submit" value="Conferma"/>
+                <input type="submit" id="submit" value="Conferma"/>
                 <?php } else { ?>
-                    <input class="disabled" disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
+                <div class="agile-submit disabled">
+                    <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
                            title="Accedi o registrati!"/>
-                <?php }?>
-                <br>
-                Ricorda che per effetturare la prenotazione devi essere registrato!
-            </div>
+                    <br>
+                    Ricorda che per effetturare la prenotazione devi essere registrato!
+                    <?php }?>
+                </div>
         </form>
 
     </div>

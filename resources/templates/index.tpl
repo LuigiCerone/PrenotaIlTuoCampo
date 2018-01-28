@@ -32,7 +32,8 @@
                                            class='typeahead'/></li>
                                 <li class="text">Data :</li>
                                 <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
-                                            class="date" id="datepicker" name="date" type="text" value=""
+                                            class="date" id="datepicker" placeholder="Data" name="date" type="text"
+                                            value=""
                                             required/>
                                 </li>
 
@@ -45,11 +46,13 @@
                                             name="gender" type="text"/></li>
                                 <li class="text">Struttura :</li>
                                 <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
-                                            id="partner" name="partner" class="typeahead" type="text" required/>
+                                            id="partner" name="partner" placeholder="Struttura" class="typeahead"
+                                            type="text" required/>
                                 </li>
                                 <li class="text">Ora :</li>
                                 <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
-                                            class="date" name="time" id="timepicker" type="text" value=""
+                                            class="date" placeholder="Ora" name="time" id="timepicker" type="text"
+                                            value=""
                                             required/>
                                 </li>
                             </ul>

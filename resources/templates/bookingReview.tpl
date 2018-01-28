@@ -50,16 +50,17 @@
                         riscaldato: {if $field->warmed == 1}Si {else}No {/if}</label>
                 </div>
             {/foreach}
+            {if ($smarty.session.id != null)}
             <div class="agile-submit">
-                {if ($smarty.session.id != null)}
-                    <input class="disabled" disabled type="submit" id="submit" value="Conferma"/>
+                <input type="submit" id="submit" value="Conferma"/>
                 {else}
-                    <input class="disabled" disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
+                <div class="agile-submit disabled">
+                    <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
                            title="Accedi o registrati!"/>
-                {/if}
-                <br>
-                Ricorda che per effetturare la prenotazione devi essere registrato!
-            </div>
+                    <br>
+                    Ricorda che per effetturare la prenotazione devi essere registrato!
+                    {/if}
+                </div>
         </form>
 
     </div>
