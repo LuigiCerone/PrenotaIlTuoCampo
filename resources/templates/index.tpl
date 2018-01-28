@@ -18,7 +18,7 @@
             <div class="">
                 <div class="searchbox-panel">
                     {*<h3>Prenota il tuo campo!</h3>*}
-                    <form id="bookingForm" method="post" action="bookingReview.php" class="mod2">
+                    <form id="form" method="post" action="bookingReview.php" class="mod2">
                         <div class="col-md-6 col-xs-6 w3l-left-mk">
                             <ul>
                                 <li class="text">Sport :</li>

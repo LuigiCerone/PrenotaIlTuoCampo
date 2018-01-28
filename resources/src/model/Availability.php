@@ -68,7 +68,7 @@ class Availability
         return $b;
     }
 
-    public function remove($id)
+    public static function remove($id)
     {
         $b = false;
         $sql = "DELETE FROM booking "

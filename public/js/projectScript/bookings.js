@@ -18,8 +18,6 @@ $(function () {
     });
 
     $('#saveBooking').click(function () {
-        console.log("qui");
-
         $.ajax({
             type: "POST",
             url: "resources/src/modifyBooking.php",

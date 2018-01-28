@@ -133,7 +133,7 @@ $(function () {
         }
     });
 
-    $('#bookingForm').submit(function () {
+    $('#form').submit(function () {
         // event.stopPropagation();
         // event.preventDefault();
         $('#selectedSport').val(selectedSport);
