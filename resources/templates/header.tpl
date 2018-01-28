@@ -62,6 +62,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                 <a class="dropdown-item " href="profile.php">Il mio account</a>
                                 <a class="dropdown-item " href="bookings.php">Le mie prenotazioni</a>
                                 <a class="dropdown-item " href="messages.php">Messaggi</a>
+                                <a class="dropdown-item " href="availability.php">Le mie disponibilità</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="index.php" class="dropdown-item" id="logout">Esci</a>
                             </div>

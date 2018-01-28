@@ -39,7 +39,7 @@
         <br>
         <hr>
         Non raggiungi la quota necessaria?
-        <a href="#">Clicca qui se hai bisogno di altri giocatori!</a>
+        <a data-toggle="modal" href="#findPlayers">Clicca qui se hai bisogno di altri giocatori!</a>
         <hr>
         Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
         <form id="fieldSelect">
@@ -53,17 +53,42 @@
             {if ($smarty.session.id != null)}
             <div class="agile-submit">
                 <input type="submit" id="submit" value="Conferma"/>
-                {else}
-                <div class="agile-submit disabled">
-                    <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
-                           title="Accedi o registrati!"/>
-                    <br>
-                    Ricorda che per effetturare la prenotazione devi essere registrato!
-                    {/if}
-                </div>
+            </div>
+
+            {else}
+            <div class="agile-submit disabled">
+                <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
+                       title="Accedi o registrati!"/>
+                <br>
+                Ricorda che per effetturare la prenotazione devi essere registrato!
+                {/if}
+            </div>
         </form>
 
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="findPlayers" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="agileinfo_sign">Cerca giocatori</h3>
+                    In questa pagina può contattare altri giocatori per unirsi alla tua squadra!
+                    <br><br>
+                    Di seguito una lista con tutte le persone che si sono offerte disponibili
+                    per giocare a {$booking->sport} il {$booking->date} alle ore {$booking->time}
+                    presso {$booking->partner}:
+
+
+                    <span id="error"></span>
+                    <div class="modal-footer">
+                        <button id="saveSearch" type="button" class="btn btn-primary">Fatto</button>
+                        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /banner -->
 {/block}

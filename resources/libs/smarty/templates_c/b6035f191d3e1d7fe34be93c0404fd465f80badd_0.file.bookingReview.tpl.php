@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-28 10:35:16
+/* Smarty version 3.1.30, created on 2018-01-28 10:45:53
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6d9954913671_65892846',
+  'unifunc' => 'content_5a6d9bd1ba9738_11061894',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6035f191d3e1d7fe34be93c0404fd465f80badd' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl',
-      1 => 1517132112,
+      1 => 1517132750,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6d9954913671_65892846 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6d9bd1ba9738_11061894 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9039504275a6d99548f5938_66926545', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11118334845a6d9bd1b88164_29583403', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16793506425a6d99548f90e8_42413591', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9165360225a6d9bd1b8add5_11644470', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17654294705a6d9954912890_96221772', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17802162245a6d9bd1ba8839_91270257', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_9039504275a6d99548f5938_66926545 extends Smarty_Internal_Block
+class Block_11118334845a6d9bd1b88164_29583403 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_16793506425a6d99548f90e8_42413591 extends Smarty_Internal_Block
+class Block_9165360225a6d9bd1b8add5_11644470 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_17654294705a6d9954912890_96221772 extends Smarty_Internal_Block
+class Block_17802162245a6d9bd1ba8839_91270257 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -110,7 +110,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <br>
         <hr>
         Non raggiungi la quota necessaria?
-        <a href="#">Clicca qui se hai bisogno di altri giocatori!</a>
+        <a data-toggle="modal" href="#findPlayers">Clicca qui se hai bisogno di altri giocatori!</a>
         <hr>
         Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
         <form id="fieldSelect">
@@ -135,19 +135,48 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             <?php if (($_SESSION['id'] != null)) {?>
             <div class="agile-submit">
                 <input type="submit" id="submit" value="Conferma"/>
-                <?php } else { ?>
-                <div class="agile-submit disabled">
-                    <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
-                           title="Accedi o registrati!"/>
-                    <br>
-                    Ricorda che per effetturare la prenotazione devi essere registrato!
-                    <?php }?>
-                </div>
+            </div>
+
+            <?php } else { ?>
+            <div class="agile-submit disabled">
+                <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
+                       title="Accedi o registrati!"/>
+                <br>
+                Ricorda che per effetturare la prenotazione devi essere registrato!
+                <?php }?>
+            </div>
         </form>
 
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="findPlayers" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="agileinfo_sign">Cerca giocatori</h3>
+                    In questa pagina può contattare altri giocatori per unirsi alla tua squadra!
+                    <br><br>
+                    Di seguito una lista con tutte le persone che si sono offerte disponibili
+                    per giocare a <?php echo $_smarty_tpl->tpl_vars['booking']->value->sport;?>
+ il <?php echo $_smarty_tpl->tpl_vars['booking']->value->date;?>
+ alle ore <?php echo $_smarty_tpl->tpl_vars['booking']->value->time;?>
+
+                    presso <?php echo $_smarty_tpl->tpl_vars['booking']->value->partner;?>
+:
+
+
+                    <span id="error"></span>
+                    <div class="modal-footer">
+                        <button id="saveSearch" type="button" class="btn btn-primary">Fatto</button>
+                        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /banner -->
 <?php
 }
 }

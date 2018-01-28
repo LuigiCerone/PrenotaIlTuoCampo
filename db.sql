@@ -1,5 +1,17 @@
 CREATE DATABASE tdwproject;
 USE tdwproject;
+
+
+CREATE TABLE availability
+(
+  id         INT AUTO_INCREMENT
+    PRIMARY KEY,
+  user_fk    INT NOT NULL,
+  partner_fk INT NOT NULL,
+  sport_fk   INT NOT NULL
+)
+  ENGINE = InnoDB;
+
 CREATE TABLE booking
 (
   id       INT AUTO_INCREMENT
@@ -20,7 +32,9 @@ CREATE TABLE field
   partner_fk  INT                    NOT NULL,
   sport_fk    INT                    NOT NULL,
   outdoor     TINYINT(1) DEFAULT '1' NULL,
-  province_fk VARCHAR(2)             NOT NULL
+  province_fk VARCHAR(2)             NOT NULL,
+  type        VARCHAR(40)            NOT NULL,
+  warmed      TINYINT(1) DEFAULT '0' NOT NULL
 )
   ENGINE = InnoDB;
 
