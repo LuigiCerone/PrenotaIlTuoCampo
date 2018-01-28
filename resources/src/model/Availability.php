@@ -31,7 +31,8 @@ class Availability
 
     public static function getAllAvailabilitiesForUser($user_fk)
     {
-        $sql = "SELECT * FROM availability WHERE user_fk=?;";
+        $sql = "SELECT a.id, a.date, a.time, sport.name AS sport, partner.name AS partner FROM (availability AS a JOIN sport ON sport_fk = sport.id)  
+                JOIN partner ON partner_fk = partner.id WHERE user_fk=?;";
 
         $conn = Database::getConnection();
         // prepare and bind
