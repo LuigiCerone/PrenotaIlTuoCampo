@@ -203,6 +203,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
             window.scrollTo(0, 1);
         } </script>
     <script type="text/javascript" src="public/js/jquery-3.2.1.min.js"></script>
+    <script src="public/js/jquery-ui.js"></script>
     <script type="text/javascript"
             src="public/js/bootstrap.js"></script>
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
@@ -221,7 +222,6 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
     <script type="text/javascript" src="public/js/easing.js"></script>
     <script src="public/js/simplePlayer.js"></script>
     <script src="public/js/jquery.swipebox.min.js"></script>
-    <script src="public/js/jquery-ui.js"></script>
     <script src="public/js/projectScript/header.js"></script>
 {/block}
 </body>

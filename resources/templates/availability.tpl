@@ -1,6 +1,7 @@
 {extends file='layout.tpl'}
 
 {block name="css" append}
+
 {/block}
 
 

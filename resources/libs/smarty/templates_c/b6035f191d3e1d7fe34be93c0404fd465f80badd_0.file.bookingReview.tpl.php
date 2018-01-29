@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-28 10:45:53
+/* Smarty version 3.1.30, created on 2018-01-29 09:24:43
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6d9bd1ba9738_11061894',
+  'unifunc' => 'content_5a6eda4b139ab2_73948999',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6035f191d3e1d7fe34be93c0404fd465f80badd' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl',
-      1 => 1517132750,
+      1 => 1517214069,
       2 => 'file',
     ),
   ),
@@ -21,46 +21,50 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6d9bd1ba9738_11061894 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6eda4b139ab2_73948999 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11118334845a6d9bd1b88164_29583403', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20601239135a6eda4b114008_29955931', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9165360225a6d9bd1b8add5_11644470', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5558178885a6eda4b119531_64244108', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17802162245a6d9bd1ba8839_91270257', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3462416505a6eda4b138ba0_94036369', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_11118334845a6d9bd1b88164_29583403 extends Smarty_Internal_Block
+class Block_20601239135a6eda4b114008_29955931 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
+    <link rel="stylesheet" href="public/css/datatables.min.css"/>
 <?php
 }
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_9165360225a6d9bd1b8add5_11644470 extends Smarty_Internal_Block
+class Block_5558178885a6eda4b119531_64244108 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
+    <?php echo '<script'; ?>
+ src="public/js/datatables.min.js"><?php echo '</script'; ?>
+>
     <?php echo '<script'; ?>
  src="public/js/projectScript/bookingReview.js"><?php echo '</script'; ?>
 >
@@ -69,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_17802162245a6d9bd1ba8839_91270257 extends Smarty_Internal_Block
+class Block_3462416505a6eda4b138ba0_94036369 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -78,7 +82,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <br>
     <div class="container">
         <h4><b>Riepilogo dati inseriti</b></h4>
-        <table class="user-info">
+        <table id="bookingData" class="user-info">
+            <thead>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>Sport selezionato:</td>
                 <td> <?php echo $_smarty_tpl->tpl_vars['booking']->value->sport;?>
@@ -106,6 +117,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 )</b>
                 </td>
             </tr>
+            </tbody>
         </table>
         <br>
         <hr>
@@ -166,7 +178,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                     presso <?php echo $_smarty_tpl->tpl_vars['booking']->value->partner;?>
 :
 
-
+                    <table id="findPlayerTable">
+                        <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Nome</td>
+                            <td>Cognome</td>
+                            <td>Anni</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tizio</td>
+                            <td>Caio</td>
+                            <td>21</td>
+                        </tr>
+                        </tbody>
+                    </table>
                     <span id="error"></span>
                     <div class="modal-footer">
                         <button id="saveSearch" type="button" class="btn btn-primary">Fatto</button>

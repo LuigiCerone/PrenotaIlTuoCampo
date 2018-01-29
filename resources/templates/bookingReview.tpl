@@ -1,10 +1,12 @@
 {extends file='layout.tpl'}
 
 {block name="css" append}
+    <link rel="stylesheet" href="public/css/datatables.min.css"/>
 {/block}
 
 
 {block name="js" append}
+    <script src="public/js/datatables.min.js"></script>
     <script src="public/js/projectScript/bookingReview.js"></script>
 {/block}
 
@@ -13,7 +15,14 @@
     <br>
     <div class="container">
         <h4><b>Riepilogo dati inseriti</b></h4>
-        <table class="user-info">
+        <table id="bookingData" class="user-info">
+            <thead>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>Sport selezionato:</td>
                 <td> {$booking->sport}</td>
@@ -35,6 +44,7 @@
                 <td> {$booking->province} <b>({$booking->selectedProvince})</b>
                 </td>
             </tr>
+            </tbody>
         </table>
         <br>
         <hr>
@@ -79,8 +89,25 @@
                     Di seguito una lista con tutte le persone che si sono offerte disponibili
                     per giocare a {$booking->sport} il {$booking->date} alle ore {$booking->time}
                     presso {$booking->partner}:
-
-
+                    <br>
+                    <table id="findPlayerTable">
+                        <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Nome</td>
+                            <td>Cognome</td>
+                            <td>Anni</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tizio</td>
+                            <td>Caio</td>
+                            <td>21</td>
+                        </tr>
+                        </tbody>
+                    </table>
                     <span id="error"></span>
                     <div class="modal-footer">
                         <button id="saveSearch" type="button" class="btn btn-primary">Fatto</button>
