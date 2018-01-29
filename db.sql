@@ -43,7 +43,7 @@ CREATE TABLE field
     PRIMARY KEY,
   partner_fk  INT                    NOT NULL,
   sport_fk    INT                    NOT NULL,
-  outdoor     TINYINT(1) DEFAULT '1' NULL,
+  outdoor     TINYINT(1) DEFAULT '1' NOT NULL,
   province_fk VARCHAR(2)             NOT NULL,
   type        VARCHAR(40)            NOT NULL,
   warmed      TINYINT(1) DEFAULT '0' NOT NULL
@@ -58,7 +58,7 @@ CREATE TABLE partner
   description VARCHAR(255) NOT NULL,
   region      VARCHAR(30)  NOT NULL,
   area        VARCHAR(2)   NOT NULL,
-  address     VARCHAR(40)  NULL,
+  address     VARCHAR(40)  NOT NULL,
   email       VARCHAR(40)  NOT NULL,
   telnumber   VARCHAR(30)  NOT NULL
 )
@@ -79,7 +79,7 @@ CREATE TABLE review
   user_fk  INT                    NOT NULL,
   text     VARCHAR(255)           NOT NULL,
   stars    INT                    NOT NULL,
-  approved TINYINT(1) DEFAULT '0' NULL
+  approved TINYINT(1) DEFAULT '0' NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -138,8 +138,8 @@ CREATE TABLE user
     PRIMARY KEY,
   email      VARCHAR(100)                NOT NULL,
   password   VARCHAR(30)                 NOT NULL,
-  telnumber  VARCHAR(20)                 NULL,
-  birthdate  DATE                        NULL,
+  telnumber  VARCHAR(20)                 NOT NULL,
+  birthdate  DATE                        NOT NULL,
   created_at DATE                        NOT NULL,
   active     TINYINT(1) DEFAULT '0'      NOT NULL,
   tokenCode  VARCHAR(100)                NOT NULL,
@@ -150,7 +150,7 @@ CREATE TABLE user
 CREATE TABLE user2team
 (
   user_fk INT                    NOT NULL,
-  team_fk INT                    NULL,
+  team_fk INT                    NOT NULL,
   status  TINYINT(1) DEFAULT '0' NOT NULL
 )
   ENGINE = InnoDB;
