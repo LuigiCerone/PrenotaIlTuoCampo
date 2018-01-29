@@ -3,35 +3,82 @@ $(function () {
     var element = $('ul.nav.navbar-nav').find('li.active');
     $(element).removeClass('active');
     // console.log(element);
+    var findPlayerTable = null;
 
-    // Inizializzazione della tabella delle ecobox.
-    var findPlayerTable = $('#findPlayerTable').DataTable({
-        searching: true,
-        stateSave: true,
-        colReorder: true,
-        paging: false,
-        scrollCollapse: true,
-        dom: 'rftip',
-        language: {
-            'lengthMenu': 'Mostrate _MENU_ righe per pagina',
-            'zeroRecords': 'Nessun risultato trovato',
-            'info': 'Pagina _PAGE_ di _PAGES_',
-            'infoEmpty': 'Nessun risultato trovato',
-            'infoFiltered': '(filtrate da _MAX_ righe totali)',
-            'search': 'Cerca',
-            'paginate': {
-                'first': 'Prima',
-                'last': 'Ultima',
-                'next': 'Succ.',
-                'previous': 'Prec.'
+    $("#openFinder").on('click', function () {
+        $("#error").html("<img id='loading_img' src='public/images/loading.webp' /> Caricamento...");
+        $.ajax({
+            type: "POST",
+            url: "resources/src/getAvailabilities.php",
+            data: {
+                'sport': $('#selectedSport').html(),
+                'partner': $('#selectedPartner').html(),
+                'date': $('#date').html(),
+                'time': $('#time').html()
             },
-            buttons: {
-                colvis: 'Seleziona colonne'
+            success: function (response) {
+                $("#error").html("");
+                response = JSON.parse(response);
+                var matrix = [];
+                response.forEach(function (item) {
+                    var ar = [];
+                    ar.push(item.id);
+                    ar.push(item.firstName);
+                    ar.push(item.lastName);
+                    ar.push(item.gender);
+                    matrix.push(ar);
+                });
+                if (findPlayerTable != null) {
+                    // La datatable deve essere distrutta prima di essere ripopolata.
+                    $('#findPlayerTable').dataTable().fnDestroy();
+                }
+                createFindPlayersTable(matrix);
+                // window.location = "activateAccount.php";
+            },
+            error: function (response) {
+                $("#error").html("Error.");
+                console.log(response);
             }
-        },
-        'columnDefs': [
-            {'visible': false, 'targets': [0]}
-        ]
+        });
     });
-    jQuery('#findPlayerTable').wrap('<div class="dataTables_scroll" />');
+
+    // Inizializzazione della tabella dei giocatori disponibili.
+    function createFindPlayersTable(data) {
+        findPlayerTable = $('#findPlayerTable').DataTable({
+            searching: true,
+            stateSave: true,
+            colReorder: true,
+            paging: false,
+            scrollCollapse: true,
+            data: data,
+            dom: 'rftip',
+            language: {
+                'lengthMenu': 'Mostrate _MENU_ righe per pagina',
+                'zeroRecords': 'Nessun risultato trovato',
+                'info': 'Pagina _PAGE_ di _PAGES_',
+                'infoEmpty': 'Nessun risultato trovato',
+                'infoFiltered': '(filtrate da _MAX_ righe totali)',
+                'search': 'Cerca',
+                'paginate': {
+                    'first': 'Prima',
+                    'last': 'Ultima',
+                    'next': 'Succ.',
+                    'previous': 'Prec.'
+                },
+                buttons: {
+                    colvis: 'Seleziona colonne'
+                }
+            },
+            "columns": [
+                {"title": "id"},
+                {"title": "Nome"},
+                {"title": "Cognome"},
+                {"title": "Sesso"}
+            ],
+            'columnDefs': [
+                {'visible': false, 'targets': [0]}
+            ]
+        });
+        jQuery('#findPlayerTable').wrap('<div class="dataTables_scroll" />');
+    }
 });

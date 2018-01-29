@@ -16,13 +16,6 @@
     <div class="container">
         <h4><b>Riepilogo dati inseriti</b></h4>
         <table id="bookingData" class="user-info">
-            <thead>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            </thead>
-            <tbody>
             <tr>
                 <td>Sport selezionato:</td>
                 <td> {$booking->sport}</td>
@@ -33,23 +26,26 @@
             </tr>
             <tr>
                 <td>Data selezionata:</td>
-                <td> {$booking->date}</td>
+                <td id="date"> {$booking->date}</td>
             </tr>
             <tr>
                 <td>Ora selezionata:</td>
-                <td> {$booking->time}</td>
+                <td id="time"> {$booking->time}</td>
             </tr>
             <tr>
                 <td>Provincia:</td>
                 <td> {$booking->province} <b>({$booking->selectedProvince})</b>
                 </td>
             </tr>
-            </tbody>
+            <tr class="hidden">
+                <td id="selectedSport">{$booking->selectedSport}</td>
+                <td id="selectedPartner">{$booking->selectedPartner}</td>
+            </tr>
         </table>
         <br>
         <hr>
         Non raggiungi la quota necessaria?
-        <a data-toggle="modal" href="#findPlayers">Clicca qui se hai bisogno di altri giocatori!</a>
+        <a id="openFinder" data-toggle="modal" href="#findPlayers">Clicca qui se hai bisogno di altri giocatori!</a>
         <hr>
         Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
         <form id="fieldSelect">
@@ -88,27 +84,11 @@
                     <br><br>
                     Di seguito una lista con tutte le persone che si sono offerte disponibili
                     per giocare a {$booking->sport} il {$booking->date} alle ore {$booking->time}
-                    presso {$booking->partner}:
+                    presso {$booking->partner}:<br><br>
+                    <span id="error"></span>
                     <br>
                     <table id="findPlayerTable">
-                        <thead>
-                        <tr>
-                            <td>ID</td>
-                            <td>Nome</td>
-                            <td>Cognome</td>
-                            <td>Anni</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Tizio</td>
-                            <td>Caio</td>
-                            <td>21</td>
-                        </tr>
-                        </tbody>
                     </table>
-                    <span id="error"></span>
                     <div class="modal-footer">
                         <button id="saveSearch" type="button" class="btn btn-primary">Fatto</button>
                         <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-29 09:24:43
+/* Smarty version 3.1.30, created on 2018-01-29 10:57:49
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6eda4b139ab2_73948999',
+  'unifunc' => 'content_5a6ef01d098ab9_54185814',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6035f191d3e1d7fe34be93c0404fd465f80badd' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl',
-      1 => 1517214069,
+      1 => 1517219866,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6eda4b139ab2_73948999 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6ef01d098ab9_54185814 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20601239135a6eda4b114008_29955931', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16012421175a6ef01d072798_63721386', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5558178885a6eda4b119531_64244108', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14067264425a6ef01d074c86_50566171', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3462416505a6eda4b138ba0_94036369', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12047031225a6ef01d097845_52746317', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_20601239135a6eda4b114008_29955931 extends Smarty_Internal_Block
+class Block_16012421175a6ef01d072798_63721386 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_5558178885a6eda4b119531_64244108 extends Smarty_Internal_Block
+class Block_14067264425a6ef01d074c86_50566171 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_3462416505a6eda4b138ba0_94036369 extends Smarty_Internal_Block
+class Block_12047031225a6ef01d097845_52746317 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -83,13 +83,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <div class="container">
         <h4><b>Riepilogo dati inseriti</b></h4>
         <table id="bookingData" class="user-info">
-            <thead>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            </thead>
-            <tbody>
             <tr>
                 <td>Sport selezionato:</td>
                 <td> <?php echo $_smarty_tpl->tpl_vars['booking']->value->sport;?>
@@ -102,12 +95,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             </tr>
             <tr>
                 <td>Data selezionata:</td>
-                <td> <?php echo $_smarty_tpl->tpl_vars['booking']->value->date;?>
+                <td id="date"> <?php echo $_smarty_tpl->tpl_vars['booking']->value->date;?>
 </td>
             </tr>
             <tr>
                 <td>Ora selezionata:</td>
-                <td> <?php echo $_smarty_tpl->tpl_vars['booking']->value->time;?>
+                <td id="time"> <?php echo $_smarty_tpl->tpl_vars['booking']->value->time;?>
 </td>
             </tr>
             <tr>
@@ -117,12 +110,17 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 )</b>
                 </td>
             </tr>
-            </tbody>
+            <tr class="hidden">
+                <td id="selectedSport"><?php echo $_smarty_tpl->tpl_vars['booking']->value->selectedSport;?>
+</td>
+                <td id="selectedPartner"><?php echo $_smarty_tpl->tpl_vars['booking']->value->selectedPartner;?>
+</td>
+            </tr>
         </table>
         <br>
         <hr>
         Non raggiungi la quota necessaria?
-        <a data-toggle="modal" href="#findPlayers">Clicca qui se hai bisogno di altri giocatori!</a>
+        <a id="openFinder" data-toggle="modal" href="#findPlayers">Clicca qui se hai bisogno di altri giocatori!</a>
         <hr>
         Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
         <form id="fieldSelect">
@@ -176,27 +174,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
  alle ore <?php echo $_smarty_tpl->tpl_vars['booking']->value->time;?>
 
                     presso <?php echo $_smarty_tpl->tpl_vars['booking']->value->partner;?>
-:
-
-                    <table id="findPlayerTable">
-                        <thead>
-                        <tr>
-                            <td>ID</td>
-                            <td>Nome</td>
-                            <td>Cognome</td>
-                            <td>Anni</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Tizio</td>
-                            <td>Caio</td>
-                            <td>21</td>
-                        </tr>
-                        </tbody>
-                    </table>
+:<br><br>
                     <span id="error"></span>
+                    <br>
+                    <table id="findPlayerTable">
+                    </table>
                     <div class="modal-footer">
                         <button id="saveSearch" type="button" class="btn btn-primary">Fatto</button>
                         <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi

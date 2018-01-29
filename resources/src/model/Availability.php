@@ -50,11 +50,35 @@ class Availability
         return json_encode($availabilities);
     }
 
+    public static function getAllAvailabilities($partner, $sport, $date, $time)
+    {
+        $sql = "SELECT user.id AS id, date, time, firstName, lastName, birthdate, gender
+        FROM availability JOIN user ON user_fk = user.id WHERE partner_fk = ? 
+        AND sport_fk=? AND STR_TO_DATE(?, '%d/%m/%Y') = date AND (time IS NULL OR time = ?);";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("iiss", $partner, $sport, $date, $time);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $availabilities = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $availabilities[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($availabilities);
+    }
+
     public function insert()
     {
         $b = false;
-        $sql = "INSERT INTO availability (id, user_fk, partner_fk, sport_fk, date, time) "
-            . " VALUES (NULL,?,?,?,?,?);";
+        $sql = "INSERT INTO availability(id, user_fk, partner_fk, sport_fk, date, time) "
+            . " VALUES(NULL,?,?,?,?,?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
