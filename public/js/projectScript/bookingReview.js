@@ -73,12 +73,24 @@ $(function () {
                 {"title": "id"},
                 {"title": "Nome"},
                 {"title": "Cognome"},
-                {"title": "Sesso"}
+                {"title": "Sesso"},
+                {"title": "Contatta"}
             ],
             'columnDefs': [
-                {'visible': false, 'targets': [0]}
+                {'visible': false, 'targets': [0]},
+                {
+                    "targets": -1,
+                    "data": null,
+                    "searchable": false,
+                    "defaultContent": "<button>Contatta</button>"
+                }
             ]
         });
         jQuery('#findPlayerTable').wrap('<div class="dataTables_scroll" />');
     }
+
+    $('#findPlayerTable').on('click', 'button', function () {
+        var data = findPlayerTable.row($(this).parents('tr')).data();
+        console.log("valore:" + data[0]);
+    });
 });
