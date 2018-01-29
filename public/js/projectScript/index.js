@@ -1,7 +1,7 @@
 $(function () {
-
-    var sportsData = null, provincesData = [], partnersData = [];
     var selectedProvince = null, selectedSport = null, selectedPartner = null;
+    var sportsData = null, provincesData = [], partnersData = [];
+
 
     $.datepicker.regional['it'] = {
         closeText: 'Chiudi', // set a close button text
@@ -16,6 +16,9 @@ $(function () {
 
     $("#datepicker").datepicker($.datepicker.regional['it']);
     $("#datepicker").datepicker();
+
+    console.log("UUUUUU");
+
 
     $('#timepicker').timepicker({
         minTime: '9:00am',

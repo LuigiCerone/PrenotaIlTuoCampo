@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-28 15:36:16
+/* Smarty version 3.1.30, created on 2018-01-29 08:42:56
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/availability.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6ddfe09704d2_62695055',
+  'unifunc' => 'content_5a6ed080371089_03839828',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6181566b994b70554fabb6ce357d9635ced0680b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/availability.tpl',
-      1 => 1517150161,
+      1 => 1517211774,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6ddfe09704d2_62695055 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6ed080371089_03839828 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8681901385a6ddfe0962176_66993997', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13818099065a6ed0803474a1_76009600', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16214902595a6ddfe0964851_21861022', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16344646485a6ed080349eb1_83155478', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1293995515a6ddfe096f969_68759967', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19864669085a6ed080370398_87445084', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_8681901385a6ddfe0962176_66993997 extends Smarty_Internal_Block
+class Block_13818099065a6ed0803474a1_76009600 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,12 +55,18 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_16214902595a6ddfe0964851_21861022 extends Smarty_Internal_Block
+class Block_16344646485a6ed080349eb1_83155478 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
+    <?php echo '<script'; ?>
+ src="public/js/jquery.timepicker.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/js/bootstrap3-typeahead.min.js"><?php echo '</script'; ?>
+>
     <?php echo '<script'; ?>
  src="public/js/projectScript/availability.js"><?php echo '</script'; ?>
 >
@@ -69,7 +75,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_1293995515a6ddfe096f969_68759967 extends Smarty_Internal_Block
+class Block_19864669085a6ed080370398_87445084 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -95,8 +101,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['availability']->value) {
                         <div class="card-block">
                             <h4 class="card-title">Dispobilità per il <?php echo $_smarty_tpl->tpl_vars['availability']->value->date;?>
 
-                                alle <?php echo $_smarty_tpl->tpl_vars['availability']->value->time;?>
-</h4>
+                                <?php if ($_smarty_tpl->tpl_vars['availability']->value->time == null) {?> tutto il giorno<?php } else { ?>
+                                    alle <?php echo $_smarty_tpl->tpl_vars['availability']->value->time;
+}?></h4>
                             <p class="card-text">Ti sei reso disponibile per giocare a <b><?php echo $_smarty_tpl->tpl_vars['availability']->value->sport;?>
 </b></p>
                             <p class="card-text">Presso <b><?php echo $_smarty_tpl->tpl_vars['availability']->value->partner;?>
@@ -139,6 +146,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     <input id="sport" name="sport" type="text" class="typeahead"
                                            placeholder="Sport" required/>
                                 </li>
+                                <li class="text">Struttura :</li>
+                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
+                                            id="partner" name="partner" placeholder="Struttura" class="typeahead"
+                                            type="text" required/>
+                                </li>
+                                <li class="text">Ora :</li>
+                                <li id="time" class="agileits-main"><i class="fa fa-clock-o"
+                                                                       aria-hidden="true"></i><input
+                                            class="date" placeholder="Ora" name="time" id="timepicker" type="text"
+                                            value=""/>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-xs-6 w3l-right-mk">
+                            <ul>
                                 <li class="text">Provincia :</li>
                                 <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <input id="province" placeholder="Provincia" name="province" type="text" required
@@ -149,31 +171,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                             value=""
                                             required/>
                                 </li>
-
-                            </ul>
-                        </div>
-                        <div class="col-md-6 col-xs-6 w3l-right-mk">
-                            <ul>
-                                <li class="text">qualcosa di utile qui :</li>
-                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
-                                            name="gender" type="text"/></li>
-                                <li class="text">Struttura :</li>
-                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
-                                            id="partner" name="partner" placeholder="Struttura" class="typeahead"
-                                            type="text" required/>
-                                </li>
-                                <li class="text">Ora :</li>
-                                <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
-                                            class="date" placeholder="Ora" name="time" id="timepicker" type="text"
-                                            value=""
-                                            required/>
+                                <li class="text"><br></li>
+                                <li class="agileits-main">
+                                    <div>
+                                        <input id="allDay" name="allDay" type="checkbox"/>
+                                        <label for="allDay">Renditi disponibile tutto il giorno</label>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="clearfix"></div>
-                        <input class="hidden" id="selectedSport" name="selectedSport"/>
-                        <input class="hidden" id="selectedPartner" name="selectedPartner"/>
-                        <input class="hidden" id="selectedProvince" name="selectedProvince"/>
+                        
+                        
+                        
 
 
                         <span id="error"></span>
@@ -198,7 +208,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                     Sei sicuro di voler rimuove la disponibilità?
                     <span id="error"></span>
                     <div class="modal-footer">
-                        <button id="saveChange" type="button" class="btn btn-primary">Si, disdici</button>
+                        <button id="saveChange" type="button" class="btn btn-primary">Si, rimuovi</button>
                         <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi
                         </button>
                     </div>

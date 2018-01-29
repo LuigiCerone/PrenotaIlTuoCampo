@@ -447,6 +447,12 @@ li.agileits-main i {
     background-color: black;
 }
 
+.disabled input[type="text"] {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background-color: black;
+}
+
 .disabled input[type="submit"]:hover {
     opacity: 0.65;
     cursor: not-allowed;

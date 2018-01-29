@@ -5,6 +5,8 @@
 
 
 {block name="js" append}
+    <script src="public/js/jquery.timepicker.min.js"></script>
+    <script src="public/js/bootstrap3-typeahead.min.js"></script>
     <script src="public/js/projectScript/availability.js"></script>
 {/block}
 
@@ -25,7 +27,8 @@
                     <div class="col-md-6">
                         <div class="card-block">
                             <h4 class="card-title">Dispobilità per il {$availability->date}
-                                alle {$availability->time}</h4>
+                                {if $availability->time == null} tutto il giorno{else}
+                                    alle {$availability->time}{/if}</h4>
                             <p class="card-text">Ti sei reso disponibile per giocare a <b>{$availability->sport}</b></p>
                             <p class="card-text">Presso <b>{$availability->partner}</b></p>
                         </div>
@@ -60,6 +63,21 @@
                                     <input id="sport" name="sport" type="text" class="typeahead"
                                            placeholder="Sport" required/>
                                 </li>
+                                <li class="text">Struttura :</li>
+                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
+                                            id="partner" name="partner" placeholder="Struttura" class="typeahead"
+                                            type="text" required/>
+                                </li>
+                                <li class="text">Ora :</li>
+                                <li id="time" class="agileits-main"><i class="fa fa-clock-o"
+                                                                       aria-hidden="true"></i><input
+                                            class="date" placeholder="Ora" name="time" id="timepicker" type="text"
+                                            value=""/>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-xs-6 w3l-right-mk">
+                            <ul>
                                 <li class="text">Provincia :</li>
                                 <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <input id="province" placeholder="Provincia" name="province" type="text" required
@@ -70,31 +88,19 @@
                                             value=""
                                             required/>
                                 </li>
-
-                            </ul>
-                        </div>
-                        <div class="col-md-6 col-xs-6 w3l-right-mk">
-                            <ul>
-                                <li class="text">qualcosa di utile qui :</li>
-                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
-                                            name="gender" type="text"/></li>
-                                <li class="text">Struttura :</li>
-                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
-                                            id="partner" name="partner" placeholder="Struttura" class="typeahead"
-                                            type="text" required/>
-                                </li>
-                                <li class="text">Ora :</li>
-                                <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
-                                            class="date" placeholder="Ora" name="time" id="timepicker" type="text"
-                                            value=""
-                                            required/>
+                                <li class="text"><br></li>
+                                <li class="agileits-main">
+                                    <div>
+                                        <input id="allDay" name="allDay" type="checkbox"/>
+                                        <label for="allDay">Renditi disponibile tutto il giorno</label>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="clearfix"></div>
-                        <input class="hidden" id="selectedSport" name="selectedSport"/>
-                        <input class="hidden" id="selectedPartner" name="selectedPartner"/>
-                        <input class="hidden" id="selectedProvince" name="selectedProvince"/>
+                        {*<input class="hidden" id="selectedSport" name="selectedSport"/>*}
+                        {*<input class="hidden" id="selectedPartner" name="selectedPartner"/>*}
+                        {*<input class="hidden" id="selectedProvince" name="selectedProvince"/>*}
 
 
                         <span id="error"></span>
@@ -119,7 +125,7 @@
                     Sei sicuro di voler rimuove la disponibilità?
                     <span id="error"></span>
                     <div class="modal-footer">
-                        <button id="saveChange" type="button" class="btn btn-primary">Si, disdici</button>
+                        <button id="saveChange" type="button" class="btn btn-primary">Si, rimuovi</button>
                         <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi
                         </button>
                     </div>

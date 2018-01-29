@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-28 10:15:42
+/* Smarty version 3.1.30, created on 2018-01-28 15:41:48
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6d94be2c7843_11928158',
+  'unifunc' => 'content_5a6de12cc63332_28609235',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7b6440b1ada807af4d6f694fea6482de546c85b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl',
-      1 => 1517130937,
+      1 => 1517150504,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6d94be2c7843_11928158 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6de12cc63332_28609235 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9634754655a6d94be2c1569_06700502', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8123742285a6de12cc58813_49251570', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1543028055a6d94be2c3f65_08568481', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7080969015a6de12cc5d730_30669262', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6489661995a6d94be2c6a66_33797919', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1311688215a6de12cc62105_57779263', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_9634754655a6d94be2c1569_06700502 extends Smarty_Internal_Block
+class Block_8123742285a6de12cc58813_49251570 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_1543028055a6d94be2c3f65_08568481 extends Smarty_Internal_Block
+class Block_7080969015a6de12cc5d730_30669262 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -66,17 +66,17 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
  src="public/js/jquery.timepicker.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="public/js/projectScript/index.js"><?php echo '</script'; ?>
+ src="public/js/bootstrap3-typeahead.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="public/js/bootstrap3-typeahead.min.js"><?php echo '</script'; ?>
+ src="public/js/projectScript/index.js"><?php echo '</script'; ?>
 >
 <?php
 }
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_6489661995a6d94be2c6a66_33797919 extends Smarty_Internal_Block
+class Block_1311688215a6de12cc62105_57779263 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -87,7 +87,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <div class="">
                 <div class="searchbox-panel">
                     
-                    <form id="bookingForm" method="post" action="bookingReview.php" class="mod2">
+                    <form id="form" method="post" action="bookingReview.php" class="mod2">
                         <div class="col-md-6 col-xs-6 w3l-left-mk">
                             <ul>
                                 <li class="text">Sport :</li>

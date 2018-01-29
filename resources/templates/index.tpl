@@ -7,8 +7,8 @@
 
 {block name="js" append}
     <script src="public/js/jquery.timepicker.min.js"></script>
-    <script src="public/js/projectScript/index.js"></script>
     <script src="public/js/bootstrap3-typeahead.min.js"></script>
+    <script src="public/js/projectScript/index.js"></script>
 {/block}
 
 {block name="content"}
