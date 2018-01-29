@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-22 18:23:28
+/* Smarty version 3.1.30, created on 2018-01-29 11:11:26
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/reviews.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a661e10bc5db3_41505956',
+  'unifunc' => 'content_5a6ef34edf14c1_42904540',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '131d760cc891a16f68a6cc991db8a6fe8c032cfb' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/reviews.tpl',
-      1 => 1516641804,
+      1 => 1516978347,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a661e10bc5db3_41505956 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6ef34edf14c1_42904540 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_63261635a661e10bbb3b4_37097234', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19625443315a6ef34ede0ab1_66489920', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8949744315a661e10bbc255_68656576', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15509447725a6ef34ede2fd7_90514616', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12810349835a661e10bc53d8_55205516', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10290767595a6ef34edf09f4_99649734', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_63261635a661e10bbb3b4_37097234 extends Smarty_Internal_Block
+class Block_19625443315a6ef34ede0ab1_66489920 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_8949744315a661e10bbc255_68656576 extends Smarty_Internal_Block
+class Block_15509447725a6ef34ede2fd7_90514616 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -72,7 +72,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_12810349835a661e10bc53d8_55205516 extends Smarty_Internal_Block
+class Block_10290767595a6ef34edf09f4_99649734 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -130,7 +130,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                data-active-icon="fa-star" data-inactive-icon=" fa-star-o" class="rating bigger"
                                value="1"/>
                         <br>
-                        <button id="saveReview" class="btn btn-success btn-lg" type="submit">Save
+                        <button id="saveReview" class="btn btn-success btn-lg" type="submit">Salva
                         </button>
                     </div>
                 </form>

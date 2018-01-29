@@ -9,8 +9,9 @@
 {/block}
 
 {block name="content"}
-    <h2 class="title">Chi siamo?</h2>
-    <br>
-    Scrivere qui come funziona il sito, chi siamo e altro.
-    <!-- /banner -->
+    <div class="container">
+        <h2 class="title">Chi siamo?</h2>
+        <br>
+        Scrivere qui come funziona il sito, chi siamo e altro.
+    </div>
 {/block}

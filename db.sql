@@ -6,9 +6,21 @@ CREATE TABLE availability
 (
   id         INT AUTO_INCREMENT
     PRIMARY KEY,
-  user_fk    INT NOT NULL,
-  partner_fk INT NOT NULL,
-  sport_fk   INT NOT NULL
+  user_fk    INT  NOT NULL,
+  partner_fk INT  NOT NULL,
+  sport_fk   INT  NOT NULL,
+  date       DATE NOT NULL,
+  time       TIME NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE award
+(
+  id            INT AUTO_INCREMENT
+    PRIMARY KEY,
+  name          VARCHAR(40) NOT NULL,
+  tournament_fk INT         NOT NULL,
+  place         INT         NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -71,12 +83,50 @@ CREATE TABLE review
 )
   ENGINE = InnoDB;
 
+CREATE TABLE sponsor
+(
+  id   INT AUTO_INCREMENT
+    PRIMARY KEY,
+  name VARCHAR(40) NOT NULL,
+  type VARCHAR(50) NOT NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE sponsor2tournament
+(
+  sponsor_fk    INT  NOT NULL,
+  tournament_fk INT  NOT NULL,
+  money         INT  NOT NULL,
+  date          DATE NOT NULL
+)
+  ENGINE = InnoDB;
+
 CREATE TABLE sport
 (
   id             INT AUTO_INCREMENT
     PRIMARY KEY,
   name           VARCHAR(40) NULL,
   number_players INT         NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE team
+(
+  id     INT AUTO_INCREMENT
+    PRIMARY KEY,
+  name   VARCHAR(50) NOT NULL,
+  number INT         NOT NULL,
+  CONSTRAINT team_name_uindex
+  UNIQUE (name)
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE tournament
+(
+  id         INT AUTO_INCREMENT
+    PRIMARY KEY,
+  name       VARCHAR(40) NOT NULL,
+  partner_fk INT         NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -94,6 +144,14 @@ CREATE TABLE user
   active     TINYINT(1) DEFAULT '0'      NOT NULL,
   tokenCode  VARCHAR(100)                NOT NULL,
   gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE user2team
+(
+  user_fk INT                    NOT NULL,
+  team_fk INT                    NULL,
+  status  TINYINT(1) DEFAULT '0' NOT NULL
 )
   ENGINE = InnoDB;
 
