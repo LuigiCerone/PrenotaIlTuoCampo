@@ -64,6 +64,7 @@ $(function () {
         }
     });
 
+
     $.datepicker.regional['it'] = {
         closeText: 'Chiudi', // set a close button text
         currentText: 'Oggi', // set today text

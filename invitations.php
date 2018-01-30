@@ -11,9 +11,9 @@ $tpl = templateInit::Instance();
 //$json = "{\"reviews\":[{\"username\":\"User1\",\"value\":1},{\"username\":\"User2\",\"number\":2}]}";
 //$params = array('reviews' => json_decode($json));
 
-if ($_SESSION['id'] != null) {
-    $params = array('sentInvitations' => Invitation::getAllSentInvitation($_SESSION['id']),
-        'receivedInvitations' => Invitation::getAllReceivedInvitation($_SESSION['id']));
+if (isset($_SESSION['id'])) {
+    $params = array('sentInvitations' => json_decode(Invitation::getAllSentInvitation($_SESSION['id'])),
+        'receivedInvitations' => json_decode(Invitation::getAllReceivedInvitation($_SESSION['id'])));
     $tpl->render('invitations', $params);
 } else
     $tpl->render('error');

@@ -1,4 +1,5 @@
 $(function () {
+    var selectedInvitation = null, sentTable = null, receivedTable = null;
     // Change the active element in the nav bar.
     var element = $('ul.nav.navbar-nav').find('li.active');
     $(element).removeClass('active');
@@ -6,18 +7,16 @@ $(function () {
 
     console.log("Ok");
     $('#sent').on('click', function () {
-        jQuery('#sentTable').wrap('<div class="dataTables_scroll" />');
         $('#sentInvitations').show();
         $('#receivedInvitations').hide();
     });
 
     $('#received').on('click', function () {
-        jQuery('#receivedTable').wrap('<div class="dataTables_scroll" />');
         $('#sentInvitations').hide();
         $('#receivedInvitations').show();
     });
 
-    var sentTable = $('#sentTable').DataTable({
+    sentTable = $('#sentTable').DataTable({
         searching: true,
         stateSave: true,
         colReorder: true,
@@ -42,18 +41,18 @@ $(function () {
             }
         },
         'columnDefs': [
-            {'visible': false, 'targets': [0]},
-            {
-                "targets": -1,
-                "data": null,
-                "searchable": false,
-                "defaultContent": "<button>Contatta</button>"
-            }
+            {'visible': false, 'targets': [0]}
+            // {
+            //     "targets": -1,
+            //     "data": null,
+            //     "searchable": false,
+            //     "defaultContent": "<button>Contatta</button>"
+            // }
         ]
     });
     jQuery('#sentTable').wrap('<div class="dataTables_scroll" />');
 
-    var receivedTable = $('#receivedTable').DataTable({
+    receivedTable = $('#receivedTable').DataTable({
         searching: true,
         stateSave: true,
         colReorder: true,
@@ -78,14 +77,37 @@ $(function () {
             }
         },
         'columnDefs': [
-            {'visible': false, 'targets': [0]},
-            {
-                "targets": -1,
-                "data": null,
-                "searchable": false,
-                "defaultContent": "<button>Contatta</button>"
-            }
+            {'visible': false, 'targets': [0]}
+            // {
+            //     "targets": -1,
+            //     "data": null,
+            //     "searchable": false,
+            //     "defaultContent": "<button>Contatta</button>"
+            // }
         ]
     });
     jQuery('#receivedTable').wrap('<div class="dataTables_scroll" />');
+
+
+    $('#receivedTable').on('click', 'tr', function () {
+        var data = receivedTable.row(this).data();
+        selectedInvitation = data[0];
+        jQuery.noConflict();
+        $('#changeStatus').modal('toggle');
+    });
+    $('#sentTable').on('click', 'tr', function () {
+        var data = sentTable.row(this).data();
+        selectedInvitation = data[0];
+        jQuery.noConflict();
+        $('#changeStatus').modal('toggle');
+    });
+
+    $('#accept').on('click', function () {
+        console.log("Accepted");
+    });
+
+    $('#decline').on('click', function () {
+        console.log("Declined");
+    });
+
 });
