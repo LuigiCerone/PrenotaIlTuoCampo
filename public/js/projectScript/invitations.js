@@ -89,13 +89,13 @@ $(function () {
     jQuery('#receivedTable').wrap('<div class="dataTables_scroll" />');
 
 
-    $('#receivedTable').on('click', 'tr', function () {
+    $('#receivedTable').on('click', 'tr.pending', function () {
         var data = receivedTable.row(this).data();
         selectedInvitation = data[0];
         jQuery.noConflict();
         $('#changeStatus').modal('toggle');
     });
-    $('#sentTable').on('click', 'tr', function () {
+    $('#sentTable').on('click', 'tr.pending', function () {
         var data = sentTable.row(this).data();
         selectedInvitation = data[0];
         jQuery.noConflict();
@@ -104,10 +104,40 @@ $(function () {
 
     $('#accept').on('click', function () {
         console.log("Accepted");
+        $.ajax({
+            type: "POST",
+            url: "resources/src/modifyInvitation.php",
+            data: {
+                'inv': selectedInvitation,
+                'status': 1
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (response) {
+                $("#error").html("Error.");
+                console.log(response);
+            }
+        });
     });
 
     $('#decline').on('click', function () {
         console.log("Declined");
+        $.ajax({
+            type: "POST",
+            url: "resources/src/modifyInvitation.php",
+            data: {
+                'inv': selectedInvitation,
+                'status': 0
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (response) {
+                $("#error").html("Error.");
+                console.log(response);
+            }
+        });
     });
 
 });

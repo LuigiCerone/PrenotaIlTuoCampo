@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-30 12:44:28
+/* Smarty version 3.1.30, created on 2018-01-30 13:07:51
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/invitations.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a705a9c499ad0_60833391',
+  'unifunc' => 'content_5a7060172850c8_97625035',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e06fdc8d7a11ac3023979db2dc7658b3f42ba7a6' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/invitations.tpl',
-      1 => 1517312663,
+      1 => 1517314068,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a705a9c499ad0_60833391 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7060172850c8_97625035 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10744258745a705a9c46ae25_21323433', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15715069635a7060172432d1_75263766', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4524347695a705a9c46d522_76837696', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2768206855a706017245ae4_10777773', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15602095625a705a9c497b20_68571258', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21059861955a706017283321_27592950', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_10744258745a705a9c46ae25_21323433 extends Smarty_Internal_Block
+class Block_15715069635a7060172432d1_75263766 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_4524347695a705a9c46d522_76837696 extends Smarty_Internal_Block
+class Block_2768206855a706017245ae4_10777773 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_15602095625a705a9c497b20_68571258 extends Smarty_Internal_Block
+class Block_21059861955a706017283321_27592950 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -115,7 +115,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['received']->value) {
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['received']->value->invitationDate;?>
 </td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['received']->value->accepted == 1) {?>Accettato <?php } elseif ($_smarty_tpl->tpl_vars['received']->value->accepted == 0) {?>Rifiutato <?php } else { ?> In attesa<?php }?></td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['received']->value->status == 1) {?>Accettato <?php } elseif ($_smarty_tpl->tpl_vars['received']->value->status == 0) {?>Rifiutato <?php } else { ?> In attesa<?php }?></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['received']->value->firstName;?>
  <?php echo $_smarty_tpl->tpl_vars['received']->value->lastName;?>
 </td>
@@ -162,12 +162,12 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['sent']->value) {
 ?>
-                    <tr>
+                    <tr class="<?php if ($_smarty_tpl->tpl_vars['sent']->value->status == 2) {?>pending<?php }?>">
                         <td><?php echo $_smarty_tpl->tpl_vars['sent']->value->id;?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['sent']->value->invitationDate;?>
 </td>
-                        <td><?php if ($_smarty_tpl->tpl_vars['sent']->value->accepted == 1) {?>Accettato <?php } elseif ($_smarty_tpl->tpl_vars['sent']->value->accepted == 0) {?>Rifiutato <?php } else { ?> In attesa<?php }?></td>
+                        <td><?php if ($_smarty_tpl->tpl_vars['sent']->value->status == 0) {?>Rifiutato <?php } elseif ($_smarty_tpl->tpl_vars['sent']->value->status == 1) {?> Accettato <?php } else { ?> In attesa<?php }?></td>
                         <td><?php echo $_smarty_tpl->tpl_vars['sent']->value->firstName;?>
  <?php echo $_smarty_tpl->tpl_vars['sent']->value->lastName;?>
 </td>

@@ -36,7 +36,7 @@ class Invitation
                 booking.time,
                 invitation.id,
                invitation.date AS invitationDate,
-               accepted,
+               status,
                firstName,
                lastName,
                 user.email,
@@ -71,7 +71,7 @@ class Invitation
                 booking.time,
                 invitation.id,
                invitation.date AS invitationDate,
-               accepted,
+               status,
                firstName,
                lastName,
                 user.email,
@@ -100,14 +100,14 @@ class Invitation
         return json_encode($received);
     }
 
-    public static function changeValidation($id)
+    public static function changeStatus($id, $status)
     {
-        $sql = "UPDATE invitation SET accepted=TRUE WHERE id=?;";
+        $sql = "UPDATE invitation SET status=? WHERE id=?;";
         $b = false;
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $id);
+        $stmt->bind_param("ii", $status, $id);
         if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);
@@ -116,7 +116,7 @@ class Invitation
 
     public function insert()
     {
-        $sql = "INSERT INTO invitation (id, from_user_fk, to_user_fk, date, accepted) "
+        $sql = "INSERT INTO invitation (id, from_user_fk, to_user_fk, date, status) "
             . " VALUES (NULL, ?, ?, NOW(),FALSE);";
         $conn = Database::getConnection();
         // prepare and bind

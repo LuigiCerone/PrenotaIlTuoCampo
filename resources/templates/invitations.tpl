@@ -40,7 +40,7 @@
                     <tr>
                         <td>{$received->id}</td>
                         <td>{$received->invitationDate}</td>
-                        <td>{if $received->accepted == 1 }Accettato {elseif $received->accepted == 0}Rifiutato {else} In attesa{/if}</td>
+                        <td>{if $received->status == 1 }Accettato {elseif $received->status == 0}Rifiutato {else} In attesa{/if}</td>
                         <td>{$received->firstName} {$received->lastName}</td>
                         <td>{$received->email}</td>
                         <td>{$received->telnumber}</td>
@@ -70,10 +70,10 @@
                 </thead>
                 <tbody>
                 {foreach from=$sentInvitations item=sent}
-                    <tr>
+                    <tr class="{if $sent->status == 2}pending{/if}">
                         <td>{$sent->id}</td>
                         <td>{$sent->invitationDate}</td>
-                        <td>{if $sent->accepted == 1 }Accettato {elseif $sent->accepted == 0}Rifiutato {else} In attesa{/if}</td>
+                        <td>{if $sent->status == 0 }Rifiutato {elseif $sent->status == 1} Accettato {else} In attesa{/if}</td>
                         <td>{$sent->firstName} {$sent->lastName}</td>
                         <td>{$sent->email}</td>
                         <td>{$sent->telnumber}</td>
