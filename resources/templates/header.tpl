@@ -90,6 +90,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                         <li id="partners"><a href="parteners.php" class="effect-3 scroll">Aziende</a></li>
                         <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Recensioni</a></li>
                         <li id="news"><a href="news.php" class="effect-3 scroll">Novità</a></li>
+                        <li id="tournaments"><a href="tournaments.php" class="effect-3 scroll">Tornei</a></li>
                         <li id="about_us"><a href="about_us.php" class="effect-3 scroll">Su di noi</a></li>
                     </ul>
                 </nav>

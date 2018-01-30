@@ -26,7 +26,7 @@
                 <tr>
                     <td>ID</td>
                     <td>Disponibilità</td>
-                    <td>Data invito</td>
+                    <td>Ultima modifica</td>
                     <td>Stato</td>
                     <td>Inviato da</td>
                     <td>Email</td>

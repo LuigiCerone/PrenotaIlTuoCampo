@@ -122,6 +122,7 @@ $(function () {
                 console.log(response);
             }
         });
+        window.location.reload();
     });
 
     $('#decline').on('click', function () {
