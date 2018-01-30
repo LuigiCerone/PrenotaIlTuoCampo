@@ -32,8 +32,8 @@ class Invitation
         $sql = "SELECT
                 sport.name      AS sport,
                 partner.name    AS partner,
-                booking.date,
-                booking.time,
+                availability.date,
+                availability.time,
                 invitation.id,
                invitation.date AS invitationDate,
                status,
@@ -41,10 +41,10 @@ class Invitation
                lastName,
                 user.email,
                user.telnumber
-                FROM ((((invitation
-                 JOIN user ON to_user_fk = user.id) JOIN booking ON booking_fk = booking.id)
-                 JOIN field ON booking.field_fk = field.id) JOIN sport ON field.sport_fk = sport.id) JOIN partner
-                 ON partner.id = field.partner_fk
+                FROM (((invitation
+                 JOIN user ON from_user_fk = user.id) JOIN availability ON availability_fk = availability.id)
+                 JOIN sport ON availability.sport_fk = sport.id) JOIN partner
+                 ON partner.id = availability.partner_fk
                  WHERE from_user_fk = ?;";
 
         $conn = Database::getConnection();
@@ -65,10 +65,11 @@ class Invitation
     public static function getAllReceivedInvitation($to_user_fk)
     {
         $sql = "SELECT
+                invitation.availability_fk AS availabilityId,
                 sport.name      AS sport,
                 partner.name    AS partner,
-                booking.date,
-                booking.time,
+                availability.date,
+                availability.time,
                 invitation.id,
                invitation.date AS invitationDate,
                status,
@@ -76,10 +77,10 @@ class Invitation
                lastName,
                 user.email,
                user.telnumber
-                FROM ((((invitation
-                 JOIN user ON from_user_fk = user.id) JOIN booking ON booking_fk = booking.id)
-                 JOIN field ON booking.field_fk = field.id) JOIN sport ON field.sport_fk = sport.id) JOIN partner
-                 ON partner.id = field.partner_fk
+                FROM (((invitation
+                 JOIN user ON from_user_fk = user.id) JOIN availability ON availability_fk = availability.id)
+                 JOIN sport ON availability.sport_fk = sport.id) JOIN partner
+                 ON partner.id = availability.partner_fk
                  WHERE to_user_fk = ?;";
 
         $conn = Database::getConnection();

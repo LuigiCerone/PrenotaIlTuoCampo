@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="da823cb4-60ac-43e2-b5b1-046a58fb250c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/afa935db-2f35-4d56-8ba0-e6236e0ae0a2.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/afa935db-2f35-4d56-8ba0-e6236e0ae0a2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/public/js/projectScript/invitations.js" afterPath="$PROJECT_DIR$/public/js/projectScript/invitations.js" />
       <change beforePath="$PROJECT_DIR$/resources/libs/smarty/templates_c/e06fdc8d7a11ac3023979db2dc7658b3f42ba7a6_0.file.invitations.tpl.php" afterPath="$PROJECT_DIR$/resources/libs/smarty/templates_c/e06fdc8d7a11ac3023979db2dc7658b3f42ba7a6_0.file.invitations.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/resources/src/model/Availability.php" afterPath="$PROJECT_DIR$/resources/src/model/Availability.php" />
       <change beforePath="$PROJECT_DIR$/resources/src/model/Invitation.php" afterPath="$PROJECT_DIR$/resources/src/model/Invitation.php" />
+      <change beforePath="$PROJECT_DIR$/resources/src/modifyInvitation.php" afterPath="$PROJECT_DIR$/resources/src/modifyInvitation.php" />
       <change beforePath="$PROJECT_DIR$/resources/templates/invitations.tpl" afterPath="$PROJECT_DIR$/resources/templates/invitations.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,6 +51,13 @@
         <item name="TDWProject@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="tdwproject: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="availability: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TDWProject@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tdwproject: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="invitation: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -58,7 +68,7 @@
       <file leaf-file-name="invitations.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/invitations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="194">
               <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
@@ -68,8 +78,18 @@
       <file leaf-file-name="invitations.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/templates/invitations.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="75" column="85" lean-forward="false" selection-start-line="75" selection-start-column="85" selection-end-line="75" selection-end-column="85" />
+            <state relative-caret-position="340">
+              <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/src/model/Database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,24 +98,24 @@
       <file leaf-file-name="Invitation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/src/model/Invitation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="109" column="41" lean-forward="false" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
+            <state relative-caret-position="128">
+              <caret line="67" column="26" lean-forward="false" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
               <folding>
-                <marker date="1517313774493" expanded="true" signature="733:900" ph="SELECT sport... invitation" />
-                <marker date="1517313774493" expanded="true" signature="733:1431" ph="SELECT sport... invitation" />
-                <marker date="1517313774493" expanded="true" signature="1963:2661" ph="SELECT sport... invitation" />
-                <marker date="1517313774493" expanded="true" signature="3195:3236" ph="UPDATE invitation... " />
-                <marker date="1517313774493" expanded="true" signature="3600:3718" ph="INSERT INTO booking... " />
+                <marker date="1517323509931" expanded="true" signature="733:910" ph="SELECT sport... invitation" />
+                <marker date="1517323509931" expanded="true" signature="733:1428" ph="SELECT sport... invitation" />
+                <marker date="1517323509931" expanded="true" signature="1960:2715" ph="SELECT sport... invitation" />
+                <marker date="1517323509931" expanded="true" signature="3249:3290" ph="UPDATE invitation... " />
+                <marker date="1517323509931" expanded="true" signature="3654:3772" ph="INSERT INTO booking... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invitations.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="invitations.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/projectScript/invitations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="97" column="43" lean-forward="false" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
+            <state relative-caret-position="170">
+              <caret line="112" column="22" lean-forward="false" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -104,9 +124,27 @@
       <file leaf-file-name="modifyInvitation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/src/modifyInvitation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="34">
+              <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Availability.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/src/model/Availability.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+              <folding>
+                <marker date="1517323755563" expanded="true" signature="697:903" ph="SELECT a.id,... availability" />
+                <marker date="1517323755563" expanded="true" signature="697:918" ph="SELECT a.id,... availability" />
+                <marker date="1517323755563" expanded="true" signature="1493:1736" ph="SELECT user.... availability" />
+                <marker date="1517323755563" expanded="true" signature="1493:1751" ph="SELECT user.... availability" />
+                <marker date="1517323755563" expanded="true" signature="2338:2370" ph="INSERT INTO availability... " />
+                <marker date="1517323755563" expanded="true" signature="2750:2862" ph="INSERT INTO availability... " />
+                <marker date="1517323755563" expanded="true" signature="3304:3359" ph="DELETE FROM availability... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,7 +161,7 @@
       <file leaf-file-name="bookings.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/projectScript/bookings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
+            <state relative-caret-position="272">
               <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="44" />
               <folding />
             </state>
@@ -228,14 +266,14 @@
         <option value="$PROJECT_DIR$/resources/templates/about_us.tpl" />
         <option value="$PROJECT_DIR$/db.sql" />
         <option value="$PROJECT_DIR$/resources/templates/header.tpl" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/console.sql" />
         <option value="$PROJECT_DIR$/invitations.php" />
         <option value="$PROJECT_DIR$/public/js/projectScript/header.js" />
-        <option value="$PROJECT_DIR$/resources/src/model/Availability.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/console.sql" />
+        <option value="$PROJECT_DIR$/public/js/projectScript/invitations.js" />
         <option value="$PROJECT_DIR$/resources/src/modifyInvitation.php" />
         <option value="$PROJECT_DIR$/resources/src/model/Invitation.php" />
         <option value="$PROJECT_DIR$/resources/templates/invitations.tpl" />
-        <option value="$PROJECT_DIR$/public/js/projectScript/invitations.js" />
+        <option value="$PROJECT_DIR$/resources/src/model/Availability.php" />
       </list>
     </option>
   </component>
@@ -281,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -356,6 +393,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,12 +482,13 @@
       <workItem from="1517211278686" duration="10529000" />
       <workItem from="1517233322733" duration="1164000" />
       <workItem from="1517246790269" duration="2677000" />
-      <workItem from="1517307243689" duration="6426000" />
+      <workItem from="1517307243689" duration="6729000" />
+      <workItem from="1517322371226" duration="1386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157233000" />
+    <option name="totallyTimeSpent" value="158922000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -465,16 +504,15 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32503888" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32503888" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32348368" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34059098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32192847" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22617246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22919819" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2118003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2118003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968896" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -483,6 +521,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -527,13 +566,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/libs/smarty/sysplugins/smarty_internal_templatebase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/libs/smarty/sysplugins/smarty_template_compiled.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -654,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.availability">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/src/getAvailabilities.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -686,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2669">
           <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,7 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,7 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,27 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invitations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/profile.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="107" column="10" lean-forward="true" selection-start-line="86" selection-start-column="3" selection-end-line="107" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -793,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="95" column="26" lean-forward="true" selection-start-line="91" selection-start-column="20" selection-end-line="95" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,9 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="41" column="11" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="41" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,28 +839,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/projectScript/bookings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/src/modifyInvitation.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/src/model/Availability.php">
+    <entry file="das://table:/b7d819b4/afa935db-2f35-4d56-8ba0-e6236e0ae0a2/tdwproject.availability">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invitations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding>
-            <marker date="1517219816252" expanded="true" signature="692:898" ph="SELECT a.id,... availability" />
-            <marker date="1517219816252" expanded="true" signature="1473:1716" ph="SELECT user.... availability" />
-            <marker date="1517219816252" expanded="true" signature="2285:2397" ph="INSERT INTO availability... " />
-            <marker date="1517219816252" expanded="true" signature="2839:2894" ph="DELETE FROM availability... " />
-          </folding>
+        <state relative-caret-position="194">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/projectScript/invitations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="112" column="22" lean-forward="false" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -875,41 +888,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/projectScript/bookings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/src/model/Invitation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="109" column="41" lean-forward="false" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
+        <state relative-caret-position="128">
+          <caret line="67" column="26" lean-forward="false" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
           <folding>
-            <marker date="1517313774493" expanded="true" signature="733:900" ph="SELECT sport... invitation" />
-            <marker date="1517313774493" expanded="true" signature="733:1431" ph="SELECT sport... invitation" />
-            <marker date="1517313774493" expanded="true" signature="1963:2661" ph="SELECT sport... invitation" />
-            <marker date="1517313774493" expanded="true" signature="3195:3236" ph="UPDATE invitation... " />
-            <marker date="1517313774493" expanded="true" signature="3600:3718" ph="INSERT INTO booking... " />
+            <marker date="1517323509931" expanded="true" signature="733:910" ph="SELECT sport... invitation" />
+            <marker date="1517323509931" expanded="true" signature="733:1428" ph="SELECT sport... invitation" />
+            <marker date="1517323509931" expanded="true" signature="1960:2715" ph="SELECT sport... invitation" />
+            <marker date="1517323509931" expanded="true" signature="3249:3290" ph="UPDATE invitation... " />
+            <marker date="1517323509931" expanded="true" signature="3654:3772" ph="INSERT INTO booking... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/invitations.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="75" column="85" lean-forward="false" selection-start-line="75" selection-start-column="85" selection-end-line="75" selection-end-column="85" />
+        <state relative-caret-position="340">
+          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/projectScript/invitations.js">
+    <entry file="file://$PROJECT_DIR$/resources/src/model/Database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="97" column="43" lean-forward="false" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/src/modifyInvitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/src/model/Availability.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding>
+            <marker date="1517323755563" expanded="true" signature="697:903" ph="SELECT a.id,... availability" />
+            <marker date="1517323755563" expanded="true" signature="697:918" ph="SELECT a.id,... availability" />
+            <marker date="1517323755563" expanded="true" signature="1493:1736" ph="SELECT user.... availability" />
+            <marker date="1517323755563" expanded="true" signature="1493:1751" ph="SELECT user.... availability" />
+            <marker date="1517323755563" expanded="true" signature="2338:2370" ph="INSERT INTO availability... " />
+            <marker date="1517323755563" expanded="true" signature="2750:2862" ph="INSERT INTO availability... " />
+            <marker date="1517323755563" expanded="true" signature="3304:3359" ph="DELETE FROM availability... " />
+          </folding>
         </state>
       </provider>
     </entry>

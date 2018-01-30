@@ -908,159 +908,166 @@
       <DataType>time|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="231" parent="210" name="PRIMARY">
+    <column id="231" parent="210" name="busy">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="232" parent="210" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="232" parent="211" name="id">
+    <column id="233" parent="211" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="211" name="name">
+    <column id="234" parent="211" name="name">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="211" name="tournament_fk">
+    <column id="235" parent="211" name="tournament_fk">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="211" name="place">
+    <column id="236" parent="211" name="place">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="236" parent="211" name="PRIMARY">
+    <key id="237" parent="211" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="237" parent="212" name="id">
+    <column id="238" parent="212" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="212" name="date">
+    <column id="239" parent="212" name="date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="212" name="time">
+    <column id="240" parent="212" name="time">
       <Position>3</Position>
       <DataType>time|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="212" name="user_fk">
+    <column id="241" parent="212" name="user_fk">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="212" name="field_fk">
+    <column id="242" parent="212" name="field_fk">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="212" name="approved">
+    <column id="243" parent="212" name="approved">
       <Position>6</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="212" name="valid">
+    <column id="244" parent="212" name="valid">
       <Position>7</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="244" parent="212" name="PRIMARY">
+    <key id="245" parent="212" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="245" parent="213" name="id">
+    <column id="246" parent="213" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="213" name="partner_fk">
+    <column id="247" parent="213" name="partner_fk">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="213" name="sport_fk">
+    <column id="248" parent="213" name="sport_fk">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="213" name="outdoor">
+    <column id="249" parent="213" name="outdoor">
       <Position>4</Position>
       <DataType>tinyint(1)|0</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="213" name="province_fk">
+    <column id="250" parent="213" name="province_fk">
       <Position>5</Position>
       <DataType>varchar(2)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="213" name="type">
+    <column id="251" parent="213" name="type">
       <Position>6</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="213" name="warmed">
+    <column id="252" parent="213" name="warmed">
       <Position>7</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="252" parent="213" name="PRIMARY">
+    <key id="253" parent="213" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="253" parent="214" name="id">
+    <column id="254" parent="214" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="214" name="from_user_fk">
+    <column id="255" parent="214" name="from_user_fk">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="214" name="to_user_fk">
+    <column id="256" parent="214" name="to_user_fk">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="214" name="date">
+    <column id="257" parent="214" name="date">
       <Position>4</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
@@ -1068,340 +1075,340 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="257" parent="214" name="status">
+    <column id="258" parent="214" name="status">
       <Position>5</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <DefaultExpression>&apos;2&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="214" name="booking_fk">
+    <column id="259" parent="214" name="availability_fk">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="259" parent="214" name="PRIMARY">
+    <key id="260" parent="214" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="260" parent="215" name="id">
+    <column id="261" parent="215" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="215" name="name">
+    <column id="262" parent="215" name="name">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="215" name="description">
+    <column id="263" parent="215" name="description">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="215" name="region">
+    <column id="264" parent="215" name="region">
       <Position>4</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="215" name="area">
+    <column id="265" parent="215" name="area">
       <Position>5</Position>
       <DataType>varchar(2)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="215" name="address">
+    <column id="266" parent="215" name="address">
       <Position>6</Position>
       <DataType>varchar(40)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="215" name="email">
+    <column id="267" parent="215" name="email">
       <Position>7</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="215" name="telnumber">
+    <column id="268" parent="215" name="telnumber">
       <Position>8</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="268" parent="215" name="PRIMARY">
+    <key id="269" parent="215" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="269" parent="216" name="sign">
+    <column id="270" parent="216" name="sign">
       <Position>1</Position>
       <DataType>varchar(2)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="216" name="name">
+    <column id="271" parent="216" name="name">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="271" parent="216" name="PRIMARY">
+    <key id="272" parent="216" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sign</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="272" parent="217" name="id">
+    <column id="273" parent="217" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="217" name="user_fk">
+    <column id="274" parent="217" name="user_fk">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="217" name="text">
+    <column id="275" parent="217" name="text">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="217" name="stars">
+    <column id="276" parent="217" name="stars">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="217" name="approved">
+    <column id="277" parent="217" name="approved">
       <Position>5</Position>
       <DataType>tinyint(1)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="277" parent="217" name="PRIMARY">
+    <key id="278" parent="217" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="278" parent="218" name="id">
+    <column id="279" parent="218" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="218" name="name">
+    <column id="280" parent="218" name="name">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="218" name="type">
+    <column id="281" parent="218" name="type">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="281" parent="218" name="PRIMARY">
+    <key id="282" parent="218" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="282" parent="219" name="sponsor_fk">
+    <column id="283" parent="219" name="sponsor_fk">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="219" name="tournament_fk">
+    <column id="284" parent="219" name="tournament_fk">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="219" name="money">
+    <column id="285" parent="219" name="money">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="219" name="date">
+    <column id="286" parent="219" name="date">
       <Position>4</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="220" name="id">
+    <column id="287" parent="220" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="220" name="name">
+    <column id="288" parent="220" name="name">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="220" name="number_players">
+    <column id="289" parent="220" name="number_players">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="289" parent="220" name="PRIMARY">
+    <key id="290" parent="220" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="290" parent="221" name="id">
+    <column id="291" parent="221" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="221" name="name">
+    <column id="292" parent="221" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="221" name="number">
+    <column id="293" parent="221" name="number">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="293" parent="221" name="team_name_uindex">
+    <index id="294" parent="221" name="team_name_uindex">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="294" parent="221" name="PRIMARY">
+    <key id="295" parent="221" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="295" parent="221" name="team_name_uindex">
+    <key id="296" parent="221" name="team_name_uindex">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>team_name_uindex</UnderlyingIndexName>
     </key>
-    <column id="296" parent="222" name="id">
+    <column id="297" parent="222" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="222" name="name">
+    <column id="298" parent="222" name="name">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="222" name="partner_fk">
+    <column id="299" parent="222" name="partner_fk">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="299" parent="222" name="PRIMARY">
+    <key id="300" parent="222" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="223" name="firstName">
+    <column id="301" parent="223" name="firstName">
       <Position>1</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="223" name="lastName">
+    <column id="302" parent="223" name="lastName">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="223" name="id">
+    <column id="303" parent="223" name="id">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="223" name="email">
+    <column id="304" parent="223" name="email">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="223" name="password">
+    <column id="305" parent="223" name="password">
       <Position>5</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="223" name="telnumber">
+    <column id="306" parent="223" name="telnumber">
       <Position>6</Position>
       <DataType>varchar(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="223" name="birthdate">
+    <column id="307" parent="223" name="birthdate">
       <Position>7</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="223" name="created_at">
+    <column id="308" parent="223" name="created_at">
       <Position>8</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="223" name="active">
+    <column id="309" parent="223" name="active">
       <Position>9</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="223" name="tokenCode">
+    <column id="310" parent="223" name="tokenCode">
       <Position>10</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="223" name="gender">
+    <column id="311" parent="223" name="gender">
       <Position>11</Position>
       <DataType>enum(&apos;M&apos;, &apos;F&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;M&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="311" parent="223" name="PRIMARY">
+    <key id="312" parent="223" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="312" parent="224" name="user_fk">
+    <column id="313" parent="224" name="user_fk">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="224" name="team_fk">
+    <column id="314" parent="224" name="team_fk">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="224" name="status">
+    <column id="315" parent="224" name="status">
       <Position>3</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>

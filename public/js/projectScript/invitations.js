@@ -1,5 +1,5 @@
 $(function () {
-    var selectedInvitation = null, sentTable = null, receivedTable = null;
+    var selectedInvitation = null, sentTable = null, receivedTable = null, selectedAvailability = null;
     // Change the active element in the nav bar.
     var element = $('ul.nav.navbar-nav').find('li.active');
     $(element).removeClass('active');
@@ -77,7 +77,7 @@ $(function () {
             }
         },
         'columnDefs': [
-            {'visible': false, 'targets': [0]}
+            {'visible': false, 'targets': [0, 1]}
             // {
             //     "targets": -1,
             //     "data": null,
@@ -92,15 +92,17 @@ $(function () {
     $('#receivedTable').on('click', 'tr.pending', function () {
         var data = receivedTable.row(this).data();
         selectedInvitation = data[0];
+        selectedAvailability = data[1];
         jQuery.noConflict();
         $('#changeStatus').modal('toggle');
     });
-    $('#sentTable').on('click', 'tr.pending', function () {
-        var data = sentTable.row(this).data();
-        selectedInvitation = data[0];
-        jQuery.noConflict();
-        $('#changeStatus').modal('toggle');
-    });
+
+    // $('#sentTable').on('click', 'tr.pending', function () {
+    //     var data = sentTable.row(this).data();
+    //     selectedInvitation = data[0];
+    //     jQuery.noConflict();
+    //     $('#changeStatus').modal('toggle');
+    // });
 
     $('#accept').on('click', function () {
         console.log("Accepted");
@@ -108,6 +110,7 @@ $(function () {
             type: "POST",
             url: "resources/src/modifyInvitation.php",
             data: {
+                'ava': selectedAvailability,
                 'inv': selectedInvitation,
                 'status': 1
             },

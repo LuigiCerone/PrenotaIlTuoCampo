@@ -25,6 +25,7 @@
                 <thead>
                 <tr>
                     <td>ID</td>
+                    <td>Disponibilità</td>
                     <td>Data invito</td>
                     <td>Stato</td>
                     <td>Inviato da</td>
@@ -37,8 +38,9 @@
                 </thead>
                 <tbody>
                 {foreach from=$receivedInvitations item=received}
-                    <tr>
+                    <tr class="{if $received->status == 2}pending{/if}">
                         <td>{$received->id}</td>
+                        <td>{$received->availabilityId}</td>
                         <td>{$received->invitationDate}</td>
                         <td>{if $received->status == 1 }Accettato {elseif $received->status == 0}Rifiutato {else} In attesa{/if}</td>
                         <td>{$received->firstName} {$received->lastName}</td>
@@ -70,7 +72,7 @@
                 </thead>
                 <tbody>
                 {foreach from=$sentInvitations item=sent}
-                    <tr class="{if $sent->status == 2}pending{/if}">
+                    <tr>
                         <td>{$sent->id}</td>
                         <td>{$sent->invitationDate}</td>
                         <td>{if $sent->status == 0 }Rifiutato {elseif $sent->status == 1} Accettato {else} In attesa{/if}</td>

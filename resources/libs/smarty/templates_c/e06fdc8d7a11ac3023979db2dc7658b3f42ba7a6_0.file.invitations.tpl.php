@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-30 13:07:51
+/* Smarty version 3.1.30, created on 2018-01-30 15:47:21
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/invitations.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7060172850c8_97625035',
+  'unifunc' => 'content_5a708579c10e01_92792703',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e06fdc8d7a11ac3023979db2dc7658b3f42ba7a6' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/invitations.tpl',
-      1 => 1517314068,
+      1 => 1517323639,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7060172850c8_97625035 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a708579c10e01_92792703 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15715069635a7060172432d1_75263766', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4766878575a708579bdaf59_56789314', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2768206855a706017245ae4_10777773', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2808942365a708579bdd508_03444797', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21059861955a706017283321_27592950', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6260869845a708579c0fa41_78132648', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_15715069635a7060172432d1_75263766 extends Smarty_Internal_Block
+class Block_4766878575a708579bdaf59_56789314 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_2768206855a706017245ae4_10777773 extends Smarty_Internal_Block
+class Block_2808942365a708579bdd508_03444797 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_21059861955a706017283321_27592950 extends Smarty_Internal_Block
+class Block_6260869845a708579c0fa41_78132648 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -94,6 +94,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <thead>
                 <tr>
                     <td>ID</td>
+                    <td>Disponibilità</td>
                     <td>Data invito</td>
                     <td>Stato</td>
                     <td>Inviato da</td>
@@ -110,8 +111,10 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['received']->value) {
 ?>
-                    <tr>
+                    <tr class="<?php if ($_smarty_tpl->tpl_vars['received']->value->status == 2) {?>pending<?php }?>">
                         <td><?php echo $_smarty_tpl->tpl_vars['received']->value->id;?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['received']->value->availabilityId;?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['received']->value->invitationDate;?>
 </td>
@@ -162,7 +165,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['sent']->value) {
 ?>
-                    <tr class="<?php if ($_smarty_tpl->tpl_vars['sent']->value->status == 2) {?>pending<?php }?>">
+                    <tr>
                         <td><?php echo $_smarty_tpl->tpl_vars['sent']->value->id;?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['sent']->value->invitationDate;?>
