@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors",0);
 require_once('templateInit.php');
 require_once('resources/src/model/Availability.php');
 

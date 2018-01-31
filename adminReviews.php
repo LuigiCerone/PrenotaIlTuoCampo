@@ -7,6 +7,6 @@ $tpl = templateInit::Instance();
 
 // Here I can add some content if needed.
 //$json = "{\"reviews\":[{\"username\":\"User1\",\"value\":1},{\"username\":\"User2\",\"value\":2}]}";
-$params = array('reviews' => json_decode(Review::getAllReviews()));
+$params = array('reviews' => json_decode(Review::getNewReviews()));
 
-$tpl->render('reviews', $params);
+$tpl->render('adminReviews', $params);

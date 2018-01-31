@@ -74,4 +74,17 @@ class Booking
         $stmt->close();
         Database::closeConnestion($conn);
     }
+
+    public function static delete()
+    {
+        $sql = "DELETE from booking WHERE approved = 1 AND valid = 0;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $stmt->close();
+        Database::closeConnestion($conn);
+    }
+
+
 }

@@ -147,6 +147,10 @@ small {
     font-size: 26px;
     cursor: pointer;
 }
+.add {
+    font-size: 26px;
+    cursor: pointer;
+}
 
 .not-valid {
     cursor: not-allowed;

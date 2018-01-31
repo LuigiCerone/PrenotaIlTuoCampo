@@ -78,7 +78,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     
     <br>
     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['news']->value->news, 'new');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Novita']->value->news, 'new');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['new']->value) {
 ?>

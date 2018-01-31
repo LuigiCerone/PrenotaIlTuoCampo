@@ -57,4 +57,50 @@ class Review
         $stmt->close();
         Database::closeConnestion($conn);
     }
+
+    public static function getNewReviews()
+    {
+        $sql = "SELECT review.id, text, stars, approved, firstName FROM review JOIN user ON user_fk = user.id WHERE approved = 0";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $reviews = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $reviews[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($reviews);
+    }
+
+    public static function approva($id)
+    {
+        $sql = "UPDATE review SET review.approved = 1 WHERE review.id = ?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
+        Database::closeConnestion($conn);
+    }
+
+    public static function delete($id)
+    {
+        $sql = "DELETE FROM review WHERE review.id = ?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
+        Database::closeConnestion($conn);
+    }
+
 }
