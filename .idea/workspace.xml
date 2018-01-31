@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/resources/templates/header.tpl" line="197" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da823cb4-60ac-43e2-b5b1-046a58fb250c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/resources/libs/smarty/templates_c/a7a50d74936f643a70293beb5dda3d67b62c4d0d_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/resources/libs/smarty/templates_c/a7a50d74936f643a70293beb5dda3d67b62c4d0d_0.file.header.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/resources/src/model/Team.php" afterPath="$PROJECT_DIR$/resources/src/model/Team.php" />
-      <change beforePath="$PROJECT_DIR$/resources/src/model/Tournament.php" afterPath="$PROJECT_DIR$/resources/src/model/Tournament.php" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/header.tpl" afterPath="$PROJECT_DIR$/resources/templates/header.tpl" />
-    </list>
+    <list default="true" id="da823cb4-60ac-43e2-b5b1-046a58fb250c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/projectScript/invitations.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="123" column="11" lean-forward="true" selection-start-line="108" selection-start-column="7" selection-end-line="123" selection-end-column="11" />
+              <caret line="123" column="11" lean-forward="false" selection-start-line="108" selection-start-column="7" selection-end-line="123" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -88,11 +82,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activateAccount.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activateAccount.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/activateAccount.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -238,9 +242,9 @@
         <option value="$PROJECT_DIR$/resources/templates/adminTournaments.tpl" />
         <option value="$PROJECT_DIR$/resources/src/model/Tournament.php" />
         <option value="$PROJECT_DIR$/resources/src/modifyTeam.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/src/model/Team.php" />
         <option value="$PROJECT_DIR$/public/js/projectScript/adminTournaments.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -293,6 +297,24 @@
             <path>
               <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
               <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libs" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PrenotaIlTuoCampo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrenotaIlTuoCampo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="libs" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="smarty" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -392,12 +414,12 @@
       <workItem from="1517337424156" duration="1794000" />
       <workItem from="1517390388266" duration="8620000" />
       <workItem from="1517407858277" duration="4434000" />
-      <workItem from="1517416165936" duration="2662000" />
+      <workItem from="1517416165936" duration="2832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180348000" />
+    <option name="totallyTimeSpent" value="180518000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -410,7 +432,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="29" y="152" width="1366" height="775" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24432677" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -421,7 +442,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34059098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32192847" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32192847" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968896" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -773,7 +794,7 @@
     <entry file="file://$PROJECT_DIR$/public/js/projectScript/invitations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="123" column="11" lean-forward="true" selection-start-line="108" selection-start-column="7" selection-end-line="123" selection-end-column="11" />
+          <caret line="123" column="11" lean-forward="false" selection-start-line="108" selection-start-column="7" selection-end-line="123" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -810,14 +831,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,6 +876,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
           <folding />
         </state>
       </provider>
