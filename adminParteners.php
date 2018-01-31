@@ -10,4 +10,4 @@ $tpl = templateInit::Instance();
 //$json = "{\"partners\":[{\"name\":\"Nome1\",\"number\":1},{\"name\":\"Nome2\",\"number\":2}]}";
 $params = array('partners' => json_decode(Partner::getAllPartners()));
 
-$tpl->render('partners', $params);
+$tpl->render('adminPartners', $params);

@@ -47,8 +47,7 @@ class Partner
 
     public function insert()
     {
-        $sql = "INSERT INTO partner (id, name, description, region, area, address, email, telnumber) "
-            . " VALUES (null, ?, ?, ?, ?,?,?,?);";
+        $sql = "INSERT INTO partner (id, name, description, region, area, address, email, telnumber) VALUES (null, ?, ?, ?, ?,?,?,?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
