@@ -10,6 +10,7 @@ class Tournament
     private $teamNumber;
     private $teamLeft;
     private $sport_fk;
+    private $scheduled;
 
     /**
      * Tournament constructor.
@@ -56,7 +57,7 @@ class Tournament
 
     public static function getInfoForTournament($id)
     {
-        $sql = "SELECT tournament.id, sport.name AS sport, sport.number_players, partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id WHERE tournament.id = ?;";
+        $sql = "SELECT tournament.scheduled,tournament.id, sport.name AS sport, sport.number_players, partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id WHERE tournament.id = ?;";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -73,7 +74,7 @@ class Tournament
 
     public static function getAllAdminTournaments()
     {
-        $sql = "SELECT sport.name AS sport, sport.number_players, tournament.id, partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber, teamLeft FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id;";
+        $sql = "SELECT tournament.scheduled,sport.name AS sport, sport.number_players, tournament.id, partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber, teamLeft FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id;";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -92,4 +93,18 @@ class Tournament
         return json_encode($tournaments);
     }
 
+    public static function setScheduled($id)
+    {
+        $b = false;
+
+        $sql = "UPDATE tournament SET scheduled=1 WHERE id=?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        if ($stmt->execute()) $b = true;
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $b;
+    }
 }

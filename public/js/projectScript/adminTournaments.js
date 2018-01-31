@@ -32,13 +32,13 @@ $(function () {
             }
         },
         'columnDefs': [
-            {'visible': false, 'targets': [0]}
-            // {
-            //     "targets": -1,
-            //     "data": null,
-            //     "searchable": false,
-            //     "defaultContent": "<button>Contatta</button>"
-            // }
+            {'visible': false, 'targets': [0]},
+            {
+                "targets": -1,
+                "data": null,
+                "searchable": false,
+                "defaultContent": "<button>Gestione partite</button>"
+            }
         ]
     });
     jQuery('#tournamentsTable').wrap('<div class="dataTables_scroll" />');
@@ -143,6 +143,7 @@ $(function () {
             },
             success: function (response) {
                 console.log('ok');
+                window.location.reload();
             },
             error: function (response) {
                 $("#error").html("Error.");
@@ -150,4 +151,11 @@ $(function () {
             }
         });
     }
+
+    $('#tournamentsTable').on('click', 'button', function () {
+        var data = tournamentsTable.row($(this).parents('tr')).data();
+        console.log("Id:" + data[0]);
+
+        window.location.href = "adminMatches.php?t=" + data[0];
+    });
 });

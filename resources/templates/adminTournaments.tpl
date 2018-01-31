@@ -34,11 +34,12 @@
                     <td>Data fine iscrizioni</td>
                     <td>Azienda</td>
                     <td>Telefono</td>
+                    <td>Partite</td>
                 </tr>
                 </thead>
                 <tbody>
                 {foreach from=$tournaments item=tournament}
-                <tr class="{if $tournament->teamLeft == 0}pending{/if}">
+                <tr class="{if $tournament->teamLeft == 0 && $tournament->scheduled==0}pending{/if}">
                     <td>{$tournament->id}</td>
                     <td>{$tournament->tournament}</td>
                     <td>{$tournament->sport}</td>
@@ -49,6 +50,7 @@
                     <td>{$tournament->endSubscription}</td>
                     <td>{$tournament->partner}</td>
                     <td>{$tournament->telnumber}</td>
+                    <td></td>
                 </tr>
                 </tbody>
                 {/foreach}
@@ -65,12 +67,8 @@
                     <div class="signin-form profile">
                         <h3 class="agileinfo_sign">Creazione calendario </h3>
                         Creazione del calendario associato al torneo in corso, attendi.....
+                        <img src='public/images/loading.webp'/>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button id="accept" type="button" class="btn btn-primary">Accetta</button>
-                    <button id="decline" type="button" class="btn btn-secondary" data-dismiss="modal">Rifiuta
-                    </button>
                 </div>
             </div>
         </div>
