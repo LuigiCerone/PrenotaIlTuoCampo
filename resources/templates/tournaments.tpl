@@ -31,6 +31,8 @@
                                     (squadre): {$tournament->teamLeft}</p>
                                 <p class="card-text">Inizio torneo: <b>{$tournament->startDate}</b>, iscrizioni
                                     entro: <b>{$tournament->endSubscription}</b></p>
+                                <p class="card-text"><a href="tournamentInfo.php?t={$tournament->id}">Clicca qui per
+                                        visualizzare premi e sponsor di questo torneo</a></p>
                             </div>
                         </div>
                         <div class="col-md-3">

@@ -65,7 +65,7 @@
             </tr>
             <tr>
                 <td>Lista giocatori</td>
-                <td>{$team->teamPlayers}</td>
+                <td>{$team->players}</td>
             </tr>
         </table>
     </div>

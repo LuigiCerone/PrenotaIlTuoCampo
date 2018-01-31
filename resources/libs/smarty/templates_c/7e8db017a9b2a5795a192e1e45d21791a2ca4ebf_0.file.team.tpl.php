@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-31 11:17:51
+/* Smarty version 3.1.30, created on 2018-01-31 11:39:23
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/team.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7197cf539b08_23905715',
+  'unifunc' => 'content_5a719cdbae9917_40334700',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7e8db017a9b2a5795a192e1e45d21791a2ca4ebf' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/team.tpl',
-      1 => 1517393803,
+      1 => 1517394889,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7197cf539b08_23905715 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a719cdbae9917_40334700 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13282939145a7197cf507ab5_26482290', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5335878375a719cdbacea69_10016148', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8770262235a7197cf50d572_02097383', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5724339325a719cdbad1737_08703425', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10990656045a7197cf538805_48984181', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11909887975a719cdbae89f6_68542180', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_13282939145a7197cf507ab5_26482290 extends Smarty_Internal_Block
+class Block_5335878375a719cdbacea69_10016148 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_8770262235a7197cf50d572_02097383 extends Smarty_Internal_Block
+class Block_5724339325a719cdbad1737_08703425 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_10990656045a7197cf538805_48984181 extends Smarty_Internal_Block
+class Block_11909887975a719cdbae89f6_68542180 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -122,8 +122,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <br>
     <hr>
     <br>
-    Dati dell'utente loggato che svolge il capitano
-    <br>
     <div class="signin-form profile">
     
     <div class="login-form container-fluid">
@@ -173,6 +171,20 @@ $_smarty_tpl->tpl_vars['n']->first = $_smarty_tpl->tpl_vars['n']->iteration == 1
 }
 ?>
 
+            <div class="row">
+                <div class="col-md-2 count">
+                </div>
+                <div class="col-md-5">
+                    <label for="team_name">Nome squadra:</label>
+                    <input class="form_input" id="team_name" type="text" name="name"
+                           placeholder="Nome squadra"
+                           required/></div>
+                <div class="col-md-5">
+                    <label for="number">Numero:</label>
+                    <input class="form_input" id="number" type="text" name="number"
+                           placeholder="Numero squadra"
+                           required/></div>
+            </div>
             <div class="row">
                 <div class="col-md-4 col-center-block">
                     <input type="submit" value="Crea squadra"/>

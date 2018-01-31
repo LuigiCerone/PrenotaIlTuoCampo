@@ -5,16 +5,7 @@ require_once('resources/src/model/Team.php');
 require_once('resources/src/model/User.php');
 
 session_start();
-//$tpl = templateInit::Instance();
-//
-//// Here I can add some content if needed.
-////$json = "{\"partners\":[{\"name\":\"Nome1\",\"number\":1},{\"name\":\"Nome2\",\"number\":2}]}";
-//$params = array('tournaments' => json_decode(Tournament::getAllTournaments()));
-//
-//$tpl->render('tournamentTeamPage');
-
-//print_r($_POST);
-
+$tpl = templateInit::Instance();
 
 if (isset($_SESSION['id']) && isset($_POST["name"]) && isset($_POST["number"]) && isset($_POST['tournament']) && isset($_POST['player'])) {
     $user = User::withID($_SESSION['id']);
@@ -24,13 +15,12 @@ if (isset($_SESSION['id']) && isset($_POST["name"]) && isset($_POST["number"]) &
     foreach ($_POST['player'] as $item) {
         $teamPlayers .= $item['firstName'] . " " . $item['lastName'] . " <br>";
     }
-    echo "" . $teamPlayers;
 
-    $team = new Team($_POST["name"], $_POST["number"], $_SESSION['id'], $teamPlayers);
+    $team = new Team($_POST["name"], $_POST["number"], $_SESSION['id'], $teamPlayers, $_POST['tournament']);
     $id = $team->insert();
 
     // Display page.
-    $params = array('tournament' => json_decode(Tournament::getInfoForTournament($_POST['id'])),
+    $params = array('tournament' => json_decode(Tournament::getInfoForTournament($_POST['tournament'])),
         'captain' => json_decode($user->to_json()),
         'team' => json_decode(Team::loadById($id)));
     $tpl->render('tournamentTeamPage', $params);
