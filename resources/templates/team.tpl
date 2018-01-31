@@ -49,8 +49,6 @@
     <br>
     <hr>
     <br>
-    Dati dell'utente loggato che svolge il capitano
-    <br>
     <div class="signin-form profile">
     {*<h3 class="agileinfo_sign">Registrati</h3>*}
     <div class="login-form container-fluid">
@@ -68,24 +66,39 @@
                        value="{$captain->lastName}"
                        disabled/></div>
         </div>
-        <form method="post" id="playersData">
-            <input id="user" name="user" type="text" class="hidden" value="{$captain->id}"/>
+        <form method="post" id="playersData" action="tournamentTeamPage.php">
+            <input id="tournament" name="tournament" type="text" class="hidden" value="{$tournament->id}"/>
             {for $n=2 to $tournament->number_players}
                 <div class="row">
                     <div class="col-md-2 count">
                         Giocatore numero {$n}
                     </div>
-                    <div class="col-md-5"><label for="first_name_{$n}">Nome:</label>
-                        <input class="form_input" type="text" id="first_name_{$n}" name="first_name_{$n}"
+                    <div class="col-md-5">
+                        <label for="first_name">Nome:</label>
+                        <input class="form_input" id="first_name" type="text" name="player[{$n}][firstName]"
                                placeholder="Nome"
                                required/></div>
                     <div class="col-md-5">
-                        <label for="last_name_{$n}">Cognome:</label>
-                        <input class="form_input" type="text" id="last_name_{$n}" name="last_name_{$n}"
+                        <label for="last_name">Cognome:</label>
+                        <input class="form_input" id="last_name" type="text" name="player[{$n}][lastName]"
                                placeholder="Cognome"
                                required/></div>
                 </div>
             {/for}
+            <div class="row">
+                <div class="col-md-2 count">
+                </div>
+                <div class="col-md-5">
+                    <label for="team_name">Nome squadra:</label>
+                    <input class="form_input" id="team_name" type="text" name="name"
+                           placeholder="Nome squadra"
+                           required/></div>
+                <div class="col-md-5">
+                    <label for="number">Numero:</label>
+                    <input class="form_input" id="number" type="text" name="number"
+                           placeholder="Numero squadra"
+                           required/></div>
+            </div>
             <div class="row">
                 <div class="col-md-4 col-center-block">
                     <input type="submit" value="Crea squadra"/>
