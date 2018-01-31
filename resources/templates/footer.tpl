@@ -8,28 +8,39 @@
                     diam ut consectetur porttitor.</p>
             </div>
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.html">Home</a></li>
+                {if isset($smarty.session.id) && isset($smarty.session.admin)}
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.php">Home</a>
+                        </li>
 
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="partners.php"
-                                                                                      class="scroll">Partners</a>
-                    </li>
+                    </ul>
+                {else}
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.php">Home</a>
+                        </li>
 
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="reviews.php" class="scroll">Reviews</a>
-                    </li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="about_us.php"
-                                                                                      class="scroll">About
-                            Us</a></li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="news.php"
-                                                                                      class="scroll">News</a></li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="partners.php"
+                                                                                          class="scroll">Partners</a>
+                        </li>
 
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#gallery" class="scroll">Gallery</a>
-                    </li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#mail" class="scroll">Mail
-                            Us</a></li>
-                </ul>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="reviews.php"
+                                                                                          class="scroll">Reviews</a>
+                        </li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="about_us.php"
+                                                                                          class="scroll">About
+                                Us</a></li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="news.php"
+                                                                                          class="scroll">News</a></li>
 
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#gallery"
+                                                                                          class="scroll">Gallery</a>
+                        </li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#mail" class="scroll">Mail
+                                Us</a></li>
+                    </ul>
+                {/if}
             </div>
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1 w3l-3">
                 <h4>Others</h4>

@@ -50,7 +50,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
             <ul class="agile_forms">
 
-                {if ($smarty.session.id != null)}
+                {if isset($smarty.session.id) && !isset($smarty.session.admin)}
                     <li>
                         <div class="dropdown show user_profile">
                             <a class="dropdown-toggle " href="#" role="button" id="dropdownMenuLink"
@@ -70,7 +70,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                         </div>
                     </li>
                     }
-                {else}
+                {elseif !isset($smarty.session.id) && !isset($smarty.session.admin)}
 
                     {*Login and Sign up*}
                     <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
@@ -82,20 +82,35 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 {/if}
             </ul>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                <nav class="link-effect-2" id="link-effect-2">
-                    <ul class="nav navbar-nav">
-                        <li id="index" class="active"><a href="index.php" class="effect-3">Home</a></li>
-                        <li id="partners"><a href="parteners.php" class="effect-3 scroll">Aziende</a></li>
-                        <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Recensioni</a></li>
-                        <li id="news"><a href="news.php" class="effect-3 scroll">Novità</a></li>
-                        <li id="tournaments"><a href="tournaments.php" class="effect-3 scroll">Tornei</a></li>
-                        <li id="about_us"><a href="about_us.php" class="effect-3 scroll">Su di noi</a></li>
-                    </ul>
-                </nav>
 
-            </div>
+            {if !isset($smarty.session.admin)}
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li id="index" class="active"><a href="index.php" class="effect-3">Home</a></li>
+                            <li id="partners"><a href="parteners.php" class="effect-3 scroll">Aziende</a></li>
+                            <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Recensioni</a></li>
+                            <li id="news"><a href="news.php" class="effect-3 scroll">Novità</a></li>
+                            <li id="tournaments"><a href="tournaments.php" class="effect-3 scroll">Tornei</a></li>
+                            <li id="about_us"><a href="about_us.php" class="effect-3 scroll">Su di noi</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            {elseif isset($smarty.session.admin)}
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li id="partners"><a href="parteners.php" class="effect-3 scroll">Gestione aziende</a></li>
+                            <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Gestione recensioni</a></li>
+                            <li id="news"><a href="news.php" class="effect-3 scroll">Gestione news</a></li>
+                            <li id="tournaments"><a href="tournaments.php" class="effect-3 scroll">Gestione tornei</a>
+                            </li>
+                            <li><a href="index.php" class="dropdown-item" id="logout">Esci</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            {/if}
         </nav>
         <div class="clearfix"></div>
     </div>

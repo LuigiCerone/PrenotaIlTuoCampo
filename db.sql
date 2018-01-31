@@ -163,7 +163,8 @@ CREATE TABLE user
   created_at DATE                        NOT NULL,
   active     TINYINT(1) DEFAULT '0'      NOT NULL,
   tokenCode  VARCHAR(100)                NOT NULL,
-  gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL
+  gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL,
+  admin      TINYINT(1) DEFAULT '0'      NOT NULL
 )
   ENGINE = InnoDB;
 

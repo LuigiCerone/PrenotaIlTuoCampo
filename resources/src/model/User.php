@@ -18,6 +18,7 @@ class User
     private $active;
     private $tokenCode;
     private $gender;
+    private $admin;
 
 
     public function __construct()
@@ -83,6 +84,11 @@ class User
     public function getLastName()
     {
         return $this->lastName;
+    }
+
+    public function isAdmin()
+    {
+        return $this->admin;
     }
 
     /**
@@ -193,6 +199,7 @@ class User
         $this->tokenCode = $row['tokenCode'];
         $this->created_at = $row['created_at'];
         $this->active = $row['active'];
+        $this->admin = $row['admin'];
     }
 
     function get_user_from_id($id)
@@ -244,7 +251,8 @@ class User
             'birthdate' => $this->birthdate,
             'created_at' => $this->created_at,
             'active' => $this->active,
-            'gender' => $this->gender
+            'gender' => $this->gender,
+            'admin' => $this->admin
         ));
     }
 
