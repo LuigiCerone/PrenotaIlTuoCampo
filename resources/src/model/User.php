@@ -3,7 +3,7 @@ require_once(dirname(__FILE__, 3) . '/libs/Mailer/PHPMailer.php');
 require_once(dirname(__FILE__, 3) . '/libs/Mailer/Exception.php');
 require_once(dirname(__FILE__, 3) . '/libs/Mailer/SMTP.php');
 
-require("Database.php");
+require_once("Database.php");
 
 class User
 {

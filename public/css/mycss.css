@@ -217,3 +217,7 @@ small {
     -o-transition: .5s all;
     -ms-transition: .5s all;
 }
+
+.count {
+    padding-top: 20px;
+}

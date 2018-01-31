@@ -5,4 +5,10 @@ $(function () {
     $(element).removeClass('active');
     // console.log(element);
     $('#tournaments').addClass('active');
+
+    $('#playersData').submit(function (event){
+       event.preventDefault();
+
+       console.log("Submit triggered");
+    });
 });
