@@ -8,6 +8,8 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     if ($user->getId() != null) {
         session_start();
         $_SESSION['id'] = $user->getId();
+        if ($user->isAdmin() == 1)
+            $_SESSION['admin'] = 1;
         exit();
     }
 }

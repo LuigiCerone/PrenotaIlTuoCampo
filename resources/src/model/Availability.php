@@ -1,5 +1,5 @@
 <?php
-require("Database.php");
+require_once("Database.php");
 
 class Availability
 {
@@ -30,7 +30,7 @@ class Availability
     public static function getAllAvailabilitiesForUser($user_fk)
     {
         $sql = "SELECT a.id, a.date, a.time, sport.name AS sport, partner.name AS partner FROM (availability AS a JOIN sport ON sport_fk = sport.id)  
-                JOIN partner ON partner_fk = partner.id WHERE user_fk=?;";
+                JOIN partner ON partner_fk = partner.id WHERE user_fk=? AND busy=FALSE;";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -54,7 +54,7 @@ class Availability
     {
         $sql = "SELECT user.id AS id, date, time, firstName, lastName, birthdate, gender
         FROM availability JOIN user ON user_fk = user.id WHERE partner_fk = ? 
-        AND sport_fk=? AND STR_TO_DATE(?, '%d/%m/%Y') = date AND (time IS NULL OR time = ?);";
+        AND sport_fk=? AND STR_TO_DATE(?, '%d/%m/%Y') = date AND (time IS NULL OR time = ?) AND busy=FALSE;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
@@ -72,6 +72,22 @@ class Availability
         Database::closeConnestion($conn);
 
         return json_encode($availabilities);
+    }
+
+    public static function setBusy($ava)
+    {
+        $b = false;
+        $sql = "UPDATE availability "
+            . " SET busy=TRUE WHERE id=?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $ava);
+        if ($stmt->execute()) $b = true;
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return $b;
     }
 
     public function insert()

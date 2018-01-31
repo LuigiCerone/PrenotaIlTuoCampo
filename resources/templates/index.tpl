@@ -14,65 +14,69 @@
 {block name="content"}
     <!-- banner -->
     <div class="container-fluid searchbox">
-        <div class="col-md-6 w3l_about_bottom_left one">
-            <div class="">
-                <div class="searchbox-panel">
-                    {*<h3>Prenota il tuo campo!</h3>*}
-                    <form id="form" method="post" action="bookingReview.php" class="mod2">
-                        <div class="col-md-6 col-xs-6 w3l-left-mk">
-                            <ul>
-                                <li class="text">Sport :</li>
-                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
-                                    <input id="sport" name="sport" type="text" class="typeahead"
-                                           placeholder="Sport" required/>
-                                </li>
-                                <li class="text">Provincia :</li>
-                                <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <input id="province" placeholder="Provincia" name="province" type="text" required
-                                           class='typeahead'/></li>
-                                <li class="text">Data :</li>
-                                <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
-                                            class="date" id="datepicker" placeholder="Data" name="date" type="text"
-                                            value=""
-                                            required/>
-                                </li>
+        {if isset($smarty.session.id) && isset($smarty.session.admin)}
+            <p>Sei un cazzo di amministratore</p>
+        {else}
+            <div class="col-md-6 w3l_about_bottom_left one">
+                <div class="">
+                    <div class="searchbox-panel">
+                        {*<h3>Prenota il tuo campo!</h3>*}
+                        <form id="form" method="post" action="bookingReview.php" class="mod2">
+                            <div class="col-md-6 col-xs-6 w3l-left-mk">
+                                <ul>
+                                    <li class="text">Sport :</li>
+                                    <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
+                                        <input id="sport" name="sport" type="text" class="typeahead"
+                                               placeholder="Sport" required/>
+                                    </li>
+                                    <li class="text">Provincia :</li>
+                                    <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <input id="province" placeholder="Provincia" name="province" type="text"
+                                               required
+                                               class='typeahead'/></li>
+                                    <li class="text">Data :</li>
+                                    <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
+                                                class="date" id="datepicker" placeholder="Data" name="date" type="text"
+                                                value=""
+                                                required/>
+                                    </li>
 
-                            </ul>
-                        </div>
-                        <div class="col-md-6 col-xs-6 w3l-right-mk">
-                            <ul>
-                                <li class="text">qualcosa di utile qui :</li>
-                                <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
-                                            name="gender" type="text"/></li>
-                                <li class="text">Struttura :</li>
-                                <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
-                                            id="partner" name="partner" placeholder="Struttura" class="typeahead"
-                                            type="text" required/>
-                                </li>
-                                <li class="text">Ora :</li>
-                                <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
-                                            class="date" placeholder="Ora" name="time" id="timepicker" type="text"
-                                            value=""
-                                            required/>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="agile-submit">
-                            <input type="submit" value="Prenota">
-                        </div>
-                        <input class="hidden" id="selectedSport" name="selectedSport"/>
-                        <input class="hidden" id="selectedPartner" name="selectedPartner"/>
-                        <input class="hidden" id="selectedProvince" name="selectedProvince"/>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-xs-6 w3l-right-mk">
+                                <ul>
+                                    <li class="text">qualcosa di utile qui :</li>
+                                    <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
+                                                name="gender" type="text"/></li>
+                                    <li class="text">Struttura :</li>
+                                    <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
+                                                id="partner" name="partner" placeholder="Struttura" class="typeahead"
+                                                type="text" required/>
+                                    </li>
+                                    <li class="text">Ora :</li>
+                                    <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
+                                                class="date" placeholder="Ora" name="time" id="timepicker" type="text"
+                                                value=""
+                                                required/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="agile-submit">
+                                <input type="submit" value="Prenota">
+                            </div>
+                            <input class="hidden" id="selectedSport" name="selectedSport"/>
+                            <input class="hidden" id="selectedPartner" name="selectedPartner"/>
+                            <input class="hidden" id="selectedProvince" name="selectedProvince"/>
 
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
+            <div class="col-md-6">
 
-        </div>
-
+            </div>
+        {/if}
     </div>
     <!-- /banner -->
 {/block}

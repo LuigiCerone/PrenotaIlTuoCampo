@@ -1,16 +1,16 @@
 CREATE DATABASE tdwproject;
 USE tdwproject;
 
-
 CREATE TABLE availability
 (
   id         INT AUTO_INCREMENT
     PRIMARY KEY,
-  user_fk    INT  NOT NULL,
-  partner_fk INT  NOT NULL,
-  sport_fk   INT  NOT NULL,
-  date       DATE NOT NULL,
-  time       TIME NULL
+  user_fk    INT                    NOT NULL,
+  partner_fk INT                    NOT NULL,
+  sport_fk   INT                    NOT NULL,
+  date       DATE                   NOT NULL,
+  time       TIME                   NULL,
+  busy       TINYINT(1) DEFAULT '0' NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -47,6 +47,18 @@ CREATE TABLE field
   province_fk VARCHAR(2)             NOT NULL,
   type        VARCHAR(40)            NOT NULL,
   warmed      TINYINT(1) DEFAULT '0' NOT NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE invitation
+(
+  id              INT AUTO_INCREMENT
+    PRIMARY KEY,
+  from_user_fk    INT                                 NOT NULL,
+  to_user_fk      INT                                 NOT NULL,
+  date            TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  status          TINYINT(1) DEFAULT '2'              NOT NULL,
+  availability_fk INT                                 NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -112,10 +124,13 @@ CREATE TABLE sport
 
 CREATE TABLE team
 (
-  id     INT AUTO_INCREMENT
+  id            INT AUTO_INCREMENT
     PRIMARY KEY,
-  name   VARCHAR(50) NOT NULL,
-  number INT         NOT NULL,
+  name          VARCHAR(50)  NOT NULL,
+  number        INT          NOT NULL,
+  user_fk       INT          NOT NULL,
+  players       VARCHAR(255) NOT NULL,
+  tournament_fk INT          NOT NULL,
   CONSTRAINT team_name_uindex
   UNIQUE (name)
 )
@@ -123,10 +138,15 @@ CREATE TABLE team
 
 CREATE TABLE tournament
 (
-  id         INT AUTO_INCREMENT
+  id              INT AUTO_INCREMENT
     PRIMARY KEY,
-  name       VARCHAR(40) NOT NULL,
-  partner_fk INT         NOT NULL
+  name            VARCHAR(40) NOT NULL,
+  partner_fk      INT         NOT NULL,
+  startDate       DATE        NOT NULL,
+  endSubscription DATE        NULL,
+  teamNumber      INT         NOT NULL,
+  teamLeft        INT         NOT NULL,
+  sport_fk        INT         NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -143,7 +163,8 @@ CREATE TABLE user
   created_at DATE                        NOT NULL,
   active     TINYINT(1) DEFAULT '0'      NOT NULL,
   tokenCode  VARCHAR(100)                NOT NULL,
-  gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL
+  gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL,
+  admin      TINYINT(1) DEFAULT '0'      NOT NULL
 )
   ENGINE = InnoDB;
 
