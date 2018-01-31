@@ -70,4 +70,26 @@ class Tournament
 
         return json_encode($tournament);
     }
+
+    public static function getAllAdminTournaments()
+    {
+        $sql = "SELECT sport.name AS sport, sport.number_players, tournament.id, partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber, teamLeft FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $tournaments = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $tournaments[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($tournaments);
+    }
+
 }

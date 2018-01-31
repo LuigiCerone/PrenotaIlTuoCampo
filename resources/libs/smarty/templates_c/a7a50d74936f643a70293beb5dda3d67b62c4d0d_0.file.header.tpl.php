@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-31 15:40:43
+/* Smarty version 3.1.30, created on 2018-01-31 16:06:02
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a71d56b6d84b9_70069326',
+  'unifunc' => 'content_5a71db5a14d0c0_26961865',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1517409640,
+      1 => 1517411157,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a71d56b6d84b9_70069326 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a71db5a14d0c0_26961865 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1256529485a71d56b6c6653_32931570', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7546496735a71db5a136cc1_51539714', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -123,7 +123,8 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1256529485a71d56b6
                             <li id="partners"><a href="parteners.php" class="effect-3 scroll">Gestione aziende</a></li>
                             <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Gestione recensioni</a></li>
                             <li id="news"><a href="news.php" class="effect-3 scroll">Gestione news</a></li>
-                            <li id="tournaments"><a href="tournaments.php" class="effect-3 scroll">Gestione tornei</a>
+                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione
+                                    tornei</a>
                             </li>
                             <li><a href="index.php" class="dropdown-item" id="logout">Esci</a></li>
                         </ul>
@@ -229,13 +230,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1256529485a71d56b6
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2693750255a71d56b6d7620_57353852', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8501705725a71db5a14c100_36903518', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_1256529485a71d56b6c6653_32931570 extends Smarty_Internal_Block
+class Block_7546496735a71db5a136cc1_51539714 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -254,7 +255,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_2693750255a71d56b6d7620_57353852 extends Smarty_Internal_Block
+class Block_8501705725a71db5a14c100_36903518 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

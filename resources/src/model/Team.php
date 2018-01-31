@@ -62,6 +62,25 @@ class Team
         return json_encode($team);
     }
 
+    public static function getAllTeamForTournament($tournament)
+    {
+        $sql = "SELECT id,name FROM team WHERE tournament_fk = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $tournament);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $teams = array();
+        while ($row = $result->fetch_assoc()) {
+            $teams[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return json_encode($teams);
+    }
+
     public function insert()
     {
         $b = false;

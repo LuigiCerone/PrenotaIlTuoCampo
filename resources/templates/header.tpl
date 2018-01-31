@@ -104,7 +104,8 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             <li id="partners"><a href="parteners.php" class="effect-3 scroll">Gestione aziende</a></li>
                             <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Gestione recensioni</a></li>
                             <li id="news"><a href="news.php" class="effect-3 scroll">Gestione news</a></li>
-                            <li id="tournaments"><a href="tournaments.php" class="effect-3 scroll">Gestione tornei</a>
+                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione
+                                    tornei</a>
                             </li>
                             <li><a href="index.php" class="dropdown-item" id="logout">Esci</a></li>
                         </ul>
