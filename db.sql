@@ -62,6 +62,21 @@ CREATE TABLE invitation
 )
   ENGINE = InnoDB;
 
+CREATE TABLE `match`
+(
+  id             INT AUTO_INCREMENT
+    PRIMARY KEY,
+  first_team_fk  INT  NOT NULL,
+  second_team_fk INT  NOT NULL,
+  tournament_fk  INT  NOT NULL,
+  date           DATE NULL,
+  time           TIME NULL,
+  field_fk       INT  NULL,
+  day            INT  NOT NULL
+  COMMENT 'Giornata del campionato'
+)
+  ENGINE = InnoDB;
+
 CREATE TABLE partner
 (
   id          INT AUTO_INCREMENT
@@ -140,13 +155,15 @@ CREATE TABLE tournament
 (
   id              INT AUTO_INCREMENT
     PRIMARY KEY,
-  name            VARCHAR(40) NOT NULL,
-  partner_fk      INT         NOT NULL,
-  startDate       DATE        NOT NULL,
-  endSubscription DATE        NULL,
-  teamNumber      INT         NOT NULL,
-  teamLeft        INT         NOT NULL,
-  sport_fk        INT         NOT NULL
+  name            VARCHAR(40)            NOT NULL,
+  partner_fk      INT                    NOT NULL,
+  startDate       DATE                   NOT NULL,
+  endSubscription DATE                   NULL,
+  teamNumber      INT                    NOT NULL,
+  teamLeft        INT                    NOT NULL,
+  sport_fk        INT                    NOT NULL,
+  scheduled       TINYINT(1) DEFAULT '0' NOT NULL
+  COMMENT 'Se true significa che le partite sono state organizzate'
 )
   ENGINE = InnoDB;
 
