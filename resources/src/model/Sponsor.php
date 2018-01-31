@@ -20,7 +20,7 @@ class Sponsor
 
     public static function getAllSponsorForTournament($id)
     {
-        $sql = "SELECT * FROM sponsor JOIN sponsor2tournament WHERE tournament_fk=?;";
+        $sql = "SELECT * FROM sponsor JOIN sponsor2tournament WHERE tournament_fk=? ORDER BY sponsor2tournament.money DESC;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);

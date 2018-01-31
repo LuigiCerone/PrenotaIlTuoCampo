@@ -1,7 +1,6 @@
 CREATE DATABASE tdwproject;
 USE tdwproject;
 
-
 CREATE TABLE availability
 (
   id         INT AUTO_INCREMENT
@@ -125,10 +124,13 @@ CREATE TABLE sport
 
 CREATE TABLE team
 (
-  id     INT AUTO_INCREMENT
+  id            INT AUTO_INCREMENT
     PRIMARY KEY,
-  name   VARCHAR(50) NOT NULL,
-  number INT         NOT NULL,
+  name          VARCHAR(50)  NOT NULL,
+  number        INT          NOT NULL,
+  user_fk       INT          NOT NULL,
+  players       VARCHAR(255) NOT NULL,
+  tournament_fk INT          NOT NULL,
   CONSTRAINT team_name_uindex
   UNIQUE (name)
 )
@@ -136,10 +138,15 @@ CREATE TABLE team
 
 CREATE TABLE tournament
 (
-  id         INT AUTO_INCREMENT
+  id              INT AUTO_INCREMENT
     PRIMARY KEY,
-  name       VARCHAR(40) NOT NULL,
-  partner_fk INT         NOT NULL
+  name            VARCHAR(40) NOT NULL,
+  partner_fk      INT         NOT NULL,
+  startDate       DATE        NOT NULL,
+  endSubscription DATE        NULL,
+  teamNumber      INT         NOT NULL,
+  teamLeft        INT         NOT NULL,
+  sport_fk        INT         NOT NULL
 )
   ENGINE = InnoDB;
 
