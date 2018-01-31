@@ -72,22 +72,6 @@ $(function () {
         $('#scheduleCalendar').modal('toggle');
     });
 
-    Number.prototype.toRoman = function () {
-        var _r = [
-                "M", 1000, "CM", 900, "D", 500, "CD", 400, "C", 100, "XC", 90, "L", 50, "XL", 40,
-                "X", 10, "IX", 9, "V", 5, "IV", 4, "I", 1
-            ],
-            n = this, i = 0, output = "";
-        while (n > 0) {
-            if (n >= _r[i + 1]) {
-                output += _r[i];
-                n -= _r[i + 1];
-            } else {
-                i += 2;
-            }
-        }
-        return output;
-    };
     var giornate = [
         [
             0, 7,
@@ -139,15 +123,31 @@ $(function () {
     ];
 
     function creaCalendario() {
-        var sHTML = "",
-            squadre = teams;
-        for (var g = 0; g < giornate.length; g++) {
-            sHTML += (g + 1).toRoman() + ". Giornata<ul>";
-            for (var i = 0; i < giornate[g].length; i += 2) {
-                sHTML += "<li>" + squadre[giornate[g][i]].name + " - " + squadre[giornate[g][i + 1]].name + "</li>";
+        var matches = [];
+        for (var day = 0; day < giornate.length; day++) {
+            for (var i = 0; i < giornate[day].length; i += 2) {
+                matches.push({
+                    'day': day,
+                    'first_team_fk': teams[giornate[day][i]].id,
+                    'second_team_fk': teams[giornate[day][i + 1]].id,
+                    'tournament': selectedTournament
+                });
             }
-            sHTML += "</ul>";
         }
-        console.log(sHTML);
+        console.log(matches);
+        $.ajax({
+            type: "POST",
+            url: "resources/src/createCalendar.php",
+            data: {
+                'matches': matches
+            },
+            success: function (response) {
+                console.log('ok');
+            },
+            error: function (response) {
+                $("#error").html("Error.");
+                console.log(response);
+            }
+        });
     }
 });
