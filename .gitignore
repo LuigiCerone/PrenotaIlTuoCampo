@@ -1,3 +1,6 @@
 .idea
 .idea/workspace.xml
 resources/libs/smarty/template_c/
+.idea/inspectionProfiles/
+resources/libs/smarty/cache/
+resources/libs/smarty/configs/
