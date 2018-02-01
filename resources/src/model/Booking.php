@@ -8,22 +8,24 @@ class Booking
     private $time;
     private $user_fk;
     private $field_fk;
+    private $approved;
+    private $valid;
 
     /**
      * Booking constructor.
-     * @param $id
      * @param $date
      * @param $time
      * @param $user_fk
      * @param $field_fk
      */
-    public function __construct($id, $date, $time, $user_fk, $field_fk)
+    public function __construct($date, $time, $user_fk, $field_fk)
     {
-        $this->id = $id;
         $this->date = $date;
         $this->time = $time;
         $this->user_fk = $user_fk;
         $this->field_fk = $field_fk;
+        $this->approved = false;
+        $this->valid = true;
     }
 
     public static function getAllBookingsForUser($user_fk)
@@ -64,20 +66,22 @@ class Booking
 
     public function insert()
     {
+        $b = false;
         $sql = "INSERT INTO booking (id, date, time, user_fk, field_fk, approved, valid) "
             . " VALUES (NULL, ?, ?, ?, ?, FALSE, TRUE);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssii", $this->date, $this->time, $this->user_fk, $this->field_fk);
-        $stmt->execute();
+        if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);
+        return $b;
     }
 
-    public function static delete()
+    public static function delete()
     {
-        $sql = "DELETE from booking WHERE approved = 1 AND valid = 0;";
+        $sql = "DELETE FROM booking WHERE approved = 1 AND valid = 0;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);

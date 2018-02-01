@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-01 18:33:20
+/* Smarty version 3.1.30, created on 2018-02-01 18:48:38
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminMatches.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a734f60988dc1_47779589',
+  'unifunc' => 'content_5a7352f647c513_01148315',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ff885e338196b7e78970565e40a861eebb79a020' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminMatches.tpl',
-      1 => 1517506379,
+      1 => 1517507315,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a734f60988dc1_47779589 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7352f647c513_01148315 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16846448755a734f60944352_42636864', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17650310015a7352f6438771_28974095', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13865491585a734f60946967_17547266', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5813184865a7352f643bbe7_27879925', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7852661515a734f60986e07_44541190', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12491612165a7352f647af57_45054182', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_16846448755a734f60944352_42636864 extends Smarty_Internal_Block
+class Block_17650310015a7352f6438771_28974095 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -57,7 +57,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_13865491585a734f60946967_17547266 extends Smarty_Internal_Block
+class Block_5813184865a7352f643bbe7_27879925 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -89,7 +89,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_7852661515a734f60986e07_44541190 extends Smarty_Internal_Block
+class Block_12491612165a7352f647af57_45054182 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -250,7 +250,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                 <div class="col-md-6 col-center-block">
                                     <button id="searchFields" class="signin-button">Cerca</button>
                                 </div>
-                                <div id="fields" class="col-md-6 col-center-block">
+                                <div id="fields" class="col-md-8 col-center-block">
 
                                 </div>
 

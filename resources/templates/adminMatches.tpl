@@ -100,7 +100,7 @@
 
                         <div class="signin-form profile">
                             <h3 class="agileinfo_sign">Modifica dati partita </h3>
-                            <form id="form" class="mod2">
+                            <form id="formInfo" class="mod2">
                                 <div class="col-md-6 col-xs-6 w3l-left-mk">
                                     <ul>
                                         <li class="text">Data :</li>
@@ -128,7 +128,7 @@
                                 <div class="col-md-6 col-center-block">
                                     <button id="searchFields" class="signin-button">Cerca</button>
                                 </div>
-                                <div id="fields" class="col-md-6 col-center-block">
+                                <div id="fields" class="col-md-8 col-center-block">
 
                                 </div>
 

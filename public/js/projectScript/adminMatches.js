@@ -118,7 +118,6 @@ $(function () {
 
     $('#searchFields').on('click', function (event) {
         event.preventDefault();
-        console.log("Blur");
         $.ajax({
             type: "POST",
             url: "resources/src/adminGetFields.php",
@@ -135,7 +134,7 @@ $(function () {
 
                 var radioHTML = "";
                 response.forEach(function (field) {
-                    radioHTML += "<label><input type='radio' name='field' id='" + field.id + "'value='" + field.id + "' required/>Campo numero: " + field.number + ", esterno : " + (field.outdoor == 0 ? "Si" : "No") + " </label><br>";
+                    radioHTML += "<label><input type='radio' name='field' id='" + field.id + "'value='" + field.id + "' required/>Campo numero: " + field.number + ", esterno : " + (field.outdoor == 1 ? "Si" : "No") + ", riscaldato : " + (field.warmed == 1 ? "Si" : "No") + "</label><br>";
                 });
 
                 $('#fields').html(radioHTML);
@@ -147,4 +146,34 @@ $(function () {
         });
     });
 
+    $('#formInfo').submit(function (event){
+        event.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "resources/src/adminGetFields.php",
+            data: {
+                'sport': $('#sport').val(),
+                'partner': $('#partner').val(),
+                'date': $('#dateMatch').val(),
+                'time': $('#timeMatch').val()
+            },
+            success: function (response) {
+                response = JSON.parse(response);
+                console.log(response);
+                $('#fields').html("");
+
+                var radioHTML = "";
+                response.forEach(function (field) {
+                    radioHTML += "<label><input type='radio' name='field' id='" + field.id + "'value='" + field.id + "' required/>Campo numero: " + field.number + ", esterno : " + (field.outdoor == 1 ? "Si" : "No") + ", riscaldato : " + (field.warmed == 1 ? "Si" : "No") + "</label><br>";
+                });
+
+                $('#fields').html(radioHTML);
+            },
+            error: function (response) {
+                $("#error").html("Error.");
+                console.log(response);
+            }
+        });
+    })
 });
