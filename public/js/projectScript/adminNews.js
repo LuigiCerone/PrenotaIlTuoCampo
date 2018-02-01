@@ -3,22 +3,22 @@ $(function () {
     var element = $('ul.nav.navbar-nav').find('li.active');
     $(element).removeClass('active');
     // console.log(element);
-    $('#reviews').addClass('active');
+    $('#news').addClass('active');
 
-    $('#saveReview').on('click', function (event) {
+    $('#saveNews').on('click', function (event) {
         event.preventDefault();
 
-        var id = $('#id').text();
-        var text = $('#reviewText').val();
-        var stars = $('#reviewStars').val();
+        var title = $('#titleNews').val();
+        var date = $('#titleDate').val();
+        var text = $('#textNews').val();
 
         $.ajax({
             type: "POST",
-            url: "resources/src/insertNewReview.php",
+            url: "resources/src/insertNews.php",
             data: {
-                'user': id,
-                'text': text,
-                'stars': stars
+                'title': title,
+                'date' : date,
+                'text': text
             },
             success: function (response) {
                 console.log(response);

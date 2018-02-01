@@ -24,7 +24,7 @@ class Novita
 
     public static function getAllNews()
     {
-        $sql = "SELECT title, date, text FROM novita";
+        $sql = "SELECT title, date, text FROM novita ORDER BY date DESC;";
 
         $conn = Database::getConnection();
         // prepare and bind

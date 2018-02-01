@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-30 23:34:53
+/* Smarty version 3.1.30, created on 2018-02-01 18:13:40
   from "C:\Users\dany\PhpstormProjects\PrenotaIlTuoCampo\resources\templates\adminPartners.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a70f30d5d16e8_15063425',
+  'unifunc' => 'content_5a734ac4f1d2c1_14840087',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58e4b80a2c3fa7d729be06ab69d79999e329c22b' => 
     array (
       0 => 'C:\\Users\\dany\\PhpstormProjects\\PrenotaIlTuoCampo\\resources\\templates\\adminPartners.tpl',
-      1 => 1517349654,
+      1 => 1517505219,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a70f30d5d16e8_15063425 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a734ac4f1d2c1_14840087 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18382821715a70f30d5b7c93_37540259', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21313198305a734ac4ef8584_58978305', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20445644395a70f30d5b9316_92316482', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_381510985a734ac4ef9bc8_33735642', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6373571435a70f30d5d1040_18035352', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6115085055a734ac4f1c761_32239117', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_18382821715a70f30d5b7c93_37540259 extends Smarty_Internal_Block
+class Block_21313198305a734ac4ef8584_58978305 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_20445644395a70f30d5b9316_92316482 extends Smarty_Internal_Block
+class Block_381510985a734ac4ef9bc8_33735642 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_6373571435a70f30d5d1040_18035352 extends Smarty_Internal_Block
+class Block_6115085055a734ac4f1c761_32239117 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -118,20 +118,20 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
         <div class="row" id="post-review-box">
             <div class="col-md-6 col-center-block">
                 <form accept-charset="UTF-8" action="" method="post">
-                    <textarea class="form-control animated" cols="50" id="partenersText" name="comment"
-                              placeholder="Inserisci qui il nome dell'azienda" rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="descriptionText" name="comment"
-                              placeholder="Inserisci qui la descrizione " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="regionText" name="comment"
-                              placeholder="Inserisci qui la regione " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="areaText" name="comment"
-                              placeholder="Inserisci qui l'area " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="addressText" name="comment"
-                              placeholder="Inserisci qui l'indirizzo " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="emailText" name="comment"
-                              placeholder="Inserisci qui l'email " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="numberText" name="comment"
-                              placeholder="Inserisci qui il numero di telefono" rows="5"></textarea>
+                    <textarea class="form-control animated" cols="30" id="partenersText" name="comment"
+                              placeholder="Inserisci qui il nome dell'azienda" rows="1"></textarea>
+                    <textarea class="form-control animated" cols="30" id="descriptionText" name="comment"
+                              placeholder="Inserisci qui la descrizione " rows="2"></textarea>
+                    <textarea class="form-control animated" cols="20" id="regionText" name="comment"
+                              placeholder="Inserisci qui la regione " rows="1"></textarea>
+                    <textarea class="form-control animated" cols="20" id="areaText" name="comment"
+                              placeholder="Inserisci qui l'area " rows="1"></textarea>
+                    <textarea class="form-control animated" cols="30" id="addressText" name="comment"
+                              placeholder="Inserisci qui l'indirizzo " rows="1"></textarea>
+                    <textarea class="form-control animated" cols="30" id="emailText" name="comment"
+                              placeholder="Inserisci qui l'email " rows="1"></textarea>
+                    <textarea class="form-control animated" cols="20" id="numberText" name="comment"
+                              placeholder="Inserisci qui il numero di telefono" rows="1"></textarea>
 
                     
                         

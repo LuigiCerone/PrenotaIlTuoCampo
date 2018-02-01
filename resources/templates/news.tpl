@@ -29,31 +29,4 @@
             </div>
         </section>
     {/foreach}
-    <!-- /banner -->
-    {*New Novita*}
-    {if ($smarty.session.id != null)}
-        <span class="hidden" id="id">{$smarty.session.id}</span>
-        <div class="row" id="post-review-box">
-            <div class="col-md-6 col-center-block">
-                <form accept-charset="UTF-8" action="" method="post">
-                    <textarea class="form-control animated" cols="50" id="titleNews" name="insertTitle"
-                              placeholder="Inserisci il titolo" rows="3"></textarea>
-                    <textarea class="form-control animated" cols="50" id="titleDate" name="insertDate"
-                              placeholder="Inserisci la data aaaa/mm/gg" rows="3"></textarea>
-                    <textarea class="form-control animated" cols="50" id="textNews" name="insertText"
-                              placeholder="Inserisci le nuove info" rows="5"></textarea>
-
-                    {*<div class="text-right">*}
-                        {*<input type="number" name="rating" id="reviewStars" data-icon-lib="fa"*}
-                               {*data-active-icon="fa-star" data-inactive-icon=" fa-star-o" class="rating bigger"*}
-                               {*value="1"/>*}
-                        <br>
-                        <button id="saveNews" class="btn btn-success btn-lg" type="submit">Salva
-                        </button>
-                    {*</div>*}
-                </form>
-            </div>
-        </div>
-    {/if}
-    <!-- /banner -->
 {/block}

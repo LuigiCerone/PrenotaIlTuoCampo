@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-30 11:00:14
+/* Smarty version 3.1.30, created on 2018-02-01 16:34:35
   from "C:\Users\dany\PhpstormProjects\PrenotaIlTuoCampo\resources\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a70422e5fc0e0_22452108',
+  'unifunc' => 'content_5a73338b80a5a3_96420560',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '684698dbfa29773a05cb7b53ce9502751fc9b5a7' => 
     array (
       0 => 'C:\\Users\\dany\\PhpstormProjects\\PrenotaIlTuoCampo\\resources\\templates\\header.tpl',
-      1 => 1517306030,
+      1 => 1517499273,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a70422e5fc0e0_22452108 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a73338b80a5a3_96420560 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2602816355a70422e5f28b4_59140201', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8404429785a73338b7fb2e3_36901518', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -69,7 +69,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2602816355a70422e5
 
             <ul class="agile_forms">
 
-                <?php if (($_SESSION['id'] != null)) {?>
+                <?php if (isset($_SESSION['id']) && !isset($_SESSION['admin'])) {?>
                     <li>
                         <div class="dropdown show user_profile">
                             <a class="dropdown-toggle " href="#" role="button" id="dropdownMenuLink"
@@ -81,6 +81,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2602816355a70422e5
                                 <a class="dropdown-item " href="profile.php">Il mio account</a>
                                 <a class="dropdown-item " href="bookings.php">Le mie prenotazioni</a>
                                 <a class="dropdown-item " href="messages.php">Messaggi</a>
+                                <a class="dropdown-item " href="invitations.php">I miei inviti</a>
                                 <a class="dropdown-item " href="availability.php">Le mie disponibilità</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="index.php" class="dropdown-item" id="logout">Esci</a>
@@ -88,7 +89,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2602816355a70422e5
                         </div>
                     </li>
                     }
-                <?php } else { ?>
+                <?php } elseif (!isset($_SESSION['id']) && !isset($_SESSION['admin'])) {?>
 
                     
                     <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
@@ -100,20 +101,36 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2602816355a70422e5
                 <?php }?>
             </ul>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                <nav class="link-effect-2" id="link-effect-2">
-                    <ul class="nav navbar-nav">
-                        <li id="index" class="active"><a href="index.php" class="effect-3">Home</a></li>
-                        <li id="partners"><a href="parteners.php" class="effect-3 scroll">Aziende</a></li>
-                        <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Recensioni</a></li>
-                        <li id="news"><a href="news.php" class="effect-3 scroll">Novità</a></li>
-                        <li id="about_us"><a href="about_us.php" class="effect-3 scroll">Su di noi</a></li>
 
-                    </ul>
-                </nav>
-
-            </div>
+            <?php if (!isset($_SESSION['admin'])) {?>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li id="index" class="active"><a href="index.php" class="effect-3">Home</a></li>
+                            <li id="partners"><a href="parteners.php" class="effect-3 scroll">Aziende</a></li>
+                            <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Recensioni</a></li>
+                            <li id="news"><a href="news.php" class="effect-3 scroll">Novità</a></li>
+                            <li id="tournaments"><a href="tournaments.php" class="effect-3 scroll">Tornei</a></li>
+                            <li id="about_us"><a href="about_us.php" class="effect-3 scroll">Su di noi</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            <?php } elseif (isset($_SESSION['admin'])) {?>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li id="partners"><a href="adminParteners.php" class="effect-3 scroll">Gestione aziende</a></li>
+                            <li id="reviews"><a href="adminReviews.php" class="effect-3 scroll">Gestione recensioni</a></li>
+                            <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione news</a></li>
+                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione
+                                    tornei</a>
+                            </li>
+                            <li><a href="index.php" class="dropdown-item" id="logout">Esci</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            <?php }?>
         </nav>
         <div class="clearfix"></div>
     </div>
@@ -213,13 +230,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2602816355a70422e5
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16918964395a70422e5fb930_83627074', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6504141095a73338b809ac2_72808918', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_2602816355a70422e5f28b4_59140201 extends Smarty_Internal_Block
+class Block_8404429785a73338b7fb2e3_36901518 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -238,7 +255,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_16918964395a70422e5fb930_83627074 extends Smarty_Internal_Block
+class Block_6504141095a73338b809ac2_72808918 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

@@ -101,9 +101,9 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
-                            <li id="partners"><a href="parteners.php" class="effect-3 scroll">Gestione aziende</a></li>
-                            <li id="reviews"><a href="reviews.php" class="effect-3 scroll">Gestione recensioni</a></li>
-                            <li id="news"><a href="news.php" class="effect-3 scroll">Gestione news</a></li>
+                            <li id="partners"><a href="adminParteners.php" class="effect-3 scroll">Gestione aziende</a></li>
+                            <li id="reviews"><a href="adminReviews.php" class="effect-3 scroll">Gestione recensioni</a></li>
+                            <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione news</a></li>
                             <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione
                                     tornei</a>
                             </li>

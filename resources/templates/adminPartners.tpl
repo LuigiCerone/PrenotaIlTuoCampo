@@ -40,20 +40,20 @@
         <div class="row" id="post-review-box">
             <div class="col-md-6 col-center-block">
                 <form accept-charset="UTF-8" action="" method="post">
-                    <textarea class="form-control animated" cols="50" id="partenersText" name="comment"
-                              placeholder="Inserisci qui il nome dell'azienda" rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="descriptionText" name="comment"
-                              placeholder="Inserisci qui la descrizione " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="regionText" name="comment"
-                              placeholder="Inserisci qui la regione " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="areaText" name="comment"
-                              placeholder="Inserisci qui l'area " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="addressText" name="comment"
-                              placeholder="Inserisci qui l'indirizzo " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="emailText" name="comment"
-                              placeholder="Inserisci qui l'email " rows="5"></textarea>
-                    <textarea class="form-control animated" cols="50" id="numberText" name="comment"
-                              placeholder="Inserisci qui il numero di telefono" rows="5"></textarea>
+                    <textarea class="form-control animated" cols="30" id="partenersText" name="comment"
+                              placeholder="Inserisci qui il nome dell'azienda" rows="1"></textarea>
+                    <textarea class="form-control animated" cols="30" id="descriptionText" name="comment"
+                              placeholder="Inserisci qui la descrizione " rows="2"></textarea>
+                    <textarea class="form-control animated" cols="20" id="regionText" name="comment"
+                              placeholder="Inserisci qui la regione " rows="1"></textarea>
+                    <textarea class="form-control animated" cols="20" id="areaText" name="comment"
+                              placeholder="Inserisci qui l'area " rows="1"></textarea>
+                    <textarea class="form-control animated" cols="30" id="addressText" name="comment"
+                              placeholder="Inserisci qui l'indirizzo " rows="1"></textarea>
+                    <textarea class="form-control animated" cols="30" id="emailText" name="comment"
+                              placeholder="Inserisci qui l'email " rows="1"></textarea>
+                    <textarea class="form-control animated" cols="20" id="numberText" name="comment"
+                              placeholder="Inserisci qui il numero di telefono" rows="1"></textarea>
 
                     {*<div class="text-right">*}
                         {*<input type="number" name="rating" id="reviewStars" data-icon-lib="fa"*}
