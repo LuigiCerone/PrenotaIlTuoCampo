@@ -17,9 +17,6 @@ $(function () {
     $("#datepicker").datepicker($.datepicker.regional['it']);
     $("#datepicker").datepicker();
 
-    console.log("UUUUUU");
-
-
     $('#timepicker').timepicker({
         minTime: '9:00am',
         maxTime: '11:00pm',

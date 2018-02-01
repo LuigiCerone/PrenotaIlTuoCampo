@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-31 16:06:02
+/* Smarty version 3.1.30, created on 2018-02-01 16:13:00
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a71db5a14d0c0_26961865',
+  'unifunc' => 'content_5a732e7c4ee9b3_40161219',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1517411157,
+      1 => 1517497973,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a71db5a14d0c0_26961865 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a732e7c4ee9b3_40161219 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7546496735a71db5a136cc1_51539714', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12217117485a732e7c4d4399_67641271', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -230,13 +230,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7546496735a71db5a1
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8501705725a71db5a14c100_36903518', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2188402475a732e7c4eda43_05672284', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_7546496735a71db5a136cc1_51539714 extends Smarty_Internal_Block
+class Block_12217117485a732e7c4d4399_67641271 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -248,6 +248,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <link rel="stylesheet" href="public/css/font-awesome.min.css">
         <!-- Font-Awesome-Icons-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/swipebox.css">
+        <link rel="stylesheet" href="public/css/datatables.min.css"/>
         <link rel="stylesheet" href="public/css/jquery-ui.min.css"/>
         <link rel="stylesheet" href="public/css/mycss.css"/>
     <?php
@@ -255,7 +256,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_8501705725a71db5a14c100_36903518 extends Smarty_Internal_Block
+class Block_2188402475a732e7c4eda43_05672284 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -274,11 +275,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
  type="text/javascript" src="public/js/jquery-3.2.1.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="public/js/jquery-ui.js"><?php echo '</script'; ?>
+ type="text/javascript" src="public/js/bootstrap.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- type="text/javascript"
-            src="public/js/bootstrap.js"><?php echo '</script'; ?>
+ type="text/javascript" src="public/js/datatables.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/js/jquery-ui.js"><?php echo '</script'; ?>
 >
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
     <!-- /include/assets/js/-files -->

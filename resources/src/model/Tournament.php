@@ -57,7 +57,7 @@ class Tournament
 
     public static function getInfoForTournament($id)
     {
-        $sql = "SELECT tournament.scheduled,tournament.id, sport.name AS sport, sport.number_players, partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id WHERE tournament.id = ?;";
+        $sql = "SELECT tournament.scheduled,tournament.id, sport.name AS sport, sport.id AS sportId, sport.number_players, partner.name AS partner, partner.id AS partnerId, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id WHERE tournament.id = ?;";
 
         $conn = Database::getConnection();
         // prepare and bind

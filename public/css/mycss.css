@@ -147,6 +147,7 @@ small {
     font-size: 26px;
     cursor: pointer;
 }
+
 .add {
     font-size: 26px;
     cursor: pointer;
@@ -224,4 +225,8 @@ small {
 
 .count {
     padding-top: 20px;
+}
+
+.time {
+    z-index: 99999 !important;
 }

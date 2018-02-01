@@ -23,6 +23,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
         <link rel="stylesheet" href="public/css/font-awesome.min.css">
         <!-- Font-Awesome-Icons-include/assets/css/ -->
         <link rel="stylesheet" href="public/css/swipebox.css">
+        <link rel="stylesheet" href="public/css/datatables.min.css"/>
         <link rel="stylesheet" href="public/css/jquery-ui.min.css"/>
         <link rel="stylesheet" href="public/css/mycss.css"/>
     {/block}
@@ -220,9 +221,9 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
             window.scrollTo(0, 1);
         } </script>
     <script type="text/javascript" src="public/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="public/js/datatables.min.js"></script>
     <script src="public/js/jquery-ui.js"></script>
-    <script type="text/javascript"
-            src="public/js/bootstrap.js"></script>
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
     <!-- /include/assets/js/-files -->
     <!-- Baneer-include/assets/js/ -->
