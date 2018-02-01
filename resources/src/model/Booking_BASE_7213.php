@@ -8,24 +8,22 @@ class Booking
     private $time;
     private $user_fk;
     private $field_fk;
-    private $approved;
-    private $valid;
 
     /**
      * Booking constructor.
+     * @param $id
      * @param $date
      * @param $time
      * @param $user_fk
      * @param $field_fk
      */
-    public function __construct($date, $time, $user_fk, $field_fk)
+    public function __construct($id, $date, $time, $user_fk, $field_fk)
     {
+        $this->id = $id;
         $this->date = $date;
         $this->time = $time;
         $this->user_fk = $user_fk;
         $this->field_fk = $field_fk;
-        $this->approved = false;
-        $this->valid = true;
     }
 
     public static function getAllBookingsForUser($user_fk)
@@ -66,66 +64,27 @@ class Booking
 
     public function insert()
     {
-        $b = false;
         $sql = "INSERT INTO booking (id, date, time, user_fk, field_fk, approved, valid) "
             . " VALUES (NULL, ?, ?, ?, ?, FALSE, TRUE);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssii", $this->date, $this->time, $this->user_fk, $this->field_fk);
-        if ($stmt->execute()) $b = true;
-        $stmt->close();
-        Database::closeConnestion($conn);
-        return $b;
-    }
-
-
-    public static function delete($id)
-    {
-        $sql = "DELETE from booking WHERE id = ?;";
-        $conn = Database::getConnection();
-        // prepare and bind
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $id);
         $stmt->execute();
         $stmt->close();
         Database::closeConnestion($conn);
     }
 
-    public static function getNotValidBookingsForUser($user_fk)
+    public function static delete()
     {
-        $sql = "SELECT booking.id, date, time, user_fk, field_fk, approved, valid FROM booking 
-                 JOIN user 
-                 WHERE user_fk<>? AND user.admin=0 AND booking.valid=0;";
-
+        $sql = "DELETE from booking WHERE approved = 1 AND valid = 0;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $user_fk);
         $stmt->execute();
-        $result = $stmt->get_result();
-
-        $partners = array();
-
-        while ($row = $result->fetch_assoc()) {
-            $partners[] = $row;
-        }
         $stmt->close();
         Database::closeConnestion($conn);
-
-        return json_encode($partners);
     }
 
-    public function to_json()
-    {
-        return json_encode(array(
-            'id' => $this->id,
-            'date' => $this->date,
-            'time' => $this->time,
-            'user_fk' => $this->user_fk,
-            'field_fk' => $this->field_fk,
-            'approved' => $this->approved,
-            'valid' => $this->valid
-        ));
-    }
+
 }

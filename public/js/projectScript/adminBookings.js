@@ -3,28 +3,28 @@ $(function () {
     var element = $('ul.nav.navbar-nav').find('li.active');
     $(element).removeClass('active');
     // console.log(element);
-    $('#reviews').addClass('active');
+    // $('#about_us').addClass('active');
 
-    $('#saveReview').on('click', function (event) {
+    var id = null;
+    console.log("loaded");
+
+    $('.delete').on('click', function (event) {
         event.preventDefault();
 
-        var id = $('#id').text();
-        var text = $('#reviewText').val();
-        var stars = $('#reviewStars').val();
-
+        id = $(this).data("id");
+        console.log(id);
         $.ajax({
             type: "POST",
-            url: "resources/src/insertNewReview.php",
+            url: "resources/src/deleteBooking.php",
             data: {
-                'user': id,
-                'text': text,
-                'stars': stars
+                'id': id
             },
             success: function (response) {
                 console.log(response);
             },
             error: function (response) {
                 console.log(response);
+
             },
         });
         window.location.reload();

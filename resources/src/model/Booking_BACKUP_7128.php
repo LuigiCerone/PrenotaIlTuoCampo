@@ -79,10 +79,15 @@ class Booking
         return $b;
     }
 
-
+<<<<<<< HEAD
+    public static function delete()
+    {
+        $sql = "DELETE FROM booking WHERE approved = 1 AND valid = 0;";
+=======
     public static function delete($id)
     {
         $sql = "DELETE from booking WHERE id = ?;";
+>>>>>>> bdd04688949d61866c04000af99759b9d6b16445
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);

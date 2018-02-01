@@ -79,42 +79,17 @@ class Booking
         return $b;
     }
 
-
-    public static function delete($id)
+    public static function delete()
     {
-        $sql = "DELETE from booking WHERE id = ?;";
+        $sql = "DELETE FROM booking WHERE approved = 1 AND valid = 0;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $id);
         $stmt->execute();
         $stmt->close();
         Database::closeConnestion($conn);
     }
 
-    public static function getNotValidBookingsForUser($user_fk)
-    {
-        $sql = "SELECT booking.id, date, time, user_fk, field_fk, approved, valid FROM booking 
-                 JOIN user 
-                 WHERE user_fk<>? AND user.admin=0 AND booking.valid=0;";
-
-        $conn = Database::getConnection();
-        // prepare and bind
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $user_fk);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        $partners = array();
-
-        while ($row = $result->fetch_assoc()) {
-            $partners[] = $row;
-        }
-        $stmt->close();
-        Database::closeConnestion($conn);
-
-        return json_encode($partners);
-    }
 
     public function to_json()
     {

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-30 17:08:25
+/* Smarty version 3.1.30, created on 2018-02-01 16:12:39
   from "C:\Users\dany\PhpstormProjects\PrenotaIlTuoCampo\resources\templates\news.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a709879593611_39962033',
+  'unifunc' => 'content_5a732e67406425_86491017',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd95973ddb34b757456de02d6d20494fa08e83d43' => 
     array (
       0 => 'C:\\Users\\dany\\PhpstormProjects\\PrenotaIlTuoCampo\\resources\\templates\\news.tpl',
-      1 => 1517328503,
+      1 => 1517497854,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a709879593611_39962033 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a732e67406425_86491017 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10759942425a709879578213_12129548', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16057399595a732e6727f5e0_64833785', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10212083165a7098795799d9_69666616', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4692208975a732e67282447_16697205', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4690235485a709879592f79_66739778', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1922205465a732e67404f68_09729053', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_10759942425a709879578213_12129548 extends Smarty_Internal_Block
+class Block_16057399595a732e6727f5e0_64833785 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_10212083165a7098795799d9_69666616 extends Smarty_Internal_Block
+class Block_4692208975a732e67282447_16697205 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_4690235485a709879592f79_66739778 extends Smarty_Internal_Block
+class Block_1922205465a732e67404f68_09729053 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -106,34 +106,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['novita']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-    <!-- /banner -->
-    
-    <?php if (($_SESSION['id'] != null)) {?>
-        <span class="hidden" id="id"><?php echo $_SESSION['id'];?>
-</span>
-        <div class="row" id="post-review-box">
-            <div class="col-md-6 col-center-block">
-                <form accept-charset="UTF-8" action="" method="post">
-                    <textarea class="form-control animated" cols="50" id="titleNews" name="insertTitle"
-                              placeholder="Inserisci il titolo" rows="3"></textarea>
-                    <textarea class="form-control animated" cols="50" id="titleDate" name="insertDate"
-                              placeholder="Inserisci la data aaaa/mm/gg" rows="3"></textarea>
-                    <textarea class="form-control animated" cols="50" id="textNews" name="insertText"
-                              placeholder="Inserisci le nuove info" rows="5"></textarea>
-
-                    
-                        
-                               
-                               
-                        <br>
-                        <button id="saveNews" class="btn btn-success btn-lg" type="submit">Salva
-                        </button>
-                    
-                </form>
-            </div>
-        </div>
-    <?php }?>
-    <!-- /banner -->
 <?php
 }
 }
