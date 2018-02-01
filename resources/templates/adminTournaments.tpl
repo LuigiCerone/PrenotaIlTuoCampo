@@ -39,21 +39,22 @@
                 </thead>
                 <tbody>
                 {foreach from=$tournaments item=tournament}
-                <tr class="{if $tournament->teamLeft == 0 && $tournament->scheduled==0}pending{/if}">
-                    <td>{$tournament->id}</td>
-                    <td>{$tournament->tournament}</td>
-                    <td>{$tournament->sport}</td>
-                    <td>{$tournament->number_players}</td>
-                    <td>{$tournament->teamNumber}</td>
-                    <td>{$tournament->teamLeft}</td>
-                    <td>{$tournament->startDate}</td>
-                    <td>{$tournament->endSubscription}</td>
-                    <td>{$tournament->partner}</td>
-                    <td>{$tournament->telnumber}</td>
-                    <td></td>
-                </tr>
-                </tbody>
+                    <tr class="{if $tournament->teamLeft == 0 && $tournament->scheduled==0}pending{/if}">
+                        <td>{$tournament->id}</td>
+                        <td>{$tournament->tournament}</td>
+                        <td>{$tournament->sport}</td>
+                        <td>{$tournament->number_players}</td>
+                        <td>{$tournament->teamNumber}</td>
+                        <td>{$tournament->teamLeft}</td>
+                        <td>{$tournament->startDate}</td>
+                        <td>{$tournament->endSubscription}</td>
+                        <td>{$tournament->partner}</td>
+                        <td>{$tournament->telnumber}</td>
+                        <td></td>
+                    </tr>
                 {/foreach}
+                </tbody>
+
             </table>
         </div>
     </section>

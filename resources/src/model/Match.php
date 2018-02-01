@@ -23,6 +23,31 @@ class Match
         $this->field_fk = null;
     }
 
+    public static function getAllMatchesForTournament($id)
+    {
+        $sql = "SELECT `match`.id AS match_id, `match`.tournament_fk, t1.name AS first_team, t2.name AS second_team, day, `match`.date, `match`.time, field.number, partner.name AS partner, field.number AS number FROM
+        (((`match` JOIN team AS t1 ON first_team_fk = t1.id) JOIN team AS t2 ON second_team_fk = t2.id)
+        LEFT JOIN field ON field_fk = field.id) LEFT JOIN partner ON field.partner_fk = partner.id
+        WHERE `match`.tournament_fk = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $matches = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $matches[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($matches);
+    }
+
     public function insert()
     {
         $b = false;
