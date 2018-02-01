@@ -91,4 +91,16 @@ class Booking
     }
 
 
+    public function to_json()
+    {
+        return json_encode(array(
+            'id' => $this->id,
+            'date' => $this->date,
+            'time' => $this->time,
+            'user_fk' => $this->user_fk,
+            'field_fk' => $this->field_fk,
+            'approved' => $this->approved,
+            'valid' => $this->valid
+        ));
+    }
 }

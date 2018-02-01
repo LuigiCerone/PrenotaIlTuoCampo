@@ -62,7 +62,8 @@ $(function () {
         dayNames: ['Domenica', 'Luned&#236', 'Marted&#236', 'Mercoled&#236', 'Gioved&#236', 'Venerd&#236', 'Sabato'], // set days names
         dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'], // set short day names
         dayNamesMin: ['Do', 'Lu', 'Ma', 'Me', 'Gio', 'Ve', 'Sa'], // set more short days names
-        dateFormat: 'dd/mm/yy' // set format date
+        dateFormat: 'yy-mm-dd',
+        minDate: 1
     };
 
     $("#dateMatch").datepicker($.datepicker.regional['it']);
@@ -86,26 +87,6 @@ $(function () {
         var data = table.row(this).data();
         selectedMatch = data;
         console.log(selectedMatch[0]);
-
-        // Get all the teams that are subscribed to that tournament.
-        // $.ajax({
-        //     type: "POST",
-        //     url: "resources/src/modifyTeam.php",
-        //     data: {
-        //         'tournament': selectedTournament
-        //     },
-        //     success: function (response) {
-        //         response = JSON.parse(response);
-        //         response.forEach(function (team) {
-        //             teams.push(team);
-        //         });
-        //         creaCalendario();
-        //     },
-        //     error: function (response) {
-        //         $("#error").html("Error.");
-        //         console.log(response);
-        //     }
-        // });
 
         $('#modifyMatch').modal('toggle');
         $('#modifyMatch').removeData();
@@ -146,29 +127,20 @@ $(function () {
         });
     });
 
-    $('#formInfo').submit(function (event){
+    $('#formInfo').submit(function (event) {
         event.preventDefault();
 
         $.ajax({
             type: "POST",
-            url: "resources/src/adminGetFields.php",
+            url: "resources/src/insertNewBooking.php",
             data: {
-                'sport': $('#sport').val(),
-                'partner': $('#partner').val(),
                 'date': $('#dateMatch').val(),
-                'time': $('#timeMatch').val()
+                'time': $('#timeMatch').val(),
+                'field': $("input[name=field]:checked").val(),
+                'match': selectedMatch[0]
             },
             success: function (response) {
-                response = JSON.parse(response);
-                console.log(response);
-                $('#fields').html("");
-
-                var radioHTML = "";
-                response.forEach(function (field) {
-                    radioHTML += "<label><input type='radio' name='field' id='" + field.id + "'value='" + field.id + "' required/>Campo numero: " + field.number + ", esterno : " + (field.outdoor == 1 ? "Si" : "No") + ", riscaldato : " + (field.warmed == 1 ? "Si" : "No") + "</label><br>";
-                });
-
-                $('#fields').html(radioHTML);
+                window.location.reload();
             },
             error: function (response) {
                 $("#error").html("Error.");

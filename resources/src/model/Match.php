@@ -48,6 +48,21 @@ class Match
         return json_encode($matches);
     }
 
+    public static function updateInfo($match, $date, $time, $field)
+    {
+        $sql = "UPDATE `match` SET date=?, time=?, field_fk=? WHERE id = ?";
+        $b = false;
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssii", $date, $time, $field, $match);
+        if ($stmt->execute()) $b = true;
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $b;
+    }
+
     public function insert()
     {
         $b = false;

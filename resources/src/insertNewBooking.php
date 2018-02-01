@@ -1,19 +1,32 @@
 <?php
 require_once('model/Booking.php');
+require_once('model/Match.php');
 
 session_start();
 
-if (isset($SESSION['id'])) {
+if (isset($_SESSION['id'])) {
 //    id, date, time, user_fk, field_fk, approved, valid
-    if (isset($_POST['date']) && isset($_POST['time']) && isset($_POST['field_fk'])) {
-        if (isset($_SESSION['admin']))
-            $booking = new Booking($_POST['date'], $_POST['time'], null, $_POST['field_fk']);
-        else
-            $booking = new Booking($_POST['date'], $_POST['time'], $_SESSION['id'], $_POST['field_fk']);
-        if ($booking->insert())
+    if (isset($_POST['date']) && isset($_POST['time']) && isset($_POST['field'])) {
+        if (isset($_SESSION['admin'])) {
+            // TODO Add method for admin.
+            $booking = new Booking($_POST['date'], $_POST['time'], null, $_POST['field']);
+        } else
+            $booking = new Booking($_POST['date'], $_POST['time'], $_SESSION['id'], $_POST['field']);
+        if ($booking->insert()) {
+            if (isset($_POST['match'])) {
+                if (Match::updateInfo($_POST['match'], $_POST['date'], $_POST['time'], $_POST['field'])) {
+                    http_response_code(200);
+                    echo "" . $_POST['match'];
+                } else {
+                    http_response_code(500);
+                    echo "Danni";
+                }
+            } else echo "Niente";
             http_response_code(200);
-        else
+        } else {
             http_response_code(500);
+        }
     }
-} else
+} else {
     http_response_code(500);
+}
