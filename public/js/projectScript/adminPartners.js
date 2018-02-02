@@ -126,4 +126,30 @@ $(function () {
             }
         });
     });
+
+    $('#resourceForm').submit(function (event) {
+        var selected = [];
+        $('#checkboxes input:checked').each(function () {
+            selected.push(
+                $(this).attr('id')
+            );
+        });
+
+        console.log(selected);
+        $.ajax({
+            type: "POST",
+            url: "resources/src/changeResources.php",
+            data: {
+                'partner': selectedPartner,
+                'supply': selected
+            },
+            success: function (response) {
+                console.log(response);
+            }
+            ,
+            error: function (response) {
+                console.log(response);
+            }
+        });
+    });
 });

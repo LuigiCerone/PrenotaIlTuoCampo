@@ -149,6 +149,26 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <div class="signin-form profile">
                             <h3 class="agileinfo_sign">Modifica disponibilità</h3>
+                            <div class="login-form">
+                                <form id="resourceForm">
+                                    <fieldset>
+                                        <legend>Seleziona ciò che l'azienda possiede</legend>
+                                        <div id="checkboxes">
+                                            {foreach from=$supplies item=supply}
+                                                <div>
+                                                    <input type="checkbox" id="{$supply->id}" name="supplies"
+                                                           value="{$supply->id}" {if $supply->available} checked{/if}>
+                                                    <label for="{$supply->id}">{$supply->name}</label>
+                                                </div>
+                                            {/foreach}
+                                        </div>
+                                    </fieldset>
+                                    <div class="row">
+                                        <div class="col-md-5 col-center-block"><input type="submit" value="Salva"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

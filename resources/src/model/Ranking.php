@@ -65,10 +65,13 @@ class Ranking
         while ($row = $result->fetch_assoc()) {
             $teams[] = $row;
         }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
         $conn = Database::getConnection();
 
         $sql = "";
-        print_r($teams);
+//        print_r($teams);
 
         foreach ($teams as $team) {
             echo "team: " . $team['first_team_fk'];

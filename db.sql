@@ -116,8 +116,7 @@ CREATE TABLE resource
     PRIMARY KEY,
   supply_fk  INT                    NOT NULL,
   partner_fk INT                    NOT NULL,
-  available  TINYINT(1) DEFAULT '0' NOT NULL,
-  quantity   INT                    NOT NULL
+  available  TINYINT(1) DEFAULT '0' NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -163,8 +162,8 @@ CREATE TABLE supply
 (
   id          INT AUTO_INCREMENT
     PRIMARY KEY,
-  name        INT NOT NULL,
-  description INT NOT NULL
+  name        VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NULL
 )
   ENGINE = InnoDB;
 
@@ -223,4 +222,5 @@ CREATE TABLE user2team
   status  TINYINT(1) DEFAULT '0' NOT NULL
 )
   ENGINE = InnoDB;
+
 

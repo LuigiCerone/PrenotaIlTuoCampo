@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 15:49:56
+/* Smarty version 3.1.30, created on 2018-02-02 17:37:12
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a747a9459ec07_78690882',
+  'unifunc' => 'content_5a7493b82fc6b3_85340160',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29bab6b896493f7b256ea98fd921b9e71f5afdd0' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl',
-      1 => 1517582370,
+      1 => 1517589421,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a747a9459ec07_78690882 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7493b82fc6b3_85340160 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16184971005a747a94579ea4_21805938', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13388282845a7493b82d0dd1_44043366', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18049932005a747a9457e245_80609526', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6081828945a7493b82d33e7_18310334', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3531215495a747a9459dc82_14023552', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_99280465a7493b82fad70_72082260', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_16184971005a747a94579ea4_21805938 extends Smarty_Internal_Block
+class Block_13388282845a7493b82d0dd1_44043366 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_18049932005a747a9457e245_80609526 extends Smarty_Internal_Block
+class Block_6081828945a7493b82d33e7_18310334 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_3531215495a747a9459dc82_14023552 extends Smarty_Internal_Block
+class Block_99280465a7493b82fad70_72082260 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -243,6 +243,39 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <div class="signin-form profile">
                             <h3 class="agileinfo_sign">Modifica disponibilità</h3>
+                            <div class="login-form">
+                                <form id="resourceForm">
+                                    <fieldset>
+                                        <legend>Seleziona ciò che l'azienda possiede</legend>
+                                        <div id="checkboxes">
+                                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['supplies']->value, 'supply');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['supply']->value) {
+?>
+                                                <div>
+                                                    <input type="checkbox" id="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
+" name="supplies"
+                                                           value="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
+" <?php if ($_smarty_tpl->tpl_vars['supply']->value->available) {?> checked<?php }?>>
+                                                    <label for="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
+"><?php echo $_smarty_tpl->tpl_vars['supply']->value->name;?>
+</label>
+                                                </div>
+                                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                                        </div>
+                                    </fieldset>
+                                    <div class="row">
+                                        <div class="col-md-5 col-center-block"><input type="submit" value="Salva"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
