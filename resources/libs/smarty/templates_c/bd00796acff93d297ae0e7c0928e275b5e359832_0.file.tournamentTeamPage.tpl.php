@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-31 11:43:11
+/* Smarty version 3.1.30, created on 2018-02-02 12:52:48
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/tournamentTeamPage.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a719dbf048699_06711887',
+  'unifunc' => 'content_5a74511073bc06_80383651',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bd00796acff93d297ae0e7c0928e275b5e359832' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/tournamentTeamPage.tpl',
-      1 => 1517395339,
+      1 => 1517572364,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a719dbf048699_06711887 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a74511073bc06_80383651 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17296518415a719dbf0314c4_75719646', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6474146725a7451106d3586_98237791', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16691077985a719dbf034051_39970354', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20274762655a7451106d7b14_78614372', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_693812135a719dbf047a08_01630286', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20347155625a74511073a283_03379294', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_17296518415a719dbf0314c4_75719646 extends Smarty_Internal_Block
+class Block_6474146725a7451106d3586_98237791 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,28 +55,27 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_16691077985a719dbf034051_39970354 extends Smarty_Internal_Block
+class Block_20274762655a7451106d7b14_78614372 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
     <?php echo '<script'; ?>
- src="public/js/projectScript/team.js"><?php echo '</script'; ?>
+ src="public/js/projectScript/tournaments.js"><?php echo '</script'; ?>
 >
 <?php
 }
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_693812135a719dbf047a08_01630286 extends Smarty_Internal_Block
+class Block_20347155625a74511073a283_03379294 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
     <h2 class="title">Riepilogo torneo, squadra e partite</h2>
     <br>
-    
     <br>
     <section>
     <div class="container">
@@ -145,6 +144,150 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 </td>
             </tr>
         </table>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class=" container text-center">
+    <?php if (isset($_smarty_tpl->tpl_vars['ranks']->value)) {?>
+        <h3>Classifica attuale </h3>
+        <table id="ranks" width="50%">
+            <thead>
+            <tr>
+                <td>Squadra</td>
+                <td>Punti</td>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['ranks']->value, 'rank');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['rank']->value) {
+?>
+                <tr>
+                    <td><?php echo $_smarty_tpl->tpl_vars['rank']->value->teamName;?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['rank']->value->point;?>
+</td>
+                </tr>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+            </tbody>
+        </table>
+    <?php } else { ?>
+        <h3 class="text-center">Classifica ancora non disponibile</h3>
+    <?php }?>
+    <br>
+    <hr>
+    <br>
+<?php if ($_smarty_tpl->tpl_vars['days']->value != null) {?>
+    <h3>Calendario</h3>
+    <ul id="tabs" class="nav nav-tabs">
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['days']->value, 'day');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['day']->value) {
+?>
+            <li class="nav-item">
+                <a data-toggle="tab" class="nav-link"
+                   href="#table_<?php echo $_smarty_tpl->tpl_vars['day']->value[0]->day;?>
+">Giornata <?php echo $_smarty_tpl->tpl_vars['day']->value[0]->day+1;?>
+
+                </a>
+            </li>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+    </ul>
+    <br>
+    <div class="tab-content">
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['days']->value, 'day');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['day']->value) {
+?>
+            <div class="tab-pane" id="table_<?php echo $_smarty_tpl->tpl_vars['day']->value[0]->day;?>
+">
+                <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>first_teamId</td>
+                        <td>second_teamId</td>
+                        <td>Giornata</td>
+                        <td>Squadra casa</td>
+                        <td>Squadra ospite</td>
+                        <td>Data</td>
+                        <td>Ora</td>
+                        <td>Azienda</td>
+                        <td>Campo</td>
+                        <td>Risultato</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['day']->value, 'match');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['match']->value) {
+?>
+                        <tr>
+                            <td><?php echo $_smarty_tpl->tpl_vars['match']->value->match_id;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['match']->value->first_teamId;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['match']->value->second_teamId;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['match']->value->day+1;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['match']->value->first_team;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['match']->value->second_team;?>
+</td>
+                            <td><?php if ($_smarty_tpl->tpl_vars['match']->value->date == null) {?> - <?php } else {
+echo $_smarty_tpl->tpl_vars['match']->value->date;
+}?></td>
+                            <td><?php if ($_smarty_tpl->tpl_vars['match']->value->time == null) {?> - <?php } else {
+echo $_smarty_tpl->tpl_vars['match']->value->time;
+}?></td>
+                            <td><?php if ($_smarty_tpl->tpl_vars['match']->value->partner == null) {?> - <?php } else {
+echo $_smarty_tpl->tpl_vars['match']->value->partner;
+}?></td>
+                            <td><?php if ($_smarty_tpl->tpl_vars['match']->value->number == null) {?> - <?php } else {
+echo $_smarty_tpl->tpl_vars['match']->value->number;
+}?></td>
+                            <td><?php if ($_smarty_tpl->tpl_vars['match']->value->result == null) {?> - <?php } else {
+echo $_smarty_tpl->tpl_vars['match']->value->result;
+}?></td>
+                        </tr>
+                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                    </tbody>
+                </table>
+            </div>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+        <?php } else { ?>
+        <h3 class="text-center">Calendario ancora non disponibile</h3>
+        <?php }?>
+
+        <br>
+        <hr>
+        <br>
     </div>
 <?php
 }

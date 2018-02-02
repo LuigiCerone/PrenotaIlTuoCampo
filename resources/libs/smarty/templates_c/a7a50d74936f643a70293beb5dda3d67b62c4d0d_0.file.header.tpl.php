@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 11:57:37
+/* Smarty version 3.1.30, created on 2018-02-02 12:23:02
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a74442168b388_09129153',
+  'unifunc' => 'content_5a744a162f8079_22774745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1517569056,
+      1 => 1517569635,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a74442168b388_09129153 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a744a162f8079_22774745 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18211230235a74442166c000_42828494', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21101985745a744a162e5e99_03921734', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -83,7 +83,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18211230235a744421
                                 <a class="dropdown-item " href="messages.php">Messaggi</a>
                                 <a class="dropdown-item " href="invitations.php">I miei inviti</a>
                                 <a class="dropdown-item " href="availability.php">Le mie disponibilità</a>
-                                <a class="dropdown-item " href=".php">I miei tornei</a>
+                                <a class="dropdown-item " href="userTournaments.php">I miei tornei</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="index.php" class="dropdown-item" id="logout">Esci</a>
                             </div>
@@ -121,8 +121,10 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18211230235a744421
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
-                            <li id="partners"><a href="adminParteners.php" class="effect-3 scroll">Gestione aziende</a></li>
-                            <li id="reviews"><a href="adminReviews.php" class="effect-3 scroll">Gestione recensioni</a></li>
+                            <li id="partners"><a href="adminParteners.php" class="effect-3 scroll">Gestione aziende</a>
+                            </li>
+                            <li id="reviews"><a href="adminReviews.php" class="effect-3 scroll">Gestione recensioni</a>
+                            </li>
                             <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione news</a></li>
                             <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione
                                     tornei</a>
@@ -231,13 +233,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18211230235a744421
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9375534765a74442168a380_05042384', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18082604665a744a162f7144_89370688', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_18211230235a74442166c000_42828494 extends Smarty_Internal_Block
+class Block_21101985745a744a162e5e99_03921734 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -257,7 +259,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_9375534765a74442168a380_05042384 extends Smarty_Internal_Block
+class Block_18082604665a744a162f7144_89370688 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

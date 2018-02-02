@@ -16,7 +16,7 @@ class Ranking
 
     public static function getAllRankForTournament($id)
     {
-        $sql = " SELECT * FROM ranking WHERE tournament_fk = ? ORDER BY point DESC;";
+        $sql = " SELECT ranking.id,ranking.tournament_fk,team_fk, point, team.name AS teamName FROM ranking JOIN team ON ranking.team_fk= team.id WHERE ranking.tournament_fk = ? ORDER BY point DESC;";
 
         $conn = Database::getConnection();
         // prepare and bind

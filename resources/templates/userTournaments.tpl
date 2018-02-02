@@ -9,15 +9,17 @@
 {/block}
 
 {block name="content"}
-    <h2 class="title">I noi tornei</h2>
+    <h2 class="title"> I miei tornei</h2>
     <br>
     {*{$partners->partners|json_encode}*}
     <br>
     <section>
         <div class="container">
             Seleziona una delle squadre di cui risulti essere il capitano per accedere alle informazioni del
-            relativo torneo
-
+            relativo torneo:
+            <br>
+            <hr>
+            <br>
             {foreach from=$teams item=team}
                 <form action="tournamentTeamPage.php" method="post" id="displayInfo">
                     <div class="card">
