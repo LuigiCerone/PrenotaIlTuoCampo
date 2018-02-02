@@ -19,7 +19,9 @@ CREATE TABLE award
     PRIMARY KEY,
   name          VARCHAR(40) NOT NULL,
   tournament_fk INT         NOT NULL,
-  place         INT         NOT NULL
+  place         INT         NOT NULL,
+  CONSTRAINT idx
+  UNIQUE (tournament_fk, place)
 )
   ENGINE = InnoDB;
 
@@ -75,6 +77,16 @@ CREATE TABLE `match`
   day            INT         NOT NULL
   COMMENT 'Giornata del campionato',
   result         VARCHAR(20) NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE novita
+(
+  id    INT AUTO_INCREMENT
+    PRIMARY KEY,
+  title VARCHAR(30) NULL,
+  date  DATE        NULL,
+  text  TEXT        NULL
 )
   ENGINE = InnoDB;
 
@@ -145,7 +157,9 @@ CREATE TABLE sponsor2tournament
   sponsor_fk    INT  NOT NULL,
   tournament_fk INT  NOT NULL,
   money         INT  NOT NULL,
-  date          DATE NOT NULL
+  date          DATE NOT NULL,
+  CONSTRAINT idx
+  UNIQUE (tournament_fk, sponsor_fk)
 )
   ENGINE = InnoDB;
 
@@ -215,20 +229,3 @@ CREATE TABLE user
 )
   ENGINE = InnoDB;
 
-CREATE TABLE user2team
-(
-  user_fk INT                    NOT NULL,
-  team_fk INT                    NULL,
-  status  TINYINT(1) DEFAULT '0' NOT NULL
-)
-  ENGINE = InnoDB;
-
-CREATE TABLE novita
-(
-  id    INT AUTO_INCREMENT
-    PRIMARY KEY,
-  title VARCHAR(30) NULL,
-  date  DATE        NULL,
-  text  TEXT        NULL
-)
-  ENGINE = InnoDB;
