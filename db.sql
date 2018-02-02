@@ -110,6 +110,17 @@ CREATE TABLE ranking
 )
   ENGINE = InnoDB;
 
+CREATE TABLE resource
+(
+  id         INT AUTO_INCREMENT
+    PRIMARY KEY,
+  supply_fk  INT                    NOT NULL,
+  partner_fk INT                    NOT NULL,
+  available  TINYINT(1) DEFAULT '0' NOT NULL,
+  quantity   INT                    NOT NULL
+)
+  ENGINE = InnoDB;
+
 CREATE TABLE review
 (
   id       INT AUTO_INCREMENT
@@ -145,6 +156,15 @@ CREATE TABLE sport
     PRIMARY KEY,
   name           VARCHAR(40) NULL,
   number_players INT         NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE supply
+(
+  id          INT AUTO_INCREMENT
+    PRIMARY KEY,
+  name        INT NOT NULL,
+  description INT NOT NULL
 )
   ENGINE = InnoDB;
 
