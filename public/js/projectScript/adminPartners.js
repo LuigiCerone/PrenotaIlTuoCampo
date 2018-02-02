@@ -104,4 +104,26 @@ $(function () {
         console.log("Id:" + data[0]);
         $('#modifyItems').modal('toggle');
     });
+
+    $('#fieldAddForm').submit(function (event) {
+        $.ajax({
+            type: "POST",
+            url: "resources/src/insertNewField.php",
+            data: {
+                'partner': selectedPartner,
+                'sport': $('#selectSport').val(),
+                'outdoor': $("input[name=outdoor]:checked").val(),
+                'warmed': $("input[name=warmed]:checked").val(),
+                'number': $('#number').val(),
+                'province': $('#province').val(),
+                'type': $('#type').val()
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (response) {
+                console.log(response);
+            }
+        });
+    });
 });

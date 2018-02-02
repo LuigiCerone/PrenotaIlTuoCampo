@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 15:37:16
+/* Smarty version 3.1.30, created on 2018-02-02 15:49:56
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a74779cec2620_28770529',
+  'unifunc' => 'content_5a747a9459ec07_78690882',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29bab6b896493f7b256ea98fd921b9e71f5afdd0' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl',
-      1 => 1517582234,
+      1 => 1517582370,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a74779cec2620_28770529 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a747a9459ec07_78690882 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9192421105a74779cea5c27_80085654', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16184971005a747a94579ea4_21805938', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12011552485a74779cea83d5_56735215', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18049932005a747a9457e245_80609526', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16723179975a74779cec0dd4_91394718', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3531215495a747a9459dc82_14023552', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_9192421105a74779cea5c27_80085654 extends Smarty_Internal_Block
+class Block_16184971005a747a94579ea4_21805938 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_12011552485a74779cea83d5_56735215 extends Smarty_Internal_Block
+class Block_18049932005a747a9457e245_80609526 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_16723179975a74779cec0dd4_91394718 extends Smarty_Internal_Block
+class Block_3531215495a747a9459dc82_14023552 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -226,8 +226,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                                 </select></td>
                                         </tr>
                                     </table>
-
-
                                     <input type="submit" value="Aggiungi">
                                 </form>
                             </div>

@@ -8,23 +8,31 @@ class Field
     private $sport_fk;
     private $outdoor;
     private $province_fk;
+    private $type;
+    private $warmed;
+    private $number;
 
     /**
      * Field constructor.
-     * @param $id
      * @param $partner_fk
      * @param $sport_fk
      * @param $outdoor
      * @param $province_fk
+     * @param $type
+     * @param $warmed
+     * @param $number
      */
-    public function __construct($id, $partner_fk, $sport_fk, $outdoor, $province_fk)
+    public function __construct($partner_fk, $sport_fk, $outdoor, $province_fk, $type, $warmed, $number)
     {
-        $this->id = $id;
         $this->partner_fk = $partner_fk;
         $this->sport_fk = $sport_fk;
         $this->outdoor = $outdoor;
         $this->province_fk = $province_fk;
+        $this->type = $type;
+        $this->warmed = $warmed;
+        $this->number = $number;
     }
+
 
     public static function getFieldsForSport($sport)
     {
@@ -68,5 +76,21 @@ class Field
         Database::closeConnestion($conn);
 
         return json_encode($fields);
+    }
+
+    public function insert()
+    {
+        $b = false;
+        $sql = "INSERT INTO field (id, partner_fk,sport_fk, outdoor, province_fk, type, warmed, number) 
+            VALUES (NULL, ?, ?, ?, ?,?,?,?);";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("iiiisii", $this->partner_fk, $this->sport_fk, $this->outdoor, $this->province_fk, $this->type, $this->warmed, $this->number);
+        if ($stmt->execute()) $b = true;
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $b;
     }
 }

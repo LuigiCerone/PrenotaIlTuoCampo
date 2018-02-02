@@ -132,8 +132,6 @@
                                                 </select></td>
                                         </tr>
                                     </table>
-
-
                                     <input type="submit" value="Aggiungi">
                                 </form>
                             </div>
