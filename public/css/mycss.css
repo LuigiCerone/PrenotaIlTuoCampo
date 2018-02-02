@@ -226,3 +226,7 @@ small {
 .count {
     padding-top: 20px;
 }
+
+.inline-label {
+    white-space: nowrap;
+}

@@ -5,6 +5,8 @@ $(function () {
     // console.log(element);
     $('#partners').addClass('active');
 
+    var selectedPartner = null;
+
     $('#savePartners').on('click', function (event) {
         event.preventDefault();
 
@@ -38,7 +40,7 @@ $(function () {
         });
     });
 
-    $('#partnersTable').DataTable({
+    var partnersTable = $('#partnersTable').DataTable({
         searching: true,
         stateSave: true,
         colReorder: true,
@@ -68,13 +70,13 @@ $(function () {
                 "targets": -2,
                 "data": null,
                 "searchable": false,
-                "defaultContent": "<button>Aggiungi campo</button>"
+                "defaultContent": "<button class=\"field\">Aggiungi campo</button>"
             },
             {
                 "targets": -1,
                 "data": null,
                 "searchable": false,
-                "defaultContent": "<button>Modifica disponibilità</button>"
+                "defaultContent": "<button class=\"item\">Modifica disponibilità</button>"
             }
         ],
         buttons: [
@@ -86,5 +88,20 @@ $(function () {
                 }
             }
         ]
+    });
+
+    $('#partnersTable').on('click', 'button.field', function () {
+        var data = partnersTable.row($(this).parents('tr')).data();
+        selectedPartner = data[0];
+        console.log("Id:" + data[0]);
+
+        $('#addField').modal('toggle');
+    });
+
+    $('#partnersTable').on('click', 'button.item', function () {
+        var data = partnersTable.row($(this).parents('tr')).data();
+        selectedPartner = data[0];
+        console.log("Id:" + data[0]);
+        $('#modifyItems').modal('toggle');
     });
 });

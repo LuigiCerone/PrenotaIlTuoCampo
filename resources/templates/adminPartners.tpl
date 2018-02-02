@@ -49,7 +49,6 @@
             </table>
         </div>
     </section>
-    {*New review*}
     {if ($smarty.session.id != null)}
         <span class="hidden" id="id">{$smarty.session.id}</span>
         <div class="row" id="post-review-box">
@@ -75,6 +74,85 @@
                         <br>
                         <input id="savePartners" type="submit" value="Salva"/>
                     </form>
+                </div>
+            </div>
+        </div>
+        <!-- Modal1 -->
+        <div class="modal fade" id="addField" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="signin-form profile">
+                            <h3 class="agileinfo_sign">Aggiungi campo</h3>
+                            <div class="login-form">
+                                <form id="fieldAddForm" method="post">
+                                    Esterno:
+                                    <label class="radio-inline">
+                                        <input type="radio" name="outdoor" value="1" required>Si
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="outdoor" value="0" required>No
+                                    </label>
+                                    <br>
+                                    Riscaldato:
+                                    <label class="radio-inline">
+                                        <input type="radio" name="warmed" value="1" required>Si
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="warmed" value="0" required>No
+                                    </label>
+                                    <table>
+                                        <tr>
+                                            <td>Tipologia campo:</td>
+                                            <td><input id="type" type="text" name="type" placeholder="Tipo campo"
+                                                       required/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Numero:</td>
+                                            <td><input id="number" type="number"
+                                                       name="number"
+                                                       placeholder="Numero campo"
+                                                       required/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Provincia:</td>
+                                            <td><input id="province" type="text" name="province"
+                                                       placeholder="Sigla provincia"
+                                                       maxlength="2"
+                                                       required/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sport:</td>
+                                            <td><select id="selectSport">
+                                                    {foreach from=$sports item=sport}
+                                                        <option value="{$sport->id}">{$sport->name}</option>
+                                                    {/foreach}
+                                                </select></td>
+                                        </tr>
+                                    </table>
+
+
+                                    <input type="submit" value="Aggiungi">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal1 -->
+        <div class="modal fade" id="modifyItems" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="signin-form profile">
+                            <h3 class="agileinfo_sign">Modifica disponibilità</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
