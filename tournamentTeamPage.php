@@ -1,5 +1,5 @@
 <?php
-ini_set("display_errors",0);
+ini_set("display_errors", 0);
 require_once('templateInit.php');
 require_once('resources/src/model/Tournament.php');
 require_once('resources/src/model/Team.php');
@@ -24,6 +24,12 @@ if (isset($_SESSION['id']) && isset($_POST["name"]) && isset($_POST["number"]) &
     $params = array('tournament' => json_decode(Tournament::getInfoForTournament($_POST['tournament'])),
         'captain' => json_decode($user->to_json()),
         'team' => json_decode(Team::loadById($id)));
+    $tpl->render('tournamentTeamPage', $params);
+} else if (isset($_SESSION['id']) && isset($_POST['tournament']) && isset($_POST['team'])) {
+    $user = User::withID($_SESSION['id']);
+    $params = array('tournament' => json_decode(Tournament::getInfoForTournament($_POST['tournament'])),
+        'captain' => json_decode($user->to_json()),
+        'team' => json_decode(Team::loadById($_POST['team'])));
     $tpl->render('tournamentTeamPage', $params);
 } else {
     $tpl->render('error');

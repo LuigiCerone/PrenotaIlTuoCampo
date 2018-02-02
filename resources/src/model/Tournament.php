@@ -107,4 +107,21 @@ class Tournament
         Database::closeConnestion($conn);
         return $b;
     }
+
+    public static function getTournamentForTeam($team)
+    {
+        $sql = "SELECT tournament.scheduled,tournament.id, sport.name AS sport, sport.id AS sportId, sport.number_players, partner.name AS partner, partner.id AS partnerId, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id WHERE tournament.id = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $tournament = $result->fetch_assoc();
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($tournament);
+    }
 }

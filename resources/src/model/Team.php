@@ -81,6 +81,43 @@ class Team
         return json_encode($teams);
     }
 
+    public static function loadByUser($id)
+    {
+        $sql = "SELECT * FROM team WHERE user_fk = ?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $team = $result->fetch_assoc();
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($team);
+    }
+
+    public static function getAllTeamForUser($id)
+    {
+        $sql = "SELECT team.id, team.name, team.number, team.players, tournament.id AS tournament, tournament.name AS tournamentName 
+        FROM team JOIN tournament ON team.tournament_fk = tournament.id WHERE user_fk = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $teams = array();
+        while ($row = $result->fetch_assoc()) {
+            $teams[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return json_encode($teams);
+    }
+
     public function insert()
     {
         $b = false;

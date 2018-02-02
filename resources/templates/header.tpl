@@ -65,6 +65,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                 <a class="dropdown-item " href="messages.php">Messaggi</a>
                                 <a class="dropdown-item " href="invitations.php">I miei inviti</a>
                                 <a class="dropdown-item " href="availability.php">Le mie disponibilità</a>
+                                <a class="dropdown-item " href="userTournaments.php">I miei tornei</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="index.php" class="dropdown-item" id="logout">Esci</a>
                             </div>
@@ -102,8 +103,10 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
-                            <li id="partners"><a href="adminParteners.php" class="effect-3 scroll">Gestione aziende</a></li>
-                            <li id="reviews"><a href="adminReviews.php" class="effect-3 scroll">Gestione recensioni</a></li>
+                            <li id="partners"><a href="adminParteners.php" class="effect-3 scroll">Gestione aziende</a>
+                            </li>
+                            <li id="reviews"><a href="adminReviews.php" class="effect-3 scroll">Gestione recensioni</a>
+                            </li>
                             <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione news</a></li>
                             <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione
                                     tornei</a>
