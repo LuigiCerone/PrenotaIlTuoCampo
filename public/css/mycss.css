@@ -226,7 +226,3 @@ small {
 .count {
     padding-top: 20px;
 }
-
-.time {
-    z-index: 99999 !important;
-}
