@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-31 15:33:37
+/* Smarty version 3.1.30, created on 2018-02-02 17:46:45
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a71d3c1e7e729_31422928',
+  'unifunc' => 'content_5a7495f5caa890_25074851',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7b6440b1ada807af4d6f694fea6482de546c85b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl',
-      1 => 1517409205,
+      1 => 1517589999,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a71d3c1e7e729_31422928 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7495f5caa890_25074851 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18440834565a71d3c1e6ef20_64563441', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10026338735a7495f5c90e21_93567647', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_274161365a71d3c1e72463_87172489', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3132290715a7495f5c93328_85674731', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20178792995a71d3c1e7d5e6_07495134', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_657893765a7495f5ca9a87_96966936', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_18440834565a71d3c1e6ef20_64563441 extends Smarty_Internal_Block
+class Block_10026338735a7495f5c90e21_93567647 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_274161365a71d3c1e72463_87172489 extends Smarty_Internal_Block
+class Block_3132290715a7495f5c93328_85674731 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_20178792995a71d3c1e7d5e6_07495134 extends Smarty_Internal_Block
+class Block_657893765a7495f5ca9a87_96966936 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -84,7 +84,70 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <!-- banner -->
     <div class="container-fluid searchbox">
         <?php if (isset($_SESSION['id']) && isset($_SESSION['admin'])) {?>
-            <p>Sei un cazzo di amministratore</p>
+            <div class="container padding">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-center-block">
+                        <h2>Profilo amministratore</h2>
+                        <br>
+                        <div class="well well-sm">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <img src="public/images/user.png" alt="" class="img-rounded img-responsive"/>
+                                </div>
+                                <div class="col-sm-6 col-md-8">
+                                    <h4>Ciao <?php echo $_smarty_tpl->tpl_vars['user']->value->firstName;?>
+&nbsp;<?php echo $_smarty_tpl->tpl_vars['user']->value->lastName;?>
+</h4>
+                                    
+                                    
+                                    
+                                    <br>
+                                    <p> I tuoi dati: </p>
+
+                                    <table class="user-info">
+                                        <tr>
+                                            <td><b>Nome:</b></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['user']->value->firstName;?>
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Cognome:</b></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['user']->value->lastName;?>
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Sesso:</b></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['user']->value->gender;?>
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Email:</b></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['user']->value->email;?>
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Numero telefono:</b></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['user']->value->telnumber;?>
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Data nascita:</b></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['user']->value->birthdate;?>
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Registrato in data:</b></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['user']->value->created_at;?>
+</td>
+                                        </tr>
+                                    </table>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <?php } else { ?>
             <div class="col-md-6 w3l_about_bottom_left one">
                 <div class="">

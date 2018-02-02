@@ -15,7 +15,61 @@
     <!-- banner -->
     <div class="container-fluid searchbox">
         {if isset($smarty.session.id) && isset($smarty.session.admin)}
-            <p>Sei un cazzo di amministratore</p>
+            <div class="container padding">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-center-block">
+                        <h2>Profilo amministratore</h2>
+                        <br>
+                        <div class="well well-sm">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <img src="public/images/user.png" alt="" class="img-rounded img-responsive"/>
+                                </div>
+                                <div class="col-sm-6 col-md-8">
+                                    <h4>Ciao {$user->firstName}&nbsp;{$user->lastName}</h4>
+                                    {*<small><cite title="San Francisco, USA">San Francisco, USA <i*}
+                                    {*class="glyphicon glyphicon-map-marker">*}
+                                    {*</i></cite></small>*}
+                                    <br>
+                                    <p> I tuoi dati: </p>
+
+                                    <table class="user-info">
+                                        <tr>
+                                            <td><b>Nome:</b></td>
+                                            <td>{$user->firstName}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Cognome:</b></td>
+                                            <td>{$user->lastName}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Sesso:</b></td>
+                                            <td>{$user->gender}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Email:</b></td>
+                                            <td>{$user->email}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Numero telefono:</b></td>
+                                            <td>{$user->telnumber}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Data nascita:</b></td>
+                                            <td>{$user->birthdate}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Registrato in data:</b></td>
+                                            <td>{$user->created_at}</td>
+                                        </tr>
+                                    </table>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         {else}
             <div class="col-md-6 w3l_about_bottom_left one">
                 <div class="">

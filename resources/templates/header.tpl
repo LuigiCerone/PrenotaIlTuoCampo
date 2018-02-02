@@ -62,7 +62,6 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             <div class="dropdown-menu user_profile_item" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item " href="profile.php">Il mio account</a>
                                 <a class="dropdown-item " href="bookings.php">Le mie prenotazioni</a>
-                                <a class="dropdown-item " href="messages.php">Messaggi</a>
                                 <a class="dropdown-item " href="invitations.php">I miei inviti</a>
                                 <a class="dropdown-item " href="availability.php">Le mie disponibilità</a>
                                 <a class="dropdown-item " href="userTournaments.php">I miei tornei</a>
