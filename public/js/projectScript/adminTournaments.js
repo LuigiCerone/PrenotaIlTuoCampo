@@ -68,7 +68,6 @@ $(function () {
             }
         });
 
-        jQuery.noConflict();
         $('#scheduleCalendar').modal('toggle');
     });
 

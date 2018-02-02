@@ -1,6 +1,5 @@
 CREATE DATABASE tdwproject;
 USE tdwproject;
-
 CREATE TABLE availability
 (
   id         INT AUTO_INCREMENT
@@ -30,7 +29,7 @@ CREATE TABLE booking
     PRIMARY KEY,
   date     DATE                   NOT NULL,
   time     TIME                   NOT NULL,
-  user_fk  INT                    NOT NULL,
+  user_fk  INT                    NULL,
   field_fk INT                    NULL,
   approved TINYINT(1) DEFAULT '0' NOT NULL,
   valid    TINYINT(1) DEFAULT '1' NOT NULL
@@ -46,7 +45,8 @@ CREATE TABLE field
   outdoor     TINYINT(1) DEFAULT '1' NULL,
   province_fk VARCHAR(2)             NOT NULL,
   type        VARCHAR(40)            NOT NULL,
-  warmed      TINYINT(1) DEFAULT '0' NOT NULL
+  warmed      TINYINT(1) DEFAULT '0' NOT NULL,
+  number      INT                    NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -66,14 +66,15 @@ CREATE TABLE `match`
 (
   id             INT AUTO_INCREMENT
     PRIMARY KEY,
-  first_team_fk  INT  NOT NULL,
-  second_team_fk INT  NOT NULL,
-  tournament_fk  INT  NOT NULL,
-  date           DATE NULL,
-  time           TIME NULL,
-  field_fk       INT  NULL,
-  day            INT  NOT NULL
-  COMMENT 'Giornata del campionato'
+  first_team_fk  INT         NOT NULL,
+  second_team_fk INT         NOT NULL,
+  tournament_fk  INT         NOT NULL,
+  date           DATE        NULL,
+  time           TIME        NULL,
+  field_fk       INT         NULL,
+  day            INT         NOT NULL
+  COMMENT 'Giornata del campionato',
+  result         VARCHAR(20) NULL
 )
   ENGINE = InnoDB;
 
@@ -96,6 +97,16 @@ CREATE TABLE province
   sign VARCHAR(2)  NOT NULL
     PRIMARY KEY,
   name VARCHAR(40) NOT NULL
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE ranking
+(
+  id            INT AUTO_INCREMENT
+    PRIMARY KEY,
+  tournament_fk INT             NOT NULL,
+  team_fk       INT             NOT NULL,
+  point         INT DEFAULT '0' NOT NULL
 )
   ENGINE = InnoDB;
 

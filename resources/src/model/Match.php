@@ -10,6 +10,7 @@ class Match
     private $time;
     private $field_fk;
     private $day;
+    private $result;
 
     public function __construct($first_team_fk, $second_team_fk, $tournament_fk, $day)
     {
@@ -21,11 +22,12 @@ class Match
         $this->date = null;
         $this->time = null;
         $this->field_fk = null;
+        $this->result = null;
     }
 
     public static function getAllMatchesForTournament($id)
     {
-        $sql = "SELECT `match`.id AS match_id, `match`.tournament_fk, t1.name AS first_team, t2.name AS second_team, day, `match`.date, `match`.time, field.number, partner.name AS partner, field.number AS number FROM
+        $sql = "SELECT `match`.result, `match`.id AS match_id, `match`.tournament_fk, t1.name AS first_team, t1.id AS first_teamId, t2.name AS second_team, t2.id AS second_teamId, day, `match`.date, `match`.time, field.number, partner.name AS partner, field.number AS number FROM
         (((`match` JOIN team AS t1 ON first_team_fk = t1.id) JOIN team AS t2 ON second_team_fk = t2.id)
         LEFT JOIN field ON field_fk = field.id) LEFT JOIN partner ON field.partner_fk = partner.id
         WHERE `match`.tournament_fk = ?;";
@@ -57,6 +59,21 @@ class Match
         // prepare and bind
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssii", $date, $time, $field, $match);
+        if ($stmt->execute()) $b = true;
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $b;
+    }
+
+    public static function updateResult($result, $match)
+    {
+        $sql = "UPDATE `match` SET result=? WHERE id = ?";
+        $b = false;
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("si", $result, $match);
         if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);

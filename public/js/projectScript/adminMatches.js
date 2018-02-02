@@ -41,7 +41,7 @@ $(function () {
             }
         },
         columnDefs: [
-            {'visible': false, 'targets': [0]}
+            {'visible': false, 'targets': [0, 1, 2]}
         ],
         buttons: [
             {
@@ -147,5 +147,29 @@ $(function () {
                 console.log(response);
             }
         });
-    })
+    });
+
+    $('#formResult').submit(function (event) {
+        event.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "resources/src/insertNewResult.php",
+            data: {
+                'match': selectedMatch[0],
+                'tournament': $('#tournament').val(),
+                'firstId': selectedMatch[1],
+                'secondId': selectedMatch[2],
+                'firstS': $("#firstTeamScore").val(),
+                'secondS': $("#secondTeamScore").val()
+            },
+            success: function (response) {
+                // console.log(response);
+                window.location.reload();
+            },
+            error: function (response) {
+                $("#error").html("Error.");
+                console.log(response);
+            }
+        });
+    });
 });

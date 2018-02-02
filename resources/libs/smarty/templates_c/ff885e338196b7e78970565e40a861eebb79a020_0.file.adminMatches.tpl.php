@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-01 19:10:37
+/* Smarty version 3.1.30, created on 2018-02-02 11:45:40
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminMatches.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a73581dd31f10_86056602',
+  'unifunc' => 'content_5a744154938c91_55963505',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ff885e338196b7e78970565e40a861eebb79a020' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminMatches.tpl',
-      1 => 1517507432,
+      1 => 1517568327,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a73581dd31f10_86056602 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a744154938c91_55963505 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16183002745a73581dceb204_77935661', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2238683575a7441548fb012_45707203', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_800085905a73581dcee818_44825235', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1829807925a7441548fe6b2_53520691', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2130687785a73581dd30c90_44210408', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21358137895a744154937747_88793022', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_16183002745a73581dceb204_77935661 extends Smarty_Internal_Block
+class Block_2238683575a7441548fb012_45707203 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -57,7 +57,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_800085905a73581dcee818_44825235 extends Smarty_Internal_Block
+class Block_1829807925a7441548fe6b2_53520691 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -89,7 +89,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_2130687785a73581dd30c90_44210408 extends Smarty_Internal_Block
+class Block_21358137895a744154937747_88793022 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -106,6 +106,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <input id="sport" type="text" class="hidden" value="<?php echo $_smarty_tpl->tpl_vars['tournament']->value->sportId;?>
 "/>
             <input id="partner" type="text" class="hidden" value="<?php echo $_smarty_tpl->tpl_vars['tournament']->value->partnerId;?>
+"/>
+            <input id="tournament" type="text" class="hidden" value="<?php echo $_smarty_tpl->tpl_vars['tournament']->value->id;?>
 "/>
             <br>
             <hr>
@@ -144,6 +146,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['day']->value) {
                             <thead>
                             <tr>
                                 <td>ID</td>
+                                <td>first_teamId</td>
+                                <td>second_teamId</td>
                                 <td>Giornata</td>
                                 <td>Squadra casa</td>
                                 <td>Squadra ospite</td>
@@ -151,6 +155,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['day']->value) {
                                 <td>Ora</td>
                                 <td>Azienda</td>
                                 <td>Campo</td>
+                                <td>Risultato</td>
                             </tr>
                             </thead>
                             <tbody>
@@ -161,6 +166,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['match']->value) {
 ?>
                                 <tr>
                                     <td><?php echo $_smarty_tpl->tpl_vars['match']->value->match_id;?>
+</td>
+                                    <td><?php echo $_smarty_tpl->tpl_vars['match']->value->first_teamId;?>
+</td>
+                                    <td><?php echo $_smarty_tpl->tpl_vars['match']->value->second_teamId;?>
 </td>
                                     <td><?php echo $_smarty_tpl->tpl_vars['match']->value->day+1;?>
 </td>
@@ -179,6 +188,9 @@ echo $_smarty_tpl->tpl_vars['match']->value->partner;
 }?></td>
                                     <td><?php if ($_smarty_tpl->tpl_vars['match']->value->number == null) {?> - <?php } else {
 echo $_smarty_tpl->tpl_vars['match']->value->number;
+}?></td>
+                                    <td><?php if ($_smarty_tpl->tpl_vars['match']->value->result == null) {?> - <?php } else {
+echo $_smarty_tpl->tpl_vars['match']->value->result;
 }?></td>
                                 </tr>
                             <?php
@@ -271,6 +283,34 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                     <div id="match_result" class="tab-pane">
                         <div class="signin-form profile">
                             <h3 class="agileinfo_sign">Modifica risultato partita </h3>
+                            <form id="formResult" class="mod2">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="firstTeamScore"><input
+                                                    class="number" id="firstTeamScore"
+                                                    name="firstTeamScore"
+                                                    type="number" min="0" max="30"
+                                                    value="0"
+                                                    required/> &nbsp; Goal squadra casa</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="secondTeamScore"><input
+                                                    class="number" name="secondTeamScore"
+                                                    id="secondTeamScore" min="0" max="30"
+                                                    type="number"
+                                                    value="0"
+                                                    required/> &nbsp;Goal squadra ospite</label>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="row">
+                                    <div class="col-md-5 col-center-block">
+                                        <div class="agile-submit ">
+                                            <input type="submit" value="Inserisci">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

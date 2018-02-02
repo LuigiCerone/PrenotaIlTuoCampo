@@ -27,6 +27,7 @@
             modificare.
             <input id="sport" type="text" class="hidden" value="{$tournament->sportId}"/>
             <input id="partner" type="text" class="hidden" value="{$tournament->partnerId}"/>
+            <input id="tournament" type="text" class="hidden" value="{$tournament->id}"/>
             <br>
             <hr>
             <br>
@@ -48,6 +49,8 @@
                             <thead>
                             <tr>
                                 <td>ID</td>
+                                <td>first_teamId</td>
+                                <td>second_teamId</td>
                                 <td>Giornata</td>
                                 <td>Squadra casa</td>
                                 <td>Squadra ospite</td>
@@ -55,12 +58,15 @@
                                 <td>Ora</td>
                                 <td>Azienda</td>
                                 <td>Campo</td>
+                                <td>Risultato</td>
                             </tr>
                             </thead>
                             <tbody>
                             {foreach from=$day item=match}
                                 <tr>
                                     <td>{$match->match_id}</td>
+                                    <td>{$match->first_teamId}</td>
+                                    <td>{$match->second_teamId}</td>
                                     <td>{$match->day + 1}</td>
                                     <td>{$match->first_team}</td>
                                     <td>{$match->second_team}</td>
@@ -68,6 +74,7 @@
                                     <td>{if $match->time == null} - {else}{$match->time}{/if}</td>
                                     <td>{if $match->partner == null} - {else}{$match->partner}{/if}</td>
                                     <td>{if $match->number == null} - {else}{$match->number}{/if}</td>
+                                    <td>{if $match->result == null} - {else}{$match->result}{/if}</td>
                                 </tr>
                             {/foreach}
                             </tbody>
@@ -149,6 +156,34 @@
                     <div id="match_result" class="tab-pane">
                         <div class="signin-form profile">
                             <h3 class="agileinfo_sign">Modifica risultato partita </h3>
+                            <form id="formResult" class="mod2">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="firstTeamScore"><input
+                                                    class="number" id="firstTeamScore"
+                                                    name="firstTeamScore"
+                                                    type="number" min="0" max="30"
+                                                    value="0"
+                                                    required/> &nbsp; Goal squadra casa</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="secondTeamScore"><input
+                                                    class="number" name="secondTeamScore"
+                                                    id="secondTeamScore" min="0" max="30"
+                                                    type="number"
+                                                    value="0"
+                                                    required/> &nbsp;Goal squadra ospite</label>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="row">
+                                    <div class="col-md-5 col-center-block">
+                                        <div class="agile-submit ">
+                                            <input type="submit" value="Inserisci">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
