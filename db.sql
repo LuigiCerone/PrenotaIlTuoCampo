@@ -223,4 +223,12 @@ CREATE TABLE user2team
 )
   ENGINE = InnoDB;
 
-
+CREATE TABLE novita
+(
+  id    INT AUTO_INCREMENT
+    PRIMARY KEY,
+  title VARCHAR(30) NULL,
+  date  DATE        NULL,
+  text  TEXT        NULL
+)
+  ENGINE = InnoDB;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-01 15:20:48
+/* Smarty version 3.1.30, created on 2018-02-02 18:23:48
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminTournaments.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a73224063d2c5_64540407',
+  'unifunc' => 'content_5a749ea487d252_64838722',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ce3c71ca7fc5733be3d9597cfb57444a365e7293' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminTournaments.tpl',
-      1 => 1517494845,
+      1 => 1517592227,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a73224063d2c5_64540407 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a749ea487d252_64838722 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10782128215a732240622344_66731678', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12804736745a749ea485b9c6_20531449', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1347071905a732240624a16_94298584', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12323268105a749ea485e029_09743768', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_527037775a73224063b338_25029209', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18444505755a749ea487c345_35720143', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_10782128215a732240622344_66731678 extends Smarty_Internal_Block
+class Block_12804736745a749ea485b9c6_20531449 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_1347071905a732240624a16_94298584 extends Smarty_Internal_Block
+class Block_12323268105a749ea485e029_09743768 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_527037775a73224063b338_25029209 extends Smarty_Internal_Block
+class Block_18444505755a749ea487c345_35720143 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -138,6 +138,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 </tbody>
 
             </table>
+
+            <div class="row">
+                <div class="col-md-5 col-center-block">
+                    <button class="signin-button" id="addTournament">Aggiungi torneo</button>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Modal1 -->
@@ -151,6 +157,87 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                         <h3 class="agileinfo_sign">Creazione calendario </h3>
                         Creazione del calendario associato al torneo in corso, attendi.....
                         <img src='public/images/loading.webp'/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="newTournament" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="signin-form profile">
+                        <h3 class="agileinfo_sign">Inserimento nuovo torneo </h3>
+                        <form id="newTournamentForm">
+                            <div class="col-md-6 col-xs-6 col-center-block">
+                                <ul>
+                                    <li class="text">Nome torneo:</li>
+                                    <li class="agileits-main">
+                                        <input id="name" type="text" name="name" placeholder="Nome torneo"
+                                               required/></li>
+                                    <li class="text">Azienda:</li>
+                                    <li class="agileits-main">
+                                        <select id="selectPartner">
+                                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['partners']->value, 'partner');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['partner']->value) {
+?>
+                                                <option value="<?php echo $_smarty_tpl->tpl_vars['partner']->value->id;?>
+"><?php echo $_smarty_tpl->tpl_vars['partner']->value->name;?>
+</option>
+                                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                                        </select></li>
+                                    <li class="text">Data inizio:
+                                    </li>
+                                    <li class="agileits-main">
+                                        <input id="startDate" type="text" class="date"
+                                               name="startDate"
+                                               placeholder="Data inizio"
+                                               required/></li>
+                                    <li class="text">Data fine iscrizioni:
+                                    </li>
+                                    <li class="agileits-main">
+                                        <input id="endSubscription" type="text" class="date"
+                                               name="endSubscription"
+                                               placeholder="Data termine iscrizioni"
+                                               required/></li>
+                                    <li class="text">Numero squadre:
+                                    </li>
+                                    <li class="agileits-main">
+                                        <input type="number" name="teamNumber"
+                                               value="10" disabled/></li>
+                                    <li class="text">Sport:
+                                    </li>
+                                    <li class="agileits-main">
+                                        <select id="selectSport">
+                                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sports']->value, 'sport');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['sport']->value) {
+?>
+                                                <option value="<?php echo $_smarty_tpl->tpl_vars['sport']->value->id;?>
+"><?php echo $_smarty_tpl->tpl_vars['sport']->value->name;?>
+</option>
+                                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                                        </select></li>
+                                </ul>
+                            </div>
+                            <input type="submit" value="Inserisci"/>
+                        </form>
                     </div>
                 </div>
             </div>

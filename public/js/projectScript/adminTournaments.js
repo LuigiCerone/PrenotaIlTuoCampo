@@ -157,4 +157,49 @@ $(function () {
 
         window.location.href = "adminMatches.php?t=" + data[0];
     });
+
+    $('#addTournament').on('click', function (event) {
+        event.preventDefault();
+
+        $('#newTournament').modal('toggle');
+    })
+
+    $.datepicker.regional['it'] = {
+        closeText: 'Chiudi', // set a close button text
+        currentText: 'Oggi', // set today text
+        monthNames: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'], // set month names
+        monthNamesShort: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'], // set short month names
+        dayNames: ['Domenica', 'Luned&#236', 'Marted&#236', 'Mercoled&#236', 'Gioved&#236', 'Venerd&#236', 'Sabato'], // set days names
+        dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'], // set short day names
+        dayNamesMin: ['Do', 'Lu', 'Ma', 'Me', 'Gio', 'Ve', 'Sa'], // set more short days names
+        dateFormat: 'yy-mm-dd',
+        minDate: 1
+    };
+
+    $("#startDate").datepicker($.datepicker.regional['it']);
+    $("#startDate").datepicker();
+    $("#endSubscription").datepicker($.datepicker.regional['it']);
+    $("#endSubscription").datepicker();
+
+    //$_POST['name'], $_POST['partner'], $_POST['start'],
+    // $_POST['end'], 10, 10, $_POST['sport']
+    $('#newTournamentForm').submit(function (event) {
+
+        $.ajax({
+            type: "POST",
+            url: "resources/src/insertNewTournament.php",
+            data: {
+                'name': $('#name').val(),
+                'partner': $('#selectPartner').val(),
+                'start': $('#startDate').val(),
+                'end': $('#endSubscription').val(),
+                'sport': $('#selectSport').val()
+            },
+            success: function (response) {
+            },
+            error: function (response) {
+                console.log(response);
+            }
+        });
+    });
 });

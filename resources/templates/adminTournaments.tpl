@@ -54,6 +54,12 @@
                 </tbody>
 
             </table>
+
+            <div class="row">
+                <div class="col-md-5 col-center-block">
+                    <button class="signin-button" id="addTournament">Aggiungi torneo</button>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Modal1 -->
@@ -67,6 +73,65 @@
                         <h3 class="agileinfo_sign">Creazione calendario </h3>
                         Creazione del calendario associato al torneo in corso, attendi.....
                         <img src='public/images/loading.webp'/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="newTournament" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="signin-form profile">
+                        <h3 class="agileinfo_sign">Inserimento nuovo torneo </h3>
+                        <form id="newTournamentForm">
+                            <div class="col-md-6 col-xs-6 col-center-block">
+                                <ul>
+                                    <li class="text">Nome torneo:</li>
+                                    <li class="agileits-main">
+                                        <input id="name" type="text" name="name" placeholder="Nome torneo"
+                                               required/></li>
+                                    <li class="text">Azienda:</li>
+                                    <li class="agileits-main">
+                                        <select id="selectPartner">
+                                            {foreach from=$partners item=partner}
+                                                <option value="{$partner->id}">{$partner->name}</option>
+                                            {/foreach}
+                                        </select></li>
+                                    <li class="text">Data inizio:
+                                    </li>
+                                    <li class="agileits-main">
+                                        <input id="startDate" type="text" class="date"
+                                               name="startDate"
+                                               placeholder="Data inizio"
+                                               required/></li>
+                                    <li class="text">Data fine iscrizioni:
+                                    </li>
+                                    <li class="agileits-main">
+                                        <input id="endSubscription" type="text" class="date"
+                                               name="endSubscription"
+                                               placeholder="Data termine iscrizioni"
+                                               required/></li>
+                                    <li class="text">Numero squadre:
+                                    </li>
+                                    <li class="agileits-main">
+                                        <input type="number" name="teamNumber"
+                                               value="10" disabled/></li>
+                                    <li class="text">Sport:
+                                    </li>
+                                    <li class="agileits-main">
+                                        <select id="selectSport">
+                                            {foreach from=$sports item=sport}
+                                                <option value="{$sport->id}">{$sport->name}</option>
+                                            {/foreach}
+                                        </select></li>
+                                </ul>
+                            </div>
+                            <input type="submit" value="Inserisci"/>
+                        </form>
                     </div>
                 </div>
             </div>

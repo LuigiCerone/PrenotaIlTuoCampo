@@ -31,6 +31,7 @@ class Tournament
         $this->teamNumber = $teamNumber;
         $this->teamLeft = $teamLeft;
         $this->sport_fk = $sport_fk;
+        $this->scheduled = false;
     }
 
 
@@ -123,5 +124,22 @@ class Tournament
         Database::closeConnestion($conn);
 
         return json_encode($tournament);
+    }
+
+    public function insert()
+    {
+        $b = false;
+        $sql = "INSERT INTO tournament(id, name, partner_fk, startDate, endSubscription, teamNumber, teamLeft, sport_fk, scheduled) 
+        VALUES (NULL, ?,?,?,?,?,?,?,?);";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sissiiii", $this->name, $this->partner_fk, $this->startDate, $this->endSubscription, $this->teamNumber, $this->teamLeft, $this->sport_fk, $this->scheduled);
+        if ($stmt->execute()) $b = true;
+
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $b;
     }
 }

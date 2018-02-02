@@ -1,5 +1,5 @@
 <?php
-require("Database.php");
+require_once("Database.php");
 
 class Partner
 {
@@ -47,7 +47,7 @@ class Partner
 
     public function insert()
     {
-        $sql = "INSERT INTO partner (id, name, description, region, area, address, email, telnumber) VALUES (null, ?, ?, ?, ?,?,?,?);";
+        $sql = "INSERT INTO partner (id, name, description, region, area, address, email, telnumber) VALUES (NULL, ?, ?, ?, ?,?,?,?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
