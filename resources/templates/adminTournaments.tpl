@@ -33,6 +33,8 @@
                     <td>Azienda</td>
                     <td>Telefono</td>
                     <td>Partite</td>
+                    <td>Sponsor</td>
+                    <td>Premi</td>
                 </tr>
                 </thead>
                 <tbody>
@@ -48,6 +50,8 @@
                         <td>{$tournament->endSubscription}</td>
                         <td>{$tournament->partner}</td>
                         <td>{$tournament->telnumber}</td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                     </tr>
                 {/foreach}

@@ -34,17 +34,29 @@ $(function () {
         'columnDefs': [
             {'visible': false, 'targets': [0]},
             {
+                "targets": -3,
+                "data": null,
+                "searchable": false,
+                "defaultContent": "<button class=\"match\">Gestione partite</button>"
+            },
+            {
+                "targets": -2,
+                "data": null,
+                "searchable": false,
+                "defaultContent": "<button class=\"sponsor\">Gestione sponsor</button>"
+            }, {
                 "targets": -1,
                 "data": null,
                 "searchable": false,
-                "defaultContent": "<button>Gestione partite</button>"
+                "defaultContent": "<button class=\"award\">Gestione premi</button>"
             }
         ]
     });
     jQuery('#tournamentsTable').wrap('<div class="dataTables_scroll" />');
 
 
-    $('#tournamentsTable').on('click', 'tr.pending', function () {
+    $('#tournamentsTable').on('click', 'tr.pending', function (event) {
+        event.preventDefault();
         var data = tournamentsTable.row(this).data();
         selectedTournament = data[0];
 
@@ -133,7 +145,7 @@ $(function () {
                 });
             }
         }
-        console.log(matches);
+        // console.log(matches);
         $.ajax({
             type: "POST",
             url: "resources/src/createCalendar.php",
@@ -151,12 +163,21 @@ $(function () {
         });
     }
 
-    $('#tournamentsTable').on('click', 'button', function () {
+    $('#tournamentsTable').on('click', 'button.match', function () {
         var data = tournamentsTable.row($(this).parents('tr')).data();
-        console.log("Id:" + data[0]);
-
         window.location.href = "adminMatches.php?t=" + data[0];
     });
+
+    $('#tournamentsTable').on('click', 'button.award', function () {
+        var data = tournamentsTable.row($(this).parents('tr')).data();
+        window.location.href = "adminAwards.php?t=" + data[0];
+    });
+
+    $('#tournamentsTable').on('click', 'button.sponsor', function () {
+        var data = tournamentsTable.row($(this).parents('tr')).data();
+        window.location.href = "adminSponsors.php?t=" + data[0];
+    });
+
 
     $('#addTournament').on('click', function (event) {
         event.preventDefault();
