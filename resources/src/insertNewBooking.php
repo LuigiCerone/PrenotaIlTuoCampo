@@ -19,9 +19,8 @@ if (isset($_SESSION['id'])) {
                     echo "" . $_POST['match'];
                 } else {
                     http_response_code(500);
-                    echo "Danni";
                 }
-            } else echo "Niente";
+            }
             http_response_code(200);
         } else {
             http_response_code(500);

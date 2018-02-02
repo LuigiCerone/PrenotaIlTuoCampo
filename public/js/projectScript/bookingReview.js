@@ -93,4 +93,25 @@ $(function () {
         var data = findPlayerTable.row($(this).parents('tr')).data();
         console.log("valore:" + data[0]);
     });
+
+    $('#fieldSelect').submit(function (event) {
+        event.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "resources/src/insertNewBooking.php",
+            data: {
+                'field': $('input[name=field_radio]:checked').val(),
+                'date': $('#date').html(),
+                'time': $('#time').html()
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (response) {
+                console.log(response);
+            }
+        });
+
+    });
 });

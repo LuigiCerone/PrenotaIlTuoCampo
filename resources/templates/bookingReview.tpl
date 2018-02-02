@@ -51,7 +51,8 @@
         <form id="fieldSelect">
             {foreach from=$fields item=field}
                 <div class="radio">
-                    <label><input type="radio" name="field_radio" required/>Numero: {$field->id}, tipo: {$field->type},
+                    <label><input type="radio" name="field_radio" required
+                                  value="{$field->id}"/>Numero: {$field->numbers}, tipo: {$field->type},
                         esterno: {if $field->outdoor == 1}Si {else}No {/if},
                         riscaldato: {if $field->warmed == 1}Si {else}No {/if}</label>
                 </div>

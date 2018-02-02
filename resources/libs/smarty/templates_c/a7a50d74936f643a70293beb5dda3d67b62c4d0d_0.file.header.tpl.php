@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 12:23:02
+/* Smarty version 3.1.30, created on 2018-02-02 17:54:52
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a744a162f8079_22774745',
+  'unifunc' => 'content_5a7497dc5da699_37476415',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1517569635,
+      1 => 1517590136,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a744a162f8079_22774745 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7497dc5da699_37476415 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21101985745a744a162e5e99_03921734', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3940848405a7497dc5c83b5_07022999', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -80,7 +80,6 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21101985745a744a16
                             <div class="dropdown-menu user_profile_item" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item " href="profile.php">Il mio account</a>
                                 <a class="dropdown-item " href="bookings.php">Le mie prenotazioni</a>
-                                <a class="dropdown-item " href="messages.php">Messaggi</a>
                                 <a class="dropdown-item " href="invitations.php">I miei inviti</a>
                                 <a class="dropdown-item " href="availability.php">Le mie disponibilità</a>
                                 <a class="dropdown-item " href="userTournaments.php">I miei tornei</a>
@@ -233,13 +232,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21101985745a744a16
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18082604665a744a162f7144_89370688', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11406406575a7497dc5d9804_28074042', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_21101985745a744a162e5e99_03921734 extends Smarty_Internal_Block
+class Block_3940848405a7497dc5c83b5_07022999 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -259,7 +258,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_18082604665a744a162f7144_89370688 extends Smarty_Internal_Block
+class Block_11406406575a7497dc5d9804_28074042 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
