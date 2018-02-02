@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 19:19:27
+/* Smarty version 3.1.30, created on 2018-02-02 19:29:11
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminAwards.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a74abaf795d65_25049711',
+  'unifunc' => 'content_5a74adf71c7885_94710038',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '88a0c20988c8b6aef83d7bda818e528b9a9166bc' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminAwards.tpl',
-      1 => 1517595545,
+      1 => 1517595975,
       2 => 'file',
     ),
   ),
@@ -21,43 +21,42 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a74abaf795d65_25049711 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a74adf71c7885_94710038 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5233261055a74abaf787550_76791386', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3664410425a74adf71b68e3_25265361', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_589187065a74abaf789a32_40598025', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9129541375a74adf71b92c5_30176340', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9796085135a74abaf795255_83384126', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16354551485a74adf71c65b6_36176151', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_5233261055a74abaf787550_76791386 extends Smarty_Internal_Block
+class Block_3664410425a74adf71b68e3_25265361 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-    <link rel="stylesheet" type="text/css" href="public/css/buttons.dataTables.min.css"/>
     <link rel="stylesheet" href="public/css/jquery.timepicker.min.css"/>
 <?php
 }
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_589187065a74abaf789a32_40598025 extends Smarty_Internal_Block
+class Block_9129541375a74adf71b92c5_30176340 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -67,21 +66,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
  src="public/js/jquery.timepicker.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- type="text/javascript" src="public/js/JSZip-2.5.0/jszip.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- type="text/javascript" src="public/js/pdfmake-0.1.32/pdfmake.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- type="text/javascript" src="public/js/pdfmake-0.1.32/vfs_fonts.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- type="text/javascript" src="public/js/dataTables.buttons.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- type="text/javascript" src="public/js/buttons.html5.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
  src="public/js/projectScript/adminAwards.js"><?php echo '</script'; ?>
 >
 <?php
@@ -89,12 +73,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_9796085135a74abaf795255_83384126 extends Smarty_Internal_Block
+class Block_16354551485a74adf71c65b6_36176151 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-    <h2 class="title">Gestione delle partite associate ad un torneo.</h2>
+    <h2 class="title">Gestione premi di un torneo.</h2>
     <br>
     
     <br>

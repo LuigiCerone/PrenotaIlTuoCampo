@@ -20,7 +20,7 @@ class Sponsor
 
     public static function getAllSponsorForTournament($id)
     {
-        $sql = "SELECT * FROM sponsor JOIN sponsor2tournament WHERE tournament_fk=? ORDER BY sponsor2tournament.money DESC;";
+        $sql = "SELECT * FROM sponsor JOIN sponsor2tournament ON sponsor.id = tournament_fk WHERE sponsor2tournament.tournament_fk=? ORDER BY sponsor2tournament.money DESC;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
@@ -53,15 +53,15 @@ class Sponsor
         return $b;
     }
 
-    public function insertSponsorForTournament($sponsor, $tournament, $money, $date)
+    public static function insertSponsorForTournament($sponsor, $tournament, $money)
     {
         $b = false;
         $sql = "INSERT INTO sponsor2tournament (sponsor_fk, tournament_fk, money, date) "
-            . " VALUES (?, ?, ?,?);";
+            . " VALUES (?, ?, ?,NOW());";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("iiis", $sponsor, $tournament, $money, $date);
+        $stmt->bind_param("iii", $sponsor, $tournament, $money);
         if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);
