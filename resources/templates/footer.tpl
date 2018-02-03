@@ -21,7 +21,7 @@
                         <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="index.php">Home</a>
                         </li>
 
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="partners.php"
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="parteners.php"
                                                                                           class="scroll">Partners</a>
                         </li>
 
@@ -33,12 +33,6 @@
                                 Us</a></li>
                         <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="news.php"
                                                                                           class="scroll">News</a></li>
-
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#gallery"
-                                                                                          class="scroll">Gallery</a>
-                        </li>
-                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#mail" class="scroll">Mail
-                                Us</a></li>
                     </ul>
                 {/if}
             </div>
@@ -53,7 +47,7 @@
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1 wthree_footer_grid_right1">
                 <h4>Contact Us</h4>
                 <ul>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:progettotwd@gmail.com">progettotwd@gmail.com</a>
                     </li>
                     <li><i class="fa fa-phone" aria-hidden="true"></i>+(000) 123 311</li>
                     <li><i class="fa fa-fax" aria-hidden="true"></i>+123 421</li>

@@ -17,4 +17,4 @@ if (isset($_SESSION['id']) && !isset($_SESSION['admin'])) {
     $tpl->render('index', $params);
 
 } else
-    $tpl->render('error');
+    $tpl->render('index');

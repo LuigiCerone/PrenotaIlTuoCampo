@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-30 17:31:36
+/* Smarty version 3.1.30, created on 2018-02-03 10:51:17
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/news.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a47bf688eb054_26859658',
+  'unifunc' => 'content_5a758615cc2d11_33216855',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1ec173643d4581ebda90dabf01fb79c6e73050b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/news.tpl',
-      1 => 1514651489,
+      1 => 1517510631,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a47bf688eb054_26859658 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a758615cc2d11_33216855 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6236065a47bf688e4507_63144708', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11701000895a758615caa3d2_66827689', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12082257255a47bf688e5237_25224898', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19318316885a758615cad4b8_96319317', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17530721225a47bf688eab47_61862453', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18646394955a758615cc2034_85582710', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_6236065a47bf688e4507_63144708 extends Smarty_Internal_Block
+class Block_11701000895a758615caa3d2_66827689 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_12082257255a47bf688e5237_25224898 extends Smarty_Internal_Block
+class Block_19318316885a758615cad4b8_96319317 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_17530721225a47bf688eab47_61862453 extends Smarty_Internal_Block
+class Block_18646394955a758615cc2034_85582710 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -78,9 +78,9 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     
     <br>
     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Novita']->value->news, 'new');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['news']->value, 'novita');
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['new']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['novita']->value) {
 ?>
         <section>
             <div class="container">
@@ -88,9 +88,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['new']->value) {
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-block">
-                                <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['new']->value->title;?>
+                                <h4 class="card-title">Titolo:<?php echo $_smarty_tpl->tpl_vars['novita']->value->title;?>
 </h4>
-                                <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['new']->value->text;?>
+                                <h6 class="card-title">Giorno:<?php echo $_smarty_tpl->tpl_vars['novita']->value->date;?>
+</h6>
+                                <p class="card-text">Novità:<?php echo $_smarty_tpl->tpl_vars['novita']->value->text;?>
 </p>
                             </div>
                         </div>
@@ -104,7 +106,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['new']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-    <!-- /banner -->
 <?php
 }
 }
