@@ -64,7 +64,7 @@
                                     <li class="text">Nome:
                                     </li>
                                     <li class="agileits-main">
-                                        <select id="selectSponsor">
+                                        <select class="form-control" id="selectSponsor">
                                             {foreach from=$sponsors item=sponsor}
                                                 <option value="{$sponsor->id}">{$sponsor->name}</option>
                                             {/foreach}
@@ -72,7 +72,7 @@
                                     <li class="text">Quota:
                                     </li>
                                     <li class="agileits-main">
-                                        <input id="money" type="number" min="0"
+                                        <input id="money" type="number" min="0" class="form-control"
                                                name="money"
                                                placeholder="Quota"
                                                required/></li>

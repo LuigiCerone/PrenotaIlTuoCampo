@@ -43,14 +43,9 @@
                     <textarea class="form-control animated" cols="50" id="textNews" name="insertText"
                               placeholder="Inserisci le nuove info" rows="5"></textarea>
 
-                    {*<div class="text-right">*}
-                    {*<input type="number" name="rating" id="reviewStars" data-icon-lib="fa"*}
-                    {*data-active-icon="fa-star" data-inactive-icon=" fa-star-o" class="rating bigger"*}
-                    {*value="1"/>*}
                     <br>
                     <button id="saveNews" class="btn btn-success btn-lg" type="submit">Salva
                     </button>
-                    {*</div>*}
                 </form>
             </div>
         </div>

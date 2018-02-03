@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 11:45:40
+/* Smarty version 3.1.30, created on 2018-02-03 18:44:05
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminMatches.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a744154938c91_55963505',
+  'unifunc' => 'content_5a75f4e5d635b2_54422782',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ff885e338196b7e78970565e40a861eebb79a020' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminMatches.tpl',
-      1 => 1517568327,
+      1 => 1517679246,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a744154938c91_55963505 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a75f4e5d635b2_54422782 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2238683575a7441548fb012_45707203', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_685996875a75f4e5d18063_88662965', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1829807925a7441548fe6b2_53520691', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1200128125a75f4e5d21022_36893463', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21358137895a744154937747_88793022', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3297870465a75f4e5d62191_69782992', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_2238683575a7441548fb012_45707203 extends Smarty_Internal_Block
+class Block_685996875a75f4e5d18063_88662965 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -57,7 +57,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_1829807925a7441548fe6b2_53520691 extends Smarty_Internal_Block
+class Block_1200128125a75f4e5d21022_36893463 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -89,7 +89,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_21358137895a744154937747_88793022 extends Smarty_Internal_Block
+class Block_3297870465a75f4e5d62191_69782992 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -287,7 +287,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="firstTeamScore"><input
-                                                    class="number" id="firstTeamScore"
+                                                    class="form-control" id="firstTeamScore"
                                                     name="firstTeamScore"
                                                     type="number" min="0" max="30"
                                                     value="0"
@@ -295,7 +295,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     </div>
                                     <div class="col-md-6">
                                         <label for="secondTeamScore"><input
-                                                    class="number" name="secondTeamScore"
+                                                    class="form-control" name="secondTeamScore"
                                                     id="secondTeamScore" min="0" max="30"
                                                     type="number"
                                                     value="0"

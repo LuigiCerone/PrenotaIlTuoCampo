@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 17:27:09
+/* Smarty version 3.1.30, created on 2018-02-03 18:34:10
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a75e2dd0c4722_50076314',
+  'unifunc' => 'content_5a75f292903b35_24550630',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29bab6b896493f7b256ea98fd921b9e71f5afdd0' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl',
-      1 => 1517675226,
+      1 => 1517679022,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a75e2dd0c4722_50076314 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a75f292903b35_24550630 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21403668725a75e2dd09a163_22931525', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6949858805a75f2928ce175_09634366', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9238859095a75e2dd09e055_75603952', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12812082895a75f2928d0884_16922080', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18175856865a75e2dd0c32a8_74819792', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10713129055a75f2929029e3_33629964', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_21403668725a75e2dd09a163_22931525 extends Smarty_Internal_Block
+class Block_6949858805a75f2928ce175_09634366 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_9238859095a75e2dd09e055_75603952 extends Smarty_Internal_Block
+class Block_12812082895a75f2928d0884_16922080 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_18175856865a75e2dd0c32a8_74819792 extends Smarty_Internal_Block
+class Block_10713129055a75f2929029e3_33629964 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -195,18 +195,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                         <tr>
                                             <td>Numero:</td>
                                             <td><input id="number" type="number"
-                                                       name="number"
+                                                       name="number" class="form-control"
                                                        placeholder="Numero campo"
                                                        required/></td>
                                         </tr>
                                         <tr>
                                             <td>Provincia:</td>
-                                            
-                                            
-                                            
-                                            
                                             <td>
-                                                <select id="province">
+                                                <select class="form-control" id="province">
                                                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['provinces']->value, 'province');
 if ($_from !== null) {
@@ -226,7 +222,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                         </tr>
                                         <tr>
                                             <td>Sport:</td>
-                                            <td><select id="selectSport">
+                                            <td><select class="form-control" id="selectSport">
                                                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sports']->value, 'sport');
 if ($_from !== null) {

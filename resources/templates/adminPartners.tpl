@@ -112,18 +112,14 @@
                                         <tr>
                                             <td>Numero:</td>
                                             <td><input id="number" type="number"
-                                                       name="number"
+                                                       name="number" class="form-control"
                                                        placeholder="Numero campo"
                                                        required/></td>
                                         </tr>
                                         <tr>
                                             <td>Provincia:</td>
-                                            {*<td><input id="province" type="text" name="province"*}
-                                            {*placeholder="Sigla provincia"*}
-                                            {*maxlength="2"*}
-                                            {*required/></td>*}
                                             <td>
-                                                <select id="province">
+                                                <select class="form-control" id="province">
                                                     {foreach from=$provinces item=province}
                                                         <option value="{$province->sign}">{$province->name}</option>
                                                     {/foreach}
@@ -132,7 +128,7 @@
                                         </tr>
                                         <tr>
                                             <td>Sport:</td>
-                                            <td><select id="selectSport">
+                                            <td><select class="form-control" id="selectSport">
                                                     {foreach from=$sports item=sport}
                                                         <option value="{$sport->id}">{$sport->name}</option>
                                                     {/foreach}

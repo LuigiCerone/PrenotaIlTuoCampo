@@ -59,7 +59,6 @@ $(function () {
         event.preventDefault();
         var data = tournamentsTable.row(this).data();
         selectedTournament = data[0];
-
         // Get all the teams that are subscribed to that tournament.
         $.ajax({
             type: "POST",
@@ -205,7 +204,6 @@ $(function () {
     //$_POST['name'], $_POST['partner'], $_POST['start'],
     // $_POST['end'], 10, 10, $_POST['sport']
     $('#newTournamentForm').submit(function (event) {
-
         $.ajax({
             type: "POST",
             url: "resources/src/insertNewTournament.php",

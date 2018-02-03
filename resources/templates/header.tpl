@@ -115,7 +115,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             <li id="bookings"><a href="adminBookings.php" class="effect-3 scroll">Gestione<br>
                                     prenotazioni</a>
                             </li>
-                            <li><a href="index.php" class="dropdown-item" id="logout">Esci</a></li>
+                            <li><a href="index.php" class="effect-3 scroll" id="logout">Esci</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -172,7 +172,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                            placeholder="Cognome"
                                            required/></div>
                                 <div class="col-md-2"><label for="first_name">Sesso:</label>
-                                    <select id="gender" class="form_input" name="gender" required>
+                                    <select id="gender" class="form-control" name="gender" required>
                                         <option selected value="m">M</option>
                                         <option value="f">F</option>
                                     </select>

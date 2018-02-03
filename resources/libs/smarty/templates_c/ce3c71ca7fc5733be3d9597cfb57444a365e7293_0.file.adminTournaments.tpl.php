@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 18:56:33
+/* Smarty version 3.1.30, created on 2018-02-03 18:43:54
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminTournaments.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a74a651e78fb3_63979519',
+  'unifunc' => 'content_5a75f4da32e329_61072640',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ce3c71ca7fc5733be3d9597cfb57444a365e7293' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminTournaments.tpl',
-      1 => 1517594190,
+      1 => 1517679826,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a74a651e78fb3_63979519 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a75f4da32e329_61072640 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11979671255a74a651e58082_35056240', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1057369685a75f4da3027f7_74770112', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18441150755a74a651e5a724_95869491', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9420451585a75f4da307025_22218236', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16386917285a74a651e78101_79717319', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_584893295a75f4da32c637_63598354', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_11979671255a74a651e58082_35056240 extends Smarty_Internal_Block
+class Block_1057369685a75f4da3027f7_74770112 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_18441150755a74a651e5a724_95869491 extends Smarty_Internal_Block
+class Block_9420451585a75f4da307025_22218236 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_16386917285a74a651e78101_79717319 extends Smarty_Internal_Block
+class Block_584893295a75f4da32c637_63598354 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -217,12 +217,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     <li class="text">Numero squadre:
                                     </li>
                                     <li class="agileits-main">
-                                        <input type="number" name="teamNumber"
+                                        <input type="number" name="teamNumber" class="form-control"
                                                value="10" disabled/></li>
                                     <li class="text">Sport:
                                     </li>
                                     <li class="agileits-main">
-                                        <select id="selectSport">
+                                        <select id="selectSport" class="form-control">
                                             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sports']->value, 'sport');
 if ($_from !== null) {

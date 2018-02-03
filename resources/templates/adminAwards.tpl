@@ -69,7 +69,7 @@
                                     <li class="text">Posto:
                                     </li>
                                     <li class="agileits-main">
-                                        <input id="place" type="number" min="0"
+                                        <input id="place" type="number" min="0" class="form-control"
                                                name="place"
                                                placeholder="Posizione"
                                                required/></li>

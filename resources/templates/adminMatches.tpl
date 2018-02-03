@@ -160,7 +160,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="firstTeamScore"><input
-                                                    class="number" id="firstTeamScore"
+                                                    class="form-control" id="firstTeamScore"
                                                     name="firstTeamScore"
                                                     type="number" min="0" max="30"
                                                     value="0"
@@ -168,7 +168,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="secondTeamScore"><input
-                                                    class="number" name="secondTeamScore"
+                                                    class="form-control" name="secondTeamScore"
                                                     id="secondTeamScore" min="0" max="30"
                                                     type="number"
                                                     value="0"

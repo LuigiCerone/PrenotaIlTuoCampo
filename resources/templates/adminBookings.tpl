@@ -10,7 +10,7 @@
 
 {block name="content"}
     <div class="container">
-        <h3 class="title">Prenotazioni per cui è stata richeista una disdetta </h3>
+        <h3 class="title">Prenotazioni per cui è stata richiesta una disdetta </h3>
         <table id="notValidBookingTable">
             <thead>
             <tr>

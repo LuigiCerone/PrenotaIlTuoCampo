@@ -122,12 +122,12 @@
                                     <li class="text">Numero squadre:
                                     </li>
                                     <li class="agileits-main">
-                                        <input type="number" name="teamNumber"
+                                        <input type="number" name="teamNumber" class="form-control"
                                                value="10" disabled/></li>
                                     <li class="text">Sport:
                                     </li>
                                     <li class="agileits-main">
-                                        <select id="selectSport">
+                                        <select id="selectSport" class="form-control">
                                             {foreach from=$sports item=sport}
                                                 <option value="{$sport->id}">{$sport->name}</option>
                                             {/foreach}

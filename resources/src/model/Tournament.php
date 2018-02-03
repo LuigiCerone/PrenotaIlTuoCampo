@@ -75,7 +75,7 @@ class Tournament
 
     public static function getAllAdminTournaments()
     {
-        $sql = "SELECT tournament.scheduled,sport.name AS sport, sport.number_players, tournament.id, partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber, teamLeft FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id;";
+        $sql = "SELECT tournament.scheduled,sport.name AS sport, sport.number_players, tournament.id, partner.name AS partner,tournament.partner_fk AS partnerId, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber, teamLeft FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id;";
 
         $conn = Database::getConnection();
         // prepare and bind

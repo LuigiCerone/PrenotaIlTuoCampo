@@ -34,6 +34,5 @@
             {/foreach}
         </div>
     </section>
-    </section>
     <!-- /banner -->
 {/block}
