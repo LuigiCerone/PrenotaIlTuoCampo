@@ -1,13 +1,10 @@
 {extends file='layout.tpl'}
 
 {block name="css" append}
-    <link rel="stylesheet" href="public/css/datatables.min.css"/>
 {/block}
 
 
 {block name="js" append}
-    <script src="public/js/bootstrap.js"></script>
-    <script src="public/js/datatables.min.js"></script>
     <script src="public/js/projectScript/invitations.js"></script>
 {/block}
 

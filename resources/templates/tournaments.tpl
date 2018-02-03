@@ -9,7 +9,7 @@
 {/block}
 
 {block name="content"}
-    <h2 class="title">I noi tornei</h2>
+    <h2 class="title">I nostri tornei</h2>
     <br>
     {*{$partners->partners|json_encode}*}
     <br>
@@ -19,7 +19,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-md-3">
-                            INSERIRE FOTO
+                            <img class="img_tournament" src="public/images/tournament.jpg" alt="Immagine dimostrativa"/>
                         </div>
                         <div class="col-md-6">
                             <div class="card-block">

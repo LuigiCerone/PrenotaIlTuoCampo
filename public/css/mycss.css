@@ -230,3 +230,8 @@ small {
 .inline-label {
     white-space: nowrap;
 }
+
+.img_tournament {
+    width: 150px;
+    height: 150px;
+}
