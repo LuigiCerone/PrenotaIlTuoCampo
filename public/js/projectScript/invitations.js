@@ -5,7 +5,6 @@ $(function () {
     $(element).removeClass('active');
     $('#sentInvitations').hide();
 
-    console.log("Ok");
     $('#sent').on('click', function () {
         $('#sentInvitations').show();
         $('#receivedInvitations').hide();
@@ -93,16 +92,8 @@ $(function () {
         var data = receivedTable.row(this).data();
         selectedInvitation = data[0];
         selectedAvailability = data[1];
-        jQuery.noConflict();
         $('#changeStatus').modal('toggle');
     });
-
-    // $('#sentTable').on('click', 'tr.pending', function () {
-    //     var data = sentTable.row(this).data();
-    //     selectedInvitation = data[0];
-    //     jQuery.noConflict();
-    //     $('#changeStatus').modal('toggle');
-    // });
 
     $('#accept').on('click', function () {
         console.log("Accepted");
@@ -114,12 +105,11 @@ $(function () {
                 'inv': selectedInvitation,
                 'status': 1
             },
-            success: function (response) {
-                console.log(response);
+            success: function () {
+                window.location.reload();
             },
-            error: function (response) {
+            error: function () {
                 $("#error").html("Error.");
-                console.log(response);
             }
         });
         window.location.reload();
@@ -135,11 +125,10 @@ $(function () {
                 'status': 0
             },
             success: function (response) {
-                console.log(response);
+                window.location.reload();
             },
             error: function (response) {
                 $("#error").html("Error.");
-                console.log(response);
             }
         });
     });
