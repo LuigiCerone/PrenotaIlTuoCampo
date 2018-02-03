@@ -64,7 +64,7 @@ class Field
 
         $conn = Database::getConnection();
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("iissi", $selectedPartner, $selectedSport, $date, $time, $selectedPartner, $selectedSport);
+        $stmt->bind_param("iissii", $selectedPartner, $selectedSport, $date, $time, $selectedPartner, $selectedSport);
         $stmt->execute();
         $result = $stmt->get_result();
         $fields = array();
