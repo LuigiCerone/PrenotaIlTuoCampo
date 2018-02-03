@@ -52,9 +52,9 @@ class Availability
 
     public static function getAllAvailabilities($partner, $sport, $date, $time)
     {
-        $sql = "SELECT user.id AS id, date, time, firstName, lastName, birthdate, gender
+        $sql = "SELECT user.id AS id, date, time, firstName, lastName, birthdate, gender, availability.id AS availabilityId
         FROM availability JOIN user ON user_fk = user.id WHERE partner_fk = ? 
-        AND sport_fk=? AND STR_TO_DATE(?, '%d/%m/%Y') = date AND (time IS NULL OR time = ?) AND busy=FALSE;";
+        AND sport_fk=? AND STR_TO_DATE(?, '%Y-%m-%d') = date AND (time IS NULL OR time = STR_TO_DATE(?, '%H:%i')) AND busy=FALSE;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);

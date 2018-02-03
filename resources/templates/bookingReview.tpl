@@ -99,4 +99,7 @@
             </div>
         </div>
     </div>
+
+    <!-- The actual snackbar -->
+    <div id="snackbar">Hai invitato questo giocatore!</div>
 {/block}

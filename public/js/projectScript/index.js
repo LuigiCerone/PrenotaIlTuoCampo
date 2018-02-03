@@ -161,17 +161,4 @@ $(function () {
         $('#selectedProvince').val(selectedProvince);
         $('#selectedPartner').val(selectedPartner);
     });
-
-    var prevent = false;
-    $('input').focus(function () {
-        prevent = true;
-    }).blur(function () {
-        prevent = false;
-    });
-
-    $('form').submit(function () {
-        if (prevent) {
-            return false;
-        }
-    });
 });

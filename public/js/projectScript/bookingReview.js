@@ -19,10 +19,12 @@ $(function () {
             success: function (response) {
                 $("#error").html("");
                 response = JSON.parse(response);
+                console.log(response);
                 var matrix = [];
                 response.forEach(function (item) {
                     var ar = [];
                     ar.push(item.id);
+                    ar.push(item.availabilityId);
                     ar.push(item.firstName);
                     ar.push(item.lastName);
                     ar.push(item.gender);
@@ -71,13 +73,14 @@ $(function () {
             },
             "columns": [
                 {"title": "id"},
+                {"title": "availabilityId"},
                 {"title": "Nome"},
                 {"title": "Cognome"},
                 {"title": "Sesso"},
                 {"title": "Contatta"}
             ],
             'columnDefs': [
-                {'visible': false, 'targets': [0]},
+                {'visible': false, 'targets': [0, 1]},
                 {
                     "targets": -1,
                     "data": null,
@@ -91,7 +94,31 @@ $(function () {
 
     $('#findPlayerTable').on('click', 'button', function () {
         var data = findPlayerTable.row($(this).parents('tr')).data();
-        console.log("valore:" + data[0]);
+        // console.log("valore:" + data[0]);
+        // console.log("valore1:" + data[1]);
+        $.ajax({
+            type: "POST",
+            url: "resources/src/insertNewInvitation.php",
+            data: {
+                'to': data[0],
+                'ava': data[1]
+            },
+            success: function (response) {
+                console.log(response);
+                var x = document.getElementById("snackbar")
+
+                // Add the "show" class to DIV
+                x.className = "show";
+
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function () {
+                    x.className = x.className.replace("show", "");
+                }, 3000);
+            },
+            error: function (response) {
+                console.log(response);
+            }
+        });
     });
 
     $('#fieldSelect').submit(function (event) {

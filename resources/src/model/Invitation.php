@@ -8,7 +8,7 @@ class Invitation
     private $to_user_fk;
     private $date;
     private $accepted;
-    private $partner_fk;
+    private $availability_fk;
 
     /**
      * Invitation constructor.
@@ -18,13 +18,12 @@ class Invitation
      * @param $date
      * @param $accepted
      */
-    public function __construct($from_user_fk, $to_user_fk, $date, $accepted, $partner_fk)
+    public function __construct($from_user_fk, $to_user_fk, $accepted, $availability_fk)
     {
         $this->from_user_fk = $from_user_fk;
         $this->to_user_fk = $to_user_fk;
-        $this->date = $date;
         $this->accepted = $accepted;
-        $this->partner_fk = $partner_fk;
+        $this->availability_fk = $availability_fk;
     }
 
     public static function getAllSentInvitation($from_user_fk)
@@ -117,14 +116,16 @@ class Invitation
 
     public function insert()
     {
-        $sql = "INSERT INTO invitation (id, from_user_fk, to_user_fk, date, status) "
-            . " VALUES (NULL, ?, ?, NOW(),FALSE);";
+        $b = false;
+        $sql = "INSERT INTO invitation (id, from_user_fk, to_user_fk, date, status, availability_fk) "
+            . " VALUES (NULL, ?, ?, NOW(),2, ?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ii", $this->from_user_fk, $this->to_user_fk);
-        $stmt->execute();
+        $stmt->bind_param("iis", $this->from_user_fk, $this->to_user_fk, $this->availability_fk);
+        if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);
+        return $b;
     }
 }
