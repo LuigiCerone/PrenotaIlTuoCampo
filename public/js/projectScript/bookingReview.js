@@ -105,11 +105,11 @@ $(function () {
             },
             success: function (response) {
                 console.log(response);
+                window.location.href = "bookings.php";
             },
             error: function (response) {
                 console.log(response);
             }
         });
-
     });
 });

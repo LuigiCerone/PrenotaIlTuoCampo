@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 17:54:52
+/* Smarty version 3.1.30, created on 2018-02-03 14:13:44
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7497dc5da699_37476415',
+  'unifunc' => 'content_5a75b588d6dbe1_43905480',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1517590136,
+      1 => 1517663622,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a7497dc5da699_37476415 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a75b588d6dbe1_43905480 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3940848405a7497dc5c83b5_07022999', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1630063285a75b588d59fa5_61087888', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -120,13 +120,18 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3940848405a7497dc5
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
-                            <li id="partners"><a href="adminParteners.php" class="effect-3 scroll">Gestione aziende</a>
+                            <li id="partners"><a href="adminParteners.php"
+                                                 class="effect-3 scroll">Gestione<br>aziende</a>
                             </li>
-                            <li id="reviews"><a href="adminReviews.php" class="effect-3 scroll">Gestione recensioni</a>
+                            <li id="reviews"><a href="adminReviews.php"
+                                                class="effect-3 scroll">Gestione<br>recensioni</a>
                             </li>
-                            <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione news</a></li>
-                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione
+                            <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione<br> news</a></li>
+                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione<br>
                                     tornei</a>
+                            </li>
+                            <li id="bookings"><a href="adminBookings.php" class="effect-3 scroll">Gestione<br>
+                                    prenotazioni</a>
                             </li>
                             <li><a href="index.php" class="dropdown-item" id="logout">Esci</a></li>
                         </ul>
@@ -232,13 +237,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3940848405a7497dc5
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11406406575a7497dc5d9804_28074042', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8505374335a75b588d6cc14_41026436', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_3940848405a7497dc5c83b5_07022999 extends Smarty_Internal_Block
+class Block_1630063285a75b588d59fa5_61087888 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -258,7 +263,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_11406406575a7497dc5d9804_28074042 extends Smarty_Internal_Block
+class Block_8505374335a75b588d6cc14_41026436 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

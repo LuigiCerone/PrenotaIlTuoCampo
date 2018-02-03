@@ -24,6 +24,9 @@
                         <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="adminTournaments.php">Gestione
                                 tornei</a>
                         </li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="adminBookings.php">Gestione
+                                prenotazioni</a>
+                        </li>
 
                     </ul>
                 {else}

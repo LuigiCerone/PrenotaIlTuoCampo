@@ -1,5 +1,5 @@
 <?php
-require("Database.php");
+require_once("Database.php");
 
 class Booking
 {
@@ -82,7 +82,7 @@ class Booking
 
     public static function delete($id)
     {
-        $sql = "DELETE from booking WHERE id = ?;";
+        $sql = "DELETE FROM booking WHERE id = ?;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
@@ -92,16 +92,15 @@ class Booking
         Database::closeConnestion($conn);
     }
 
-    public static function getNotValidBookingsForUser($user_fk)
+    public static function getNotValidBookings()
     {
-        $sql = "SELECT booking.id, date, time, user_fk, field_fk, approved, valid FROM booking 
-                 JOIN user 
-                 WHERE user_fk<>? AND user.admin=0 AND booking.valid=0;";
+        $sql = "SELECT booking.id, date, time, user_fk, firstName, lastName, field_fk, approved, valid 
+            FROM booking JOIN user ON booking.user_fk = user.id
+                 WHERE  user.admin=0 AND booking.valid=0;";
 
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $user_fk);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -114,6 +113,43 @@ class Booking
         Database::closeConnestion($conn);
 
         return json_encode($partners);
+    }
+
+    public static function getNotApprovedBookings()
+    {
+        $sql = "SELECT booking.id, date, time, user_fk, firstName, lastName, field_fk, approved, valid 
+            FROM booking JOIN user ON booking.user_fk = user.id
+                 WHERE  user.admin=0 AND booking.approved=0;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $partners = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $partners[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($partners);
+    }
+
+    public static function approveBooking($booking)
+    {
+        $sql = "UPDATE booking SET approved=TRUE WHERE id=?;";
+        $b = false;
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $booking);
+        if ($stmt->execute()) $b = true;
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $b;
     }
 
     public function to_json()

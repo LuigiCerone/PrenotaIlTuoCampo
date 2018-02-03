@@ -102,13 +102,18 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
-                            <li id="partners"><a href="adminParteners.php" class="effect-3 scroll">Gestione aziende</a>
+                            <li id="partners"><a href="adminParteners.php"
+                                                 class="effect-3 scroll">Gestione<br>aziende</a>
                             </li>
-                            <li id="reviews"><a href="adminReviews.php" class="effect-3 scroll">Gestione recensioni</a>
+                            <li id="reviews"><a href="adminReviews.php"
+                                                class="effect-3 scroll">Gestione<br>recensioni</a>
                             </li>
-                            <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione news</a></li>
-                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione
+                            <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione<br> news</a></li>
+                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione<br>
                                     tornei</a>
+                            </li>
+                            <li id="bookings"><a href="adminBookings.php" class="effect-3 scroll">Gestione<br>
+                                    prenotazioni</a>
                             </li>
                             <li><a href="index.php" class="dropdown-item" id="logout">Esci</a></li>
                         </ul>

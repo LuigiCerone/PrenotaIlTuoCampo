@@ -87,6 +87,7 @@ $(function () {
                 sport: selectedSport
             },
             success: function (data) {
+                console.log(data);
                 data.forEach(function (value) {
                     provincesData.push({'province_fk': value.province_fk, 'province_name': value.province_name});
                     partnersData.push({'partner_fk': value.partner_fk, 'partner_name': value.partner_name});
@@ -121,6 +122,7 @@ $(function () {
         }
     }).blur(function () {
         if (map[$(this).val()] == null) {
+            console.log("HERE");
             $('#province').val('');
             partnersData = [];
         }
