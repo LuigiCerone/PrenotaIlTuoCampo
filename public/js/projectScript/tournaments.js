@@ -30,6 +30,7 @@ $(function () {
                 colvis: 'Seleziona colonne'
             }
         },
+        order: [[1, 'desc']],
         buttons: [
             {
                 extend: 'pdf',
