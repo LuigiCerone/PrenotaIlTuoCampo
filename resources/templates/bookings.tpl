@@ -21,7 +21,7 @@
         <div class="booking-card not-valid" data-toggle="tooltip"
              title="La disdetta deve ancora essere approva dall'amministratore!">
             {/if}
-
+            <br>
             <div class="row ">
                 <div class="col-md-3">
                 </div>

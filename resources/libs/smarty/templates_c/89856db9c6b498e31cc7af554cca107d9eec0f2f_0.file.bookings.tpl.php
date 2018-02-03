@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 11:28:26
+/* Smarty version 3.1.30, created on 2018-02-03 17:11:34
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookings.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a758eca160284_19804073',
+  'unifunc' => 'content_5a75df36bd1bd3_98041356',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89856db9c6b498e31cc7af554cca107d9eec0f2f' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookings.tpl',
-      1 => 1517653703,
+      1 => 1517674292,
       2 => 'file',
     ),
   ),
@@ -21,25 +21,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a758eca160284_19804073 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a75df36bd1bd3_98041356 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9610688975a758eca129994_64090158', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_502734915a75df36bb88e1_86343609', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21023722515a758eca12e2f2_92718957', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4137345925a75df36bbb0e1_04347909', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14091179075a758eca15eeb9_41725586', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3139405965a75df36bd0ba4_36685087', "content");
 ?>
 
 
@@ -48,7 +48,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14091179075a758eca
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_9610688975a758eca129994_64090158 extends Smarty_Internal_Block
+class Block_502734915a75df36bb88e1_86343609 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -59,7 +59,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_21023722515a758eca12e2f2_92718957 extends Smarty_Internal_Block
+class Block_4137345925a75df36bbb0e1_04347909 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_14091179075a758eca15eeb9_41725586 extends Smarty_Internal_Block
+class Block_3139405965a75df36bd0ba4_36685087 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -94,7 +94,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['booking']->value) {
         <div class="booking-card not-valid" data-toggle="tooltip"
              title="La disdetta deve ancora essere approva dall'amministratore!">
             <?php }?>
-
+            <br>
             <div class="row ">
                 <div class="col-md-3">
                 </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 11:31:50
+/* Smarty version 3.1.30, created on 2018-02-03 17:11:41
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/availability.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a758f96508403_29959033',
+  'unifunc' => 'content_5a75df3dc1bca4_94384878',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6181566b994b70554fabb6ce357d9635ced0680b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/availability.tpl',
-      1 => 1517653907,
+      1 => 1517655225,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a758f96508403_29959033 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a75df3dc1bca4_94384878 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16770597055a758f964f5cb3_49103622', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14537475285a75df3dc09312_60417791', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18629571205a758f964f82f5_82723370', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4233159675a75df3dc0bb20_44206389', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16887044035a758f965077b9_07821625', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11915160085a75df3dc1afc6_77326182', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_16770597055a758f964f5cb3_49103622 extends Smarty_Internal_Block
+class Block_14537475285a75df3dc09312_60417791 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_18629571205a758f964f82f5_82723370 extends Smarty_Internal_Block
+class Block_4233159675a75df3dc0bb20_44206389 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_16887044035a758f965077b9_07821625 extends Smarty_Internal_Block
+class Block_11915160085a75df3dc1afc6_77326182 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -131,7 +131,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
-                <form id="form" class="mod2">
+                <form id="form" autocomplete="off" class="mod2">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h3 class="agileinfo_sign">Aggiungi disponilità</h3>

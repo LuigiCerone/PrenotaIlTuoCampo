@@ -27,9 +27,6 @@
                                 </div>
                                 <div class="col-sm-6 col-md-8">
                                     <h4>Ciao {$user->firstName}&nbsp;{$user->lastName}</h4>
-                                    {*<small><cite title="San Francisco, USA">San Francisco, USA <i*}
-                                    {*class="glyphicon glyphicon-map-marker">*}
-                                    {*</i></cite></small>*}
                                     <br>
                                     <p> I tuoi dati: </p>
 
@@ -84,25 +81,6 @@
                                                class="typeahead"
                                                placeholder="Sport" required/>
                                     </li>
-                                    <li class="text">Provincia :</li>
-                                    <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <input id="province" placeholder="Provincia" name="province" type="text"
-                                               required
-                                               class='typeahead'/></li>
-                                    <li class="text">Data :</li>
-                                    <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
-                                                class="date" id="datepicker" placeholder="Data" name="date" type="text"
-                                                value=""
-                                                required/>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div class="col-md-6 col-xs-6 w3l-right-mk">
-                                <ul>
-                                    <li class="text">qualcosa di utile qui :</li>
-                                    <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i><input
-                                                name="gender" type="text"/></li>
                                     <li class="text">Struttura :</li>
                                     <li class="agileits-main"><i class="fa fa-home" aria-hidden="true"></i><input
                                                 id="partner" name="partner" placeholder="Struttura" class="typeahead"
@@ -111,6 +89,23 @@
                                     <li class="text">Ora :</li>
                                     <li class="agileits-main"><i class="fa fa-clock-o" aria-hidden="true"></i><input
                                                 class="date" placeholder="Ora" name="time" id="timepicker" type="text"
+                                                value=""
+                                                required/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-xs-6 w3l-right-mk">
+                                <ul>
+                                    <li class="text">Provincia :</li>
+                                    <li class="agileits-main"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <input id="province" placeholder="Provincia" name="province" type="text"
+                                               required
+                                               class='typeahead'/></li>
+
+
+                                    <li class="text">Data :</li>
+                                    <li class="agileits-main"><i class="fa fa-calendar" aria-hidden="true"></i><input
+                                                class="date" id="datepicker" placeholder="Data" name="date" type="text"
                                                 value=""
                                                 required/>
                                     </li>

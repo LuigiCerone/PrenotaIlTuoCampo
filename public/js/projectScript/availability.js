@@ -48,6 +48,10 @@ $(function () {
         }
     });
 
+
+    var objects = [];
+    var map = {};
+
     // Sports typeahead.
     $('#sport').typeahead({
         minLength: 3,
@@ -68,8 +72,12 @@ $(function () {
         updater: function (item) {
             selectedSport = map[item].id;
             populateProvinces();
-            console.log(selectedSport);
+            // console.log(selectedSport);
             return item;
+        }
+    }).blur(function () {
+        if (map[$(this).val()] == null) {
+            $('#sport').val('');
         }
     });
 
@@ -133,6 +141,11 @@ $(function () {
             console.log(selectedProvince);
             return item;
         }
+    }).blur(function () {
+        if (map[$(this).val()] == null) {
+            console.log("HERE");
+            $('#province').val('');
+        }
     });
 
     $('#partner').typeahead({
@@ -156,11 +169,13 @@ $(function () {
             console.log(selectedPartner);
             return item;
         }
+    }).blur(function () {
+        if (map[$(this).val()] == null) {
+            $('#partner').val('');
+        }
     });
 
     $('#form').submit(function (event) {
-        event.stopPropagation();
-        console.log("Form");
 
         // New availability data.
         var data = $('#datepicker').val();
@@ -183,11 +198,25 @@ $(function () {
             success: function (response) {
                 console.log(response);
                 // window.location = "activateAccount.php";
+                window.location.reload();
             },
             error: function (response) {
                 console.log(response);
             }
         });
+    });
+
+    var prevent = false;
+    $('input').focus(function () {
+        prevent = true;
+    }).blur(function () {
+        prevent = false;
+    });
+
+    $('form').submit(function () {
+        if (prevent) {
+            return false;
+        }
     });
 
     $('.delete').on('click', function (event) {

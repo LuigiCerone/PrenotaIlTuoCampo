@@ -25,7 +25,8 @@
                     <div class="card">
                         <div class="row">
                             <div class="col-md-3">
-                                INSERIRE FOTO
+                                <img class="img_tournament" src="public/images/tournament.jpg"
+                                     alt="Immagine dimostrativa"/>
                             </div>
                             <div class="col-md-6">
                                 <div class="card-block">

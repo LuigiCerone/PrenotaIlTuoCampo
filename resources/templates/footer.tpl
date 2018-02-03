@@ -54,11 +54,8 @@
                 {/if}
             </div>
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1 w3l-3">
-                <h4>Altro</h4>
-                <ul>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Media</a></li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Privacy Policy</a></li>
-                </ul>
+                <h4>Info per aziende</h4>
+                Se sei un'azienda e vuoi entrare nella nostra rete non esitare a contattarci!
             </div>
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1 wthree_footer_grid_right1">
                 <h4>Contattaci</h4>
