@@ -201,6 +201,12 @@ small {
     margin: 0;
 }
 
+/** Added from this point */
+.typeahead.dropdown-menu {
+    width: 102%;
+    overflow-x: hidden;
+}
+
 .signin-button {
     outline: none;
     padding: 0.8em 0;

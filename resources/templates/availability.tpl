@@ -48,7 +48,7 @@
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
-                <form id="form" class="mod2">
+                <form id="form" autocomplete="off" class="mod2">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h3 class="agileinfo_sign">Aggiungi disponilità</h3>

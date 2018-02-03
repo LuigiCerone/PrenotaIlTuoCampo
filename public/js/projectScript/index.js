@@ -39,6 +39,8 @@ $(function () {
         }
     });
 
+    var objects = [];
+    var map = {};
     // Sports typeahead.
     $('#sport').typeahead({
         minLength: 3,
@@ -59,15 +61,24 @@ $(function () {
         updater: function (item) {
             selectedSport = map[item].id;
             populateProvinces();
-            console.log(selectedSport);
+            // console.log(selectedSport);
             return item;
+        }
+    }).blur(function () {
+        if (map[$(this).val()] == null) {
+            $('#sport').val('');
+            clean();
         }
     });
 
     $('#sport').on('focus', function () {
+        clean();
+    });
+
+    function clean() {
         provincesData = [];
         partnersData = [];
-    });
+    }
 
     function populateProvinces() {
         $.ajax({
@@ -106,8 +117,13 @@ $(function () {
         },
         updater: function (item) {
             selectedProvince = map[item].province_fk;
-            console.log(selectedProvince);
+            // console.log(selectedProvince);
             return item;
+        }
+    }).blur(function () {
+        if (map[$(this).val()] == null) {
+            $('#province').val('');
+            clean();
         }
     });
 
@@ -129,8 +145,13 @@ $(function () {
         },
         updater: function (item) {
             selectedPartner = map[item].partner_fk;
-            console.log(selectedPartner);
+            // console.log(selectedPartner);
             return item;
+        }
+    }).blur(function () {
+        if (map[$(this).val()] == null) {
+            $('#partner').val('');
+            clean();
         }
     });
 

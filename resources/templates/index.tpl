@@ -75,12 +75,13 @@
                 <div class="">
                     <div class="searchbox-panel">
                         {*<h3>Prenota il tuo campo!</h3>*}
-                        <form id="form" method="post" action="bookingReview.php" class="mod2">
+                        <form id="form" method="post" autocomplete="off" action="bookingReview.php" class="mod2">
                             <div class="col-md-6 col-xs-6 w3l-left-mk">
                                 <ul>
                                     <li class="text">Sport :</li>
                                     <li class="agileits-main"><i class="fa fa-user-o" aria-hidden="true"></i>
-                                        <input id="sport" name="sport" type="text" class="typeahead"
+                                        <input id="sport" name="sport" type="text"
+                                               class="typeahead"
                                                placeholder="Sport" required/>
                                     </li>
                                     <li class="text">Provincia :</li>
