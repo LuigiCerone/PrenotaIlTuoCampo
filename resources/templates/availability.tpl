@@ -1,7 +1,7 @@
 {extends file='layout.tpl'}
 
 {block name="css" append}
-
+    <link href="public/css/jquery.timepicker.min.css" rel="stylesheet"/>
 {/block}
 
 

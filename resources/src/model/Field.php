@@ -36,7 +36,7 @@ class Field
 
     public static function getFieldsForSport($sport)
     {
-        $sql = "SELECT province_fk, province.name AS province_name , partner_fk, partner.name AS partner_name
+        $sql = "SELECT DISTINCT province_fk, province.name AS province_name , partner_fk, partner.name AS partner_name
       FROM (field JOIN partner ON field.partner_fk = partner.id)
       JOIN province ON sign = province_fk 
       WHERE sport_fk = ?;";

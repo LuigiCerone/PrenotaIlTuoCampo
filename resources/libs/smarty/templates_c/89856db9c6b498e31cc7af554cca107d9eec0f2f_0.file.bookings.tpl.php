@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-27 16:01:56
+/* Smarty version 3.1.30, created on 2018-02-03 11:28:26
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookings.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6c946421e128_26586769',
+  'unifunc' => 'content_5a758eca160284_19804073',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89856db9c6b498e31cc7af554cca107d9eec0f2f' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookings.tpl',
-      1 => 1517065312,
+      1 => 1517653703,
       2 => 'file',
     ),
   ),
@@ -21,25 +21,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a6c946421e128_26586769 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a758eca160284_19804073 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12520792335a6c9464207835_61788136', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9610688975a758eca129994_64090158', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2022376315a6c9464209eb6_28069614', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21023722515a758eca12e2f2_92718957', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15517387065a6c946421d0a1_48257480', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14091179075a758eca15eeb9_41725586', "content");
 ?>
 
 
@@ -48,7 +48,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15517387065a6c9464
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_12520792335a6c9464207835_61788136 extends Smarty_Internal_Block
+class Block_9610688975a758eca129994_64090158 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -59,7 +59,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_2022376315a6c9464209eb6_28069614 extends Smarty_Internal_Block
+class Block_21023722515a758eca12e2f2_92718957 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_15517387065a6c946421d0a1_48257480 extends Smarty_Internal_Block
+class Block_14091179075a758eca15eeb9_41725586 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -113,8 +113,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['booking']->value) {
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <i data-id="<?php echo $_smarty_tpl->tpl_vars['booking']->value->id;?>
+                    <?php if ($_smarty_tpl->tpl_vars['booking']->value->valid == 1) {?>
+                        <i data-id="<?php echo $_smarty_tpl->tpl_vars['booking']->value->id;?>
+" class="fa fa-trash delete pointer" aria-hidden="true"></i>
+                    <?php } elseif ($_smarty_tpl->tpl_vars['booking']->value->valid == 0) {?>
+                        <i data-id="<?php echo $_smarty_tpl->tpl_vars['booking']->value->id;?>
 " class="fa fa-trash delete" aria-hidden="true"></i>
+                    <?php }?>
                 </div>
             </div>
         </div>

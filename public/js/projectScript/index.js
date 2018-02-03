@@ -64,8 +64,12 @@ $(function () {
         }
     });
 
+    $('#sport').on('focus', function () {
+        provincesData = [];
+        partnersData = [];
+    });
+
     function populateProvinces() {
-        console.log("Running");
         $.ajax({
             type: "get",
             url: "resources/src/getSports.php",
@@ -73,17 +77,13 @@ $(function () {
                 sport: selectedSport
             },
             success: function (data) {
-                console.log(data);
-
                 data.forEach(function (value) {
                     provincesData.push({'province_fk': value.province_fk, 'province_name': value.province_name});
                     partnersData.push({'partner_fk': value.partner_fk, 'partner_name': value.partner_name});
                 });
-                console.log(provincesData);
-                console.log(partnersData);
             },
             error: function (data) {
-                console.log(data);
+                // console.log(data);
             }
         });
     }

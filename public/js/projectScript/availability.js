@@ -5,7 +5,6 @@ $(function () {
     // console.log(element);
     // $('#news').addClass('active');
     var id = null;
-    console.log("loaded");
 
     var selectedProvince = null, selectedSport = null, selectedPartner = null;
     var sportsData = null, provincesData = [], partnersData = [];
@@ -26,14 +25,13 @@ $(function () {
     $("#datepicker").datepicker($.datepicker.regional['it']);
     $("#datepicker").datepicker();
 
-    console.log("UUUUUU");
-
 
     $('#timepicker').timepicker({
         minTime: '9:00am',
         maxTime: '11:00pm',
         disableTextInput: true,
         timeFormat: 'G:i',
+        template: 'modal',
         step: 60
     });
 
@@ -75,8 +73,23 @@ $(function () {
         }
     });
 
+    $('#sport').on('focus', function () {
+        provincesData = [];
+        partnersData = [];
+    });
+
+    $('#addAvailability').on('hidden.bs.modal', function () {
+        console.log("Closed");
+        $("#addAvailability input").val("");
+
+        sportsData = [];
+        provincesData = [];
+        provincesData = [];
+
+        selectedSport = selectedPartner = selectedProvince = null;
+    })
+
     function populateProvinces() {
-        console.log("Running");
         $.ajax({
             type: "get",
             url: "resources/src/getSports.php",
@@ -84,14 +97,14 @@ $(function () {
                 sport: selectedSport
             },
             success: function (data) {
-                console.log(data);
+                // console.log(data);
 
                 data.forEach(function (value) {
                     provincesData.push({'province_fk': value.province_fk, 'province_name': value.province_name});
                     partnersData.push({'partner_fk': value.partner_fk, 'partner_name': value.partner_name});
                 });
-                console.log(provincesData);
-                console.log(partnersData);
+                // console.log(provincesData);
+                // console.log(partnersData);
             },
             error: function (data) {
                 console.log(data);

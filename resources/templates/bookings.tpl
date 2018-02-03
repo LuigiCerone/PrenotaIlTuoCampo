@@ -36,7 +36,11 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <i data-id="{$booking->id}" class="fa fa-trash delete" aria-hidden="true"></i>
+                    {if $booking->valid == 1}
+                        <i data-id="{$booking->id}" class="fa fa-trash delete pointer" aria-hidden="true"></i>
+                    {elseif $booking->valid == 0}
+                        <i data-id="{$booking->id}" class="fa fa-trash delete" aria-hidden="true"></i>
+                    {/if}
                 </div>
             </div>
         </div>
