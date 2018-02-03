@@ -59,8 +59,8 @@ class Field
     public static function getAllAvailableFields($selectedSport, $selectedPartner, $date, $time)
     {
         $sql = "SELECT * FROM field AS f WHERE f.id NOT IN (
-        SELECT field.id FROM booking JOIN field ON booking.field_fk = field.id 
-        WHERE field.partner_fk = ? AND field.sport_fk = ? AND date = ? AND time=?);";
+        SELECT DISTINCT field.id FROM booking JOIN field ON booking.field_fk = field.id 
+        WHERE field.partner_fk = ? AND field.sport_fk = ? AND booking.date = ? AND booking.time=?);";
 
         $conn = Database::getConnection();
         $stmt = $conn->prepare($sql);

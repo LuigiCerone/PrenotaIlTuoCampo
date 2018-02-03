@@ -95,8 +95,6 @@ $(function () {
     });
 
     $('#fieldSelect').submit(function (event) {
-        event.preventDefault();
-
         $.ajax({
             type: "POST",
             url: "resources/src/insertNewBooking.php",

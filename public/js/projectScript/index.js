@@ -67,7 +67,6 @@ $(function () {
     }).blur(function () {
         if (map[$(this).val()] == null) {
             $('#sport').val('');
-            clean();
         }
     });
 
@@ -123,7 +122,7 @@ $(function () {
     }).blur(function () {
         if (map[$(this).val()] == null) {
             $('#province').val('');
-            clean();
+            partnersData = [];
         }
     });
 
@@ -151,7 +150,6 @@ $(function () {
     }).blur(function () {
         if (map[$(this).val()] == null) {
             $('#partner').val('');
-            clean();
         }
     });
 

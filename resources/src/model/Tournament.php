@@ -129,7 +129,7 @@ class Tournament
     public static function getAllTournamentsAvailableForUser($id)
     {
         $sql = "SELECT sport.name AS sport, sport.number_players, tournament.id, partner.name AS partner,
-        partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber 
+        partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber, teamLeft 
         FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id 
         WHERE endSubscription >= NOW() AND tournament.id NOT IN (SELECT tournament.id FROM tournament JOIN team ON tournament.id = team.tournament_fk WHERE team.user_fk = ?);";
 

@@ -35,11 +35,13 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            {if ($smarty.session.id != null)}
+                            {if ($smarty.session.id != null) && $tournament->teamLeft > 0}
                                 <form action="team.php" method="post">
                                     <input name="id" type="text" class="hidden" value="{$tournament->id}"/>
                                     <input type="submit" class="signin-button" value="Partecipa"/>
                                 </form>
+                            {elseif $tournament->teamLeft == 0}
+                                <h3 class="text-center"> Posti esauriti</h3>
                             {else}
                                 <p>Per iscriverti è necessario essere registrati o avere effettuato l'accesso!</p>
                             {/if}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 17:55:49
+/* Smarty version 3.1.30, created on 2018-02-03 12:35:08
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a749815713c94_77684551',
+  'unifunc' => 'content_5a759e6c97f271_72232312',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6035f191d3e1d7fe34be93c0404fd465f80badd' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl',
-      1 => 1517590424,
+      1 => 1517657704,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a749815713c94_77684551 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a759e6c97f271_72232312 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2235249945a7498156eb5a6_80387908', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14346148945a759e6c95a427_69519077', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12072403695a7498156ee851_37949431', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11752065435a759e6c95ca65_95385876', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4968747265a749815712be5_96105601', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3114241155a759e6c97e2a2_50382523', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_2235249945a7498156eb5a6_80387908 extends Smarty_Internal_Block
+class Block_14346148945a759e6c95a427_69519077 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_12072403695a7498156ee851_37949431 extends Smarty_Internal_Block
+class Block_11752065435a759e6c95ca65_95385876 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_4968747265a749815712be5_96105601 extends Smarty_Internal_Block
+class Block_3114241155a759e6c97e2a2_50382523 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -132,7 +132,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['field']->value) {
                 <div class="radio">
                     <label><input type="radio" name="field_radio" required
                                   value="<?php echo $_smarty_tpl->tpl_vars['field']->value->id;?>
-"/>Numero: <?php echo $_smarty_tpl->tpl_vars['field']->value->numbers;?>
+"/>Numero: <?php echo $_smarty_tpl->tpl_vars['field']->value->number;?>
 , tipo: <?php echo $_smarty_tpl->tpl_vars['field']->value->type;?>
 ,
                         esterno: <?php if ($_smarty_tpl->tpl_vars['field']->value->outdoor == 1) {?>Si <?php } else { ?>No <?php }?>,

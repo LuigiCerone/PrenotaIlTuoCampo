@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 11:23:38
+/* Smarty version 3.1.30, created on 2018-02-03 12:28:37
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/tournaments.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a758daab2c618_45537544',
+  'unifunc' => 'content_5a759ce52f57a6_52518670',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '347d75196bc4a013e17c65eed45bcb2e38eb8bba' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/tournaments.tpl',
-      1 => 1517653416,
+      1 => 1517657313,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a758daab2c618_45537544 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a759ce52f57a6_52518670 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6253131665a758daab131d2_23318168', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7324330945a759ce52d37b8_83838179', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15898216955a758daab156b0_09004266', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9684740755a759ce52d5cf6_23682235', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7489849725a758daab2b946_05761998', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18696790825a759ce52f4641_60746973', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_6253131665a758daab131d2_23318168 extends Smarty_Internal_Block
+class Block_7324330945a759ce52d37b8_83838179 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_15898216955a758daab156b0_09004266 extends Smarty_Internal_Block
+class Block_9684740755a759ce52d5cf6_23682235 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_7489849725a758daab2b946_05761998 extends Smarty_Internal_Block
+class Block_18696790825a759ce52f4641_60746973 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -114,12 +114,14 @@ foreach ($_from as $_smarty_tpl->tpl_vars['tournament']->value) {
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <?php if (($_SESSION['id'] != null)) {?>
+                            <?php if (($_SESSION['id'] != null) && $_smarty_tpl->tpl_vars['tournament']->value->teamLeft > 0) {?>
                                 <form action="team.php" method="post">
                                     <input name="id" type="text" class="hidden" value="<?php echo $_smarty_tpl->tpl_vars['tournament']->value->id;?>
 "/>
                                     <input type="submit" class="signin-button" value="Partecipa"/>
                                 </form>
+                            <?php } elseif ($_smarty_tpl->tpl_vars['tournament']->value->teamLeft == 0) {?>
+                                <h3 class="text-center"> Posti esauriti</h3>
                             <?php } else { ?>
                                 <p>Per iscriverti è necessario essere registrati o avere effettuato l'accesso!</p>
                             <?php }?>
