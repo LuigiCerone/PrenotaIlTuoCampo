@@ -118,10 +118,17 @@
                                         </tr>
                                         <tr>
                                             <td>Provincia:</td>
-                                            <td><input id="province" type="text" name="province"
-                                                       placeholder="Sigla provincia"
-                                                       maxlength="2"
-                                                       required/></td>
+                                            {*<td><input id="province" type="text" name="province"*}
+                                            {*placeholder="Sigla provincia"*}
+                                            {*maxlength="2"*}
+                                            {*required/></td>*}
+                                            <td>
+                                                <select id="province">
+                                                    {foreach from=$provinces item=province}
+                                                        <option value="{$province->sign}">{$province->name}</option>
+                                                    {/foreach}
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Sport:</td>
