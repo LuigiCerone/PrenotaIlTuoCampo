@@ -11,7 +11,6 @@
 {block name="content"}
     <h2 class="title">I nostri tornei</h2>
     <br>
-    {*{$partners->partners|json_encode}*}
     <br>
     <section>
         <div class="container">
@@ -23,7 +22,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card-block">
-                                <h4 class="card-title">Torneo {$tournament->name}</h4>
+                                <h4 class="card-title">Torneo {$tournament->tournament}</h4>
                                 <p class="card-text"><b>Sport:</b> {$tournament->sport}, squadre
                                     da: {$tournament->number_players}</p>
                                 <p class="card-text">Si svolge presso il centro {$tournament->partner}
