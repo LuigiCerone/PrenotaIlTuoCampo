@@ -60,11 +60,11 @@ class Field
     {
         $sql = "SELECT * FROM field AS f WHERE f.id NOT IN (
         SELECT DISTINCT field.id FROM booking JOIN field ON booking.field_fk = field.id 
-        WHERE field.partner_fk = ? AND field.sport_fk = ? AND booking.date = ? AND booking.time=?);";
+        WHERE field.partner_fk = ? AND field.sport_fk = ? AND booking.date = ? AND booking.time=?) AND f.partner_fk = ? AND f.sport_fk=?;";
 
         $conn = Database::getConnection();
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("iiss", $selectedPartner, $selectedSport, $date, $time);
+        $stmt->bind_param("iissi", $selectedPartner, $selectedSport, $date, $time, $selectedPartner, $selectedSport);
         $stmt->execute();
         $result = $stmt->get_result();
         $fields = array();
