@@ -255,6 +255,11 @@ small {
     height: 80px;
 }
 
+.img_partner {
+    width: 80px;
+    height: 50px;
+}
+
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */

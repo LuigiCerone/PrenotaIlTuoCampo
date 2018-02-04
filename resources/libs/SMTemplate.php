@@ -1,6 +1,5 @@
 <?php
 
-
 require_once('smtemplate_config.php');
 
 class SMTemplate

@@ -1,7 +1,6 @@
 <?php
 ini_set("display_errors",0);
 require_once('templateInit.php');
-ini_set( "display_errors", 0);
 
 $tpl = templateInit::Instance();
 session_start();

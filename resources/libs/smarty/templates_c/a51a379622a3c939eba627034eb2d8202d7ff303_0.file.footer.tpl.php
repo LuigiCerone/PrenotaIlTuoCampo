@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 17:06:09
+/* Smarty version 3.1.30, created on 2018-02-04 16:09:49
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a75ddf15964e8_74848688',
+  'unifunc' => 'content_5a77223d1893c9_37612254',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a51a379622a3c939eba627034eb2d8202d7ff303' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/footer.tpl',
-      1 => 1517673965,
+      1 => 1517756985,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a75ddf15964e8_74848688 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a77223d1893c9_37612254 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <div class="footer">
@@ -80,6 +80,9 @@ function content_5a75ddf15964e8_74848688 (Smarty_Internal_Template $_smarty_tpl)
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1 w3l-3">
                 <h4>Info per aziende</h4>
                 Se sei un'azienda e vuoi entrare nella nostra rete non esitare a contattarci!
+                <br><br>
+                <img class="img_partner img-responsive center-block" src="public/images/become_a_partner.png"
+                     alt="Immagine dimostrativa"/>
             </div>
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1 wthree_footer_grid_right1">
                 <h4>Contattaci</h4>

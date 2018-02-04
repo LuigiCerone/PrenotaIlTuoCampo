@@ -82,8 +82,6 @@ $(function () {
     // ----------------------------------------------------------------------------------------------------------------
     // ------------------------------------- SIGNUP
     $('#signupForm').submit(function (event) {
-        console.log("Submit button clicked");
-
         var email = $('#signup_email').val();
         var password = $('#signup_password').val();
         var firstName = $('#first_name').val();
@@ -92,8 +90,6 @@ $(function () {
         var gender = $('#gender').val();
         var telnumber = $('#telnumber').val();
 
-        console.log(email + password);
-        // ""
         $.ajax({
             type: "POST",
             url: "resources/src/signup.php",
@@ -109,7 +105,7 @@ $(function () {
             success: function (response) {
                 $("#signup_err").html("Sign up ok.");
                 console.log(response);
-                // window.location = "activateAccount.php";
+                window.location = "activateAccount.php";
             },
             error: function (response) {
                 $("#signup_err").html("Error in signup");

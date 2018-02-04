@@ -18,8 +18,6 @@ if (isset($_POST["email"]) &&
 
         $user = User::signUp($_POST['email'], $_POST['password'], $_POST["firstName"], $_POST["lastName"], $_POST["birthDate"], $_POST["gender"], $_POST["telnumber"]);
 
-        // Send confirmation email.
-        $user->sendConfirmationEmail();
     } else {
         // The email is already in use.
         http_response_code(409);

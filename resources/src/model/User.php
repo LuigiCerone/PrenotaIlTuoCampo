@@ -27,14 +27,16 @@ class User
 
     public static function activateUser($token)
     {
-        $sql = "UPDATE user SET active = 1 WHERE tokenCode=?;";
+        $b = false;
+        $sql = "UPDATE user SET active = 1 WHERE id=?;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $token);
-        $stmt->execute();
+        $stmt->bind_param("i", $token);
+        if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);
+        return $b;
     }
 
     public static function changePassword($id, $old_pass, $new_pass)
@@ -145,10 +147,10 @@ class User
     public static function signUp($email, $password, $firstName, $lastName, $birthdate, $gender, $tel)
     {
         $instance = new self();
-        // TODO Insert all the data.
         $instance->insert($email, $password, $firstName, $lastName, $birthdate, $gender, $tel);
         $instance->loadByID($instance->getId());
-        echo "" . $instance->to_json();
+        // Send confirmation email.
+        $instance->sendConfirmationEmail();
         return $instance;
     }
 
@@ -162,6 +164,8 @@ class User
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
+
+        $count = 0;
 
         while ($row = $result->fetch_assoc()) {
             $count = $row['count'];
@@ -258,7 +262,7 @@ class User
 
     public function sendConfirmationEmail()
     {
-        $message = $this->formatMessage($this->firstName, $this->tokenCode);
+        $message = $this->formatMessage($this->firstName, $this->id);
         $subject = "Conferma registrazione";
 
         $mail = new \PHPMailer\PHPMailer\PHPMailer(true);                              // Passing `true` enables exceptions
@@ -268,8 +272,8 @@ class User
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'progettotwd@gmail.com';                 // SMTP username
-            $mail->Password = 'progettotwd1';                           // SMTP password
+            $mail->Username = '@gmail.com';                 // SMTP username
+            $mail->Password = '';                           // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                    // TCP port to connect to
 
@@ -300,7 +304,7 @@ class User
     {
         $message = "Ciao " . $firstName . ",<br/><br />Benvenuto su PrenotaIlTuoCampo!<br/> " .
             "Per completare la tua registrazione clicca semplicemente sul seguente link:<br/>" .
-            "<a href='http://www.localhost/PrenotaIlTuoCampo/resources/src/verifyAccount.php?token='" . $token . "'>Clicca qui per attivare!</a>" .
+            "<a href='http://www.localhost/PrenotaIlTuoCampo/verifyAccount.php?token=" . $token . "'>Clicca qui per attivare!</a>" .
             "<br/><br/>Grazie!";
         return $message;
     }
