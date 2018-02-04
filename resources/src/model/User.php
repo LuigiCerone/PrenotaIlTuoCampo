@@ -16,7 +16,6 @@ class User
     private $birthdate;
     private $created_at;
     private $active;
-    private $tokenCode;
     private $gender;
     private $admin;
 
@@ -25,14 +24,14 @@ class User
     {
     }
 
-    public static function activateUser($token)
+    public static function activateUser($id)
     {
         $b = false;
         $sql = "UPDATE user SET active = 1 WHERE id=?;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $token);
+        $stmt->bind_param("i", $id);
         if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);
@@ -108,11 +107,11 @@ class User
 
     public function insert($email, $password, $firstName, $lastName, $birthdate, $gender, $tel)
     {
-        $sql = "INSERT INTO user (id, email, password, firstName, lastName, birthdate, gender, telnumber, created_at, tokenCode) VALUES (NULL, ?, ?, ?, ?, ?, ?,?, NOW(), ?);";
+        $sql = "INSERT INTO user (id, email, password, firstName, lastName, birthdate, gender, telnumber, created_at) VALUES (NULL, ?, ?, ?, ?, ?, ?,?, NOW());";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssssss", $email, $password, $firstName, $lastName, $birthdate, $gender, $tel, md5($firstName . $lastName));
+        $stmt->bind_param("sssssss", $email, $password, $firstName, $lastName, $birthdate, $gender, $tel);
         $stmt->execute();
         $id = $conn->insert_id;
         $stmt->close();
@@ -200,7 +199,6 @@ class User
         $this->gender = $row['gender'];
         $this->telnumber = $row['telnumber'];
         $this->birthdate = $row['birthdate'];
-        $this->tokenCode = $row['tokenCode'];
         $this->created_at = $row['created_at'];
         $this->active = $row['active'];
         $this->admin = $row['admin'];
@@ -300,11 +298,11 @@ class User
     }
 
 
-    function formatMessage($firstName, $token)
+    function formatMessage($firstName, $id)
     {
         $message = "Ciao " . $firstName . ",<br/><br />Benvenuto su PrenotaIlTuoCampo!<br/> " .
             "Per completare la tua registrazione clicca semplicemente sul seguente link:<br/>" .
-            "<a href='http://www.localhost/PrenotaIlTuoCampo/verifyAccount.php?token=" . $token . "'>Clicca qui per attivare!</a>" .
+            "<a href='http://www.localhost/PrenotaIlTuoCampo/verifyAccount.php?token=" . $id . "'>Clicca qui per attivare!</a>" .
             "<br/><br/>Grazie!";
         return $message;
     }

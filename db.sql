@@ -1,5 +1,6 @@
 CREATE DATABASE tdwproject;
 USE tdwproject;
+
 CREATE TABLE availability
 (
   id         INT AUTO_INCREMENT
@@ -80,13 +81,14 @@ CREATE TABLE `match`
 )
   ENGINE = InnoDB;
 
-CREATE TABLE novita
+CREATE TABLE news
 (
-  id    INT AUTO_INCREMENT
+  id      INT AUTO_INCREMENT
     PRIMARY KEY,
-  title VARCHAR(30) NULL,
-  date  DATE        NULL,
-  text  TEXT        NULL
+  title   VARCHAR(30) NULL,
+  date    DATE        NULL,
+  text    TEXT        NULL,
+  user_fk INT         NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -223,9 +225,9 @@ CREATE TABLE user
   birthdate  DATE                        NULL,
   created_at DATE                        NOT NULL,
   active     TINYINT(1) DEFAULT '0'      NOT NULL,
-  tokenCode  VARCHAR(100)                NOT NULL,
   gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL,
   admin      TINYINT(1) DEFAULT '0'      NOT NULL
 )
   ENGINE = InnoDB;
+
 
