@@ -3,7 +3,7 @@ $(function () {
     var element = $('ul.nav.navbar-nav').find('li.active');
     $(element).removeClass('active');
     // console.log(element);
-    // $('#about_us').addClass('active');
+    $('#reviews').addClass('active');
 
     var id = null;
     console.log("loaded");

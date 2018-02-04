@@ -206,19 +206,6 @@ $(function () {
         });
     });
 
-    var prevent = false;
-    $('input').focus(function () {
-        prevent = true;
-    }).blur(function () {
-        prevent = false;
-    });
-
-    $('form').submit(function () {
-        if (prevent) {
-            return false;
-        }
-    });
-
     $('.delete').on('click', function (event) {
         event.stopPropagation();
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 12:28:37
+/* Smarty version 3.1.30, created on 2018-02-04 11:27:17
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/tournaments.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a759ce52f57a6_52518670',
+  'unifunc' => 'content_5a76e0055d6386_62735775',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '347d75196bc4a013e17c65eed45bcb2e38eb8bba' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/tournaments.tpl',
-      1 => 1517657313,
+      1 => 1517740030,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a759ce52f57a6_52518670 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a76e0055d6386_62735775 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7324330945a759ce52d37b8_83838179', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20069513755a76e0055b5c77_42986252', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9684740755a759ce52d5cf6_23682235', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7645936145a76e0055b8ae4_89171413', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18696790825a759ce52f4641_60746973', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2935554255a76e0055d5580_97978029', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_7324330945a759ce52d37b8_83838179 extends Smarty_Internal_Block
+class Block_20069513755a76e0055b5c77_42986252 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_9684740755a759ce52d5cf6_23682235 extends Smarty_Internal_Block
+class Block_7645936145a76e0055b8ae4_89171413 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_18696790825a759ce52f4641_60746973 extends Smarty_Internal_Block
+class Block_2935554255a76e0055d5580_97978029 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -114,7 +114,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['tournament']->value) {
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <?php if (($_SESSION['id'] != null) && $_smarty_tpl->tpl_vars['tournament']->value->teamLeft > 0) {?>
+                            <?php if (isset($_SESSION['id']) && $_smarty_tpl->tpl_vars['tournament']->value->teamLeft > 0) {?>
                                 <form action="team.php" method="post">
                                     <input name="id" type="text" class="hidden" value="<?php echo $_smarty_tpl->tpl_vars['tournament']->value->id;?>
 "/>

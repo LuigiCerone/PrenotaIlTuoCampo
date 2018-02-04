@@ -37,7 +37,7 @@ class Tournament
 
     public static function getAllTournaments()
     {
-        $sql = "SELECT sport.name AS sport, sport.number_players, tournament.id, partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id WHERE endSubscription >= NOW();";
+        $sql = "SELECT sport.name AS sport, sport.number_players, tournament.id, tournament.teamLeft , partner.name AS partner, partner.region, telnumber, tournament.name AS tournament, endSubscription, startDate, teamNumber FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id WHERE endSubscription >= NOW();";
 
         $conn = Database::getConnection();
         // prepare and bind

@@ -9,18 +9,12 @@ if (isset($_POST["email"]) &&
     isset($_POST["lastName"]) &&
     isset($_POST["birthDate"]) &&
     isset($_POST["gender"]) &&
-    isset($_POST["telbumber"])) {
+    isset($_POST["telnumber"])) {
 
     if (User::isEmailAvailable($_POST['email']) == true) {
         http_response_code(200);
         // Then sign up.
         $user = new User();
-//                'email': email,
-//                'password': password,
-//                'firstName' : firstName,
-//                'lastName' : lastName,
-//                'birthDate' : birthDate,
-//                'gender' : gender
 
         $user = User::signUp($_POST['email'], $_POST['password'], $_POST["firstName"], $_POST["lastName"], $_POST["birthDate"], $_POST["gender"], $_POST["telnumber"]);
 

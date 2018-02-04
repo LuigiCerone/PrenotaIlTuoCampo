@@ -1,11 +1,6 @@
 <?php
-/*
-* @file
-* Wrapper for Smarty Template Engine
-*/
 
 
-//require_once('smarty/Smarty.class.php');
 require_once('smtemplate_config.php');
 
 class SMTemplate
@@ -25,15 +20,10 @@ class SMTemplate
         $this->_smarty->config_dir = $smtemplate_config['configs_dir'];
     }
 
-//    function render($template){
-//        $this->_smarty->display($template . '.tpl');
-//    }
-
     function render($template, $data = array())
     {
         foreach ($data as $key => $value) {
             $this->_smarty->assign($key, $value);
-//            echo "key:" . $key . ", value:" . $value);
         }
         $this->_smarty->display($template . '.tpl');
     }

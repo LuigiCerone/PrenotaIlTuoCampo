@@ -56,23 +56,23 @@
             <h3 class="agileinfo_sign">Inserisci nuova azienda</h3>
             <div class="login-form">
                 <div class="col-md-6 col-center-block">
-                    <form accept-charset="UTF-8" action="" method="post">
+                    <form id="savePartners" accept-charset="UTF-8" action="" method="post">
                         <input type="text" class="form-control" id="partenersText"
-                               placeholder="Inserisci qui il nome dell'azienda"/>
+                               placeholder="Inserisci qui il nome dell'azienda" required/>
                         <input type="text" class="form-control" id="descriptionText"
-                               placeholder="Inserisci qui la descrizione "/>
+                               placeholder="Inserisci qui la descrizione " required/>
                         <input type="text" class="form-control" id="regionText"
-                               placeholder="Inserisci qui la regione "/>
+                               placeholder="Inserisci qui la regione " required/>
                         <input type="text" class="form-control" id="areaText"
-                               placeholder="Inserisci qui l'area "/>
+                               placeholder="Inserisci qui l'area " required/>
                         <input type="text" class="form-control" id="addressText"
-                               placeholder="Inserisci qui l'indirizzo "/>
+                               placeholder="Inserisci qui l'indirizzo " required/>
                         <input type="email" class="form-control " id="emailText" name="comment"
-                               placeholder="Inserisci qui l'email "/>
+                               placeholder="Inserisci qui l'email " required/>
                         <input type="text" class="form-control animated" id="numberText" name="comment"
-                               placeholder="Inserisci qui il numero di telefono"/>
+                               placeholder="Inserisci qui il numero di telefono" required/>
                         <br>
-                        <input id="savePartners" type="submit" value="Salva"/>
+                        <input type="submit" value="Salva"/>
                     </form>
                 </div>
             </div>

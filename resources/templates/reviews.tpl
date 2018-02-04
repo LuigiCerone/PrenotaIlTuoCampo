@@ -37,7 +37,7 @@
     {/foreach}
 
     {*New review*}
-    {if ($smarty.session.id != null)}
+    {if isset($smarty.session.id)}
         <span class="hidden" id="id">{$smarty.session.id}</span>
         <div class="row" id="post-review-box">
             <div class="col-md-6 col-center-block">

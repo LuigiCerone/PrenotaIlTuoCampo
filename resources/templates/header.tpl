@@ -160,7 +160,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                 <div class="signin-form profile modal-body">
                     <h3 class="agileinfo_sign">Registrati</h3>
                     <div class="login-form container-fluid">
-                        <form method="post" id="signupForm">
+                        <form autocomplete="off" method="post" id="signupForm">
                             <div class="row">
                                 <div class="col-md-5"><label for="first_name">Nome:</label>
                                     <input class="form_input" type="text" id="first_name" name="first_name"
@@ -181,7 +181,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             <div class="row">
                                 <div class="col-md-4"><label for="email">Email:</label>
                                     <input class="form_input" id="signup_email" type="email" name="email"
-                                           placeholder="Email" required/>
+                                           placeholder="Email" required autocomplete="false"/>
                                 </div>
                                 <div class="col-md-4"><label for="telnumber">Telefono:</label>
                                     <input class="form_input" id="telnumber" type="text" name="telnumber"
@@ -190,14 +190,14 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                 <div class="col-md-4">
                                     <label for="birthdate">Data di nascita:</label>
                                     <input class="form_input" type="text" id="birthdate" name="birthdate"
-                                           placeholder="Data di nascita"
+                                           placeholder="Data di nascita" autocomplete="false"
                                            required/></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="passoword">Passoword:</label>
                                     <input class="form_input" type="password" name="password" id="signup_password"
-                                           placeholder="Password"
+                                           placeholder="Password" autocomplete="new-password"
                                            required/></div>
                                 <div class="col-md-6">
                                     <label for="rep_password">Conferma passoword:</label>
@@ -211,7 +211,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             <input type="submit" class="form-control" id="submit_button" value="Registrati"/>
                         </form>
                     </div>
-                    <p><a href="#"> Cliccando su "Regitrati", accetti i nostri termini.</a></p>
+                    <p><a href="#"> Cliccando su "Registrati", accetti i nostri termini.</a></p>
                 </div>
             </div>
         </div>

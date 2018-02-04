@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 18:34:10
+/* Smarty version 3.1.30, created on 2018-02-04 11:40:54
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a75f292903b35_24550630',
+  'unifunc' => 'content_5a76e3368ac854_81148977',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29bab6b896493f7b256ea98fd921b9e71f5afdd0' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl',
-      1 => 1517679022,
+      1 => 1517740339,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a75f292903b35_24550630 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a76e3368ac854_81148977 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6949858805a75f2928ce175_09634366', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10450907555a76e336883455_38275888', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12812082895a75f2928d0884_16922080', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1382267505a76e336885c54_90658427', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10713129055a75f2929029e3_33629964', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5876423555a76e3368ab740_23932478', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_6949858805a75f2928ce175_09634366 extends Smarty_Internal_Block
+class Block_10450907555a76e336883455_38275888 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_12812082895a75f2928d0884_16922080 extends Smarty_Internal_Block
+class Block_1382267505a76e336885c54_90658427 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_10713129055a75f2929029e3_33629964 extends Smarty_Internal_Block
+class Block_5876423555a76e3368ab740_23932478 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -139,23 +139,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             <h3 class="agileinfo_sign">Inserisci nuova azienda</h3>
             <div class="login-form">
                 <div class="col-md-6 col-center-block">
-                    <form accept-charset="UTF-8" action="" method="post">
+                    <form id="savePartners" accept-charset="UTF-8" action="" method="post">
                         <input type="text" class="form-control" id="partenersText"
-                               placeholder="Inserisci qui il nome dell'azienda"/>
+                               placeholder="Inserisci qui il nome dell'azienda" required/>
                         <input type="text" class="form-control" id="descriptionText"
-                               placeholder="Inserisci qui la descrizione "/>
+                               placeholder="Inserisci qui la descrizione " required/>
                         <input type="text" class="form-control" id="regionText"
-                               placeholder="Inserisci qui la regione "/>
+                               placeholder="Inserisci qui la regione " required/>
                         <input type="text" class="form-control" id="areaText"
-                               placeholder="Inserisci qui l'area "/>
+                               placeholder="Inserisci qui l'area " required/>
                         <input type="text" class="form-control" id="addressText"
-                               placeholder="Inserisci qui l'indirizzo "/>
+                               placeholder="Inserisci qui l'indirizzo " required/>
                         <input type="email" class="form-control " id="emailText" name="comment"
-                               placeholder="Inserisci qui l'email "/>
+                               placeholder="Inserisci qui l'email " required/>
                         <input type="text" class="form-control animated" id="numberText" name="comment"
-                               placeholder="Inserisci qui il numero di telefono"/>
+                               placeholder="Inserisci qui il numero di telefono" required/>
                         <br>
-                        <input id="savePartners" type="submit" value="Salva"/>
+                        <input type="submit" value="Salva"/>
                     </form>
                 </div>
             </div>

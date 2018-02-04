@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            {if ($smarty.session.id != null) && $tournament->teamLeft > 0}
+                            {if isset($smarty.session.id) && $tournament->teamLeft > 0}
                                 <form action="team.php" method="post">
                                     <input name="id" type="text" class="hidden" value="{$tournament->id}"/>
                                     <input type="submit" class="signin-button" value="Partecipa"/>

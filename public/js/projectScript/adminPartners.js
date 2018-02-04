@@ -7,9 +7,7 @@ $(function () {
 
     var selectedPartner = null;
 
-    $('#savePartners').on('click', function (event) {
-        event.preventDefault();
-
+    $('#savePartners').submit(function () {
         var name = $('#partenersText').val();
         var info = $('#descriptionText').val();
         var region = $('#regionText').val();
@@ -31,11 +29,8 @@ $(function () {
                 'telnumber': number
             },
             success: function (response) {
-                console.log(response);
-                window.location.reload();
             },
             error: function (response) {
-                console.log(response);
             }
         });
     });
