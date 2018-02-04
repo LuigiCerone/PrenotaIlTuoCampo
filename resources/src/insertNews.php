@@ -1,10 +1,13 @@
 <?php
-require_once("model/Novita.php");
+require_once("model/News.php");
 
-if (isset($_POST["title"]) &&
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['admin']) &&
+    isset($_POST["title"]) &&
     isset($_POST["date"]) &&
-    isset($_POST["text"])){
+    isset($_POST["text"])) {
 
-    $novita = new Novita($_POST["title"], $_POST["date"], $_POST["text"]);
-    $novita->insert();
+    $new = new News($_POST["title"], $_POST["date"], $_POST["text"], $_SESSION['id']);
+    $new->insert();
 }

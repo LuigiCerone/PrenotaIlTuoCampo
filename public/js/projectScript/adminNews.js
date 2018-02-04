@@ -5,8 +5,22 @@ $(function () {
     // console.log(element);
     $('#news').addClass('active');
 
-    $('#saveNews').on('click', function (event) {
-        event.preventDefault();
+    $.datepicker.regional['it'] = {
+        closeText: 'Chiudi', // set a close button text
+        currentText: 'Oggi', // set today text
+        monthNames: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'], // set month names
+        monthNamesShort: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'], // set short month names
+        dayNames: ['Domenica', 'Luned&#236', 'Marted&#236', 'Mercoled&#236', 'Gioved&#236', 'Venerd&#236', 'Sabato'], // set days names
+        dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'], // set short day names
+        dayNamesMin: ['Do', 'Lu', 'Ma', 'Me', 'Gio', 'Ve', 'Sa'], // set more short days names
+        dateFormat: 'yy-mm-dd',
+        minDate: 1
+    };
+
+    $("#titleDate").datepicker($.datepicker.regional['it']);
+    $("#titleDate").datepicker();
+
+    $('#addNewForm').submit(function (event) {
 
         var title = $('#titleNews').val();
         var date = $('#titleDate').val();
@@ -17,7 +31,7 @@ $(function () {
             url: "resources/src/insertNews.php",
             data: {
                 'title': title,
-                'date' : date,
+                'date': date,
                 'text': text
             },
             success: function (response) {
@@ -27,6 +41,5 @@ $(function () {
                 console.log(response);
             },
         });
-        window.location.reload();
     });
 });

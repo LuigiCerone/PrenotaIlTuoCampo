@@ -1,30 +1,33 @@
 <?php
 require("Database.php");
 
-class Novita
+class News
 {
     private $id;
     private $title;
     private $date;
     private $text;
+    private $user_fk;
 
     /**
-     * Novita constructor.
-     * @param $id
-     * @param $date
+     * News constructor.
      * @param $title
+     * @param $date
      * @param $text
+     * @param $user_fk
      */
-    public function __construct($title,$date, $text)
+    public function __construct($title, $date, $text, $user_fk)
     {
         $this->title = $title;
         $this->date = $date;
         $this->text = $text;
+        $this->user_fk = $user_fk;
     }
+
 
     public static function getAllNews()
     {
-        $sql = "SELECT title, date, text FROM novita ORDER BY date DESC;";
+        $sql = "SELECT title, date, text FROM `news` ORDER BY date DESC;";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -46,11 +49,11 @@ class Novita
 
     public function insert()
     {
-        $sql = "INSERT INTO novita (id, title, date, text) VALUES (NULL,?, ?, ?);";
+        $sql = "INSERT INTO `news` (id, title, date, text, user_fk) VALUES (NULL,?, ?, ?,?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss",$this->title, $this->date, $this->text);
+        $stmt->bind_param("sssi", $this->title, $this->date, $this->text, $this->user_fk);
         $stmt->execute();
         $stmt->close();
         Database::closeConnestion($conn);

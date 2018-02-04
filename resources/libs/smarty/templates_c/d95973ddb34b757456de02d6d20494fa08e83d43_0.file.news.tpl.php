@@ -78,9 +78,9 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     
     <br>
     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['news']->value, 'novita');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['news']->value, 'News');
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['novita']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['News']->value) {
 ?>
         <section>
             <div class="container">
@@ -88,11 +88,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['novita']->value) {
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-block">
-                                <h4 class="card-title">Titolo:<?php echo $_smarty_tpl->tpl_vars['novita']->value->title;?>
+                                <h4 class="card-title">Titolo:<?php echo $_smarty_tpl->tpl_vars['News']->value->title;?>
 </h4>
-                                <h6 class="card-title">Giorno:<?php echo $_smarty_tpl->tpl_vars['novita']->value->date;?>
+                                <h6 class="card-title">Giorno:<?php echo $_smarty_tpl->tpl_vars['News']->value->date;?>
 </h6>
-                                <p class="card-text">Novità:<?php echo $_smarty_tpl->tpl_vars['novita']->value->text;?>
+                                <p class="card-text">Novità:<?php echo $_smarty_tpl->tpl_vars['News']->value->text;?>
 </p>
                             </div>
                         </div>

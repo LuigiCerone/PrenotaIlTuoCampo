@@ -22,12 +22,6 @@
                                 <div class="card-block">
                                     <h4 class="card-title">Recensione di {$review->firstName}</h4>
                                     <p class="card-text">{$review->text}</p>
-                                    {*<p class="pull-right"><input type="number" name="rating" id="stars_rating"*}
-                                    {*data-icon-lib="fa"*}
-                                    {*data-active-icon="fa-star" data-inactive-icon=" fa-star-o"*}
-                                    {*class="rating bigger" value="{$review->stars}"*}
-                                    {*data-readonly/>*}
-                                    {*</p>*}
                                 </div>
                             </div>
                             <div class="col-md-2">
