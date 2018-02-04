@@ -31,6 +31,7 @@
                         </div>
                     </div>
                 </div>
+                <hr>
             {/foreach}
         </div>
     </section>
