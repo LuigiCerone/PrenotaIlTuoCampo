@@ -9,10 +9,6 @@ session_start();
 $tpl = templateInit::Instance();
 
 if (isset($_SESSION['admin']) && isset($_GET['t'])) {
-// Here I can add some content if needed.
-//    echo "<pre>";
-//    print_r(array_chunk(json_decode(Match::getAllMatchesForTournament($_GET['t'])), 5));
-//    echo "</pre>";
     $params = array('tournament' => json_decode(Tournament::getInfoForTournament($_GET['t'])),
         'days' => array_chunk(json_decode(Match::getAllMatchesForTournament($_GET['t'])), 5));
 

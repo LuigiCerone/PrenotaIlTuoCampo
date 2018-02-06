@@ -6,8 +6,6 @@ require_once('resources/src/model/Supply.php');
 
 session_start();
 $tpl = templateInit::Instance();
-//    print_r($_POST);
-//print_r($_POST);
 
 if (isset($_POST['selectedSport']) && isset($_POST['selectedPartner']) && isset($_POST['selectedPartner'])) {
     $booking = array(
@@ -29,7 +27,3 @@ if (isset($_POST['selectedSport']) && isset($_POST['selectedPartner']) && isset(
     }
     $tpl->render('bookingReview', $params);
 }
-// Here I can add some content if needed.
-//$json = "{\"partners\":[{\"name\":\"Nome1\",\"number\":1},{\"name\":\"Nome2\",\"number\":2}]}";
-//$params = array('partners' => json_decode(Partner::getAllPartners()));
-

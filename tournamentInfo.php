@@ -8,7 +8,6 @@ require_once('resources/src/model/Sponsor.php');
 session_start();
 $tpl = templateInit::Instance();
 if (isset($_GET['t'])) {
-    // Here I can add some content if needed.
     $params = array('tournament' => json_decode(Tournament::getInfoForTournament($_GET['t'])),
         'awards' => json_decode(Award::getAllAwardsForTournament($_GET['t'])),
         'sponsors' => json_decode(Sponsor::getAllSponsorForTournament($_GET['t'])));

@@ -9,7 +9,6 @@ $tpl = templateInit::Instance();
 
 
 if (isset($_GET['token'])) {
-
     if (User::activateUser($_GET['token'])) {
         http_response_code(200);
         $tpl->render('activatedUserAccount');

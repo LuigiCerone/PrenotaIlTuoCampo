@@ -10,7 +10,6 @@ session_start();
 $tpl = templateInit::Instance();
 
 if (isset($_SESSION['admin'])) {
-// Here I can add some content if needed.
     $params = array('tournaments' => json_decode(Tournament::getAllAdminTournaments()),
         'sports' => json_decode(Sport::getAllSports()),
         'partners' => json_decode(Partner::getAllPartners()));

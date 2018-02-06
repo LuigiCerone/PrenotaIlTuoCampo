@@ -5,7 +5,6 @@ require_once('resources/src/model/User.php');
 
 $tpl = templateInit::Instance();
 
-// Here I can add some content if needed.
 session_start();
 
 if (isset($_SESSION['id']) && !isset($_SESSION['admin'])) {
