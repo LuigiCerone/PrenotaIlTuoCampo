@@ -36,6 +36,22 @@ class Sponsor
         return json_encode($sponsors);
     }
 
+    public static function getAllSponsors()
+    {
+        $sql = "SELECT * FROM sponsor;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $sponsors = array();
+        while ($row = $result->fetch_assoc()) {
+            $sponsors[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return json_encode($sponsors);
+    }
 
     public function insert()
     {

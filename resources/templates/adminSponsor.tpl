@@ -65,8 +65,8 @@
                                     </li>
                                     <li class="agileits-main">
                                         <select class="form-control" id="selectSponsor">
-                                            {foreach from=$sponsors item=sponsor}
-                                                <option value="{$sponsor->id}">{$sponsor->name}</option>
+                                            {foreach from=$allsponsors item=allsponsor}
+                                                <option value="{$allsponsor->id}">{$allsponsor->name}</option>
                                             {/foreach}
                                         </select></li>
                                     <li class="text">Quota:

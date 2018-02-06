@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 19:40:42
+/* Smarty version 3.1.30, created on 2018-02-06 18:38:21
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminSponsor.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a74b0aacf4e42_20766415',
+  'unifunc' => 'content_5a79e80dc8c3d6_67796338',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4b8349c22c53ce4131f278849b1476db3de44d15' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminSponsor.tpl',
-      1 => 1517596594,
+      1 => 1517938698,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a74b0aacf4e42_20766415 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a79e80dc8c3d6_67796338 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11963202275a74b0aacdfa14_68333301', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18466897535a79e80dc76a03_29800650', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11528934955a74b0aace1fe5_79583245', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17190639205a79e80dc78fd8_43585858', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21132206715a74b0aacf40e9_90068161', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13026789805a79e80dc8b715_19673216', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_11963202275a74b0aacdfa14_68333301 extends Smarty_Internal_Block
+class Block_18466897535a79e80dc76a03_29800650 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_11528934955a74b0aace1fe5_79583245 extends Smarty_Internal_Block
+class Block_17190639205a79e80dc78fd8_43585858 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -70,7 +70,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_21132206715a74b0aacf40e9_90068161 extends Smarty_Internal_Block
+class Block_13026789805a79e80dc8b715_19673216 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -145,14 +145,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     <li class="text">Nome:
                                     </li>
                                     <li class="agileits-main">
-                                        <select id="selectSponsor">
+                                        <select class="form-control" id="selectSponsor">
                                             <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sponsors']->value, 'sponsor');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['allsponsors']->value, 'allsponsor');
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['sponsor']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['allsponsor']->value) {
 ?>
-                                                <option value="<?php echo $_smarty_tpl->tpl_vars['sponsor']->value->id;?>
-"><?php echo $_smarty_tpl->tpl_vars['sponsor']->value->name;?>
+                                                <option value="<?php echo $_smarty_tpl->tpl_vars['allsponsor']->value->id;?>
+"><?php echo $_smarty_tpl->tpl_vars['allsponsor']->value->name;?>
 </option>
                                             <?php
 }
@@ -164,7 +164,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     <li class="text">Quota:
                                     </li>
                                     <li class="agileits-main">
-                                        <input id="money" type="number" min="0"
+                                        <input id="money" type="number" min="0" class="form-control"
                                                name="money"
                                                placeholder="Quota"
                                                required/></li>
