@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 18:17:17
+/* Smarty version 3.1.30, created on 2018-02-06 16:58:16
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a75ee9d680a12_49804858',
+  'unifunc' => 'content_5a79d0987f0b67_86248169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6035f191d3e1d7fe34be93c0404fd465f80badd' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl',
-      1 => 1517678199,
+      1 => 1517932659,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a75ee9d680a12_49804858 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a79d0987f0b67_86248169 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8789150725a75ee9d65a3f9_83188961', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5202503895a79d0987865a6_95794187', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13125891165a75ee9d65d601_05900150', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1277527125a79d09878da54_05810698', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8353891325a75ee9d67f943_52400958', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16463690885a79d0987ee963_13658520', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_8789150725a75ee9d65a3f9_83188961 extends Smarty_Internal_Block
+class Block_5202503895a79d0987865a6_95794187 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_13125891165a75ee9d65d601_05900150 extends Smarty_Internal_Block
+class Block_1277527125a79d09878da54_05810698 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_8353891325a75ee9d67f943_52400958 extends Smarty_Internal_Block
+class Block_16463690885a79d0987ee963_13658520 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -122,6 +122,28 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         Non raggiungi la quota necessaria?
         <a id="openFinder" data-toggle="modal" href="#findPlayers">Clicca qui se hai bisogno di altri giocatori!</a>
         <hr>
+        <?php if (isset($_smarty_tpl->tpl_vars['supplies']->value)) {?>
+            La struttura selezionata mette a dispozione per i clienti:
+            <ul>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['supplies']->value, 'supply');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['supply']->value) {
+?>
+                    <li><b>Nome:</b><?php echo $_smarty_tpl->tpl_vars['supply']->value->name;
+if (isset($_smarty_tpl->tpl_vars['supply']->value->description)) {?> ,
+                            <b>Descrizione:</b>
+                            <?php echo $_smarty_tpl->tpl_vars['supply']->value->description;
+}?></li>
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+            </ul>
+            <hr>
+        <?php }?>
         Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
         <form id="fieldSelect">
             <?php
@@ -190,7 +212,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             </div>
         </div>
     </div>
-
     <!-- The actual snackbar -->
     <div id="snackbar">Hai invitato questo giocatore!</div>
 <?php

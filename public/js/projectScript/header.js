@@ -2,15 +2,11 @@ $(function () {
     console.log("ok");
 
     $('#loginForm').submit(function (event) {
-        console.log("Submit button clicked");
-
         event.preventDefault();
         event.stopPropagation();
 
         var email = $('#email').val();
         var password = $('#password').val();
-
-        console.log(email + password);
         // ""
         $.ajax({
             type: "POST",

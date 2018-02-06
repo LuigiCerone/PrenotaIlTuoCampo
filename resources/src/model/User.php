@@ -275,8 +275,8 @@ class User
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                    // TCP port to connect to
 
-            echo "L'email : " . $this->email;
-            echo "";
+//            echo "L'email : " . $this->email;
+//            echo "";
             //Recipients
             $mail->setFrom('progettotdw@gmail.com', 'Mailer');
             $mail->addAddress('' . $this->email);     // Add a recipient

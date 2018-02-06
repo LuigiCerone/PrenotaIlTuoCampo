@@ -47,6 +47,17 @@
         Non raggiungi la quota necessaria?
         <a id="openFinder" data-toggle="modal" href="#findPlayers">Clicca qui se hai bisogno di altri giocatori!</a>
         <hr>
+        {if isset($supplies)}
+            La struttura selezionata mette a dispozione per i clienti:
+            <ul>
+                {foreach from=$supplies item=supply}
+                    <li><b>Nome:</b>{$supply->name}{if isset($supply->description)} ,
+                            <b>Descrizione:</b>
+                            {$supply->description}{/if}</li>
+                {/foreach}
+            </ul>
+            <hr>
+        {/if}
         Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
         <form id="fieldSelect">
             {foreach from=$fields item=field}
@@ -91,7 +102,6 @@
                     <table id="findPlayerTable">
                     </table>
                     <div class="modal-footer">
-                        <button id="saveSearch" type="button" class="btn btn-primary">Fatto</button>
                         <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi
                         </button>
                     </div>
@@ -99,7 +109,6 @@
             </div>
         </div>
     </div>
-
     <!-- The actual snackbar -->
     <div id="snackbar">Hai invitato questo giocatore!</div>
 {/block}
