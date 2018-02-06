@@ -45,7 +45,6 @@
                         <div class="col-md-4">
                             <div class="card-block">
                                 <h4 class="card-title">Nome sponsor: {$sponsor->name}</h4>
-                                <h3 class="card-title">Tipo {$sponsor->type}</h3>
                             </div>
                         </div>
                         <div class="col-md-6">

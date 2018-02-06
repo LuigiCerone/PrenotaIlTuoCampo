@@ -29,7 +29,9 @@ $(function () {
             buttons: {
                 colvis: 'Seleziona colonne'
             }
-        }
+        },
+        columnDefs: [
+            {'visible': false, 'targets': [0]}]
     });
     jQuery('#sponsorsTable').wrap('<div class="dataTables_scroll" />');
 

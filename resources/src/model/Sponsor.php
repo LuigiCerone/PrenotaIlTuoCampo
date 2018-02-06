@@ -4,23 +4,20 @@ require_once('Database.php');
 class Sponsor
 {
     private $name;
-    private $type;
 
     /**
      * Sponsor constructor.
      * @param $name
-     * @param $type
      */
-    public function __construct($name, $type)
+    public function __construct($name)
     {
         $this->name = $name;
-        $this->type = $type;
     }
 
 
     public static function getAllSponsorForTournament($id)
     {
-        $sql = "SELECT money, tournament_fk, name, type FROM sponsor JOIN sponsor2tournament ON sponsor.id = sponsor_fk WHERE sponsor2tournament.tournament_fk=? ORDER BY sponsor2tournament.money DESC;";
+        $sql = "SELECT money, tournament_fk, name,date FROM sponsor JOIN sponsor2tournament ON sponsor.id = sponsor_fk WHERE sponsor2tournament.tournament_fk=? ORDER BY sponsor2tournament.money DESC;";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
@@ -56,12 +53,12 @@ class Sponsor
     public function insert()
     {
         $b = false;
-        $sql = "INSERT INTO sponsor (id, name, type) "
-            . " VALUES (NULL, ?, ?);";
+        $sql = "INSERT INTO sponsor (id, name) "
+            . " VALUES (NULL, ?);";
         $conn = Database::getConnection();
         // prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ss", $this->name, $this->type);
+        $stmt->bind_param("s", $this->name);
         if ($stmt->execute()) $b = true;
         $stmt->close();
         Database::closeConnestion($conn);

@@ -25,7 +25,6 @@
                 <tr>
                     <td>ID</td>
                     <td>Nome</td>
-                    <td>Tipo</td>
                     <td>Quota</td>
                     <td>Data</td>
                 </tr>
@@ -35,7 +34,6 @@
                     <tr>
                         <td>{$sponsor->id}</td>
                         <td>{$sponsor->name}</td>
-                        <td>{$sponsor->type}</td>
                         <td>{$sponsor->money}</td>
                         <td>{$sponsor->date}</td>
                     </tr>

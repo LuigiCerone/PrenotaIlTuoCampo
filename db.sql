@@ -140,8 +140,7 @@ CREATE TABLE sponsor
 (
   id   INT AUTO_INCREMENT
     PRIMARY KEY,
-  name VARCHAR(40) NOT NULL,
-  type VARCHAR(50) NOT NULL
+  name VARCHAR(40) NOT NULL
 )
   ENGINE = InnoDB;
 
@@ -520,11 +519,11 @@ INSERT INTO `review` (`id`, `user_fk`, `text`, `stars`, `approved`) VALUES
   (4, 1, 'Bello', 1, 1),
   (5, 1, 'Sito interessante', 5, 0);
 
-INSERT INTO `sponsor` (`id`, `name`, `type`) VALUES
-  (1, 'Adidas', ''),
-  (2, 'Nike', ''),
-  (3, 'Puma', ''),
-  (4, 'Amazon', '');
+INSERT INTO `sponsor` (`id`, `name`) VALUES
+  (1, 'Adidas'),
+  (2, 'Nike'),
+  (3, 'Puma'),
+  (4, 'Amazon');
 
 INSERT INTO `sponsor2tournament` (`sponsor_fk`, `tournament_fk`, `money`, `date`) VALUES
   (1, 1, 200, '2018-02-07'),

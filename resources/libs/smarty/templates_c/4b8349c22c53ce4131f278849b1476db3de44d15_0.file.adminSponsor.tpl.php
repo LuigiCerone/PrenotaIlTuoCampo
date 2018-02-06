@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-06 18:38:21
+/* Smarty version 3.1.30, created on 2018-02-06 19:06:56
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminSponsor.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a79e80dc8c3d6_67796338',
+  'unifunc' => 'content_5a79eec0ee9952_56374524',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4b8349c22c53ce4131f278849b1476db3de44d15' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminSponsor.tpl',
-      1 => 1517938698,
+      1 => 1517940261,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a79e80dc8c3d6_67796338 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a79eec0ee9952_56374524 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18466897535a79e80dc76a03_29800650', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19287924455a79eec0ed46a1_43381662', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17190639205a79e80dc78fd8_43585858', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9375550145a79eec0ed7176_60002054', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13026789805a79e80dc8b715_19673216', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6130526705a79eec0ee8ae2_63335461', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_18466897535a79e80dc76a03_29800650 extends Smarty_Internal_Block
+class Block_19287924455a79eec0ed46a1_43381662 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_17190639205a79e80dc78fd8_43585858 extends Smarty_Internal_Block
+class Block_9375550145a79eec0ed7176_60002054 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -70,7 +70,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_13026789805a79e80dc8b715_19673216 extends Smarty_Internal_Block
+class Block_6130526705a79eec0ee8ae2_63335461 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -92,7 +92,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <tr>
                     <td>ID</td>
                     <td>Nome</td>
-                    <td>Tipo</td>
                     <td>Quota</td>
                     <td>Data</td>
                 </tr>
@@ -107,8 +106,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['sponsor']->value) {
                         <td><?php echo $_smarty_tpl->tpl_vars['sponsor']->value->id;?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['sponsor']->value->name;?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['sponsor']->value->type;?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['sponsor']->value->money;?>
 </td>
