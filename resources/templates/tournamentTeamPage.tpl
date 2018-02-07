@@ -60,7 +60,7 @@
             </tr>
             <tr>
                 <td>Capitano:</td>
-                <td>{$team->user_fk}</td>
+                <td>{$captain->firstName} {$captain->lastName}</td>
             </tr>
             <tr>
                 <td>Lista giocatori</td>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 12:52:48
+/* Smarty version 3.1.30, created on 2018-02-07 14:10:37
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/tournamentTeamPage.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a74511073bc06_80383651',
+  'unifunc' => 'content_5a7afacdab1515_84858441',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bd00796acff93d297ae0e7c0928e275b5e359832' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/tournamentTeamPage.tpl',
-      1 => 1517572364,
+      1 => 1518009015,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a74511073bc06_80383651 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7afacdab1515_84858441 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6474146725a7451106d3586_98237791', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20441328765a7afacda5c542_30198780', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20274762655a7451106d7b14_78614372', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14223887735a7afacda5eff5_92238655', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20347155625a74511073a283_03379294', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13394195745a7afacdaaf752_37047214', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_6474146725a7451106d3586_98237791 extends Smarty_Internal_Block
+class Block_20441328765a7afacda5c542_30198780 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_20274762655a7451106d7b14_78614372 extends Smarty_Internal_Block
+class Block_14223887735a7afacda5eff5_92238655 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_20347155625a74511073a283_03379294 extends Smarty_Internal_Block
+class Block_13394195745a7afacdaaf752_37047214 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -135,7 +135,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             </tr>
             <tr>
                 <td>Capitano:</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['team']->value->user_fk;?>
+                <td><?php echo $_smarty_tpl->tpl_vars['captain']->value->firstName;?>
+ <?php echo $_smarty_tpl->tpl_vars['captain']->value->lastName;?>
 </td>
             </tr>
             <tr>

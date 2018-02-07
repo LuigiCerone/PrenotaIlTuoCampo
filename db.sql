@@ -184,7 +184,7 @@ CREATE TABLE team
   name          VARCHAR(50)  NOT NULL,
   number        INT          NOT NULL,
   user_fk       INT REFERENCES user (id),
-  players       VARCHAR(255) NOT NULL,
+  players       VARCHAR(500) NOT NULL,
   tournament_fk INT REFERENCES tournament (id),
   CONSTRAINT team_name_uindex
   UNIQUE (name)
@@ -547,20 +547,21 @@ INSERT INTO `supply` (`id`, `name`, `description`) VALUES
   (6, 'pallone da pallamano', ''),
   (7, 'pallone da calcetto', '');
 
+
 INSERT INTO `team` (`id`, `name`, `number`, `user_fk`, `players`, `tournament_fk`) VALUES
-  (1, 'jUVE', 1, 1,
-   'A G <br>H J <br>H K <br>L N <br>J L <br>L L <br>K J <br>L K <br>J J <br>L L <br>L L <br>L L <br>L L <br>L L <br>L L <br>L L <br>L F <br>',
+  (1, 'JUVE', 1, 1,
+   '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI <br>AMERIGO ROSSI <br>PAOLA FRACASSI <br>MITICO PAOLINO <br>DANILO BIANCHI <br>ALFIO RAGUSA <br>DANIELE LALLONE <br>LUIGI FIDANZA <br>LUIGI CERONE <br>LORETO CICERONE <br>',
    1),
-  (2, 'Inter', 1, 3, 'A G <br>H J <br>K KL <br>L L <br>L L <br>L H <br>J BN <br>J B <br>B I <br>', 2),
-  (3, 'SiViaggia', 10, 7, 'S c <br>h j <br>k g <br>j k <br>b j n <br>k  s <br>kj b <br>b i <br>b k <br>', 2),
-  (4, 'aaaa', 2, 4, 'a a <br>a a <br>a a <br>a a <br>a a <br>a a <br>a a <br>a a <br>a a <br>', 2),
-  (5, 'ssss', 4, 6, 's s <br>s s <br>s s <br>s s <br>s s <br>s s <br>s s <br>s k <br>s s <br>', 2),
-  (6, 'wwww', 5, 9, 'j w <br>w w <br>w w <br>w w <br>w w <br>w w <br>w w <br>w w <br>w w <br>', 2),
-  (7, 'hhhh', 7, 10, 'h h <br>h h <br>h h <br>h h <br>h h <br>h h <br>h h <br>h h <br>h h <br>', 2),
-  (9, 'ffff', 8, 11, 'f f <br>f f <br>f f <br>f f <br>f f <br>f f <br>f f <br>f f <br>f f <br>', 2),
-  (10, 'qqq', 4, 5, 'q q <br>q q <br>q q <br>q q <br>q q <br>q q <br>q q <br>q q <br>q q <br>', 2),
-  (11, 'g', 5, 8, 'sSs g <br>g g <br>g g <br>g g <br>g g <br>g gg <br>g g <br>g g <br>d gg <br>', 2),
-  (12, 'gggg', 44, 1, 'gGg h <br>j bgh <br>k ,x <br>l n <br>h r <br>t y <br>u n <br>c h <br>k kl <br>', 2);
+  (2, 'INTER', 1, 3, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (3, 'MILAN', 10, 7, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (4, 'SAMPDORIA', 2, 4, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (5, 'GENOA', 4, 6, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (6, 'LAZIO', 5, 9, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (7, 'ROMA', 7, 10, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (9, 'CAGLIARI', 8, 11, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (10, 'PESCARA', 4, 5, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (11, 'FOGGIA', 5, 8, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2),
+  (12, 'SALERNITANA', 44, 1, '<br>ALE ROSATI <br>GIACOMO ROSSI <br>POLLO MARCIO <br>DAVIDE FRACASSI <br>SERGIO BIANCHI <br>FILIPPO CERASOLI <br>SERGIO TAGLIERI <br>AGOSTINO BIANCHI ', 2);
 
 INSERT INTO `tournament` (`id`, `name`, `partner_fk`, `startDate`, `endSubscription`, `teamNumber`, `teamLeft`, `sport_fk`, `scheduled`)
 VALUES
