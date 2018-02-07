@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 12:23:54
+/* Smarty version 3.1.30, created on 2018-02-07 12:03:56
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/userTournaments.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a744a4a43f3f1_06764316',
+  'unifunc' => 'content_5a7add1c2dfff8_98236441',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e3d9c0a72e97dec6c1822c247d0ad7d10f1301f9' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/userTournaments.tpl',
-      1 => 1517570631,
+      1 => 1517674178,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a744a4a43f3f1_06764316 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7add1c2dfff8_98236441 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7915727975a744a4a42ada6_62039422', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12128996195a7add1c2d0181_02944017', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17367256485a744a4a42dfe7_51126883', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19682425735a7add1c2d2832_63732686', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12521738665a744a4a43e589_58274645', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11276203165a7add1c2df452_93142981', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_7915727975a744a4a42ada6_62039422 extends Smarty_Internal_Block
+class Block_12128996195a7add1c2d0181_02944017 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_17367256485a744a4a42dfe7_51126883 extends Smarty_Internal_Block
+class Block_19682425735a7add1c2d2832_63732686 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_12521738665a744a4a43e589_58274645 extends Smarty_Internal_Block
+class Block_11276203165a7add1c2df452_93142981 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -94,7 +94,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['team']->value) {
                     <div class="card">
                         <div class="row">
                             <div class="col-md-3">
-                                INSERIRE FOTO
+                                <img class="img_tournament" src="public/images/tournament.jpg"
+                                     alt="Immagine dimostrativa"/>
                             </div>
                             <div class="col-md-6">
                                 <div class="card-block">

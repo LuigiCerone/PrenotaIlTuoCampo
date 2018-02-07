@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 11:24:28
+/* Smarty version 3.1.30, created on 2018-02-07 11:39:58
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/profile.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a758ddcc184c5_03347716',
+  'unifunc' => 'content_5a7ad77e6f1c34_84520262',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '851d01d268753293f6cff2ad0be90c0198820ad2' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/profile.tpl',
-      1 => 1517589933,
+      1 => 1517999995,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a758ddcc184c5_03347716 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7ad77e6f1c34_84520262 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13741697355a758ddcc075e6_63735680', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14411023275a7ad77e6db501_76950368', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4661408195a758ddcc09db4_65928561', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20768251415a7ad77e6de147_52900672', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14530111095a758ddcc17967_33915377', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7031909245a7ad77e6f0e56_54733747', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_13741697355a758ddcc075e6_63735680 extends Smarty_Internal_Block
+class Block_14411023275a7ad77e6db501_76950368 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_4661408195a758ddcc09db4_65928561 extends Smarty_Internal_Block
+class Block_20768251415a7ad77e6de147_52900672 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_14530111095a758ddcc17967_33915377 extends Smarty_Internal_Block
+class Block_7031909245a7ad77e6f0e56_54733747 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -88,9 +88,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             <h4>Ciao <?php echo $_smarty_tpl->tpl_vars['user']->value->firstName;?>
 &nbsp;<?php echo $_smarty_tpl->tpl_vars['user']->value->lastName;?>
 </h4>
-                            
-                            
-                            
                             <br>
                             <p> I tuoi dati: </p>
 
@@ -132,10 +129,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                                 </tr>
                             </table>
                             <br><br>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#changePasswordModal">
-                                Cambia password
-                            </button>
+                            <div class="row">
+                                <div class="col-md-6 col-block-center">
+                                    <button type="button" class="signin-button" data-toggle="modal"
+                                            data-target="#changePasswordModal">
+                                        Cambia password
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

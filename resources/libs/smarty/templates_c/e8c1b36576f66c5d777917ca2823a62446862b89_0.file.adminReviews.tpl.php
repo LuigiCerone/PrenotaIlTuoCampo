@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-04 11:44:56
+/* Smarty version 3.1.30, created on 2018-02-07 11:50:46
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminReviews.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a76e428d9ae58_83349541',
+  'unifunc' => 'content_5a7ada062ec559_76186397',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e8c1b36576f66c5d777917ca2823a62446862b89' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminReviews.tpl',
-      1 => 1517741095,
+      1 => 1517754738,
       2 => 'file',
     ),
   ),
@@ -21,25 +21,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a76e428d9ae58_83349541 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7ada062ec559_76186397 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19560126285a76e428d89b89_58562348', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16482556655a7ada062d1e25_33844341', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1328128905a76e428d8c2c9_06461417', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18646588745a7ada062d4e99_77125825', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8255312645a76e428d99f13_84806689', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3040770635a7ada062eb606_31251336', "content");
 ?>
 
 
@@ -48,7 +48,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8255312645a76e428d
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_19560126285a76e428d89b89_58562348 extends Smarty_Internal_Block
+class Block_16482556655a7ada062d1e25_33844341 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -59,7 +59,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_1328128905a76e428d8c2c9_06461417 extends Smarty_Internal_Block
+class Block_18646588745a7ada062d4e99_77125825 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_8255312645a76e428d99f13_84806689 extends Smarty_Internal_Block
+class Block_3040770635a7ada062eb606_31251336 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -99,12 +99,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['review']->value) {
 </h4>
                                     <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['review']->value->text;?>
 </p>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
                                 </div>
                             </div>
                             <div class="col-md-2">

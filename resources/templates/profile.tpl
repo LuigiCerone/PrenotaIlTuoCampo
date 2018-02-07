@@ -21,9 +21,6 @@
                         </div>
                         <div class="col-sm-6 col-md-8">
                             <h4>Ciao {$user->firstName}&nbsp;{$user->lastName}</h4>
-                            {*<small><cite title="San Francisco, USA">San Francisco, USA <i*}
-                            {*class="glyphicon glyphicon-map-marker">*}
-                            {*</i></cite></small>*}
                             <br>
                             <p> I tuoi dati: </p>
 
@@ -58,10 +55,14 @@
                                 </tr>
                             </table>
                             <br><br>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#changePasswordModal">
-                                Cambia password
-                            </button>
+                            <div class="row">
+                                <div class="col-md-6 col-block-center">
+                                    <button type="button" class="signin-button" data-toggle="modal"
+                                            data-target="#changePasswordModal">
+                                        Cambia password
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

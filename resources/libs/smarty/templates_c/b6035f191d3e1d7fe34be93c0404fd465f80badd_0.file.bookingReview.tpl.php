@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-06 16:58:16
+/* Smarty version 3.1.30, created on 2018-02-07 11:52:18
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a79d0987f0b67_86248169',
+  'unifunc' => 'content_5a7ada625190f3_33292054',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6035f191d3e1d7fe34be93c0404fd465f80badd' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl',
-      1 => 1517932659,
+      1 => 1517932811,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a79d0987f0b67_86248169 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7ada625190f3_33292054 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5202503895a79d0987865a6_95794187', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17566565905a7ada624e35e2_89718027', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1277527125a79d09878da54_05810698', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16364471595a7ada624e5fc1_97262739', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16463690885a79d0987ee963_13658520', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14721569485a7ada62517820_31196691', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_5202503895a79d0987865a6_95794187 extends Smarty_Internal_Block
+class Block_17566565905a7ada624e35e2_89718027 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_1277527125a79d09878da54_05810698 extends Smarty_Internal_Block
+class Block_16364471595a7ada624e5fc1_97262739 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_16463690885a79d0987ee963_13658520 extends Smarty_Internal_Block
+class Block_14721569485a7ada62517820_31196691 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -204,7 +204,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                     <table id="findPlayerTable">
                     </table>
                     <div class="modal-footer">
-                        <button id="saveSearch" type="button" class="btn btn-primary">Fatto</button>
                         <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi
                         </button>
                     </div>

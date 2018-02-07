@@ -122,3 +122,5 @@ class Availability
         return $b;
     }
 }
+
+
