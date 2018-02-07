@@ -186,6 +186,7 @@ class User
     protected function loadByEmailAndPassword($email, $password)
     {
         $row = $this->get_user_from_email_password($email, $password);
+        if ($row == null) return;
         $this->fill($row);
     }
 

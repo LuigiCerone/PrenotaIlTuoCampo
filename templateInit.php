@@ -4,13 +4,23 @@ require_once('resources/libs/SMTemplate.php');
 
 class templateInit
 {
+//    public static function Instance()
+//    {
+//        static $inst = null;
+//        if ($inst == null) {
+//            $inst = new SMTemplate();
+//        }
+//        return $inst;
+//    }
+
+    private static $instance = null;
 
     public static function Instance()
     {
-        static $inst = null;
-        if ($inst === null) {
-            $inst = new SMTemplate();
+        if (self::$instance == null) {
+            self::$instance = new SMTemplate();
         }
-        return $inst;
+
+        return self::$instance;
     }
 }
