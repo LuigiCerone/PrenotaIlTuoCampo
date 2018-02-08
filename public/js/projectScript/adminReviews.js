@@ -10,18 +10,14 @@ $(function () {
 
     $('.add').on('click', function (event) {
         event.stopPropagation();
-
         id = $(this).data("id");
-        console.log(id);
 
         $('#saveReview').modal('toggle');
     });
 
     $('.delete').on('click', function (event) {
         event.stopPropagation();
-
         id = $(this).data("id");
-        console.log(id);
 
         $('#deleteReview').modal('toggle');
     });
