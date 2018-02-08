@@ -14,5 +14,4 @@ $(function () {
         prevButtonText: '&laquo;',
         nextButtonText: '&raquo;'
     });
-
 });

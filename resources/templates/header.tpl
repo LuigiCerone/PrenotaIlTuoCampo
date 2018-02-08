@@ -118,7 +118,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                             <li id="bookings"><a href="adminBookings.php" class="effect-3 scroll">Gestione<br>
                                     prenotazioni</a>
                             </li>
-                            <li id="accounts"><a href="#" class="effect-3 scroll">Gestione<br>
+                            <li id="accounts"><a href="adminAccounts.php" class="effect-3 scroll">Gestione<br>
                                     accounts</a>
                             </li>
                             <li><a href="index.php" class="effect-3 scroll" id="logout">Esci</a></li>

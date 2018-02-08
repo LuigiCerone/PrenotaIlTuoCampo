@@ -53,6 +53,27 @@ class User
         return $b;
     }
 
+    public static function getAllAvailableUser()
+    {
+        $sql = "SELECT firstName, lastName, email FROM user;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $users = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $users[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($users);
+    }
+
     function toString()
     {
         return ("User's data : " . $this->firstName . " " . $this->lastName);
@@ -278,8 +299,8 @@ class User
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'progettotwd@gmail.com';                 // SMTP username
-            $mail->Password = 'progettotwd1';                           // SMTP password
+            $mail->Username = '@gmail.com';                 // SMTP username
+            $mail->Password = '';                           // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                    // TCP port to connect to
 
