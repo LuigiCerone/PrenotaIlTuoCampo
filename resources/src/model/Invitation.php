@@ -41,7 +41,7 @@ class Invitation
                 user.email,
                user.telnumber
                 FROM (((invitation
-                 JOIN user ON from_user_fk = user.id) JOIN availability ON availability_fk = availability.id)
+                 JOIN user ON to_user_fk = user.id) JOIN availability ON availability_fk = availability.id)
                  JOIN sport ON availability.sport_fk = sport.id) JOIN partner
                  ON partner.id = availability.partner_fk
                  WHERE from_user_fk = ?;";
