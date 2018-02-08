@@ -45,6 +45,20 @@ class Partner
         return json_encode($partners);
     }
 
+    public static function getPartnerById($moderator)
+    {
+        $sql = "SELECT * FROM partner WHERE id = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $moderator);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $partner = $result->fetch_assoc();
+        return json_encode($partner);
+    }
+
     public function insert()
     {
         $sql = "INSERT INTO partner (id, name, description, region, area, address, email, telnumber) VALUES (NULL, ?, ?, ?, ?,?,?,?);";

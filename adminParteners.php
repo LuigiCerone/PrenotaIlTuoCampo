@@ -8,9 +8,18 @@ require_once('resources/src/model/Province.php');
 
 session_start();
 $tpl = templateInit::Instance();
-$params = array('partners' => json_decode(Partner::getAllPartners()),
-    'sports' => json_decode(Sport::getAllSports()),
-    'supplies' => json_decode(Supply::getAllSupplies()),
-    'provinces' => json_decode(Province::getAllProvinces()));
+if (isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {
+    $params = array('partners' => json_decode(Partner::getAllPartners()),
+        'sports' => json_decode(Sport::getAllSports()),
+        'supplies' => json_decode(Supply::getAllSupplies()),
+        'provinces' => json_decode(Province::getAllProvinces()));
+    $tpl->render('adminPartners', $params);
+} else if (isset($_SESSION['moderator'])) {
+    $params = array('partner' => json_decode(Partner::getPartnerById($_SESSION['moderator'])),
+        'sports' => json_decode(Sport::getAllSports()),
+        'supplies' => json_decode(Supply::getAllSupplies()),
+        'provinces' => json_decode(Province::getAllProvinces()));
+    $tpl->render('adminPartners', $params);
+} else
+    $tpl->render('error');
 
-$tpl->render('adminPartners', $params);

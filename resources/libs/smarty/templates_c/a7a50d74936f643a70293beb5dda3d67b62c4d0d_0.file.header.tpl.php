@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 09:31:24
+/* Smarty version 3.1.30, created on 2018-02-08 11:25:08
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c0adc0b4e46_98673891',
+  'unifunc' => 'content_5a7c25842e49b6_74783764',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1518078681,
+      1 => 1518085505,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a7c0adc0b4e46_98673891 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7c25842e49b6_74783764 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6230614945a7c0adc095636_73368062', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10452798285a7c25842c5d42_51908250', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -69,7 +69,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6230614945a7c0adc0
 
             <ul class="agile_forms">
 
-                <?php if (isset($_SESSION['id']) && !isset($_SESSION['admin'])) {?>
+                <?php if (isset($_SESSION['id']) && !isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {?>
                     <li>
                         <a class="user_profile" href="profile.php" role="button">
                             Il mio account
@@ -92,7 +92,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6230614945a7c0adc0
                         
                     </li>
                     }
-                <?php } elseif (!isset($_SESSION['id']) && !isset($_SESSION['admin'])) {?>
+                <?php } elseif (!isset($_SESSION['id']) && !isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {?>
 
                     
                     <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
@@ -105,7 +105,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6230614945a7c0adc0
             </ul>
 
 
-            <?php if (!isset($_SESSION['admin'])) {?>
+            <?php if (!isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {?>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
@@ -119,7 +119,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6230614945a7c0adc0
                         </ul>
                     </nav>
                 </div>
-            <?php } elseif (isset($_SESSION['admin'])) {?>
+            <?php } elseif (isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {?>
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
@@ -130,6 +130,26 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6230614945a7c0adc0
                                                 class="effect-3 scroll">Gestione<br>recensioni</a>
                             </li>
                             <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione<br> news</a></li>
+                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione<br>
+                                    tornei</a>
+                            </li>
+                            <li id="bookings"><a href="adminBookings.php" class="effect-3 scroll">Gestione<br>
+                                    prenotazioni</a>
+                            </li>
+                            <li id="accounts"><a href="#" class="effect-3 scroll">Gestione<br>
+                                    accounts</a>
+                            </li>
+                            <li><a href="index.php" class="effect-3 scroll" id="logout">Esci</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            <?php } elseif (!isset($_SESSION['admin']) && isset($_SESSION['moderator'])) {?>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li id="partners"><a href="adminParteners.php"
+                                                 class="effect-3 scroll">Gestione<br>azienda</a>
+                            </li>
                             <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione<br>
                                     tornei</a>
                             </li>
@@ -240,13 +260,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6230614945a7c0adc0
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9126240775a7c0adc0b3cf3_56640084', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10028367625a7c25842e3a83_68745555', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_6230614945a7c0adc095636_73368062 extends Smarty_Internal_Block
+class Block_10452798285a7c25842c5d42_51908250 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -266,7 +286,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_9126240775a7c0adc0b3cf3_56640084 extends Smarty_Internal_Block
+class Block_10028367625a7c25842e3a83_68745555 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

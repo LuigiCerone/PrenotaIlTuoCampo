@@ -18,6 +18,7 @@ class User
     private $active;
     private $gender;
     private $admin;
+    private $moderator;
 
 
     public function __construct()
@@ -90,6 +91,11 @@ class User
     public function isAdmin()
     {
         return $this->admin;
+    }
+
+    public function isModerator()
+    {
+        return $this->moderator;
     }
 
     /**
@@ -203,6 +209,7 @@ class User
         $this->created_at = $row['created_at'];
         $this->active = $row['active'];
         $this->admin = $row['admin'];
+        $this->moderator = $row['moderator'];
     }
 
     function get_user_from_id($id)

@@ -222,9 +222,12 @@ CREATE TABLE user
   created_at DATE                        NOT NULL,
   active     TINYINT(1) DEFAULT '0'      NOT NULL,
   gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL,
-  admin      TINYINT(1) DEFAULT '0'      NOT NULL
+  admin      TINYINT(1) DEFAULT '0'      NOT NULL,
+  moderator  INT DEFAULT '0'             NOT NULL
+
 )
   ENGINE = InnoDB;
+
 
 DROP TABLE IF EXISTS booking;
 CREATE TABLE booking

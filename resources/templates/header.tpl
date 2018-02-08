@@ -51,7 +51,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
             <ul class="agile_forms">
 
-                {if isset($smarty.session.id) && !isset($smarty.session.admin)}
+                {if isset($smarty.session.id) && !isset($smarty.session.admin) && !isset($smarty.session.moderator)}
                     <li>
                         <a class="user_profile" href="profile.php" role="button">
                             Il mio account
@@ -74,7 +74,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                         {*</div>*}
                     </li>
                     }
-                {elseif !isset($smarty.session.id) && !isset($smarty.session.admin)}
+                {elseif !isset($smarty.session.id) && !isset($smarty.session.admin) && !isset($smarty.session.moderator)}
 
                     {*Login and Sign up*}
                     <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"
@@ -87,7 +87,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
             </ul>
 
 
-            {if !isset($smarty.session.admin)}
+            {if !isset($smarty.session.admin) && !isset($smarty.session.moderator)}
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
@@ -101,7 +101,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                         </ul>
                     </nav>
                 </div>
-            {elseif isset($smarty.session.admin)}
+            {elseif isset($smarty.session.admin) && !isset($smarty.session.moderator)}
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
@@ -112,6 +112,26 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
                                                 class="effect-3 scroll">Gestione<br>recensioni</a>
                             </li>
                             <li id="news"><a href="adminNews.php" class="effect-3 scroll">Gestione<br> news</a></li>
+                            <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione<br>
+                                    tornei</a>
+                            </li>
+                            <li id="bookings"><a href="adminBookings.php" class="effect-3 scroll">Gestione<br>
+                                    prenotazioni</a>
+                            </li>
+                            <li id="accounts"><a href="#" class="effect-3 scroll">Gestione<br>
+                                    accounts</a>
+                            </li>
+                            <li><a href="index.php" class="effect-3 scroll" id="logout">Esci</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            {elseif !isset($smarty.session.admin) && isset($smarty.session.moderator)}
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li id="partners"><a href="adminParteners.php"
+                                                 class="effect-3 scroll">Gestione<br>azienda</a>
+                            </li>
                             <li id="tournaments"><a href="adminTournaments.php" class="effect-3 scroll">Gestione<br>
                                     tornei</a>
                             </li>

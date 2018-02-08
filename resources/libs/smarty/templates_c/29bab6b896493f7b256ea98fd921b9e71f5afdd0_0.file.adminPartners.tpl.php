@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-04 11:40:54
+/* Smarty version 3.1.30, created on 2018-02-08 11:44:05
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a76e3368ac854_81148977',
+  'unifunc' => 'content_5a7c29f5a1f853_34301105',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29bab6b896493f7b256ea98fd921b9e71f5afdd0' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl',
-      1 => 1517740339,
+      1 => 1518086643,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a76e3368ac854_81148977 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7c29f5a1f853_34301105 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10450907555a76e336883455_38275888', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1144072985a7c29f59e4611_71869853', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1382267505a76e336885c54_90658427', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12025053495a7c29f59e6ba7_65924910', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5876423555a76e3368ab740_23932478', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13389306305a7c29f5a1e455_12323032', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_10450907555a76e336883455_38275888 extends Smarty_Internal_Block
+class Block_1144072985a7c29f59e4611_71869853 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_1382267505a76e336885c54_90658427 extends Smarty_Internal_Block
+class Block_12025053495a7c29f59e6ba7_65924910 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,71 +69,69 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_5876423555a76e3368ab740_23932478 extends Smarty_Internal_Block
+class Block_13389306305a7c29f5a1e455_12323032 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-    <h2 class="title">I nostri principali partners.</h2>
-    <br>
-    
-    <br>
-    <section>
-        <div class="container">
-            <table id="partnersTable">
-                <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>Nome</td>
-                    <td>Descrizione</td>
-                    <td>Regione</td>
-                    <td>Area</td>
-                    <td>Indirizzo</td>
-                    <td>Email</td>
-                    <td>Telefono</td>
-                    <td>Modifica campo</td>
-                    <td>Modifica oggetti disponibili</td>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
+    <?php if (isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {?>
+        <h2 class="title">I nostri principali partners.</h2>
+        <br>
+        
+        <br>
+        <section>
+            <div class="container">
+                <table id="partnersTable">
+                    <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nome</td>
+                        <td>Descrizione</td>
+                        <td>Regione</td>
+                        <td>Area</td>
+                        <td>Indirizzo</td>
+                        <td>Email</td>
+                        <td>Telefono</td>
+                        <td>Modifica campo</td>
+                        <td>Modifica oggetti disponibili</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['partners']->value, 'partner');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['partner']->value) {
 ?>
-                    <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->id;?>
+                        <tr>
+                            <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->id;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->name;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->name;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->description;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->description;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->region;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->region;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->area;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->area;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->address;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->address;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->email;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->email;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->telnumber;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->telnumber;?>
 </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                <?php
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <?php if (($_SESSION['id'] != null)) {?>
-        <span class="hidden" id="id"><?php echo $_SESSION['id'];?>
-</span>
+                    </tbody>
+                </table>
+            </div>
+        </section>
         <div class="row" id="post-review-box">
         <div class="signin-form profile">
             <h3 class="agileinfo_sign">Inserisci nuova azienda</h3>
@@ -160,142 +158,188 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 </div>
             </div>
         </div>
-        <!-- Modal1 -->
-        <div class="modal fade" id="addField" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <div class="signin-form profile">
-                            <h3 class="agileinfo_sign">Aggiungi campo</h3>
-                            <div class="login-form">
-                                <form id="fieldAddForm" method="post">
-                                    Esterno:
-                                    <label class="radio-inline">
-                                        <input type="radio" name="outdoor" value="1" required>Si
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="outdoor" value="0" required>No
-                                    </label>
-                                    <br>
-                                    Riscaldato:
-                                    <label class="radio-inline">
-                                        <input type="radio" name="warmed" value="1" required>Si
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="warmed" value="0" required>No
-                                    </label>
-                                    <table>
-                                        <tr>
-                                            <td>Tipologia campo:</td>
-                                            <td><input id="type" type="text" name="type" placeholder="Tipo campo"
-                                                       required/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Numero:</td>
-                                            <td><input id="number" type="number"
-                                                       name="number" class="form-control"
-                                                       placeholder="Numero campo"
-                                                       required/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Provincia:</td>
-                                            <td>
-                                                <select class="form-control" id="province">
-                                                    <?php
+    <?php } elseif (isset($_SESSION['moderator']) && !isset($_SESSION['admin'])) {?>
+        <h2 class="title">La tua azienda</h2>
+        <br>
+        <section>
+            <div class="container">
+                <table id="partnersTable">
+                    <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nome</td>
+                        <td>Descrizione</td>
+                        <td>Regione</td>
+                        <td>Area</td>
+                        <td>Indirizzo</td>
+                        <td>Email</td>
+                        <td>Telefono</td>
+                        <td>Modifica campo</td>
+                        <td>Modifica oggetti disponibili</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->id;?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->name;?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->description;?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->region;?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->area;?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->address;?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->email;?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['partner']->value->telnumber;?>
+</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    <?php }?>
+    <!-- Modal1 -->
+    <div class="modal fade" id="addField" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="signin-form profile">
+                        <h3 class="agileinfo_sign">Aggiungi campo</h3>
+                        <div class="login-form">
+                            <form id="fieldAddForm" method="post">
+                                Esterno:
+                                <label class="radio-inline">
+                                    <input type="radio" name="outdoor" value="1" required>Si
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="outdoor" value="0" required>No
+                                </label>
+                                <br>
+                                Riscaldato:
+                                <label class="radio-inline">
+                                    <input type="radio" name="warmed" value="1" required>Si
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="warmed" value="0" required>No
+                                </label>
+                                <table>
+                                    <tr>
+                                        <td>Tipologia campo:</td>
+                                        <td><input id="type" type="text" name="type" placeholder="Tipo campo"
+                                                   required/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Numero:</td>
+                                        <td><input id="number" type="number"
+                                                   name="number" class="form-control"
+                                                   placeholder="Numero campo"
+                                                   required/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Provincia:</td>
+                                        <td>
+                                            <select class="form-control" id="province">
+                                                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['provinces']->value, 'province');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['province']->value) {
 ?>
-                                                        <option value="<?php echo $_smarty_tpl->tpl_vars['province']->value->sign;?>
+                                                    <option value="<?php echo $_smarty_tpl->tpl_vars['province']->value->sign;?>
 "><?php echo $_smarty_tpl->tpl_vars['province']->value->name;?>
 </option>
-                                                    <?php
+                                                <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sport:</td>
-                                            <td><select class="form-control" id="selectSport">
-                                                    <?php
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sport:</td>
+                                        <td><select class="form-control" id="selectSport">
+                                                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sports']->value, 'sport');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['sport']->value) {
 ?>
-                                                        <option value="<?php echo $_smarty_tpl->tpl_vars['sport']->value->id;?>
+                                                    <option value="<?php echo $_smarty_tpl->tpl_vars['sport']->value->id;?>
 "><?php echo $_smarty_tpl->tpl_vars['sport']->value->name;?>
 </option>
-                                                    <?php
+                                                <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-                                                </select></td>
-                                        </tr>
-                                    </table>
-                                    <input type="submit" value="Aggiungi">
-                                </form>
-                            </div>
+                                            </select></td>
+                                    </tr>
+                                </table>
+                                <input type="submit" value="Aggiungi">
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Modal1 -->
-        <div class="modal fade" id="modifyItems" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <div class="signin-form profile">
-                            <h3 class="agileinfo_sign">Modifica disponibilità</h3>
-                            <div class="login-form">
-                                <form id="resourceForm">
-                                    <fieldset>
-                                        <legend>Seleziona ciò che l'azienda possiede</legend>
-                                        <div id="checkboxes">
-                                            <?php
+    </div>
+    <!-- Modal1 -->
+    <div class="modal fade" id="modifyItems" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="signin-form profile">
+                        <h3 class="agileinfo_sign">Modifica disponibilità</h3>
+                        <div class="login-form">
+                            <form id="resourceForm">
+                                <fieldset>
+                                    <legend>Seleziona ciò che l'azienda possiede</legend>
+                                    <div id="checkboxes">
+                                        <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['supplies']->value, 'supply');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['supply']->value) {
 ?>
-                                                <div>
-                                                    <input type="checkbox" id="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
+                                            <div>
+                                                <input type="checkbox" id="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
 " name="supplies"
-                                                           value="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
+                                                       value="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
 " <?php if ($_smarty_tpl->tpl_vars['supply']->value->available) {?> checked<?php }?>>
-                                                    <label for="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
+                                                <label for="<?php echo $_smarty_tpl->tpl_vars['supply']->value->id;?>
 "><?php echo $_smarty_tpl->tpl_vars['supply']->value->name;?>
 </label>
-                                                </div>
-                                            <?php
+                                            </div>
+                                        <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-                                        </div>
-                                    </fieldset>
-                                    <div class="row">
-                                        <div class="col-md-5 col-center-block"><input type="submit" value="Salva"/>
-                                        </div>
                                     </div>
-                                </form>
-                            </div>
+                                </fieldset>
+                                <div class="row">
+                                    <div class="col-md-5 col-center-block"><input type="submit" value="Salva"/>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <?php }
+    </div>
+<?php
 }
 }
 /* {/block "content"} */
