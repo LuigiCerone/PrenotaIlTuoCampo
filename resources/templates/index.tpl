@@ -109,61 +109,46 @@
                                             <td><b>Data nascita:</b></td>
                                             <td>{$user->birthdate}</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="bottom-border">
                                             <td><b>Registrato in data:</b></td>
                                             <td>{$user->created_at}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><p>Dati azienda</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Nome azienda:</b></td>
+                                            <td>{$partner->name}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Descrizione azienda:</b></td>
+                                            <td>{$partner->description}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Regione:</b></td>
+                                            <td>{$partner->region}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Area:</b></td>
+                                            <td>{$partner->area}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Indirizzo:</b></td>
+                                            <td>{$partner->address}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Email azienda:</b></td>
+                                            <td>{$partner->email}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Telefono azienda:</b></td>
+                                            <td>{$partner->telnumber}</td>
                                         </tr>
                                     </table>
                                     <br><br>
                                 </div>
                             </div>
                         </div>
-                        <hr>
-                        {*Dati azienda e modifiche su dati azienda*}
-                        {*<div class="well well-sm">*}
-                        {*<div class="row">*}
-                        {*<div class="col-sm-6 col-md-4">*}
-                        {*<img src="public/images/user.png" alt="" class="img-rounded img-responsive"/>*}
-                        {*</div>*}
-                        {*<div class="col-sm-6 col-md-8">*}
-                        {*<h4>Ciao {$user->firstName}&nbsp;{$user->lastName}</h4>*}
-                        {*<br>*}
-                        {*<p> I tuoi dati: </p>*}
-
-                        {*<table class="user-info">*}
-                        {*<tr>*}
-                        {*<td><b>Nome:</b></td>*}
-                        {*<td>{$user->firstName}</td>*}
-                        {*</tr>*}
-                        {*<tr>*}
-                        {*<td><b>Cognome:</b></td>*}
-                        {*<td>{$user->lastName}</td>*}
-                        {*</tr>*}
-                        {*<tr>*}
-                        {*<td><b>Sesso:</b></td>*}
-                        {*<td>{$user->gender}</td>*}
-                        {*</tr>*}
-                        {*<tr>*}
-                        {*<td><b>Email:</b></td>*}
-                        {*<td>{$user->email}</td>*}
-                        {*</tr>*}
-                        {*<tr>*}
-                        {*<td><b>Numero telefono:</b></td>*}
-                        {*<td>{$user->telnumber}</td>*}
-                        {*</tr>*}
-                        {*<tr>*}
-                        {*<td><b>Data nascita:</b></td>*}
-                        {*<td>{$user->birthdate}</td>*}
-                        {*</tr>*}
-                        {*<tr>*}
-                        {*<td><b>Registrato in data:</b></td>*}
-                        {*<td>{$user->created_at}</td>*}
-                        {*</tr>*}
-                        {*</table>*}
-                        {*<br><br>*}
-                        {*</div>*}
-                        {*</div>*}
-                        {*</div>*}
                     </div>
                 </div>
             </div>

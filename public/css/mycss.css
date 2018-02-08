@@ -334,3 +334,7 @@ small {
 .break-text {
     word-wrap: break-word;
 }
+
+.bottom-border {
+    border-bottom: 1px dashed black;
+}
