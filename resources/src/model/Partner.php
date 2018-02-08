@@ -59,6 +59,28 @@ class Partner
         return json_encode($partner);
     }
 
+//    public static function getPaginatedPartners($page)
+//    {
+//        $start_from = $page == 1 ? 0 : (($page - 1) * 10 - 1);
+//        $sql = "SELECT * FROM partner LIMIT ;";
+//
+//        $conn = Database::getConnection();
+//        // prepare and bind
+//        $stmt = $conn->prepare($sql);
+//        $stmt->execute();
+//        $result = $stmt->get_result();
+//
+//        $partners = array();
+//
+//        while ($row = $result->fetch_assoc()) {
+//            $partners[] = $row;
+//        }
+//        $stmt->close();
+//        Database::closeConnestion($conn);
+//
+//        return json_encode($partners);
+//    }
+
     public function insert()
     {
         $sql = "INSERT INTO partner (id, name, description, region, area, address, email, telnumber) VALUES (NULL, ?, ?, ?, ?,?,?,?);";

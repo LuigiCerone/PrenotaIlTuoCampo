@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 12:57:05
+/* Smarty version 3.1.30, created on 2018-02-08 13:01:59
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c3b11dedbf8_17408252',
+  'unifunc' => 'content_5a7c3c373eb289_93634923',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7b6440b1ada807af4d6f694fea6482de546c85b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl',
-      1 => 1518091022,
+      1 => 1518091316,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7c3b11dedbf8_17408252 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7c3c373eb289_93634923 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8042142115a7c3b11db8a60_72487612', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14702210465a7c3c373afa71_85940999', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10398481575a7c3b11dbb020_23157358', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20010502065a7c3c373b3027_99262206', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10011101725a7c3b11dec6a5_75558951', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4172022915a7c3c373e9e94_71916689', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_8042142115a7c3b11db8a60_72487612 extends Smarty_Internal_Block
+class Block_14702210465a7c3c373afa71_85940999 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_10398481575a7c3b11dbb020_23157358 extends Smarty_Internal_Block
+class Block_20010502065a7c3c373b3027_99262206 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_10011101725a7c3b11dec6a5_75558951 extends Smarty_Internal_Block
+class Block_4172022915a7c3c373e9e94_71916689 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -150,7 +150,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <div class="container padding">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-center-block">
-                        <h2>Profilo gestore pagina azienda</h2>
+                        <h2 class="white">Profilo gestore pagina azienda</h2>
                         <br>
                         <div class="well well-sm">
                             <div class="row">

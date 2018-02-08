@@ -336,5 +336,38 @@ small {
 }
 
 .bottom-border {
-    border-bottom: 1px dashed black;
+    border-bottom: 1px solid darkgray;
+}
+
+.white {
+    color: white;
+}
+
+/* Pagination stuff*/
+
+.easyPaginateNav {
+    text-align: center;
+    font-size: 15px;
+    margin: 0 auto;
+}
+
+.page {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.easyPaginateNav a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.easyPaginateNav a.current {
+    background-color: #002147;
+    color: white;
+}
+
+.easyPaginateNav a:hover:not(.current) {
+    background-color: #ddd;
 }
