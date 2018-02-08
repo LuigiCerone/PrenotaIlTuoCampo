@@ -157,9 +157,13 @@
                                     <li class="text">Azienda:</li>
                                     <li class="agileits-main">
                                         <select id="selectPartner">
-                                            {foreach from=$partners item=partner}
+                                            {if isset($partners)}
+                                                {foreach from=$partners item=partner}
+                                                    <option value="{$partner->id}">{$partner->name}</option>
+                                                {/foreach}
+                                            {else}
                                                 <option value="{$partner->id}">{$partner->name}</option>
-                                            {/foreach}
+                                            {/if}
                                         </select></li>
                                     <li class="text">Data inizio:
                                     </li>

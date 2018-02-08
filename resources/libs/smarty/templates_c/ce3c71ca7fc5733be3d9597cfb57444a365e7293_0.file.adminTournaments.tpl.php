@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 12:17:59
+/* Smarty version 3.1.30, created on 2018-02-08 12:20:48
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminTournaments.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c31e7b5a4f6_24819617',
+  'unifunc' => 'content_5a7c3290edb327_74834257',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ce3c71ca7fc5733be3d9597cfb57444a365e7293' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminTournaments.tpl',
-      1 => 1518088676,
+      1 => 1518088845,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7c31e7b5a4f6_24819617 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7c3290edb327_74834257 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4735889635a7c31e7b20949_24556443', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13161923085a7c3290e93e04_90304006', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7815398395a7c31e7b23234_86547804', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14100673785a7c3290e9aa72_79493859', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13489778115a7c31e7b59181_08715495', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13032421735a7c3290ed9ca7_82644286', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_4735889635a7c31e7b20949_24556443 extends Smarty_Internal_Block
+class Block_13161923085a7c3290e93e04_90304006 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_7815398395a7c31e7b23234_86547804 extends Smarty_Internal_Block
+class Block_14100673785a7c3290e9aa72_79493859 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_13489778115a7c31e7b59181_08715495 extends Smarty_Internal_Block
+class Block_13032421735a7c3290ed9ca7_82644286 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -260,20 +260,26 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     <li class="text">Azienda:</li>
                                     <li class="agileits-main">
                                         <select id="selectPartner">
-                                            <?php
+                                            <?php if (isset($_smarty_tpl->tpl_vars['partners']->value)) {?>
+                                                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['partners']->value, 'partner');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['partner']->value) {
 ?>
-                                                <option value="<?php echo $_smarty_tpl->tpl_vars['partner']->value->id;?>
+                                                    <option value="<?php echo $_smarty_tpl->tpl_vars['partner']->value->id;?>
 "><?php echo $_smarty_tpl->tpl_vars['partner']->value->name;?>
 </option>
-                                            <?php
+                                                <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
+                                            <?php } else { ?>
+                                                <option value="<?php echo $_smarty_tpl->tpl_vars['partner']->value->id;?>
+"><?php echo $_smarty_tpl->tpl_vars['partner']->value->name;?>
+</option>
+                                            <?php }?>
                                         </select></li>
                                     <li class="text">Data inizio:
                                     </li>

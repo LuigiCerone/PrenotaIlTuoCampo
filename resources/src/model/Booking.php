@@ -64,6 +64,54 @@ class Booking
         return $b;
     }
 
+    public static function getNotValidBookingsForPartner($moderator)
+    {
+        $sql = "SELECT booking.id, date, time, user_fk, firstName, lastName, field_fk, approved, valid 
+            FROM (booking JOIN user ON booking.user_fk = user.id) JOIN field ON booking.field_fk = field.id
+                 WHERE  user.admin=0 AND booking.valid=0 AND field.partner_fk = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $moderator);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $bookings = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $bookings[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($bookings);
+    }
+
+    public static function getNotApprovedBookingsForPartner($moderator)
+    {
+        $sql = "SELECT booking.id, date, time, user_fk, firstName, lastName, field_fk, approved, valid 
+            FROM (booking JOIN user ON booking.user_fk = user.id) JOIN field ON booking.field_fk = field.id
+                 WHERE  user.admin=0 AND booking.approved=0 AND field.partner_fk = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $moderator);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $bookings = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $bookings[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($bookings);
+    }
+
     public function insert()
     {
         $b = false;

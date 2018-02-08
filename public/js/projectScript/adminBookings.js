@@ -3,7 +3,7 @@ $(function () {
     var element = $('ul.nav.navbar-nav').find('li.active');
     $(element).removeClass('active');
     // console.log(element);
-    $('#tournament').addClass('active');
+    $('#bookings').addClass('active');
 
 
     var validTable = $('#notValidBookingTable').DataTable({
