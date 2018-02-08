@@ -53,22 +53,25 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
                 {if isset($smarty.session.id) && !isset($smarty.session.admin)}
                     <li>
-                        <div class="dropdown show user_profile">
-                            <a class="dropdown-toggle " href="#" role="button" id="dropdownMenuLink"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Il mio account
-                            </a>
+                        <a class="user_profile" href="profile.php" role="button">
+                            Il mio account
+                        </a>
+                        {*<div class="dropdown show user_profile">*}
+                        {*<a class="dropdown-toggle " href="#" role="button" id="dropdownMenuLink"*}
+                        {*data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*}
+                        {*Il mio account*}
+                        {*</a>*}
 
-                            <div class="dropdown-menu user_profile_item" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item " href="profile.php">Il mio account</a>
-                                <a class="dropdown-item " href="bookings.php">Le mie prenotazioni</a>
-                                <a class="dropdown-item " href="invitations.php">I miei inviti</a>
-                                <a class="dropdown-item " href="availability.php">Le mie disponibilità</a>
-                                <a class="dropdown-item " href="userTournaments.php">I miei tornei</a>
-                                <div class="dropdown-divider"></div>
-                                <a href="index.php" class="dropdown-item" id="logout">Esci</a>
-                            </div>
-                        </div>
+                        {*<div class="dropdown-menu user_profile_item" aria-labelledby="dropdownMenuLink">*}
+                        {*<a class="dropdown-item " href="profile.php">Il mio account</a>*}
+                        {*<a class="dropdown-item " href="bookings.php">Le mie prenotazioni</a>*}
+                        {*<a class="dropdown-item " href="invitations.php">I miei inviti</a>*}
+                        {*<a class="dropdown-item " href="availability.php">Le mie disponibilità</a>*}
+                        {*<a class="dropdown-item " href="userTournaments.php">I miei tornei</a>*}
+                        {*<div class="dropdown-divider"></div>*}
+                        {*<a href="index.php" class="dropdown-item" id="logout">Esci</a>*}
+                        {*</div>*}
+                        {*</div>*}
                     </li>
                     }
                 {elseif !isset($smarty.session.id) && !isset($smarty.session.admin)}

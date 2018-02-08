@@ -55,7 +55,7 @@
             </div>
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1 w3l-3">
                 <h4>Info per aziende</h4>
-                Se sei un'azienda e vuoi entrare nella nostra rete non esitare a contattarci!
+                <p>Se sei un'azienda e vuoi entrare nella nostra rete non esitare a contattarci!</p>
                 <br><br>
                 <img class="img_partner img-responsive center-block" src="public/images/become_a_partner.png"
                      alt="Immagine dimostrativa"/>

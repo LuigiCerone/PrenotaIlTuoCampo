@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-04 11:25:22
+/* Smarty version 3.1.30, created on 2018-02-08 10:53:08
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/reviews.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a76df92399b10_99279339',
+  'unifunc' => 'content_5a7c1e040372a6_80281559',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '131d760cc891a16f68a6cc991db8a6fe8c032cfb' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/reviews.tpl',
-      1 => 1517739914,
+      1 => 1518083584,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a76df92399b10_99279339 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7c1e040372a6_80281559 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11390661575a76df92386291_64738977', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4942416695a7c1e04023688_97530386', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2888423735a76df92389663_92233000', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19898392835a7c1e04027ae4_43535489', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2910939885a76df92398f36_63649972', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18330799395a7c1e040364d5_02082758', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_11390661575a76df92386291_64738977 extends Smarty_Internal_Block
+class Block_4942416695a7c1e04023688_97530386 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_2888423735a76df92389663_92233000 extends Smarty_Internal_Block
+class Block_19898392835a7c1e04027ae4_43535489 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -72,7 +72,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_2910939885a76df92398f36_63649972 extends Smarty_Internal_Block
+class Block_18330799395a7c1e040364d5_02082758 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -80,41 +80,45 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <h2 class="title">Cosa dicono di noi?</h2>
     
     <br>
-    <?php
+    <section>
+        <div class="container break-text">
+            <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['reviews']->value, 'review');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['review']->value) {
 ?>
-        <section>
-            <div class="container">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card-block">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-block ">
+                            <div class="col-md-6">
                                 <h4 class="card-title">Recensione di <?php echo $_smarty_tpl->tpl_vars['review']->value->firstName;?>
 </h4>
                                 <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['review']->value->text;?>
 </p>
-                                <p class="pull-right"><input type="number" name="rating" id="stars_rating"
-                                                             data-icon-lib="fa"
-                                                             data-active-icon="fa-star" data-inactive-icon=" fa-star-o"
-                                                             class="rating bigger" value="<?php echo $_smarty_tpl->tpl_vars['review']->value->stars;?>
+                            </div>
+                            <div class="col-md-5">
+                                <input type="number" name="rating" id="stars_rating"
+                                       data-icon-lib="fa"
+                                       data-active-icon="fa-star"
+                                       data-inactive-icon=" fa-star-o"
+                                       class="rating bigger"
+                                       value="<?php echo $_smarty_tpl->tpl_vars['review']->value->stars;?>
 "
-                                                             data-readonly/>
-                                </p>
+                                       data-readonly/>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    <?php
+                <hr>
+            <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-
+        </div>
+    </section>
     
     <?php if (isset($_SESSION['id'])) {?>
         <span class="hidden" id="id"><?php echo $_SESSION['id'];?>

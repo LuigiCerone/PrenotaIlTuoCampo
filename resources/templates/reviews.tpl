@@ -13,29 +13,33 @@
     <h2 class="title">Cosa dicono di noi?</h2>
     {*{$partners->partners|json_encode}*}
     <br>
-    {foreach from=$reviews item=review}
-        <section>
-            <div class="container">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card-block">
+    <section>
+        <div class="container break-text">
+            {foreach from=$reviews item=review}
+                <div class="row">
+                    <div class="card">
+                        <div class="card-block ">
+                            <div class="col-md-6">
                                 <h4 class="card-title">Recensione di {$review->firstName}</h4>
                                 <p class="card-text">{$review->text}</p>
-                                <p class="pull-right"><input type="number" name="rating" id="stars_rating"
-                                                             data-icon-lib="fa"
-                                                             data-active-icon="fa-star" data-inactive-icon=" fa-star-o"
-                                                             class="rating bigger" value="{$review->stars}"
-                                                             data-readonly/>
-                                </p>
+                            </div>
+                            <div class="col-md-5">
+                                <input type="number" name="rating" id="stars_rating"
+                                       data-icon-lib="fa"
+                                       data-active-icon="fa-star"
+                                       data-inactive-icon=" fa-star-o"
+                                       class="rating bigger"
+                                       value="{$review->stars}"
+                                       data-readonly/>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    {/foreach}
-
+                <hr>
+            {/foreach}
+        </div>
+    </section>
     {*New review*}
     {if isset($smarty.session.id)}
         <span class="hidden" id="id">{$smarty.session.id}</span>

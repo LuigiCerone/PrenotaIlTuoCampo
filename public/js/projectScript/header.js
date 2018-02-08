@@ -111,20 +111,5 @@ $(function () {
             }
         });
     });
-
-    $('#logout').on('click', function () {
-        console.log("Log out clicked");
-        $.ajax({
-            type: "POST",
-            url: "resources/src/logout.php",
-            success: function (response) {
-                // console.log(response);
-                window.location.href = "index.php";
-            },
-            error: function (response) {
-                console.log(response);
-            }
-        });
-    });
 });
 
