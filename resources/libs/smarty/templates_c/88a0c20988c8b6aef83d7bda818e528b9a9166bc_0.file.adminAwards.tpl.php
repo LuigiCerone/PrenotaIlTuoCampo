@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 19:29:11
+/* Smarty version 3.1.30, created on 2018-02-08 12:19:14
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminAwards.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a74adf71c7885_94710038',
+  'unifunc' => 'content_5a7c3232ceaba4_69980703',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '88a0c20988c8b6aef83d7bda818e528b9a9166bc' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminAwards.tpl',
-      1 => 1517595975,
+      1 => 1517679187,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a74adf71c7885_94710038 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7c3232ceaba4_69980703 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3664410425a74adf71b68e3_25265361', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6287986515a7c3232cd0b11_67934846', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9129541375a74adf71b92c5_30176340', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12017850095a7c3232cd34b8_04181716', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16354551485a74adf71c65b6_36176151', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2075620295a7c3232ce9aa5_60117394', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_3664410425a74adf71b68e3_25265361 extends Smarty_Internal_Block
+class Block_6287986515a7c3232cd0b11_67934846 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_9129541375a74adf71b92c5_30176340 extends Smarty_Internal_Block
+class Block_12017850095a7c3232cd34b8_04181716 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_16354551485a74adf71c65b6_36176151 extends Smarty_Internal_Block
+class Block_2075620295a7c3232ce9aa5_60117394 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -150,7 +150,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     <li class="text">Posto:
                                     </li>
                                     <li class="agileits-main">
-                                        <input id="place" type="number" min="0"
+                                        <input id="place" type="number" min="0" class="form-control"
                                                name="place"
                                                placeholder="Posizione"
                                                required/></li>

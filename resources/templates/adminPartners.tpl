@@ -111,6 +111,36 @@
                     </tr>
                     </tbody>
                 </table>
+                <br>
+                <hr>
+                <br>
+                {*Fields*}
+                <table id="fieldsTable">
+                    <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Numero</td>
+                        <td>Sport</td>
+                        <td>Tipo</td>
+                        <td>Esterno</td>
+                        <td>Riscaldato</td>
+                        <td>Provincia</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach from=$fields item=field}
+                        <tr>
+                            <td>{$field->id}</td>
+                            <td>{$field->number}</td>
+                            <td>{$field->name}</td>
+                            <td>{$field->type}</td>
+                            <td>{if $field->outdoor == 1}Si{else}No{/if}</td>
+                            <td>{if $field->warmed == 1}Si{else}No{/if}</td>
+                            <td>{$field->province_fk}</td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
             </div>
         </section>
     {/if}

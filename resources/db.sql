@@ -270,7 +270,7 @@ VALUES
   ('Giovanni', 'Gemini', 7, 'gemini@gmail.com', 'gemini', '325415255', '1998-02-02', '2018-02-03', 1, 'M', 0),
   ('Segio', 'Cornelio', 8, 'cornelio@gmail.com', 'cornelio', '3254454866', '1995-05-05', '2018-02-02', 1, 'M', 0),
   ('Andea', 'Paris', 9, 'paris@gmail.com', 'paris', '32515485', '1999-02-02', '2018-02-02', 1, 'M', 0),
-  ('mattia', 'masci', 10, 'masci@gmail.com', 'masci', '325155625', '1996-02-02', '2018-02-02', 1, 'M', 0),
+  ('Mattia', 'Masci', 10, 'masci@gmail.com', 'masci', '325155625', '1996-02-02', '2018-02-02', 1, 'M', 0),
   ('Luigi', 'Fidanza', 11, 'fidanza@gmail.com', 'fidanza', '3251588916', '1998-02-02', '2018-02-02', 1, 'M', 0);
 
 INSERT INTO `availability` (`id`, `user_fk`, `partner_fk`, `sport_fk`, `date`, `time`, `busy`) VALUES

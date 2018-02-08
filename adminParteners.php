@@ -4,6 +4,7 @@ require_once('templateInit.php');
 require_once('resources/src/model/Partner.php');
 require_once('resources/src/model/Sport.php');
 require_once('resources/src/model/Supply.php');
+require_once('resources/src/model/Field.php');
 require_once('resources/src/model/Province.php');
 
 session_start();
@@ -18,6 +19,7 @@ if (isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {
     $params = array('partner' => json_decode(Partner::getPartnerById($_SESSION['moderator'])),
         'sports' => json_decode(Sport::getAllSports()),
         'supplies' => json_decode(Supply::getAllSupplies()),
+        'fields' => json_decode(Field::getFieldsForPartner($_SESSION['moderator'])),
         'provinces' => json_decode(Province::getAllProvinces()));
     $tpl->render('adminPartners', $params);
 } else

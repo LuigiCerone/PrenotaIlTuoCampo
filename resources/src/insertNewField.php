@@ -3,7 +3,7 @@ require_once("model/Field.php");
 
 session_start();
 
-if (isset($_SESSION['admin']) && isset($_POST['partner']) && isset($_POST['outdoor'])
+if ((isset($_SESSION['admin']) || isset($_SESSION['moderator'])) && isset($_POST['partner']) && isset($_POST['outdoor'])
     && isset($_POST['sport']) && isset($_POST['warmed']) && isset($_POST['number'])
     && isset($_POST['province']) && isset($_POST['type'])) {
 

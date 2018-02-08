@@ -151,6 +151,28 @@ class Tournament
         return json_encode($tournaments);
     }
 
+    public static function getAllTournamentsForPartner($moderator)
+    {
+        $sql = "SELECT tournament.scheduled,sport.name AS sport, sport.number_players, tournament.id, tournament.name AS tournament, endSubscription, startDate, teamNumber, teamLeft, telnumber FROM (tournament JOIN partner ON partner_fk = partner.id) JOIN sport ON sport_fk = sport.id WHERE partner.id = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $moderator);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $tournaments = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $tournaments[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($tournaments);
+    }
+
     public function insert()
     {
         $b = false;

@@ -78,6 +78,26 @@ class Field
         return json_encode($fields);
     }
 
+    public static function getFieldsForPartner($moderator)
+    {
+        $sql = "SELECT * FROM field JOIN sport ON sport_fk = sport.id WHERE partner_fk = ?;";
+
+        $conn = Database::getConnection();
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $moderator);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $fields = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $fields[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($fields);
+    }
+
     public function insert()
     {
         $b = false;

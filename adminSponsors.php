@@ -8,7 +8,7 @@ require_once('resources/src/model/Sponsor.php');
 session_start();
 $tpl = templateInit::Instance();
 
-if (isset($_SESSION['admin']) && isset($_GET['t'])) {
+if ((isset($_SESSION['admin']) || isset($_SESSION['moderator'])) && isset($_GET['t'])) {
     $params = array('tournament' => json_decode(Tournament::getInfoForTournament($_GET['t'])),
         'sponsors' => json_decode(Sponsor::getAllSponsorForTournament($_GET['t'])),
         'allsponsors' => json_decode(Sponsor::getAllSponsors()));

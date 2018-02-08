@@ -3,7 +3,7 @@ require_once('model/Resource.php');
 
 session_start();
 
-if (isset($_SESSION['admin'])) {
+if (isset($_SESSION['admin']) || isset($_SESSION['moderator'])) {
 //    id, date, time, user_fk, field_fk, approved, valid
     if (isset($_POST['partner']) && isset($_POST['supply'])) {
         Resource::addSupplies($_POST['partner'], $_POST['supply']);

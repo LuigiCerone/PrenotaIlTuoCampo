@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 11:44:05
+/* Smarty version 3.1.30, created on 2018-02-08 12:02:26
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c29f5a1f853_34301105',
+  'unifunc' => 'content_5a7c2e421ea702_41439837',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29bab6b896493f7b256ea98fd921b9e71f5afdd0' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminPartners.tpl',
-      1 => 1518086643,
+      1 => 1518087743,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7c29f5a1f853_34301105 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7c2e421ea702_41439837 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1144072985a7c29f59e4611_71869853', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18399988915a7c2e4219cfc9_44868029', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12025053495a7c29f59e6ba7_65924910', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11801102255a7c2e4219f845_16779882', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13389306305a7c29f5a1e455_12323032', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18676048925a7c2e421e8dd5_06147494', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_1144072985a7c29f59e4611_71869853 extends Smarty_Internal_Block
+class Block_18399988915a7c2e4219cfc9_44868029 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_12025053495a7c29f59e6ba7_65924910 extends Smarty_Internal_Block
+class Block_11801102255a7c2e4219f845_16779882 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_13389306305a7c29f5a1e455_12323032 extends Smarty_Internal_Block
+class Block_18676048925a7c2e421e8dd5_06147494 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -199,6 +199,50 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                         <td></td>
                         <td></td>
                     </tr>
+                    </tbody>
+                </table>
+                <br>
+                <hr>
+                <br>
+                
+                <table id="fieldsTable">
+                    <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Numero</td>
+                        <td>Sport</td>
+                        <td>Tipo</td>
+                        <td>Esterno</td>
+                        <td>Riscaldato</td>
+                        <td>Provincia</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['fields']->value, 'field');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['field']->value) {
+?>
+                        <tr>
+                            <td><?php echo $_smarty_tpl->tpl_vars['field']->value->id;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['field']->value->number;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['field']->value->name;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['field']->value->type;?>
+</td>
+                            <td><?php if ($_smarty_tpl->tpl_vars['field']->value->outdoor == 1) {?>Si<?php } else { ?>No<?php }?></td>
+                            <td><?php if ($_smarty_tpl->tpl_vars['field']->value->warmed == 1) {?>Si<?php } else { ?>No<?php }?></td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['field']->value->province_fk;?>
+</td>
+                        </tr>
+                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
                     </tbody>
                 </table>
             </div>

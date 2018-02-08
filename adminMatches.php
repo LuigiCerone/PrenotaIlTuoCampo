@@ -8,7 +8,7 @@ require_once('resources/src/model/Match.php');
 session_start();
 $tpl = templateInit::Instance();
 
-if (isset($_SESSION['admin']) && isset($_GET['t'])) {
+if ((isset($_SESSION['admin']) || isset($_SESSION['moderator'])) && isset($_GET['t'])) {
     $params = array('tournament' => json_decode(Tournament::getInfoForTournament($_GET['t'])),
         'days' => array_chunk(json_decode(Match::getAllMatchesForTournament($_GET['t'])), 5));
 

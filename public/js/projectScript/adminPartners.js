@@ -85,6 +85,7 @@ $(function () {
         ]
     });
 
+
     $('#partnersTable').on('click', 'button.field', function () {
         var data = partnersTable.row($(this).parents('tr')).data();
         selectedPartner = data[0];
@@ -146,5 +147,43 @@ $(function () {
                 console.log(response);
             }
         });
+    });
+
+    var fieldsTable = $('#fieldsTable').DataTable({
+        searching: true,
+        stateSave: true,
+        colReorder: true,
+        paging: false,
+        scrollCollapse: true,
+        dom: 'Brftip',
+        language: {
+            'lengthMenu': 'Mostrate _MENU_ righe per pagina',
+            'zeroRecords': 'Nessun risultato trovato',
+            'info': 'Pagina _PAGE_ di _PAGES_',
+            'infoEmpty': 'Nessun risultato trovato',
+            'infoFiltered': '(filtrate da _MAX_ righe totali)',
+            'search': 'Cerca',
+            'paginate': {
+                'first': 'Prima',
+                'last': 'Ultima',
+                'next': 'Succ.',
+                'previous': 'Prec.'
+            },
+            buttons: {
+                colvis: 'Seleziona colonne'
+            }
+        },
+        columnDefs: [
+            {'visible': false, 'targets': [0]}
+        ],
+        buttons: [
+            {
+                extend: 'pdf',
+                text: 'Salva PDF',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            }
+        ]
     });
 });
