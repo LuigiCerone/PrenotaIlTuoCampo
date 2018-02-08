@@ -32,9 +32,9 @@
             lastButton: true,
             lastButtonText: '>>',
             prevButton: true,
-            prevButtonText: '&laquo;',
+            prevButtonText: '<',
             nextButton: true,
-            nextButtonText: '&raquo;'
+            nextButtonText: '>'
         }
 
         return this.each(function (instance) {

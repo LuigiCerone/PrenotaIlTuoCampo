@@ -11,6 +11,8 @@ $(function () {
         elementsPerPage: 2,
         effect: 'slide',
         firstButton: false,
-        lastButton: false
+        lastButton: false,
+        prevButtonText: '&laquo;',
+        nextButtonText: '&raquo;'
     });
 });
