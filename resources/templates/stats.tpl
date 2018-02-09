@@ -12,6 +12,16 @@
 {block name="content"}
     <h2 class="title">Le mie statistiche</h2>
     <div class="container">
+        <div id="checkboxes">
+            <input type="text" id="sportsNumber" class="hidden" value="{$sports|@count}"/>
+            {foreach from=$sports item=sport}
+                <div>
+                    <input type="checkbox" id="{$sport->id}" name="supplies"
+                           value="{$sport->name}">
+                    <label for="{$sport->id}">{$sport->name}</label>
+                </div>
+            {/foreach}
+        </div>
         <div class="chart-container">
             <canvas id="pileChart"></canvas>
         </div>
