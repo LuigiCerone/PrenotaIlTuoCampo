@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 17:25:06
+/* Smarty version 3.1.30, created on 2018-02-09 13:00:39
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/news.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c79e2461d05_11043640',
+  'unifunc' => 'content_5a7d8d672f3bc3_45592023',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1ec173643d4581ebda90dabf01fb79c6e73050b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/news.tpl',
-      1 => 1518107100,
+      1 => 1518171487,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7c79e2461d05_11043640 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7d8d672f3bc3_45592023 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15435977895a7c79e24560d0_49293563', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12069493475a7d8d672de629_20034483', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8134843695a7c79e2458849_01668935', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14180635915a7d8d672e6bc6_03549229', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15092622075a7c79e2461334_81646166', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19760492855a7d8d672f30e8_71689955', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_15435977895a7c79e24560d0_49293563 extends Smarty_Internal_Block
+class Block_12069493475a7d8d672de629_20034483 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_8134843695a7c79e2458849_01668935 extends Smarty_Internal_Block
+class Block_14180635915a7d8d672e6bc6_03549229 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -72,7 +72,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_15092622075a7c79e2461334_81646166 extends Smarty_Internal_Block
+class Block_19760492855a7d8d672f30e8_71689955 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -80,7 +80,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <h2 class="title">Ultime novità!</h2>
     <br>
     <section>
-        <div class="container">
+        <div class="container  break-text">
             <div id="pagination">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['news']->value, 'new');
