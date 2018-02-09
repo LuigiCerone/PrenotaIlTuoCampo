@@ -1,8 +1,8 @@
-/**, *:before, *:after {*/
-/*-moz-box-sizing: border-box;*/
-/*-webkit-box-sizing: border-box;*/
-/*box-sizing: border-box;*/
-/*}*/
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .tiles_container {
     margin: 0 auto;
@@ -54,6 +54,7 @@
     padding: 12px;
     position: absolute;
     bottom: 30%;
+    top: 15%;
     text-align: center;
     left: 0%;
     -webkit-transform: translate(0%, 0%);
@@ -91,6 +92,12 @@
 }
 
 @media all and (max-width: 320px) {
+    .profile-item {
+        color: #fff;
+        font-size: 55px;
+        margin-bottom: 5px;
+    }
+
     .span__1, .span__2, .span__4 {
         width: 100%;
     }
@@ -101,6 +108,16 @@
 }
 
 @media all and (min-width: 321px) and (max-width: 480px) {
+    .profile-item {
+        color: #fff;
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .tile {
+        top: 5%;
+    }
+
     .span__1, .span__2, .span__4 {
         width: 49.54525%;
     }
@@ -111,6 +128,12 @@
 }
 
 @media all and (min-width: 481px) {
+    .profile-item {
+        color: #fff;
+        font-size: 65px;
+        margin-bottom: 25px;
+    }
+
     .span__1 {
         width: 25%;
     }
@@ -135,3 +158,9 @@
         padding-bottom: 25%;
     }
 }
+
+.clear {
+    clear: both;
+}
+
+

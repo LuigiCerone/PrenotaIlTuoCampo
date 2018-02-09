@@ -4,7 +4,6 @@ $(function () {
     $(element).removeClass('active');
 
     $('#logout').on('click', function () {
-        console.log("Log out clicked");
         $.ajax({
             type: "POST",
             url: "resources/src/logout.php",

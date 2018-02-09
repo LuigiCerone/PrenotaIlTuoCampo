@@ -30,7 +30,7 @@ class Booking
 
     public static function getAllBookingsForUser($user_fk)
     {
-        $sql = "SELECT * FROM booking WHERE user_fk=? AND approved=1;";
+        $sql = "SELECT * FROM booking WHERE user_fk=? AND approved=1 AND date>=NOW();";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -110,6 +110,32 @@ class Booking
         Database::closeConnestion($conn);
 
         return json_encode($bookings);
+    }
+
+    public static function getLastBookings($id)
+    {
+        $sql = "SELECT *
+        FROM booking
+        JOIN field ON field_fk = field.id
+        JOIN partner ON partner_fk = partner.id
+        WHERE user_fk = ? AND approved = 1 AND valid = 1 AND date < NOW();";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $partners = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $partners[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($partners);
     }
 
     public function insert()
