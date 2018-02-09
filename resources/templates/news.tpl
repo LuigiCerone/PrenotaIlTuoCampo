@@ -13,7 +13,7 @@
     <h2 class="title">Ultime novità!</h2>
     <br>
     <section>
-        <div class="container">
+        <div class="container  break-text">
             <div id="pagination">
                 {foreach from=$news item=new}
                     <div class="card">

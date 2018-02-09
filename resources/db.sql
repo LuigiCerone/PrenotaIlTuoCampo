@@ -93,15 +93,17 @@ CREATE TABLE partner
 (
   id          INT AUTO_INCREMENT
     PRIMARY KEY,
-  name        VARCHAR(30)  NOT NULL,
-  description VARCHAR(255) NOT NULL,
-  region      VARCHAR(30)  NOT NULL,
-  area        VARCHAR(2)   NOT NULL,
-  address     VARCHAR(40)  NULL,
-  email       VARCHAR(40)  NOT NULL,
-  telnumber   VARCHAR(30)  NOT NULL
+  name        VARCHAR(30)                                            NOT NULL,
+  description VARCHAR(255)                                           NOT NULL,
+  region      VARCHAR(30)                                            NOT NULL,
+  area        VARCHAR(2)                                             NOT NULL,
+  address     VARCHAR(40)                                            NULL,
+  email       VARCHAR(40)                                            NOT NULL,
+  telnumber   VARCHAR(30)                                            NOT NULL,
+  img         VARCHAR(500) DEFAULT 'public/images/partner_logo.jpeg' NULL
 )
   ENGINE = InnoDB;
+
 
 DROP TABLE IF EXISTS province;
 CREATE TABLE province

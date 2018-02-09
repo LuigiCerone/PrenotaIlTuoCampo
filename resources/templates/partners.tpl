@@ -15,7 +15,7 @@
     {*{$partners->partners|json_encode}*}
     <br>
     <section>
-        <div class="container">
+        <div class="container  break-text">
             <div id="pagination">
                 {foreach from=$partners item=item}
                     <div class="card">
