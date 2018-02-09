@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 13:01:59
+/* Smarty version 3.1.30, created on 2018-02-09 10:19:45
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c3c373eb289_93634923',
+  'unifunc' => 'content_5a7d67b1156462_20029860',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7b6440b1ada807af4d6f694fea6482de546c85b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl',
-      1 => 1518091316,
+      1 => 1518167630,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7c3c373eb289_93634923 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7d67b1156462_20029860 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14702210465a7c3c373afa71_85940999', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5677681075a7d67b1121973_22656149', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20010502065a7c3c373b3027_99262206', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7840246845a7d67b11240c9_26176191', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4172022915a7c3c373e9e94_71916689', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20721548345a7d67b1155180_63700489', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_14702210465a7c3c373afa71_85940999 extends Smarty_Internal_Block
+class Block_5677681075a7d67b1121973_22656149 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_20010502065a7c3c373b3027_99262206 extends Smarty_Internal_Block
+class Block_7840246845a7d67b11240c9_26176191 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_4172022915a7c3c373e9e94_71916689 extends Smarty_Internal_Block
+class Block_20721548345a7d67b1155180_63700489 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -239,7 +239,15 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 </td>
                                         </tr>
                                     </table>
-                                    <br><br>
+                                    <br>
+                                    <form id="changePhoto" method="post" enctype="multipart/form-data">
+                                        <fieldset>
+                                            <legend>Selezione immagine azienda</legend>
+                                            <input type="file" name="file" required>
+                                            <input type="submit" class="signin-button" name="submit" value="Carica">
+                                        </fieldset>
+                                    </form>
+                                    <br>
                                 </div>
                             </div>
                         </div>

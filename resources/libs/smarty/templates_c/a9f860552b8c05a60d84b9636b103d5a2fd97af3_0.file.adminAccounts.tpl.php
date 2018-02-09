@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 18:18:21
+/* Smarty version 3.1.30, created on 2018-02-08 18:22:13
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminAccounts.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c865dca0d82_31215852',
+  'unifunc' => 'content_5a7c874519cf18_02542371',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9f860552b8c05a60d84b9636b103d5a2fd97af3' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminAccounts.tpl',
-      1 => 1518110297,
+      1 => 1518110530,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7c865dca0d82_31215852 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7c874519cf18_02542371 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16400059135a7c865dc86d39_04825144', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8486330295a7c8745183727_65844693', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4407792645a7c865dc89675_71926078', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1248348125a7c8745185dc4_32837570', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11706514845a7c865dc9ffa1_98718949', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4208831075a7c874519c1f8_77275428', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_16400059135a7c865dc86d39_04825144 extends Smarty_Internal_Block
+class Block_8486330295a7c8745183727_65844693 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_4407792645a7c865dc89675_71926078 extends Smarty_Internal_Block
+class Block_1248348125a7c8745185dc4_32837570 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_11706514845a7c865dc9ffa1_98718949 extends Smarty_Internal_Block
+class Block_4208831075a7c874519c1f8_77275428 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -164,7 +164,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     </section>
     <div class="row">
         <div class="col-center-block col-md-3">
-            <button class="signin-button" id="addModerator">Salva</button>
+            <button class="signin-button not-valid" id="addModerator">Salva</button>
         </div>
     </div>
     <!-- Modal1 -->
@@ -175,7 +175,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <div class="signin-form profile">
-                        <h3 class="agileinfo_sign">Aggiungi campo</h3>
+                        <h3 class="agileinfo_sign">Aggiungi utente a gestionale</h3>
                         <div class="login-form">
                             Stai per assegnare all'utente <b><span id="user"></span></b> i diritti di gestione
                             sull'azienda
@@ -183,7 +183,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                             Sei sicuro?
                         </div>
                         <div class="modal-footer">
-                            <button id="save" type="button" class="btn btn-primary">Si</button>
+                            <button id="saveUser" type="button" class="btn btn-primary">Si</button>
                             <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Annulla
                             </button>
                         </div>
