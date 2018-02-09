@@ -104,8 +104,8 @@ $(function () {
                 'ava': data[1]
             },
             success: function (response) {
-                console.log(response);
-                var x = document.getElementById("snackbar")
+                // console.log(response);
+                var x = document.getElementById("snackbar");
 
                 // Add the "show" class to DIV
                 x.className = "show";
