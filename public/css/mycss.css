@@ -369,3 +369,9 @@ small {
 .easyPaginateNav a:hover:not(.current) {
     background-color: #ddd;
 }
+
+.chart-container {
+
+    width: 80%;
+    height: 50%;
+}

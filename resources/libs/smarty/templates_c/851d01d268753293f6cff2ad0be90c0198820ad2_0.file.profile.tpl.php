@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-09 12:49:22
+/* Smarty version 3.1.30, created on 2018-02-09 18:28:09
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/profile.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7d8ac26bbe32_46087303',
+  'unifunc' => 'content_5a7dda29303fd6_83209356',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '851d01d268753293f6cff2ad0be90c0198820ad2' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/profile.tpl',
-      1 => 1518176959,
+      1 => 1518197285,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7d8ac26bbe32_46087303 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7dda29303fd6_83209356 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13779149255a7d8ac26b6e16_77141548', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7702502395a7dda292fec23_68050442', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9772471285a7d8ac26b9475_07311119', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3892445755a7dda29301353_42569825', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_41872435a7d8ac26bb5a7_13320817', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17056631995a7dda293036f6_49695057', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_13779149255a7d8ac26b6e16_77141548 extends Smarty_Internal_Block
+class Block_7702502395a7dda292fec23_68050442 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_9772471285a7d8ac26b9475_07311119 extends Smarty_Internal_Block
+class Block_3892445755a7dda29301353_42569825 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -70,7 +70,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_41872435a7d8ac26bb5a7_13320817 extends Smarty_Internal_Block
+class Block_17056631995a7dda293036f6_49695057 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -80,7 +80,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <h3 class="text-center">Area riservata utente</h3>
         <br>
         <ul class="grid">
-            <li class="grid_item span__2 g"><a href="#" class="grid_link">
+            <li class="grid_item span__2 g"><a href="stats.php" class="grid_link">
                     <div class="tile">Statistiche se possibile</div>
                 </a></li>
             <li class="grid_item span__2 a"><a href="repeatLastBookings.php" class="grid_link">

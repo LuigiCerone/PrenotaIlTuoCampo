@@ -160,6 +160,34 @@ class Booking
         return json_encode($info);
     }
 
+    public static function getStats($id)
+    {
+        $sql = "SELECT
+  COUNT(*) AS count,
+ MONTH(booking.date) AS month
+FROM booking
+  JOIN user u ON booking.user_fk = u.id
+WHERE u.admin = 0 AND booking.approved = 1 AND booking.valid = 1 AND u.id = ?
+GROUP BY MONTH(booking.date);";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $stats = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $stats[] = $row;
+        }
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        return json_encode($stats);
+    }
+
     public function insert()
     {
         $b = false;

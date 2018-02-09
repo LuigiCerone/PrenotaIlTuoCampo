@@ -15,7 +15,7 @@
         <h3 class="text-center">Area riservata utente</h3>
         <br>
         <ul class="grid">
-            <li class="grid_item span__2 g"><a href="#" class="grid_link">
+            <li class="grid_item span__2 g"><a href="stats.php" class="grid_link">
                     <div class="tile">Statistiche se possibile</div>
                 </a></li>
             <li class="grid_item span__2 a"><a href="repeatLastBookings.php" class="grid_link">
