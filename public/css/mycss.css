@@ -20,11 +20,9 @@
     color: #EEE;
 }
 
-.card-img-bottom {
-    color: #fff;
-    height: 20rem;
-    background: url("../images/partner_logo.jpeg") center no-repeat;
-    background-size: cover;
+.img-bottom {
+    width: 100%;
+    height: 30rem;
 }
 
 .card {

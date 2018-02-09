@@ -59,6 +59,18 @@ class Partner
         return json_encode($partner);
     }
 
+    public static function updateImage($moderator, $path)
+    {
+        $b = false;
+        $sql = "UPDATE partner SET img = ? WHERE id = ?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("si", $path, $moderator);
+        if ($stmt->execute()) $b = true;
+        return $b;
+    }
+
     public function insert()
     {
         $sql = "INSERT INTO partner (id, name, description, region, area, address, email, telnumber) VALUES (NULL, ?, ?, ?, ?,?,?,?);";

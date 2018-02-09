@@ -165,15 +165,9 @@ $(function () {
     $('#changePhoto').submit(function (event) {
         event.preventDefault();
         event.stopPropagation();
-
-        // var form = $('#changePhoto')[0]; // You need to use standard javascript object here
         var formData = new FormData();
         var fileInfo = $('input[type=file]')[0].files[0];
-        console.log(fileInfo);
-
         formData.append('file', fileInfo, fileInfo.name);
-        console.log(formData);
-
         $.ajax({
             type: "POST",
             url: " resources/src/upload.php",

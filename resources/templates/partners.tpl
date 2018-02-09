@@ -28,7 +28,9 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="card-img-bottom">
+                                <div class="img-fluid img-responsive">
+                                    <img class="img-bottom"
+                                         src="{$item->img}"/>
                                 </div>
                             </div>
                         </div>
