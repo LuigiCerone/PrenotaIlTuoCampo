@@ -114,7 +114,7 @@ class Booking
 
     public static function getLastBookings($id)
     {
-        $sql = "SELECT *
+        $sql = "SELECT booking.id, booking.date, booking.time, partner.name
         FROM booking
         JOIN field ON field_fk = field.id
         JOIN partner ON partner_fk = partner.id
@@ -136,6 +136,28 @@ class Booking
         Database::closeConnestion($conn);
 
         return json_encode($partners);
+    }
+
+    public static function getInfoFromId($selectedBooking)
+    {
+        $sql = "SELECT partner.id AS selectedPartner, partner.name AS partner, field.province_fk AS selectedProvince, 
+        province.name AS province, sport.id AS selectedSport, sport.name AS sport
+        FROM (((booking
+        JOIN field ON field_fk = field.id)
+        JOIN partner ON partner_fk = partner.id)
+        JOIN sport ON field.sport_fk = sport.id)
+        JOIN province ON field.province_fk = province.sign
+        WHERE booking.id = ?;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $selectedBooking);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $info = $result->fetch_assoc();
+
+        return json_encode($info);
     }
 
     public function insert()

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-07 11:52:18
+/* Smarty version 3.1.30, created on 2018-02-09 17:25:31
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7ada625190f3_33292054',
+  'unifunc' => 'content_5a7dcb7b210276_65624092',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6035f191d3e1d7fe34be93c0404fd465f80badd' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/bookingReview.tpl',
-      1 => 1517932811,
+      1 => 1518191230,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7ada625190f3_33292054 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7dcb7b210276_65624092 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17566565905a7ada624e35e2_89718027', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4023275725a7dcb7b1d44f3_59172756', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16364471595a7ada624e5fc1_97262739', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_34358795a7dcb7b1d6b84_68089589', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14721569485a7ada62517820_31196691', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2324828505a7dcb7b20ef10_52289565', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_17566565905a7ada624e35e2_89718027 extends Smarty_Internal_Block
+class Block_4023275725a7dcb7b1d44f3_59172756 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_16364471595a7ada624e5fc1_97262739 extends Smarty_Internal_Block
+class Block_34358795a7dcb7b1d6b84_68089589 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_14721569485a7ada62517820_31196691 extends Smarty_Internal_Block
+class Block_2324828505a7dcb7b20ef10_52289565 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -144,42 +144,46 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             </ul>
             <hr>
         <?php }?>
-        Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
-        <form id="fieldSelect">
-            <?php
+        <?php if (isset($_smarty_tpl->tpl_vars['fields']->value)) {?>
+            Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
+            <form id="fieldSelect">
+                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['fields']->value, 'field');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['field']->value) {
 ?>
-                <div class="radio">
-                    <label><input type="radio" name="field_radio" required
-                                  value="<?php echo $_smarty_tpl->tpl_vars['field']->value->id;?>
+                    <div class="radio">
+                        <label><input type="radio" name="field_radio" required
+                                      value="<?php echo $_smarty_tpl->tpl_vars['field']->value->id;?>
 "/>Numero: <?php echo $_smarty_tpl->tpl_vars['field']->value->number;?>
 , tipo: <?php echo $_smarty_tpl->tpl_vars['field']->value->type;?>
 ,
-                        esterno: <?php if ($_smarty_tpl->tpl_vars['field']->value->outdoor == 1) {?>Si <?php } else { ?>No <?php }?>,
-                        riscaldato: <?php if ($_smarty_tpl->tpl_vars['field']->value->warmed == 1) {?>Si <?php } else { ?>No <?php }?></label>
-                </div>
-            <?php
+                            esterno: <?php if ($_smarty_tpl->tpl_vars['field']->value->outdoor == 1) {?>Si <?php } else { ?>No <?php }?>,
+                            riscaldato: <?php if ($_smarty_tpl->tpl_vars['field']->value->warmed == 1) {?>Si <?php } else { ?>No <?php }?></label>
+                    </div>
+                <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-            <?php if (($_SESSION['id'] != null)) {?>
-            <div class="agile-submit">
-                <input type="submit" id="submit" value="Conferma"/>
-            </div>
+                <?php if (($_SESSION['id'] != null)) {?>
+                <div class="agile-submit">
+                    <input type="submit" id="submit" value="Conferma"/>
+                </div>
 
-            <?php } else { ?>
-            <div class="agile-submit disabled">
-                <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
-                       title="Accedi o registrati!"/>
-                <br>
-                Ricorda che per effetturare la prenotazione devi essere registrato!
-                <?php }?>
-            </div>
-        </form>
+                <?php } else { ?>
+                <div class="agile-submit disabled">
+                    <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
+                           title="Accedi o registrati!"/>
+                    <br>
+                    Ricorda che per effetturare la prenotazione devi essere registrato!
+                    <?php }?>
+                </div>
+            </form>
+        <?php } else { ?>
+            Nella data e nell'ora selezionare la struttura non dispone di campi! Ci scusiamo e ti invitiamo a cambiare dati!
+        <?php }?>
 
     </div>
     <!-- Modal -->

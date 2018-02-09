@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-09 16:42:13
+/* Smarty version 3.1.30, created on 2018-02-09 17:22:22
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/repeatLastBookings.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7dc1553ad719_99055568',
+  'unifunc' => 'content_5a7dcabee03bf3_70258392',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32ae9b76a9f0593d09dfa3021428b1dc9f1b8cb6' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/repeatLastBookings.tpl',
-      1 => 1518190879,
+      1 => 1518193288,
       2 => 'file',
     ),
   ),
@@ -21,25 +21,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7dc1553ad719_99055568 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a7dcabee03bf3_70258392 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2602967395a7dc15539dff6_26037556', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8270223765a7dcabedf6d45_05159711', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7410405845a7dc1553a0e08_73262239', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12821845535a7dcabedf9582_23023649', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6703603405a7dc1553ac457_40788680', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5630040855a7dcabee02e10_26618506', "content");
 ?>
 
 
@@ -48,7 +48,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6703603405a7dc1553
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_2602967395a7dc15539dff6_26037556 extends Smarty_Internal_Block
+class Block_8270223765a7dcabedf6d45_05159711 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -60,7 +60,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_7410405845a7dc1553a0e08_73262239 extends Smarty_Internal_Block
+class Block_12821845535a7dcabedf9582_23023649 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -77,7 +77,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_6703603405a7dc1553ac457_40788680 extends Smarty_Internal_Block
+class Block_5630040855a7dcabee02e10_26618506 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -122,7 +122,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             </tbody>
         </table>
         <hr>
-        <form id="form" class="mod2">
+        <form id="form" class="mod2" method="post" action="bookingReview.php">
+            <input type="text" class="hidden" id="selectedBooking" name="selectedBooking"/>
             <div class="row">
                 <div class="col-md-4">
                     <div class=" w3l-left-mk">
@@ -167,7 +168,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             </div>
         </form>
     </div>
-
     <div id="snackbar">Selezionare la prenotazione dalla tabella!</div>
 <?php
 }

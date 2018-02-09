@@ -58,30 +58,34 @@
             </ul>
             <hr>
         {/if}
-        Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
-        <form id="fieldSelect">
-            {foreach from=$fields item=field}
-                <div class="radio">
-                    <label><input type="radio" name="field_radio" required
-                                  value="{$field->id}"/>Numero: {$field->number}, tipo: {$field->type},
-                        esterno: {if $field->outdoor == 1}Si {else}No {/if},
-                        riscaldato: {if $field->warmed == 1}Si {else}No {/if}</label>
+        {if isset($fields)}
+            Nel giorno e nella data selezionata la struttura dispone dei seguenti campi:
+            <form id="fieldSelect">
+                {foreach from=$fields item=field}
+                    <div class="radio">
+                        <label><input type="radio" name="field_radio" required
+                                      value="{$field->id}"/>Numero: {$field->number}, tipo: {$field->type},
+                            esterno: {if $field->outdoor == 1}Si {else}No {/if},
+                            riscaldato: {if $field->warmed == 1}Si {else}No {/if}</label>
+                    </div>
+                {/foreach}
+                {if ($smarty.session.id != null)}
+                <div class="agile-submit">
+                    <input type="submit" id="submit" value="Conferma"/>
                 </div>
-            {/foreach}
-            {if ($smarty.session.id != null)}
-            <div class="agile-submit">
-                <input type="submit" id="submit" value="Conferma"/>
-            </div>
 
-            {else}
-            <div class="agile-submit disabled">
-                <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
-                       title="Accedi o registrati!"/>
-                <br>
-                Ricorda che per effetturare la prenotazione devi essere registrato!
-                {/if}
-            </div>
-        </form>
+                {else}
+                <div class="agile-submit disabled">
+                    <input disabled type="submit" id="submit" value="Conferma" data-toggle="tooltip"
+                           title="Accedi o registrati!"/>
+                    <br>
+                    Ricorda che per effetturare la prenotazione devi essere registrato!
+                    {/if}
+                </div>
+            </form>
+        {else}
+            Nella data e nell'ora selezionare la struttura non dispone di campi! Ci scusiamo e ti invitiamo a cambiare dati!
+        {/if}
 
     </div>
     <!-- Modal -->

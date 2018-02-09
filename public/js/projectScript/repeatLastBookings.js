@@ -40,6 +40,7 @@ $(function () {
         if ($(this).hasClass('selected')) {
             $(this).removeClass('selected');
             selectedBooking = [];
+            $('#selectedBooking').val();
         }
         else {
             bookingTable.$('tr.selected').removeClass('selected');
@@ -48,6 +49,7 @@ $(function () {
             console.log(selectedBooking);
             $('#booking').val("");
             $('#booking').val(selectedBooking[3]);
+            $('#selectedBooking').val(selectedBooking[0]);
         }
     });
 

@@ -38,7 +38,8 @@
             </tbody>
         </table>
         <hr>
-        <form id="form" class="mod2">
+        <form id="form" class="mod2" method="post" action="bookingReview.php">
+            <input type="text" class="hidden" id="selectedBooking" name="selectedBooking"/>
             <div class="row">
                 <div class="col-md-4">
                     <div class=" w3l-left-mk">
@@ -83,7 +84,6 @@
             </div>
         </form>
     </div>
-
     <div id="snackbar">Selezionare la prenotazione dalla tabella!</div>
 {/block}
 
