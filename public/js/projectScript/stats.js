@@ -138,6 +138,7 @@ $(function () {
                 type: 'bar',
                 data: piledata,
                 options: {
+                    responsive: true,
                     scales: {
                         yAxes: [{
                             ticks: {
