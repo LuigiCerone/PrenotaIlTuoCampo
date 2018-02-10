@@ -160,15 +160,18 @@ class Booking
         return json_encode($info);
     }
 
-    public static function getStats($id)
+    public static function getPartnerStats($id)
     {
         $sql = "SELECT
-  COUNT(*) AS count,
- MONTH(booking.date) AS month
-FROM booking
-  JOIN user u ON booking.user_fk = u.id
-WHERE u.admin = 0 AND booking.approved = 1 AND booking.valid = 1 AND u.id = ?
-GROUP BY MONTH(booking.date);";
+        COUNT(*) AS count,
+        partner.name AS name,
+        partner.id AS partnerId
+        FROM ((booking
+        JOIN field f ON booking.field_fk = f.id)
+        JOIN partner ON f.partner_fk = partner.id)
+        JOIN user ON booking.user_fk = user.id
+        WHERE user.admin = 0 AND booking.approved = 1 AND booking.valid = 1 AND user.id = ?
+        GROUP BY partnerId;";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -185,7 +188,7 @@ GROUP BY MONTH(booking.date);";
         $stmt->close();
         Database::closeConnestion($conn);
 
-        return json_encode($stats);
+        return $stats;
     }
 
     public static function getMoreStats($id)
@@ -217,7 +220,7 @@ GROUP BY MONTH(booking.date), field.sport_fk;";
         $stmt->close();
         Database::closeConnestion($conn);
 
-        return json_encode($stats);
+        return $stats;
     }
 
     public function insert()

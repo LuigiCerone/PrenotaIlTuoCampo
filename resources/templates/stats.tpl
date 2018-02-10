@@ -23,7 +23,19 @@
             {/foreach}
         </div>
         <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="chart-container">
             <canvas id="pileChart"></canvas>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="chart-container">
+            <canvas id="cakeChart"></canvas>
         </div>
     </div>
 {/block}
