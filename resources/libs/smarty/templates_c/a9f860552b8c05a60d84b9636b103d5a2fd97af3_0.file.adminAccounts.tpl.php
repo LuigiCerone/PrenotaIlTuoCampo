@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 18:22:13
+/* Smarty version 3.1.30, created on 2018-02-12 16:21:29
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminAccounts.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c874519cf18_02542371',
+  'unifunc' => 'content_5a81b0f9c61a95_00020738',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9f860552b8c05a60d84b9636b103d5a2fd97af3' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/adminAccounts.tpl',
-      1 => 1518110530,
+      1 => 1518448887,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7c874519cf18_02542371 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a81b0f9c61a95_00020738 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8486330295a7c8745183727_65844693', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20455359585a81b0f9c47c94_65649438', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1248348125a7c8745185dc4_32837570', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12487497965a81b0f9c4a409_53242435', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4208831075a7c874519c1f8_77275428', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15526150405a81b0f9c608a1_87736116', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_8486330295a7c8745183727_65844693 extends Smarty_Internal_Block
+class Block_20455359585a81b0f9c47c94_65649438 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_1248348125a7c8745185dc4_32837570 extends Smarty_Internal_Block
+class Block_12487497965a81b0f9c4a409_53242435 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_4208831075a7c874519c1f8_77275428 extends Smarty_Internal_Block
+class Block_15526150405a81b0f9c608a1_87736116 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -164,7 +164,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     </section>
     <div class="row">
         <div class="col-center-block col-md-3">
-            <button class="signin-button not-valid" id="addModerator">Salva</button>
+            <button class="signin-button" disabled id="addModerator">Salva</button>
         </div>
     </div>
     <!-- Modal1 -->

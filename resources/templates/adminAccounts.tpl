@@ -69,7 +69,7 @@
     </section>
     <div class="row">
         <div class="col-center-block col-md-3">
-            <button class="signin-button not-valid" id="addModerator">Salva</button>
+            <button class="signin-button" disabled id="addModerator">Salva</button>
         </div>
     </div>
     <!-- Modal1 -->

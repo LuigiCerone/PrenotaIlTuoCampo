@@ -105,6 +105,7 @@ $(function () {
             selectedPartner = partnersTable.row($(this)).data();
             $('#partner').text(selectedPartner[1]);
         }
+        checkButtonState();
     });
 
     $('#usersTable tbody').on('click', 'tr', function () {
@@ -117,8 +118,18 @@ $(function () {
             $(this).addClass('selected');
             selectedUser = usersTable.row($(this)).data();
             $('#user').text(selectedUser[1] + " " + selectedUser[2]);
+            console.log(selectedUser);
         }
+        checkButtonState();
     });
+
+    function checkButtonState() {
+        if (selectedPartner.length > 0 && selectedUser.length > 0) {
+            $('#addModerator').prop('disabled', false);
+        } else {
+            $('#addModerator').prop('disabled', true);
+        }
+    }
 
     $('#addModerator').on('click', function (event) {
         event.preventDefault();
@@ -127,7 +138,20 @@ $(function () {
 
     $('#saveUser').on('click', function (event) {
         event.preventDefault();
-
-        // TODO AJAX to PHP.
-    })
+        $.ajax({
+            type: "POST",
+            url: "resources/src/addModerator.php",
+            data: {
+                'user': selectedUser[0],
+                'partner': selectedPartner[0]
+            },
+            success: function (response) {
+                console.log(response);
+                // window.location.reload();
+            },
+            error: function (response) {
+                console.log(response);
+            }
+        });
+    });
 });

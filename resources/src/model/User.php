@@ -55,7 +55,7 @@ class User
 
     public static function getAllAvailableUser()
     {
-        $sql = "SELECT firstName, lastName, email FROM user;";
+        $sql = "SELECT id,firstName, lastName, email FROM user WHERE partner_fk IS NULL;";
 
         $conn = Database::getConnection();
         // prepare and bind
@@ -169,6 +169,20 @@ class User
         $stmt->close();
         Database::closeConnestion($conn);
         return $result->fetch_assoc()['count'];
+    }
+
+    public static function setModerator($user, $partner)
+    {
+        $b = false;
+        $sql = "UPDATE user SET partner_fk = ? WHERE id=?;";
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ii", $partner, $user);
+        if ($stmt->execute()) $b = true;
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $b;
     }
 
 
