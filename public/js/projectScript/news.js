@@ -7,7 +7,7 @@ $(function () {
 
     $('#pagination').easyPaginate({
         paginateElement: 'div.row',
-        elementsPerPage: 1,
+        elementsPerPage: 3,
         effect: 'slide',
         firstButton: false,
         lastButton: false,

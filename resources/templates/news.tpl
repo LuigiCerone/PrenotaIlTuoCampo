@@ -18,15 +18,21 @@
                 {foreach from=$news item=new}
                     <div class="card">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="card-block">
-                                    <h4 class="card-title">Titolo:{$new->title}</h4>
-                                    <h6 class="card-title">
-                                        Giorno:{$new->date}</h6>
-                                    <p class="card-text">Novità:{$new->text}</p>
+                                    <h4 class="card-title"><b>Titolo:</b> {$new->title}</h4>
+                                    <p class="card-text">{$new->date}</p>
+                                    <p class="card-text">{$new->text}</p>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                            </div>
+                            <div class="clearfix"></div>
+                            <br>
+                            <hr>
+                            <br>
                         </div>
+
                     </div>
                 {/foreach}
             </div>

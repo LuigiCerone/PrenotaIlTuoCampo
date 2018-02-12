@@ -48,6 +48,8 @@
                         </div>
                     </div>
                 </div>
+                <hr>
+                <br>
             {/foreach}
         </div>
     </section>

@@ -81,7 +81,7 @@ CREATE TABLE news
 (
   id      INT AUTO_INCREMENT
     PRIMARY KEY,
-  title   VARCHAR(30) NULL,
+  title   VARCHAR(50) NULL,
   date    DATE        NULL,
   text    TEXT        NULL,
   user_fk INT REFERENCES user (id)
@@ -390,6 +390,10 @@ VALUES
   (45, 11, 6, 2, NULL, NULL, NULL, 8, NULL);
 
 INSERT INTO `news` (`id`, `title`, `date`, `text`, `user_fk`) VALUES
+  (3, 'Inserimento del centro sportivo Paterno', '2018-02-02', 'E\' inserita una nuova azienda.',
+   0),
+  (4, 'Torneo terminato', '2018-02-02', 'Si è concluso il torneo Serie C.',
+   0),
   (1, 'Creazione torneo', '2018-02-02', 'E\' stato creato il torneo Serie A. Sport: Calcio. Partecipanti: 10 squadre',
    0),
   (2, 'Creazione sito', '2018-02-01', 'E\' stato creato il sito \"PRENOTAILTUOCAMPO\"', 0);
