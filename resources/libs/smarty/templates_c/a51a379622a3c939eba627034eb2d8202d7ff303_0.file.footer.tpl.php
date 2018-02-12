@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-12 16:58:54
+/* Smarty version 3.1.30, created on 2018-02-12 17:03:35
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a81b9be304ed5_60793796',
+  'unifunc' => 'content_5a81bad79463f7_75018777',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a51a379622a3c939eba627034eb2d8202d7ff303' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/footer.tpl',
-      1 => 1518451131,
+      1 => 1518451410,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a81b9be304ed5_60793796 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a81bad79463f7_75018777 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <div class="footer">
     <div class="container">
-        <?php if (isset($_SESSION['id']) && !isset($_smarty_tpl->tpl_vars['smart']->value['session']['admin']) && !isset($_smarty_tpl->tpl_vars['smart']->value['session']['moderator'])) {?>
+        <?php if (isset($_SESSION['id']) && !isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {?>
         <div class="wthree_footer_grid_left">
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1">
                 <h4>Su di noi</h4>
@@ -58,7 +58,7 @@ function content_5a81b9be304ed5_60793796 (Smarty_Internal_Template $_smarty_tpl)
                                                                                       class="scroll">Le mie
                             statistiche</a>
                     </li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a id="logout" href="index.php"
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a id="logout2" href="index.php"
                                                                                       class="scroll">Esci</a>
                     </li>
                 </ul>

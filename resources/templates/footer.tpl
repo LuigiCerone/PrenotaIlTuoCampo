@@ -1,7 +1,7 @@
 <html>
 <div class="footer">
     <div class="container">
-        {if isset($smarty.session.id) && !isset($smart.session.admin) && !isset($smart.session.moderator)}
+        {if isset($smarty.session.id) && !isset($smarty.session.admin) && !isset($smarty.session.moderator)}
         <div class="wthree_footer_grid_left">
             <div class="col-md-3 col-xs-3 wthree_footer_grid_left1">
                 <h4>Su di noi</h4>
@@ -34,7 +34,7 @@
                                                                                       class="scroll">Le mie
                             statistiche</a>
                     </li>
-                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a id="logout" href="index.php"
+                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a id="logout2" href="index.php"
                                                                                       class="scroll">Esci</a>
                     </li>
                 </ul>

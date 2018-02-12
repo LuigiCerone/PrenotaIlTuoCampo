@@ -112,7 +112,7 @@ $(function () {
         });
     });
 
-    $('#logout').on('click', function () {
+    $('#logout,#logout2').on('click', function () {
         console.log("Log out clicked");
         $.ajax({
             type: "POST",

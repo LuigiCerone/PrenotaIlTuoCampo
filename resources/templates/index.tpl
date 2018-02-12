@@ -149,7 +149,7 @@
                                     <form id="changePhoto" method="post" enctype="multipart/form-data">
                                         <fieldset>
                                             <legend>Selezione immagine azienda</legend>
-                                            <input type="file" name="file" required>
+                                            <input type="file" class="form-control" name="file" required>
                                             <input type="submit" class="signin-button" name="submit" value="Carica">
                                         </fieldset>
                                     </form>
