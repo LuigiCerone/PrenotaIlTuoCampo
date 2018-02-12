@@ -15,11 +15,12 @@
             <li class="active"><a id="received" data-toggle="tab">Ricevuti</a></li>
             <li><a id="sent" data-toggle="tab">Inviati</a></li>
         </ul>
-
+        <br>
         <div id="receivedInvitations">
             Di seguito è presente la lista degli inviti ricevuti da parte di altri utenti.
             Per <b>accettare</b> o per <b>rifiutare</b> un invito clicca sulla riga della tabella il cui stato corrent è
             <b>in attesa</b>.
+            <br><br>
             <table id="receivedTable" width="100%">
                 <thead>
                 <tr>

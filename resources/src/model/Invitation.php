@@ -54,6 +54,14 @@ class Invitation
         $result = $stmt->get_result();
         $sent = array();
         while ($row = $result->fetch_assoc()) {
+            if ($row['invitationDate'] != null) {
+                $date = new DateTime($row['invitationDate']);
+                $row['invitationDate'] = $date->format('d-m-Y H:i:s');
+            }
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $sent[] = $row;
         }
         $stmt->close();
@@ -92,6 +100,14 @@ class Invitation
         $received = array();
 
         while ($row = $result->fetch_assoc()) {
+            if ($row['invitationDate'] != null) {
+                $date = new DateTime($row['invitationDate']);
+                $row['invitationDate'] = $date->format('d-m-Y H:i:s');
+            }
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $received[] = $row;
         }
         $stmt->close();

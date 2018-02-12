@@ -42,6 +42,10 @@ class Booking
         $partners = array();
 
         while ($row = $result->fetch_assoc()) {
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $partners[] = $row;
         }
         $stmt->close();
@@ -130,6 +134,8 @@ class Booking
         $partners = array();
 
         while ($row = $result->fetch_assoc()) {
+            $date = new DateTime($row['date']);
+            $row['date'] = $date->format('d-m-Y');
             $partners[] = $row;
         }
         $stmt->close();

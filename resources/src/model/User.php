@@ -370,6 +370,16 @@ class User
 
     public function to_json()
     {
+        if ($this->birthdate != null) {
+            $date = new DateTime($this->birthdate);
+            $this->birthdate = $date->format('d-m-Y');
+        }
+
+        if ($this->created_at != null) {
+            $date = new DateTime($this->created_at);
+            $this->created_at = $date->format('d-m-Y');
+        }
+
         return json_encode(array(
             'id' => $this->id,
             'firstName' => $this->firstName,

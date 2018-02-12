@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-03 11:07:46
+/* Smarty version 3.1.30, created on 2018-02-12 11:47:55
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/invitations.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7589f231d709_11483439',
+  'unifunc' => 'content_5a8170db735342_03354977',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e06fdc8d7a11ac3023979db2dc7658b3f42ba7a6' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/invitations.tpl',
-      1 => 1517652453,
+      1 => 1518432473,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7589f231d709_11483439 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a8170db735342_03354977 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18288288555a7589f22e5983_65163803', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17551688415a8170db6fe779_17087477', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4586876175a7589f22e8088_47286934', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9466360675a8170db700e24_71768255', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1755958885a7589f231c3d3_75625632', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7243331055a8170db733cf3_86522738', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_18288288555a7589f22e5983_65163803 extends Smarty_Internal_Block
+class Block_17551688415a8170db6fe779_17087477 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_4586876175a7589f22e8088_47286934 extends Smarty_Internal_Block
+class Block_9466360675a8170db700e24_71768255 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_1755958885a7589f231c3d3_75625632 extends Smarty_Internal_Block
+class Block_7243331055a8170db733cf3_86522738 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -80,9 +80,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <li class="active"><a id="received" data-toggle="tab">Ricevuti</a></li>
             <li><a id="sent" data-toggle="tab">Inviati</a></li>
         </ul>
-
+        <br>
         <div id="receivedInvitations">
-            Di seguito è presente la lista degli inviti ricevuti da parte di altri utenti:
+            Di seguito è presente la lista degli inviti ricevuti da parte di altri utenti.
+            Per <b>accettare</b> o per <b>rifiutare</b> un invito clicca sulla riga della tabella il cui stato corrent è
+            <b>in attesa</b>.
+            <br><br>
             <table id="receivedTable" width="100%">
                 <thead>
                 <tr>

@@ -38,7 +38,7 @@
             </tbody>
         </table>
         <hr>
-        <form id="form" class="mod2" method="post" action="bookingReview.php">
+        <form id="form" class="mod2" method="post" action="bookingReview.php" autocomplete="off">
             <input type="text" class="hidden" id="selectedBooking" name="selectedBooking"/>
             <div class="row">
                 <div class="col-md-4">

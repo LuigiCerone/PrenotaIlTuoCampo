@@ -38,6 +38,8 @@ class News
         $news = array();
 
         while ($row = $result->fetch_assoc()) {
+            $date = new DateTime($row['date']);
+            $row['date'] = $date->format('d-m-Y');
             $news[] = $row;
         }
         $stmt->close();

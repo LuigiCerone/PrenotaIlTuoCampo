@@ -48,6 +48,10 @@ class Tournament
         $tournaments = array();
 
         while ($row = $result->fetch_assoc()) {
+            $date = new DateTime($row['startDate']);
+            $row['startDate'] = $date->format('d-m-Y');
+            $date = new DateTime($row['endSubscription']);
+            $row['endSubscription'] = $date->format('d-m-Y');
             $tournaments[] = $row;
         }
         $stmt->close();
@@ -69,6 +73,11 @@ class Tournament
         $tournament = $result->fetch_assoc();
         $stmt->close();
         Database::closeConnestion($conn);
+
+        $date = new DateTime($tournament['startDate']);
+        $tournament['startDate'] = $date->format('d-m-Y');
+        $date = new DateTime($tournament['endSubscription']);
+        $tournament['endSubscription'] = $date->format('d-m-Y');
 
         return json_encode($tournament);
     }
@@ -143,6 +152,10 @@ class Tournament
         $tournaments = array();
 
         while ($row = $result->fetch_assoc()) {
+            $date = new DateTime($row['startDate']);
+            $row['startDate'] = $date->format('d-m-Y');
+            $date = new DateTime($row['endSubscription']);
+            $row['endSubscription'] = $date->format('d-m-Y');
             $tournaments[] = $row;
         }
         $stmt->close();

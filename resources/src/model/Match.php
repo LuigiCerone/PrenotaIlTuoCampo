@@ -42,6 +42,10 @@ class Match
         $matches = array();
 
         while ($row = $result->fetch_assoc()) {
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $matches[] = $row;
         }
         $stmt->close();

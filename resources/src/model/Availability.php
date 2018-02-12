@@ -42,6 +42,10 @@ class Availability
         $availabilities = array();
 
         while ($row = $result->fetch_assoc()) {
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $availabilities[] = $row;
         }
         $stmt->close();

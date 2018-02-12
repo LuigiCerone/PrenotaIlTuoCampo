@@ -12,6 +12,7 @@ $(function () {
         dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'], // set short day names
         dayNamesMin: ['Do', 'Lu', 'Ma', 'Me', 'Gio', 'Ve', 'Sa'], // set more short days names
         dateFormat: 'yy-mm-dd',
+        // altFormat: "dd-mm-yy",
         minDate: 1
     };
 

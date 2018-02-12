@@ -21,7 +21,8 @@
                             <div class="col-md-12">
                                 <div class="card-block">
                                     <h4 class="card-title">Titolo:{$new->title}</h4>
-                                    <h6 class="card-title">Giorno:{$new->date}</h6>
+                                    <h6 class="card-title">
+                                        Giorno:{$new->date}</h6>
                                     <p class="card-text">Novità:{$new->text}</p>
                                 </div>
                             </div>
