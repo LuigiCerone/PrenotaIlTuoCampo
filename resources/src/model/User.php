@@ -152,12 +152,13 @@ class User
     public static function getCaptainNumber($id)
     {
         $sql = "SELECT
-              count(*) AS count
-            FROM (user
-              JOIN booking b ON user.id = b.user_fk)
-            WHERE b.user_fk = ? AND b.valid = 1 AND b.approved = 1 AND b.date < NOW()
-            GROUP BY user.id
-            ORDER BY count DESC
+              count(*) AS count,
+              team.name
+            FROM user
+              JOIN team ON team.user_fk = user.id
+            WHERE user.id = ?
+            GROUP BY team.user_fk
+            ORDER BY COUNT DESC
             LIMIT 1;";
 
         $conn = Database::getConnection();

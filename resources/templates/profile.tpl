@@ -34,11 +34,11 @@
                                             </li>
                                             <li class="anim4">
                                                 <div class="quote"> Il tuo giorno preferito per
-                                                    giocare è il {$stats->favDay}.
+                                                    giocare è {$stats->favDay}.
                                                 </div>
                                             </li>
                                             <li class="anim5">
-                                                <div class="quote">Se il capitano
+                                                <div class="quote">Sei il capitano
                                                     di {if $stats->captain == 1} {$stats->captain} squadra.{else}
                                                         {$stats->captain} squadre.{/if}</div>
                                             </li>

@@ -118,7 +118,6 @@ $(function () {
             $(this).addClass('selected');
             selectedUser = usersTable.row($(this)).data();
             $('#user').text(selectedUser[1] + " " + selectedUser[2]);
-            console.log(selectedUser);
         }
         checkButtonState();
     });
@@ -146,8 +145,7 @@ $(function () {
                 'partner': selectedPartner[0]
             },
             success: function (response) {
-                console.log(response);
-                // window.location.reload();
+                window.location.reload();
             },
             error: function (response) {
                 console.log(response);
