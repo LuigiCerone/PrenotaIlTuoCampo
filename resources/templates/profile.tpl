@@ -15,37 +15,40 @@
         <h3 class="text-center">Area riservata utente</h3>
         <br>
         <ul class="grid">
-            <li class="grid_item span__4 g"><a href="" class="not-hoverable grid_link">
-                    <div class="tile">
-                        <div class="content-slider">
-                            <div class="slider">
-                                <div class="mask">
-                                    <ul>
-                                        <li class="anim1">
-                                            <div class="quote">Il tuo sport preferito è {$stats->favSport}.</div>
-                                        </li>
-                                        <li class="anim2">
-                                            <div class="quote">Sono {$stats->day} giorni che non giochi!</div>
-                                        </li>
-                                        <li class="anim3">
-                                            <div class="quote">Il tuo partener preferito è {$stats->favPartner}.</div>
-                                        </li>
-                                        <li class="anim4">
-                                            <div class="quote"> Il tuo giorno preferito per
-                                                giocare è il {$stats->favDay}.
-                                            </div>
-                                        </li>
-                                        <li class="anim5">
-                                            <div class="quote">Se il capitano
-                                                di {if $stats->captain == 1} {$stats->captain} squadra.{else}
-                                                    {$stats->captain} squadre.{/if}</div>
-                                        </li>
-                                    </ul>
+            {if isset($stats)}
+                <li class="grid_item span__4 g"><a href="" class="not-hoverable grid_link">
+                        <div class="tile">
+                            <div class="content-slider">
+                                <div class="slider">
+                                    <div class="mask">
+                                        <ul>
+                                            <li class="anim1">
+                                                <div class="quote">Il tuo sport preferito è {$stats->favSport}.</div>
+                                            </li>
+                                            <li class="anim2">
+                                                <div class="quote">Sono {$stats->day} giorni che non giochi!</div>
+                                            </li>
+                                            <li class="anim3">
+                                                <div class="quote">Il tuo partener preferito è {$stats->favPartner}.
+                                                </div>
+                                            </li>
+                                            <li class="anim4">
+                                                <div class="quote"> Il tuo giorno preferito per
+                                                    giocare è il {$stats->favDay}.
+                                                </div>
+                                            </li>
+                                            <li class="anim5">
+                                                <div class="quote">Se il capitano
+                                                    di {if $stats->captain == 1} {$stats->captain} squadra.{else}
+                                                        {$stats->captain} squadre.{/if}</div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a></li>
+                    </a></li>
+            {/if}
             <li class="grid_item span__2 hoverable g"><a href="stats.php" class="grid_link">
                     <div class="tile">
                         <i class="fa fa-line-chart profile-item" aria-hidden="true"></i><br>Statistiche

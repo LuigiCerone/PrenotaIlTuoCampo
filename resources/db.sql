@@ -215,18 +215,18 @@ CREATE TABLE user
 (
   id         INT AUTO_INCREMENT
     PRIMARY KEY,
-  firstName  VARCHAR(30)                 NOT NULL,
-  lastName   VARCHAR(30)                 NOT NULL,
-  email      VARCHAR(100)                NOT NULL,
-  password   VARCHAR(30)                 NOT NULL,
-  telnumber  VARCHAR(20)                 NULL,
-  birthdate  DATE                        NULL,
-  created_at DATE                        NOT NULL,
-  active     TINYINT(1) DEFAULT '0'      NOT NULL,
-  gender     ENUM ('M', 'F') DEFAULT 'M' NOT NULL,
-  admin      TINYINT(1) DEFAULT '0'      NOT NULL,
-  moderator  INT DEFAULT '0'             NOT NULL
-
+  firstName  VARCHAR(30)                  NOT NULL,
+  lastName   VARCHAR(30)                  NOT NULL,
+  email      VARCHAR(100)                 NOT NULL,
+  password   VARCHAR(30)                  NOT NULL,
+  telnumber  VARCHAR(20)                  NULL,
+  birthdate  DATE                         NULL,
+  created_at DATE                         NOT NULL,
+  active     TINYINT(1) DEFAULT '0'       NOT NULL,
+  gender     ENUM ('M', 'F') DEFAULT 'M'  NOT NULL,
+  admin      TINYINT(1) DEFAULT '0'       NOT NULL,
+  partner_fk INT DEFAULT NULL             NULL,
+  FOREIGN KEY (partner_fk) REFERENCES partner (id)
 )
   ENGINE = InnoDB;
 
@@ -259,21 +259,32 @@ CREATE TABLE review
 )
   ENGINE = InnoDB;
 
+INSERT INTO `partner` (`id`, `name`, `description`, `region`, `area`, `address`, `email`, `telnumber`) VALUES
+  (1, 'Paterno', 'Impianto che dispone campi di ogni tipo di sport. Moderni e praticabili.', 'Abruzzo', 'AQ',
+   'Via del fosso 10', 'paterno@gmail.com', '3257548125'),
+  (2, 'TorVergata',
+   'Impianto situato nei pressi della capitale, Frequentato maggiormente da studenti. DisponibilitÃ  limitate.',
+   'Lazio', 'RM', 'via salaria 72', 'torvergata@gmail.com', '3254515485'),
+  (3, 'Fiorentina', 'Impianto di notevole importanza per le sue origini. Impianti non moderni ma efficenti', 'Toscana',
+   'FI', 'via merla 80', 'fiorentina@gmail.com', '32874156256'),
+  (4, 'Corropoli', 'Impinato situato sulla costa adriatica. Vista mare.', 'Abruzzo', 'TE', 'Via Ros 45',
+   'corropoli@gmail.com', '32458766265');
 
-INSERT INTO `user` (`firstName`, `lastName`, `id`, `email`, `password`, `telnumber`, `birthdate`, `created_at`, `active`, `gender`, `admin`)
+
+INSERT INTO `user` (`firstName`, `lastName`, `id`, `email`, `password`, `telnumber`, `birthdate`, `created_at`, `active`, `gender`, `admin`, `partner_fk`)
 VALUES
-  ('Alessandro', 'Taglieri', 1, 'taglieri@gmail.com', 'taglieri', '3881938676', '1996-04-19', '2018-02-01', 1, 'M',
-                 0),
-  ('Luigi', 'Cerone', 2, 'cerone@gmail.com', 'cerone', '33315148567', '1996-09-15', '2018-02-02', 1, 'M', 1),
-  ('Danilo', 'Rosati', 3, 'rosati@gmail.com', 'rosati', '3257845755', '1996-05-12', '2018-02-01', 1, 'M', 0),
-  ('Serena', 'Rossi', 4, 'rossi@gmail.com', 'rossi', '3285745615', '1998-08-29', '2018-02-02', 1, 'F', 0),
-  ('Massimiliano', 'Nucci', 5, 'nucci@gmail.com', 'nucci', '325874525', '1997-05-02', '2018-02-02', 1, 'M', 0),
-  ('Sara', 'Bianchi', 6, 'bianchi@gmail.com', 'bianchi', '3548423654', '1987-05-01', '2018-02-03', 1, 'F', 0),
-  ('Giovanni', 'Gemini', 7, 'gemini@gmail.com', 'gemini', '325415255', '1998-02-02', '2018-02-03', 1, 'M', 0),
-  ('Segio', 'Cornelio', 8, 'cornelio@gmail.com', 'cornelio', '3254454866', '1995-05-05', '2018-02-02', 1, 'M', 0),
-  ('Andea', 'Paris', 9, 'paris@gmail.com', 'paris', '32515485', '1999-02-02', '2018-02-02', 1, 'M', 0),
-  ('Mattia', 'Masci', 10, 'masci@gmail.com', 'masci', '325155625', '1996-02-02', '2018-02-02', 1, 'M', 0),
-  ('Luigi', 'Fidanza', 11, 'fidanza@gmail.com', 'fidanza', '3251588916', '1998-02-02', '2018-02-02', 1, 'M', 0);
+  ('Alessandro', 'Taglieri', 1, 'taglieri@gmail.com', 'taglieri', '3881938676', '1996-04-19', '2018-02-01', 1, 'M', 0,
+   1),
+  ('Luigi', 'Cerone', 2, 'cerone@gmail.com', 'cerone', '33315148567', '1996-09-15', '2018-02-02', 1, 'M', 1, NULL),
+  ('Danilo', 'Rosati', 3, 'rosati@gmail.com', 'rosati', '3257845755', '1996-05-12', '2018-02-01', 1, 'M', 0, NULL),
+  ('Serena', 'Rossi', 4, 'rossi@gmail.com', 'rossi', '3285745615', '1998-08-29', '2018-02-02', 1, 'F', 0, NULL),
+  ('Massimiliano', 'Nucci', 5, 'nucci@gmail.com', 'nucci', '325874525', '1997-05-02', '2018-02-02', 1, 'M', 0, NULL),
+  ('Sara', 'Bianchi', 6, 'bianchi@gmail.com', 'bianchi', '3548423654', '1987-05-01', '2018-02-03', 1, 'F', 0, NULL),
+  ('Giovanni', 'Gemini', 7, 'gemini@gmail.com', 'gemini', '325415255', '1998-02-02', '2018-02-03', 1, 'M', 0, NULL),
+  ('Segio', 'Cornelio', 8, 'cornelio@gmail.com', 'cornelio', '3254454866', '1995-05-05', '2018-02-02', 1, 'M', 0, NULL),
+  ('Andea', 'Paris', 9, 'paris@gmail.com', 'paris', '32515485', '1999-02-02', '2018-02-02', 1, 'M', 0, NULL),
+  ('Mattia', 'Masci', 10, 'masci@gmail.com', 'masci', '325155625', '1996-02-02', '2018-02-02', 1, 'M', 0, NULL),
+  ('Luigi', 'Fidanza', 11, 'fidanza@gmail.com', 'fidanza', '3251588916', '1998-02-02', '2018-02-02', 1, 'M', 0, NULL);
 
 INSERT INTO `availability` (`id`, `user_fk`, `partner_fk`, `sport_fk`, `date`, `time`, `busy`) VALUES
   (1, 1, 1, 1, '2018-02-13', NULL, 1),
@@ -310,7 +321,10 @@ INSERT INTO `booking` (`id`, `date`, `time`, `user_fk`, `field_fk`, `approved`, 
   (1, '2018-02-21', '11:00:00', NULL, 2, 0, 1),
   (2, '2018-02-13', '13:00:00', 1, 1, 1, 1),
   (3, '2018-02-12', '14:00:00', 1, 1, 1, 1),
-  (4, '2018-02-13', '14:00:00', 1, 1, 1, 1),
+  (14, '2018-02-10', '14:00:00', 3, 1, 1, 1),
+  (15, '2018-02-5', '14:00:00', 3, 1, 1, 1),
+  (16, '2018-02-6', '14:00:00', 3, 1, 1, 1),
+  (4, '2018-02-11', '14:00:00', 3, 1, 1, 1),
   (5, '2018-02-28', '12:00:00', 1, 1, 0, 0),
   (6, '2018-02-15', '13:00:00', 1, 6, 1, 1),
   (7, '2018-02-22', '11:00:00', 7, 7, 1, 0),
@@ -379,18 +393,6 @@ INSERT INTO `news` (`id`, `title`, `date`, `text`, `user_fk`) VALUES
   (1, 'Creazione torneo', '2018-02-02', 'E\' stato creato il torneo Serie A. Sport: Calcio. Partecipanti: 10 squadre',
    0),
   (2, 'Creazione sito', '2018-02-01', 'E\' stato creato il sito \"PRENOTAILTUOCAMPO\"', 0);
-
-
-INSERT INTO `partner` (`id`, `name`, `description`, `region`, `area`, `address`, `email`, `telnumber`) VALUES
-  (1, 'Paterno', 'Impianto che dispone campi di ogni tipo di sport. Moderni e praticabili.', 'Abruzzo', 'AQ',
-   'Via del fosso 10', 'paterno@gmail.com', '3257548125'),
-  (2, 'TorVergata',
-   'Impianto situato nei pressi della capitale, Frequentato maggiormente da studenti. DisponibilitÃ  limitate.',
-   'Lazio', 'RM', 'via salaria 72', 'torvergata@gmail.com', '3254515485'),
-  (3, 'Fiorentina', 'Impianto di notevole importanza per le sue origini. Impianti non moderni ma efficenti', 'Toscana',
-   'FI', 'via merla 80', 'fiorentina@gmail.com', '32874156256'),
-  (4, 'Corropoli', 'Impinato situato sulla costa adriatica. Vista mare.', 'Abruzzo', 'TE', 'Via Ros 45',
-   'corropoli@gmail.com', '32458766265');
 
 
 INSERT INTO `province` (`sign`, `name`) VALUES

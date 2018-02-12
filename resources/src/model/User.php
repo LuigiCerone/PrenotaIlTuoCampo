@@ -18,7 +18,7 @@ class User
     private $active;
     private $gender;
     private $admin;
-    private $moderator;
+    private $parnter_fk;
 
 
     public function __construct()
@@ -84,7 +84,7 @@ class User
               JOIN booking b ON user.id = b.user_fk)
               JOIN field ON b.field_fk = field.id)
               JOIN sport ON sport.id = field.sport_fk)
-              JOIN partner ON partner_fk = partner.id
+              JOIN partner ON field.partner_fk = partner.id
             WHERE b.user_fk = ? AND b.valid = 1 AND b.approved = 1 AND b.date < NOW()
             GROUP BY sport.id, partner.id
             ORDER BY count DESC
@@ -214,7 +214,14 @@ class User
 
     public function isModerator()
     {
-        return $this->moderator;
+        if ($this->parnter_fk != null)
+            return true;
+        else return false;
+    }
+
+    public function getPartner()
+    {
+        return $this->parnter_fk;
     }
 
     /**
@@ -328,7 +335,7 @@ class User
         $this->created_at = $row['created_at'];
         $this->active = $row['active'];
         $this->admin = $row['admin'];
-        $this->moderator = $row['moderator'];
+        $this->parnter_fk = $row['partner_fk'];
     }
 
     function get_user_from_id($id)

@@ -11,8 +11,9 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         $_SESSION['id'] = $user->getId();
         if ($user->isAdmin() == 1)
             $_SESSION['admin'] = 1;
-        if ($user->isModerator() == 1)
-            $_SESSION['moderator'] = 1;
+        if ($user->isModerator()) {
+            $_SESSION['moderator'] = $user->getPartner();
+        }
         exit();
     } else
         http_response_code(500);

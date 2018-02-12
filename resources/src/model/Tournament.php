@@ -95,6 +95,10 @@ class Tournament
         $tournaments = array();
 
         while ($row = $result->fetch_assoc()) {
+            $date = new DateTime($row['startDate']);
+            $row['startDate'] = $date->format('d-m-Y');
+            $date = new DateTime($row['endSubscription']);
+            $row['endSubscription'] = $date->format('d-m-Y');
             $tournaments[] = $row;
         }
         $stmt->close();

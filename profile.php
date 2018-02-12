@@ -16,9 +16,14 @@ if ($_SESSION['id'] != null) {
         $stats->{'favDay'} = User::getFavouriteDay($_SESSION['id']);
         $stats->{'day'} = User::getLastBookingDateDiff($_SESSION['id']);
         $stats->{'captain'} = User::getCaptainNumber($_SESSION['id']);
-//        print_r($favs);
+//        print_r($stats);
 
-        $params['stats'] = $stats;
+        $i = 0;
+        foreach ($stats as $key => $value) {
+            $i++;
+        }
+        if ($i == 6)
+            $params['stats'] = $stats;
         $tpl->render('profile', $params);
     }
 } else

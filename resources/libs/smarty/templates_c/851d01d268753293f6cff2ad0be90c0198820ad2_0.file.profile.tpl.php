@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-12 11:09:41
+/* Smarty version 3.1.30, created on 2018-02-12 16:04:32
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/profile.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a8167e5b3cd78_16116365',
+  'unifunc' => 'content_5a81ad00e297a7_40970138',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '851d01d268753293f6cff2ad0be90c0198820ad2' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/profile.tpl',
-      1 => 1518430175,
+      1 => 1518447866,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a8167e5b3cd78_16116365 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a81ad00e297a7_40970138 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16737159715a8167e5b1ec69_01496174', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21140364415a81ad00e0c628_75623222', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10076284955a8167e5b213d4_58649965', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10671539215a81ad00e0ff74_31401007', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8604411565a8167e5b3c081_81802859', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5493888855a81ad00e27816_30777733', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_16737159715a8167e5b1ec69_01496174 extends Smarty_Internal_Block
+class Block_21140364415a81ad00e0c628_75623222 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_10076284955a8167e5b213d4_58649965 extends Smarty_Internal_Block
+class Block_10671539215a81ad00e0ff74_31401007 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -70,7 +70,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_8604411565a8167e5b3c081_81802859 extends Smarty_Internal_Block
+class Block_5493888855a81ad00e27816_30777733 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -80,43 +80,46 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <h3 class="text-center">Area riservata utente</h3>
         <br>
         <ul class="grid">
-            <li class="grid_item span__4 g"><a href="" class="not-hoverable grid_link">
-                    <div class="tile">
-                        <div class="content-slider">
-                            <div class="slider">
-                                <div class="mask">
-                                    <ul>
-                                        <li class="anim1">
-                                            <div class="quote">Il tuo sport preferito è <?php echo $_smarty_tpl->tpl_vars['stats']->value->favSport;?>
+            <?php if (isset($_smarty_tpl->tpl_vars['stats']->value)) {?>
+                <li class="grid_item span__4 g"><a href="" class="not-hoverable grid_link">
+                        <div class="tile">
+                            <div class="content-slider">
+                                <div class="slider">
+                                    <div class="mask">
+                                        <ul>
+                                            <li class="anim1">
+                                                <div class="quote">Il tuo sport preferito è <?php echo $_smarty_tpl->tpl_vars['stats']->value->favSport;?>
 .</div>
-                                        </li>
-                                        <li class="anim2">
-                                            <div class="quote">Sono <?php echo $_smarty_tpl->tpl_vars['stats']->value->day;?>
+                                            </li>
+                                            <li class="anim2">
+                                                <div class="quote">Sono <?php echo $_smarty_tpl->tpl_vars['stats']->value->day;?>
  giorni che non giochi!</div>
-                                        </li>
-                                        <li class="anim3">
-                                            <div class="quote">Il tuo partener preferito è <?php echo $_smarty_tpl->tpl_vars['stats']->value->favPartner;?>
-.</div>
-                                        </li>
-                                        <li class="anim4">
-                                            <div class="quote"> Il tuo giorno preferito per
-                                                giocare è il <?php echo $_smarty_tpl->tpl_vars['stats']->value->favDay;?>
+                                            </li>
+                                            <li class="anim3">
+                                                <div class="quote">Il tuo partener preferito è <?php echo $_smarty_tpl->tpl_vars['stats']->value->favPartner;?>
 .
-                                            </div>
-                                        </li>
-                                        <li class="anim5">
-                                            <div class="quote">Se il capitano
-                                                di <?php if ($_smarty_tpl->tpl_vars['stats']->value->captain == 1) {?> <?php echo $_smarty_tpl->tpl_vars['stats']->value->captain;?>
+                                                </div>
+                                            </li>
+                                            <li class="anim4">
+                                                <div class="quote"> Il tuo giorno preferito per
+                                                    giocare è il <?php echo $_smarty_tpl->tpl_vars['stats']->value->favDay;?>
+.
+                                                </div>
+                                            </li>
+                                            <li class="anim5">
+                                                <div class="quote">Se il capitano
+                                                    di <?php if ($_smarty_tpl->tpl_vars['stats']->value->captain == 1) {?> <?php echo $_smarty_tpl->tpl_vars['stats']->value->captain;?>
  squadra.<?php } else { ?>
-                                                    <?php echo $_smarty_tpl->tpl_vars['stats']->value->captain;?>
+                                                        <?php echo $_smarty_tpl->tpl_vars['stats']->value->captain;?>
  squadre.<?php }?></div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a></li>
+                    </a></li>
+            <?php }?>
             <li class="grid_item span__2 hoverable g"><a href="stats.php" class="grid_link">
                     <div class="tile">
                         <i class="fa fa-line-chart profile-item" aria-hidden="true"></i><br>Statistiche

@@ -84,6 +84,10 @@ class Booking
         $bookings = array();
 
         while ($row = $result->fetch_assoc()) {
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $bookings[] = $row;
         }
         $stmt->close();
@@ -108,6 +112,10 @@ class Booking
         $bookings = array();
 
         while ($row = $result->fetch_assoc()) {
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $bookings[] = $row;
         }
         $stmt->close();
@@ -134,8 +142,10 @@ class Booking
         $partners = array();
 
         while ($row = $result->fetch_assoc()) {
-            $date = new DateTime($row['date']);
-            $row['date'] = $date->format('d-m-Y');
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $partners[] = $row;
         }
         $stmt->close();
@@ -272,6 +282,10 @@ GROUP BY MONTH(booking.date), field.sport_fk;";
         $partners = array();
 
         while ($row = $result->fetch_assoc()) {
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $partners[] = $row;
         }
         $stmt->close();
@@ -295,6 +309,10 @@ GROUP BY MONTH(booking.date), field.sport_fk;";
         $partners = array();
 
         while ($row = $result->fetch_assoc()) {
+            if ($row['date'] != null) {
+                $date = new DateTime($row['date']);
+                $row['date'] = $date->format('d-m-Y');
+            }
             $partners[] = $row;
         }
         $stmt->close();
