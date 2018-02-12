@@ -22,19 +22,23 @@
                                 <div class="mask">
                                     <ul>
                                         <li class="anim1">
-                                            <div class="quote">Gay</div>
+                                            <div class="quote">Il tuo sport preferito è {$stats->favSport}.</div>
                                         </li>
                                         <li class="anim2">
-                                            <div class="quote">Cane</div>
+                                            <div class="quote">Sono {$stats->day} giorni che non giochi!</div>
                                         </li>
                                         <li class="anim3">
-                                            <div class="quote">Maiale</div>
+                                            <div class="quote">Il tuo partener preferito è {$stats->favPartner}.</div>
                                         </li>
                                         <li class="anim4">
-                                            <div class="quote">Porco</div>
+                                            <div class="quote"> Il tuo giorno preferito per
+                                                giocare è il {$stats->favDay}.
+                                            </div>
                                         </li>
                                         <li class="anim5">
-                                            <div class="quote">Cazzo</div>
+                                            <div class="quote">Se il capitano
+                                                di {if $stats->captain == 1} {$stats->captain} squadra.{else}
+                                                    {$stats->captain} squadre.{/if}</div>
                                         </li>
                                     </ul>
                                 </div>

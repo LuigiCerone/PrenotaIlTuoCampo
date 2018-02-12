@@ -74,6 +74,104 @@ class User
         return json_encode($users);
     }
 
+    public static function getFavouriteStats($id)
+    {
+        $sql = "SELECT
+              count(*)     AS count,
+              sport.name   AS favSport,
+              partner.name AS favPartner
+            FROM (((user
+              JOIN booking b ON user.id = b.user_fk)
+              JOIN field ON b.field_fk = field.id)
+              JOIN sport ON sport.id = field.sport_fk)
+              JOIN partner ON partner_fk = partner.id
+            WHERE b.user_fk = ? AND b.valid = 1 AND b.approved = 1 AND b.date < NOW()
+            GROUP BY sport.id, partner.id
+            ORDER BY count DESC
+            LIMIT 1;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return json_encode($result->fetch_assoc());
+    }
+
+    public static function getFavouriteDay($id)
+    {
+        $sql = "SELECT
+              count(*) AS count,
+              WEEKDAY(b.date) AS day
+            FROM (user
+              JOIN booking b ON user.id = b.user_fk)
+            WHERE b.user_fk = ? AND b.valid = 1 AND b.approved = 1 AND b.date < NOW()
+            GROUP BY WEEKDAY(b.date)
+            ORDER BY count DESC
+            LIMIT 1;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        Database::closeConnestion($conn);
+
+        $result = $result->fetch_assoc();
+        $days = array('Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica');
+        return $days[$result['day']];
+    }
+
+    public static function getLastBookingDateDiff($id)
+    {
+
+        $sql = "SELECT DATEDIFF(NOW(), MAX(date)) AS day  
+                FROM (user
+                  JOIN booking b ON user.id = b.user_fk)
+                WHERE b.user_fk = ? AND b.valid = 1 AND b.approved = 1 AND b.date < NOW()
+                ORDER BY b.date DESC
+                LIMIT 1;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        Database::closeConnestion($conn);
+        $result = $result->fetch_assoc();
+        return $result['day'];
+    }
+
+    public static function getCaptainNumber($id)
+    {
+        $sql = "SELECT
+              count(*) AS count
+            FROM (user
+              JOIN booking b ON user.id = b.user_fk)
+            WHERE b.user_fk = ? AND b.valid = 1 AND b.approved = 1 AND b.date < NOW()
+            GROUP BY user.id
+            ORDER BY count DESC
+            LIMIT 1;";
+
+        $conn = Database::getConnection();
+        // prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        Database::closeConnestion($conn);
+        return $result->fetch_assoc()['count'];
+    }
+
+
     function toString()
     {
         return ("User's data : " . $this->firstName . " " . $this->lastName);
