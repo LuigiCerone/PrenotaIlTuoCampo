@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-12 17:01:24
+/* Smarty version 3.1.30, created on 2018-02-12 17:42:54
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a81ba5465ce58_25666412',
+  'unifunc' => 'content_5a81c40eea9894_76076935',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7b6440b1ada807af4d6f694fea6482de546c85b' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/index.tpl',
-      1 => 1518451278,
+      1 => 1518453766,
       2 => 'file',
     ),
   ),
@@ -21,30 +21,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a81ba5465ce58_25666412 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a81c40eea9894_76076935 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11275402275a81ba5461ecc5_24972565', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1371334485a81c40ee73d66_20026276', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8017548265a81ba54621cc4_56541147', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10879791385a81c40ee76595_51344220', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17304776475a81ba5465bbd4_53359502', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8653587285a81c40eea8626_55343312', "content");
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_11275402275a81ba5461ecc5_24972565 extends Smarty_Internal_Block
+class Block_1371334485a81c40ee73d66_20026276 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_8017548265a81ba54621cc4_56541147 extends Smarty_Internal_Block
+class Block_10879791385a81c40ee76595_51344220 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_17304776475a81ba5465bbd4_53359502 extends Smarty_Internal_Block
+class Block_8653587285a81c40eea8626_55343312 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -255,6 +255,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 </div>
             </div>
         <?php } else { ?>
+            <br>
             <div class="col-md-6 w3l_about_bottom_left one">
                 <div class="">
                     <div class="searchbox-panel">

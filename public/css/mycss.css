@@ -1,11 +1,9 @@
 .searchbox {
-    background-image: url("../images/ball-stadium.jpeg");
     /* Full height */
-    height: 100%;
-
+    /*height: 100%;*/
+    height: 80vh;
     /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("../images/ball-stadium.jpeg") no-repeat center;
     background-size: cover;
 }
 

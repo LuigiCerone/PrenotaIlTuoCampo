@@ -161,6 +161,7 @@
                 </div>
             </div>
         {else}
+            <br>
             <div class="col-md-6 w3l_about_bottom_left one">
                 <div class="">
                     <div class="searchbox-panel">
