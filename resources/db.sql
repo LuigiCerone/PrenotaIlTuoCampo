@@ -76,18 +76,6 @@ CREATE TABLE `match`
 )
   ENGINE = InnoDB;
 
-DROP TABLE IF EXISTS news;
-CREATE TABLE news
-(
-  id      INT AUTO_INCREMENT
-    PRIMARY KEY,
-  title   VARCHAR(50) NULL,
-  date    DATE        NULL,
-  text    TEXT        NULL,
-  user_fk INT REFERENCES user (id)
-)
-  ENGINE = InnoDB;
-
 DROP TABLE IF EXISTS partner;
 CREATE TABLE partner
 (
@@ -101,6 +89,40 @@ CREATE TABLE partner
   email       VARCHAR(40)                                            NOT NULL,
   telnumber   VARCHAR(30)                                            NOT NULL,
   img         VARCHAR(500) DEFAULT 'public/images/partner_logo.jpeg' NULL
+)
+  ENGINE = InnoDB;
+
+DROP TABLE IF EXISTS user;
+CREATE TABLE user
+(
+  id         INT AUTO_INCREMENT
+    PRIMARY KEY,
+  firstName  VARCHAR(30)                  NOT NULL,
+  lastName   VARCHAR(30)                  NOT NULL,
+  email      VARCHAR(100)                 NOT NULL,
+  password   VARCHAR(30)                  NOT NULL,
+  telnumber  VARCHAR(20)                  NULL,
+  birthdate  DATE                         NULL,
+  created_at DATE                         NOT NULL,
+  active     TINYINT(1) DEFAULT '0'       NOT NULL,
+  gender     ENUM ('M', 'F') DEFAULT 'M'  NOT NULL,
+  admin      TINYINT(1) DEFAULT '0'       NOT NULL,
+  partner_fk INT DEFAULT NULL             NULL,
+  FOREIGN KEY (partner_fk) REFERENCES partner (id)
+)
+  ENGINE = InnoDB;
+
+
+DROP TABLE IF EXISTS news;
+CREATE TABLE news
+(
+  id      INT AUTO_INCREMENT
+    PRIMARY KEY,
+  title   VARCHAR(50) NULL,
+  date    DATE        NULL,
+  text    TEXT        NULL,
+  user_fk INT         NULL,
+  FOREIGN KEY (user_fk) REFERENCES user (id)
 )
   ENGINE = InnoDB;
 
@@ -209,27 +231,6 @@ CREATE TABLE tournament
   COMMENT 'Se true significa che le partite sono state organizzate'
 )
   ENGINE = InnoDB;
-
-DROP TABLE IF EXISTS user;
-CREATE TABLE user
-(
-  id         INT AUTO_INCREMENT
-    PRIMARY KEY,
-  firstName  VARCHAR(30)                  NOT NULL,
-  lastName   VARCHAR(30)                  NOT NULL,
-  email      VARCHAR(100)                 NOT NULL,
-  password   VARCHAR(30)                  NOT NULL,
-  telnumber  VARCHAR(20)                  NULL,
-  birthdate  DATE                         NULL,
-  created_at DATE                         NOT NULL,
-  active     TINYINT(1) DEFAULT '0'       NOT NULL,
-  gender     ENUM ('M', 'F') DEFAULT 'M'  NOT NULL,
-  admin      TINYINT(1) DEFAULT '0'       NOT NULL,
-  partner_fk INT DEFAULT NULL             NULL,
-  FOREIGN KEY (partner_fk) REFERENCES partner (id)
-)
-  ENGINE = InnoDB;
-
 
 DROP TABLE IF EXISTS booking;
 CREATE TABLE booking
@@ -393,12 +394,12 @@ VALUES
 
 INSERT INTO `news` (`id`, `title`, `date`, `text`, `user_fk`) VALUES
   (3, 'Inserimento del centro sportivo Paterno', '2018-02-02', 'E\' inserita una nuova azienda.',
-   0),
-  (4, 'Torneo terminato', '2018-02-02', 'Si è concluso il torneo Serie C.',
-   0),
+   2),
+  (4, 'Torneo terminato', '2018-02-02', 'Si e concluso il torneo Serie C.',
+   2),
   (1, 'Creazione torneo', '2018-02-02', 'E\' stato creato il torneo Serie A. Sport: Calcio. Partecipanti: 10 squadre',
-   0),
-  (2, 'Creazione sito', '2018-02-01', 'E\' stato creato il sito \"PRENOTAILTUOCAMPO\"', 0);
+   2),
+  (2, 'Creazione sito', '2018-02-01', 'E\' stato creato il sito \"PRENOTAILTUOCAMPO\"', 2);
 
 
 INSERT INTO `province` (`sign`, `name`) VALUES
@@ -578,7 +579,7 @@ INSERT INTO `team` (`id`, `name`, `number`, `user_fk`, `players`, `tournament_fk
 
 INSERT INTO `tournament` (`id`, `name`, `partner_fk`, `startDate`, `endSubscription`, `teamNumber`, `teamLeft`, `sport_fk`, `scheduled`)
 VALUES
-  (1, 'Serie A', 1, '2018-02-14', '2018-02-07', 10, 9, 5, 0),
-  (2, 'A1', 2, '2018-02-13', '2018-02-08', 10, 0, 1, 1),
-  (3, 'Serie B', 2, '2018-02-21', '2018-02-14', 10, 10, 3, 0),
+  (1, 'Serie A', 1, '2018-02-24', '2018-02-22', 10, 9, 5, 0),
+  (2, 'A1', 2, '2018-02-25', '2018-02-23', 10, 0, 1, 1),
+  (3, 'Serie B', 2, '2018-02-26', '2018-02-24', 10, 10, 3, 0),
   (4, 'Serie B', 1, '2018-02-28', '2018-02-20', 10, 10, 5, 0);

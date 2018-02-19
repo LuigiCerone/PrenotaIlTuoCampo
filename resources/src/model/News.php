@@ -36,7 +36,6 @@ class News
         $result = $stmt->get_result();
 
         $news = array();
-
         while ($row = $result->fetch_assoc()) {
             $date = new DateTime($row['date']);
             $row['date'] = $date->format('d-m-Y');
