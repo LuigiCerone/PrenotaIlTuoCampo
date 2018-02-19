@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-08 17:57:01
+/* Smarty version 3.1.30, created on 2018-02-19 16:52:59
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7c815d54de84_92208968',
+  'unifunc' => 'content_5a8af2dbb256e0_98977176',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7a50d74936f643a70293beb5dda3d67b62c4d0d' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/header.tpl',
-      1 => 1518108678,
+      1 => 1519055566,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a7c815d54de84_92208968 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a8af2dbb256e0_98977176 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,7 +42,7 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 
     <!--/ Meta tag Keywords -->
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5330622385a7c815d52d997_06232932', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17966901065a8af2dbafd310_76778165', "css");
 ?>
 
     <!-- /include/assets/css/ files -->
@@ -74,22 +74,8 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5330622385a7c815d5
                         <a class="user_profile" href="profile.php" role="button">
                             Il mio account
                         </a>
-                        
-                        
-                        
-                        
-                        
-
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                    </li>
+                    <li><a id="logout3" href="" role="button">Esci</a>
                     </li>
                     }
                 <?php } elseif (!isset($_SESSION['id']) && !isset($_SESSION['admin']) && !isset($_SESSION['moderator'])) {?>
@@ -260,13 +246,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5330622385a7c815d5
 </div>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15249691045a7c815d54ccc8_60826342', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7530853545a8af2dbb24715_22218287', "js");
 ?>
 
 </body>
 </html><?php }
 /* {block "css"} */
-class Block_5330622385a7c815d52d997_06232932 extends Smarty_Internal_Block
+class Block_17966901065a8af2dbafd310_76778165 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -286,7 +272,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_15249691045a7c815d54ccc8_60826342 extends Smarty_Internal_Block
+class Block_7530853545a8af2dbb24715_22218287 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

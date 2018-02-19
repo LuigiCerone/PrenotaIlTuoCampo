@@ -72,7 +72,7 @@
             <div class="container padding">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-center-block">
-                        <h2 class="white">Profilo gestore pagina azienda</h2>
+                        <h2 class="white">Profilo gestore azienda</h2>
                         <br>
                         <div class="well well-sm">
                             <div class="row">

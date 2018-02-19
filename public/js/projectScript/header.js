@@ -112,8 +112,8 @@ $(function () {
         });
     });
 
-    $('#logout,#logout2').on('click', function () {
-        console.log("Log out clicked");
+    $('#logout,#logout2,#logout3').on('click', function () {
+        // console.log("Log out clicked");
         $.ajax({
             type: "POST",
             url: "resources/src/logout.php",
