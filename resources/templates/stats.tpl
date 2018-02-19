@@ -37,6 +37,7 @@
         <div class="chart-container">
             <canvas id="cakeChart"></canvas>
         </div>
+        <br><br>
     </div>
 {/block}
 

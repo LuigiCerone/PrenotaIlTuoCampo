@@ -15,5 +15,19 @@
         Questo sito ti permette di effettuare prenotazioni presso strutture sportive affiliate e di partecipare a tornei
         organizzati da aziende con in palio diversi premi!
         Se sei una azienda o una società sportiva e desideri entrare nella nostra rete non esitare a contattarci!
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
     </div>
 {/block}

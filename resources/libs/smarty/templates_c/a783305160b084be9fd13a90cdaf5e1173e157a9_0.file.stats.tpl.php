@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-10 17:26:23
+/* Smarty version 3.1.30, created on 2018-02-19 10:35:23
   from "/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/stats.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a7f1d2f938633_27753056',
+  'unifunc' => 'content_5a8a9a5b8140b8_87409708',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a783305160b084be9fd13a90cdaf5e1173e157a9' => 
     array (
       0 => '/home/debian-luigi/PhpstormProjects/PrenotaIlTuoCampo/resources/templates/stats.tpl',
-      1 => 1518279106,
+      1 => 1519032920,
       2 => 'file',
     ),
   ),
@@ -21,25 +21,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a7f1d2f938633_27753056 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a8a9a5b8140b8_87409708 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2265608405a7f1d2f9257d7_86450161', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1710775985a8a9a5b7f8597_78937095', "css");
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_904819855a7f1d2f927dd9_44283230', "js");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5983632535a8a9a5b7fb066_12048671', "js");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20007006275a7f1d2f9373e4_20404665', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_598790185a8a9a5b812f61_52511050', "content");
 ?>
 
 
@@ -48,7 +48,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20007006275a7f1d2f
 $_smarty_tpl->_subTemplateRender("file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block "css"} */
-class Block_2265608405a7f1d2f9257d7_86450161 extends Smarty_Internal_Block
+class Block_1710775985a8a9a5b7f8597_78937095 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -59,7 +59,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "css"} */
 /* {block "js"} */
-class Block_904819855a7f1d2f927dd9_44283230 extends Smarty_Internal_Block
+class Block_5983632535a8a9a5b7fb066_12048671 extends Smarty_Internal_Block
 {
 public $append = true;
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,7 +76,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "js"} */
 /* {block "content"} */
-class Block_20007006275a7f1d2f9373e4_20404665 extends Smarty_Internal_Block
+class Block_598790185a8a9a5b812f61_52511050 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -122,6 +122,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
         <div class="chart-container">
             <canvas id="cakeChart"></canvas>
         </div>
+        <br><br>
     </div>
 <?php
 }

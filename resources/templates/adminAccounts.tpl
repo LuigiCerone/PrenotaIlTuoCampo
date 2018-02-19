@@ -13,7 +13,8 @@
     <br>
     <section>
         <div class="container">
-            Selezionare l'azienda e l'utente a cui si vogliono dare i diritti di gestione.
+            <b>Selezionare</b> l'azienda e successivamente <b>selezionare</b> l'utente a cui si vogliono dare i diritti
+            di gestione.
             <table id="partnersTable">
                 <thead>
                 <tr>
