@@ -281,7 +281,7 @@ VALUES
   ('Massimiliano', 'Nucci', 5, 'nucci@gmail.com', 'nucci', '325874525', '1997-05-02', '2018-02-02', 1, 'M', 0, NULL),
   ('Sara', 'Bianchi', 6, 'bianchi@gmail.com', 'bianchi', '3548423654', '1987-05-01', '2018-02-03', 1, 'F', 0, NULL),
   ('Giovanni', 'Gemini', 7, 'gemini@gmail.com', 'gemini', '325415255', '1998-02-02', '2018-02-03', 1, 'M', 0, NULL),
-  ('Segio', 'Cornelio', 8, 'cornelio@gmail.com', 'cornelio', '3254454866', '1995-05-05', '2018-02-02', 1, 'M', 0, NULL),
+  ('Segio', 'Cornelio', 8, 'cornelio@gmail.com', 'cornelio', '3254454866', '1995-05-05', '2018-02-02', 1, 'M', 0, 2),
   ('Andea', 'Paris', 9, 'paris@gmail.com', 'paris', '32515485', '1999-02-02', '2018-02-02', 1, 'M', 0, NULL),
   ('Mattia', 'Masci', 10, 'masci@gmail.com', 'masci', '325155625', '1996-02-02', '2018-02-02', 1, 'M', 0, NULL),
   ('Luigi', 'Fidanza', 11, 'fidanza@gmail.com', 'fidanza', '3251588916', '1998-02-02', '2018-02-02', 1, 'M', 0, NULL);

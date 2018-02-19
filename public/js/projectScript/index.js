@@ -164,8 +164,6 @@ $(function () {
     });
 
     $('#changePhoto').submit(function (event) {
-        event.preventDefault();
-        event.stopPropagation();
         var formData = new FormData();
         var fileInfo = $('input[type=file]')[0].files[0];
         formData.append('file', fileInfo, fileInfo.name);
